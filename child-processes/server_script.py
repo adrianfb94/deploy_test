@@ -281,12 +281,14 @@ if not os.path.exists(ifile+'.nc'):
 def install_cdo():
     sh_file = '/'.join([root_dir,'child-processes/install_cdo.sh'])
     subprocess.run('chmod a+x {}'.format(sh_file), shell=True)
-    subprocess.run('./{}'.format(sh_file), shell=True)
+    os.chdir('/'.join([root_dir,'child-processes']))
+    subprocess.run('./install_cdo.sh', shell=True)
     print("CDO was instaled success!")
 
 
 install_cdo()
 
+exit()
 cdo_dir = '/'.join([root_dir,'child-processes/cdo-1.9.1/bin/cdo'])
 # local_cdo_dir = '/home/adrianfb/cdo_install/cdo-1.9.1/local/bin/cdo'
 
