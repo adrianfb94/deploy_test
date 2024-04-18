@@ -118,17 +118,17 @@ def get_ip(raw_ip):
 
 
 
-# # SERVER
-# server_cad = sys.argv[1:][0]
-# argumentos = server_cad.split('&')
-# client_ip = sys.argv[1:][1]
-# ip = get_ip(client_ip)
-
-
-# LOCAL
-server_cad = 'latiN=29&longW=-94.6&longE=-50&latiS=5&modelo=3&indice=1&periodoS=1&annoIRef=1961&annoFRef=1980&annoIEva=1961&annoFEva=1980&moddro=-1&sevdro=-1.5&extdrou=-2&umbral=-0.5&def=2&comportamiento=0&lsm=1'
+# SERVER
+server_cad = sys.argv[1:][0]
 argumentos = server_cad.split('&')
-ip = '127.0.0.1'
+client_ip = sys.argv[1:][1]
+ip = get_ip(client_ip)
+
+
+# # LOCAL
+# server_cad = 'latiN=29&longW=-94.6&longE=-50&latiS=5&modelo=3&indice=1&periodoS=1&annoIRef=1961&annoFRef=1980&annoIEva=1961&annoFEva=1980&moddro=-1&sevdro=-1.5&extdrou=-2&umbral=-0.5&def=2&comportamiento=0&lsm=1'
+# argumentos = server_cad.split('&')
+# ip = '127.0.0.1'
 
 dict = {}
 for item in argumentos:
