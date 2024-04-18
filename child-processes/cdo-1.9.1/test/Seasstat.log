@@ -1,0 +1,201 @@
+cdo seasmin (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasmin (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasmin: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasmin (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasmin (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasmin: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasmin (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasmin (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasmin: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasmax (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasmax (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasmax: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasmax (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasmax (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasmax: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasmax (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasmax (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasmax: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasrange (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasrange (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasrange: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasrange (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasrange (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasrange: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasrange (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasrange (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasrange: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seassum (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seassum (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seassum: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seassum (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seassum (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seassum: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seassum (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seassum (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seassum: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasavg (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasavg (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasavg: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasavg (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasavg (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasavg: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasavg (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasavg (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasavg: Processed 60 values from 1 variable over 60 timesteps ( 0.01s )
+cdo seasmean (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasmean (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasmean: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasmean (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasmean (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasmean: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasmean (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasmean (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasmean: Processed 60 values from 1 variable over 60 timesteps ( 0.01s )
+cdo seasstd (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasstd (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasstd: Processed 60 values from 1 variable over 60 timesteps ( 0.01s )
+cdo seasstd (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasstd (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasstd: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasstd (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasstd (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasstd: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasstd1 (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasstd1 (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasstd1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasstd1 (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasstd1 (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasstd1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasstd1 (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasstd1 (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasstd1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasvar (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasvar (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasvar: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+1..10
+Running test: 1
+../src/cdo -f srv seasmin ../test/data/ts_mm_5years seasmin_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 1
+../src/cdo -f grb seasmin ../test/data/ts_mm_5years seasmin_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 1
+../src/cdo -f nc seasmin ../test/data/ts_mm_5years seasmin_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+ok 1 - seasmin
+PASS: Seasstat.test 1 - seasmin
+Running test: 2
+../src/cdo -f srv seasmax ../test/data/ts_mm_5years seasmax_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 2
+../src/cdo -f grb seasmax ../test/data/ts_mm_5years seasmax_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 2
+../src/cdo -f nc seasmax ../test/data/ts_mm_5years seasmax_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+ok 2 - seasmax
+PASS: Seasstat.test 2 - seasmax
+Running test: 3
+../src/cdo -f srv seasrange ../test/data/ts_mm_5years seasrange_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 3
+../src/cdo -f grb seasrange ../test/data/ts_mm_5years seasrange_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 3
+../src/cdo -f nc seasrange ../test/data/ts_mm_5years seasrange_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+ok 3 - seasrange
+PASS: Seasstat.test 3 - seasrange
+Running test: 4
+../src/cdo -f srv seassum ../test/data/ts_mm_5years seassum_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 4
+../src/cdo -f grb seassum ../test/data/ts_mm_5years seassum_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 4
+../src/cdo -f nc seassum ../test/data/ts_mm_5years seassum_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+ok 4 - seassum
+PASS: Seasstat.test 4 - seassum
+Running test: 5
+../src/cdo -f srv seasavg ../test/data/ts_mm_5years seasavg_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.01s )
+Running test: 5
+../src/cdo -f grb seasavg ../test/data/ts_mm_5years seasavg_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 5
+../src/cdo -f nc seasavg ../test/data/ts_mm_5years seasavg_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+ok 5 - seasavg
+PASS: Seasstat.test 5 - seasavg
+Running test: 6
+../src/cdo -f srv seasmean ../test/data/ts_mm_5years seasmean_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 6
+../src/cdo -f grb seasmean ../test/data/ts_mm_5years seasmean_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 6
+../src/cdo -f nc seasmean ../test/data/ts_mm_5years seasmean_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+ok 6 - seasmean
+PASS: Seasstat.test 6 - seasmean
+Running test: 7
+../src/cdo -f srv seasstd ../test/data/ts_mm_5years seasstd_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 7
+../src/cdo -f grb seasstd ../test/data/ts_mm_5years seasstd_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 7
+../src/cdo -f nc seasstd ../test/data/ts_mm_5years seasstd_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+ok 7 - seasstd
+PASS: Seasstat.test 7 - seasstd
+Running test: 8
+../src/cdo -f srv seasstd1 ../test/data/ts_mm_5years seasstd1_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 8
+../src/cdo -f grb seasstd1 ../test/data/ts_mm_5years seasstd1_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 8
+../src/cdo -f nc seasstd1 ../test/data/ts_mm_5years seasstd1_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+ok 8 - seasstd1
+PAScdo seasvar (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasvar (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasvar: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasvar (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasvar (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasvar: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasvar1 (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasvar1 (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasvar1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasvar1 (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasvar1 (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasvar1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo seasvar1 (Warning): Season   1 ( 1991-01-15) has only 2 input time steps!
+cdo seasvar1 (Warning): Season  21 ( 1995-12-15) has only 1 input time step!
+cdo seasvar1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+S: Seasstat.test 8 - seasstd1
+Running test: 9
+../src/cdo -f srv seasvar ../test/data/ts_mm_5years seasvar_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 9
+../src/cdo -f grb seasvar ../test/data/ts_mm_5years seasvar_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 9
+../src/cdo -f nc seasvar ../test/data/ts_mm_5years seasvar_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+ok 9 - seasvar
+PASS: Seasstat.test 9 - seasvar
+Running test: 10
+../src/cdo -f srv seasvar1 ../test/data/ts_mm_5years seasvar1_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 10
+../src/cdo -f grb seasvar1 ../test/data/ts_mm_5years seasvar1_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+Running test: 10
+../src/cdo -f nc seasvar1 ../test/data/ts_mm_5years seasvar1_res
+cdo diff: Processed 42 values from 2 variables over 42 timesteps ( 0.00s )
+ok 10 - seasvar1
+PASS: Seasstat.test 10 - seasvar1

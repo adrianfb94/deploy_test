@@ -1,0 +1,61 @@
+cdo zonmin: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo zonmax: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo zonrange: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo zonsum: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo zonavg: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo zonmean: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo zonstd: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo zonstd1: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo zonvar: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo zonvar1: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+1..10
+Running test: 1
+../src/cdo -f srv -b 32 zonmin ../test/data/t21_geosp_tsurf.grb zonmin_res
+cdo diff: Processed 128 values from 4 variables over 2 timesteps ( 0.00s )
+ok 1 - zonmin
+PASS: Zonstat.test 1 - zonmin
+Running test: 2
+../src/cdo -f srv -b 32 zonmax ../test/data/t21_geosp_tsurf.grb zonmax_res
+cdo diff: Processed 128 values from 4 variables over 2 timesteps ( 0.00s )
+ok 2 - zonmax
+PASS: Zonstat.test 2 - zonmax
+Running test: 3
+../src/cdo -f srv -b 32 zonrange ../test/data/t21_geosp_tsurf.grb zonrange_res
+cdo diff: Processed 128 values from 4 variables over 2 timesteps ( 0.00s )
+ok 3 - zonrange
+PASS: Zonstat.test 3 - zonrange
+Running test: 4
+../src/cdo -f srv -b 32 zonsum ../test/data/t21_geosp_tsurf.grb zonsum_res
+cdo diff: Processed 128 values from 4 variables over 2 timesteps ( 0.00s )
+ok 4 - zonsum
+PASS: Zonstat.test 4 - zonsum
+Running test: 5
+../src/cdo -f srv -b 32 zonavg ../test/data/t21_geosp_tsurf.grb zonavg_res
+cdo diff: Processed 128 values from 4 variables over 2 timesteps ( 0.00s )
+ok 5 - zonavg
+PASS: Zonstat.test 5 - zonavg
+Running test: 6
+../src/cdo -f srv -b 32 zonmean ../test/data/t21_geosp_tsurf.grb zonmean_res
+cdo diff: Processed 128 values from 4 variables over 2 timesteps ( 0.00s )
+ok 6 - zonmean
+PASS: Zonstat.test 6 - zonmean
+Running test: 7
+../src/cdo -f srv -b 32 zonstd ../test/data/t21_geosp_tsurf.grb zonstd_res
+cdo diff: Processed 128 values from 4 variables over 2 timesteps ( 0.00s )
+ok 7 - zonstd
+PASS: Zonstat.test 7 - zonstd
+Running test: 8
+../src/cdo -f srv -b 32 zonstd1 ../test/data/t21_geosp_tsurf.grb zonstd1_res
+cdo diff: Processed 128 values from 4 variables over 2 timesteps ( 0.00s )
+ok 8 - zonstd1
+PASS: Zonstat.test 8 - zonstd1
+Running test: 9
+../src/cdo -f srv -b 32 zonvar ../test/data/t21_geosp_tsurf.grb zonvar_res
+cdo diff: Processed 128 values from 4 variables over 2 timesteps ( 0.00s )
+ok 9 - zonvar
+PASS: Zonstat.test 9 - zonvar
+Running test: 10
+../src/cdo -f srv -b 32 zonvar1 ../test/data/t21_geosp_tsurf.grb zonvar1_res
+cdo diff: Processed 128 values from 4 variables over 2 timesteps ( 0.00s )
+ok 10 - zonvar1
+PASS: Zonstat.test 10 - zonvar1

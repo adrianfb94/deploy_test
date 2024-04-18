@@ -1,0 +1,92 @@
+cdo outputf: Started child process "fldsum -gridarea -random,global_5 (pipe1.1)".
+cdo(2) fldsum: Started child process "gridarea -random,global_5 (pipe2.1)".
+cdo(3) gridarea: Started child process "random,global_5 (pipe3.1)".
+cdo(4) random: Set default filetype to GRIB
+cdo(4) random:  ( 0.00s )
+cdo(3) gridarea: Processed 1 variable ( 0.00s )
+cdo(2) fldsum: Processed 2592 values from 1 variable over 1 timestep ( 0.00s )
+cdo outputf: Processed 1 value from 1 variable over 1 timestep ( 0.00s )
+cdo outputf: Started child process "fldsum -gridarea -random,global_2 (pipe1.1)".
+cdo(2) fldsum: Started child process "gridarea -random,global_2 (pipe2.1)".
+cdo(3) gridarea: Started child process "random,global_2 (pipe3.1)".
+cdo(4) random: Set default filetype to GRIB
+cdo(4) random:  ( 0.01s )
+cdo(3) gridarea: Processed 1 variable ( 0.01s )
+cdo(2) fldsum: Processed 16200 values from 1 variable over 1 timestep ( 0.01s )
+cdo outputf: Processed 1 value from 1 variable over 1 timestep ( 0.01s )
+cdo outputf: Started child process "fldsum -gridarea -random,global_1 (pipe1.1)".
+cdo(2) fldsum: Started child process "gridarea -random,global_1 (pipe2.1)".
+cdo(3) gridarea: Started child process "random,global_1 (pipe3.1)".
+cdo(4) random: Set default filetype to GRIB
+cdo(4) random:  ( 0.02s )
+cdo(3) gridarea: Processed 1 variable ( 0.02s )
+cdo(2) fldsum: Processed 64800 values from 1 variable over 1 timestep ( 0.02s )
+cdo outputf: Processed 1 value from 1 variable over 1 timestep ( 0.02s )
+cdo outputf: Started child process "fldsum -gridarea -random,global_.5 (pipe1.1)".
+cdo(2) fldsum: Started child process "gridarea -random,global_.5 (pipe2.1)".
+cdo(3) gridarea: Started child process "random,global_.5 (pipe3.1)".
+cdo(4) random: Set default filetype to GRIB
+cdo(4) random:  ( 0.09s )
+cdo(3) gridarea: Processed 1 variable ( 0.09s )
+cdo(2) fldsum: Processed 259200 values from 1 variable over 1 timestep ( 0.09s )
+cdo outputf: Processed 1 value from 1 variable over 1 timestep ( 0.09s )
+cdo outputf: Started child process "fldsum -gridarea -random,n32 (pipe1.1)".
+cdo(2) fldsum: Started child process "gridarea -random,n32 (pipe2.1)".
+cdo(3) gridarea: Started child process "random,n32 (pipe3.1)".
+cdo(4) random: Set default filetype to GRIB
+cdo(4) random:  ( 0.00s )
+cdo(3) gridarea: Processed 1 variable ( 0.00s )
+cdo(2) fldsum: Processed 8192 values from 1 variable over 1 timestep ( 0.00s )
+cdo outputf: Processed 1 value from 1 variable over 1 timestep ( 0.00s )
+cdo outputf: Started child process "fldsum -gridarea -random,n80 (pipe1.1)".
+cdo(2) fldsum: Started child process "gridarea -random,n80 (pipe2.1)".
+cdo(3) gridarea: Started child process "random,n80 (pipe3.1)".
+cdo(4) random: Set default filetype to GRIB
+cdo(4) random:  ( 0.03s )
+cdo(3) gridarea: Processed 1 variable ( 0.03s )
+cdo(2) fldsum: Processed 51200 values from 1 variable over 1 timestep ( 0.03s )
+cdo outputf: Processed 1 value from 1 variable over 1 timestep ( 0.03s )
+cdo outputf: Started child process "fldsum -gridarea -random,n160 (pipe1.1)".
+cdo(2) fldsum: Started child process "gridarea -random,n160 (pipe2.1)".
+cdo(3) gridarea: Started child process "random,n160 (pipe3.1)".
+cdo(4) random: Set default filetype to GRIB
+cdo(4) random:  ( 0.11s )
+cdo(3) gridarea: Processed 1 variable ( 0.11s )
+cdo(2) fldsum: Processed 204800 values from 1 variable over 1 timestep ( 0.11s )
+cdo outputf: Processed 1 value from 1 variable over 1 timestep ( 0.11s )
+1..7
+Running test: 1
+../src/cdo outputf,%10.7f -fldsum -gridarea -random,global_5
+gridarea global_5: >12.5663706< >12.5663706<
+ok 1 - gridarea global_5
+PASS: Gridarea.test 1 - gridarea global_5
+Running test: 2
+../src/cdo outputf,%10.7f -fldsum -gridarea -random,global_2
+gridarea global_2: >12.5663706< >12.5663706<
+ok 2 - gridarea global_2
+PASS: Gridarea.test 2 - gridarea global_2
+Running test: 3
+../src/cdo outputf,%10.7f -fldsum -gridarea -random,global_1
+gridarea global_1: >12.5663706< >12.5663706<
+ok 3 - gridarea global_1
+PASS: Gridarea.test 3 - gridarea global_1
+Running test: 4
+../src/cdo outputf,%10.7f -fldsum -gridarea -random,global_.5
+gridarea global_.5: >12.5663706< >12.5663706<
+ok 4 - gridarea global_.5
+PASS: Gridarea.test 4 - gridarea global_.5
+Running test: 5
+../src/cdo outputf,%10.7f -fldsum -gridarea -random,n32
+gridarea n32: >12.5663706< >12.5663706<
+ok 5 - gridarea n32
+PASS: Gridarea.test 5 - gridarea n32
+Running test: 6
+../src/cdo outputf,%10.7f -fldsum -gridarea -random,n80
+gridarea n80: >12.5663706< >12.5663706<
+ok 6 - gridarea n80
+PASS: Gridarea.test 6 - gridarea n80
+Running test: 7
+../src/cdo outputf,%10.7f -fldsum -gridarea -random,n160
+gridarea n160: >12.5663706< >12.5663706<
+ok 7 - gridarea n160
+PASS: Gridarea.test 7 - gridarea n160

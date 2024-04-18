@@ -1,0 +1,21 @@
+cdo gp2sp: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo sp2gp: Processed 1012 values from 2 variables over 1 timestep ( 0.00s )
+cdo gp2spl: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo sp2gpl: Processed 2112 values from 2 variables over 1 timestep ( 0.00s )
+1..4
+../src/cdo  gp2sp ../test/data/t21_geosp_tsurf.grb gp2sp_res
+cdo diff: Processed 2024 values from 4 variables over 2 timesteps ( 0.00s )
+ok 1 - gp2sp
+PASS: Spectral.test 1 - gp2sp
+../src/cdo  sp2gp ../test/data/gp2sp_ref sp2gp_res
+cdo diff: Processed 8192 values from 4 variables over 2 timesteps ( 0.00s )
+ok 2 - sp2gp
+PASS: Spectral.test 2 - sp2gp
+../src/cdo  gp2spl ../test/data/t21_geosp_tsurf.grb gp2spl_res
+cdo diff: Processed 4224 values from 4 variables over 2 timesteps ( 0.00s )
+ok 3 - gp2spl
+PASS: Spectral.test 3 - gp2spl
+../src/cdo  sp2gpl ../test/data/gp2spl_ref sp2gpl_res
+cdo diff: Processed 8192 values from 4 variables over 2 timesteps ( 0.00s )
+ok 4 - sp2gpl
+PASS: Spectral.test 4 - sp2gpl

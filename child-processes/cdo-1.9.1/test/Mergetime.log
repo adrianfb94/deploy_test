@@ -1,0 +1,15 @@
+cdo mergetime: Timestep    2 in stream 2 ( 2002-01-01 00:00:00) already exists, skipped!
+cdo mergetime: Processed 2 values from 2 variables over 3 timesteps ( 0.00s )
+cdo mergetime: Timestep    1 in stream 2 ( 2002-01-01 00:00:00) already exists, skipped!
+cdo mergetime: Processed 2 values from 2 variables over 3 timesteps ( 0.00s )
+1..2
+Running test: 1
+../src/cdo -f srv -b 32 mergetime ../test/data/mergetime_y2 ../test/data/mergetime_y12 mergetime_res
+cdo diff: Processed 4 values from 2 variables over 4 timesteps ( 0.00s )
+ok 1 - mergetime
+PASS: Mergetime.test 1 - mergetime
+Running test: 2
+../src/cdo -f srv -b 32 mergetime ../test/data/mergetime_y12 ../test/data/mergetime_y2 mergetime_res
+cdo diff: Processed 4 values from 2 variables over 4 timesteps ( 0.00s )
+ok 2 - mergetime
+PASS: Mergetime.test 2 - mergetime

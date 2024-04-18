@@ -1,0 +1,61 @@
+cdo fldmin: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo fldmax: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo fldrange: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo fldsum: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo fldavg: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo fldmean: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo fldstd: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo fldstd1: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo fldvar: Processed 4096 values from 2 variables over 1 timestep ( 0.01s )
+cdo fldvar1: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+1..10
+Running test: 1
+../src/cdo -f srv -b 32 fldmin ../test/data/t21_geosp_tsurf.grb fldmin_res
+cdo diff: Processed 4 values from 4 variables over 2 timesteps ( 0.00s )
+ok 1 - fldmin
+PASS: Fldstat.test 1 - fldmin
+Running test: 2
+../src/cdo -f srv -b 32 fldmax ../test/data/t21_geosp_tsurf.grb fldmax_res
+cdo diff: Processed 4 values from 4 variables over 2 timesteps ( 0.00s )
+ok 2 - fldmax
+PASS: Fldstat.test 2 - fldmax
+Running test: 3
+../src/cdo -f srv -b 32 fldrange ../test/data/t21_geosp_tsurf.grb fldrange_res
+cdo diff: Processed 4 values from 4 variables over 2 timesteps ( 0.00s )
+ok 3 - fldrange
+PASS: Fldstat.test 3 - fldrange
+Running test: 4
+../src/cdo -f srv -b 32 fldsum ../test/data/t21_geosp_tsurf.grb fldsum_res
+cdo diff: Processed 4 values from 4 variables over 2 timesteps ( 0.00s )
+ok 4 - fldsum
+PASS: Fldstat.test 4 - fldsum
+Running test: 5
+../src/cdo -f srv -b 32 fldavg ../test/data/t21_geosp_tsurf.grb fldavg_res
+cdo diff: Processed 4 values from 4 variables over 2 timesteps ( 0.00s )
+ok 5 - fldavg
+PASS: Fldstat.test 5 - fldavg
+Running test: 6
+../src/cdo -f srv -b 32 fldmean ../test/data/t21_geosp_tsurf.grb fldmean_res
+cdo diff: Processed 4 values from 4 variables over 2 timesteps ( 0.00s )
+ok 6 - fldmean
+PASS: Fldstat.test 6 - fldmean
+Running test: 7
+../src/cdo -f srv -b 32 fldstd ../test/data/t21_geosp_tsurf.grb fldstd_res
+cdo diff: Processed 4 values from 4 variables over 2 timesteps ( 0.00s )
+ok 7 - fldstd
+PASS: Fldstat.test 7 - fldstd
+Running test: 8
+../src/cdo -f srv -b 32 fldstd1 ../test/data/t21_geosp_tsurf.grb fldstd1_res
+cdo diff: Processed 4 values from 4 variables over 2 timesteps ( 0.00s )
+ok 8 - fldstd1
+PASS: Fldstat.test 8 - fldstd1
+Running test: 9
+../src/cdo -f srv -b 32 fldvar ../test/data/t21_geosp_tsurf.grb fldvar_res
+cdo diff: Processed 4 values from 4 variables over 2 timesteps ( 0.00s )
+ok 9 - fldvar
+PASS: Fldstat.test 9 - fldvar
+Running test: 10
+../src/cdo -f srv -b 32 fldvar1 ../test/data/t21_geosp_tsurf.grb fldvar1_res
+cdo diff: Processed 4 values from 4 variables over 2 timesteps ( 0.00s )
+ok 10 - fldvar1
+PASS: Fldstat.test 10 - fldvar1

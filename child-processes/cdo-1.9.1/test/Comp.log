@@ -1,0 +1,44 @@
+cdo const:  ( 0.00s )
+cdo eq: Filling up stream2 >constdata< by copying the first record.
+cdo eq: Processed 6144 values from 3 variables over 2 timesteps ( 0.00s )
+cdo ne: Filling up stream2 >constdata< by copying the first record.
+cdo ne: Processed 6144 values from 3 variables over 2 timesteps ( 0.00s )
+cdo le: Filling up stream2 >constdata< by copying the first record.
+cdo le: Processed 6144 values from 3 variables over 2 timesteps ( 0.00s )
+cdo lt: Filling up stream2 >constdata< by copying the first record.
+cdo lt: Processed 6144 values from 3 variables over 2 timesteps ( 0.00s )
+cdo ge: Filling up stream2 >constdata< by copying the first record.
+cdo ge: Processed 6144 values from 3 variables over 2 timesteps ( 0.00s )
+cdo gt: Filling up stream2 >constdata< by copying the first record.
+cdo gt: Processed 6144 values from 3 variables over 2 timesteps ( 0.00s )
+1..6
+Running test: 1 - eq
+../src/cdo -f srv -b 32 eq ../test/data/comptest.srv constdata comp_eq_res
+cdo diff: Processed 8192 values from 4 variables over 2 timesteps ( 0.00s )
+ok 1 - eq
+PASS: Comp.test 1 - eq
+Running test: 2 - ne
+../src/cdo -f srv -b 32 ne ../test/data/comptest.srv constdata comp_ne_res
+cdo diff: Processed 8192 values from 4 variables over 2 timesteps ( 0.00s )
+ok 2 - ne
+PASS: Comp.test 2 - ne
+Running test: 3 - le
+../src/cdo -f srv -b 32 le ../test/data/comptest.srv constdata comp_le_res
+cdo diff: Processed 8192 values from 4 variables over 2 timesteps ( 0.00s )
+ok 3 - le
+PASS: Comp.test 3 - le
+Running test: 4 - lt
+../src/cdo -f srv -b 32 lt ../test/data/comptest.srv constdata comp_lt_res
+cdo diff: Processed 8192 values from 4 variables over 2 timesteps ( 0.00s )
+ok 4 - lt
+PASS: Comp.test 4 - lt
+Running test: 5 - ge
+../src/cdo -f srv -b 32 ge ../test/data/comptest.srv constdata comp_ge_res
+cdo diff: Processed 8192 values from 4 variables over 2 timesteps ( 0.00s )
+ok 5 - ge
+PASS: Comp.test 5 - ge
+Running test: 6 - gt
+../src/cdo -f srv -b 32 gt ../test/data/comptest.srv constdata comp_gt_res
+cdo diff: Processed 8192 values from 4 variables over 2 timesteps ( 0.00s )
+ok 6 - gt
+PASS: Comp.test 6 - gt

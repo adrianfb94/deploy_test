@@ -1,0 +1,49 @@
+cdo eof: Processed 64960 values from 2 variables over 58 timesteps ( 0.00s )
+cdo eofcoeff (Warning): Grids have different types! First grid: generic; second grid: lonlat
+cdo eofcoeff: Processed 67200 values from 2 variables over 30 timesteps ( 0.00s )
+cdo eof: Processed 64960 values from 2 variables over 58 timesteps ( 0.00s )
+cdo eofcoeff (Warning): Grids have different types! First grid: generic; second grid: lonlat
+cdo eofcoeff: Processed 67200 values from 2 variables over 30 timesteps ( 0.01s )
+cdo eof3d: Processed 64960 values from 2 variables over 58 timesteps ( 0.00s )
+cdo eofcoeff3d (Warning): Grids have different types! First grid: generic; second grid: lonlat
+cdo eofcoeff3d: Processed 67200 values from 2 variables over 30 timesteps ( 0.00s )
+cdo eof3d: Processed 64960 values from 2 variables over 58 timesteps ( 0.01s )
+cdo eofcoeff3d (Warning): Grids have different types! First grid: generic; second grid: lonlat
+cdo eofcoeff3d: Processed 67200 values from 2 variables over 30 timesteps ( 0.01s )
+1..4
+../src/cdo -f srv -b 32 eof,1 ../test/data/psl_DJF_anom.grb eval_res eof_res
+../src/cdo -f srv -b 32 eofcoeff eof_res ../test/data/psl_DJF_anom.grb res_pcoeff
+cdo diff: Started child process "abs res_pcoeff00000 (pipe1.1)".
+cdo diff: Started child process "abs ../test/data/pcoeff00000 (pipe1.2)".
+cdo(2) abs: Processed 29 values from 1 variable over 29 timesteps ( 0.00s )
+cdo(3) abs: Processed 29 values from 1 variable over 29 timesteps ( 0.00s )
+cdo diff: Processed 58 values from 2 variables over 58 timesteps ( 0.00s )
+ok 1 - eof/eofcoeff - jacobi
+PASS: EOF.test 1 - eof/eofcoeff - jacobi
+../src/cdo -f srv -b 32 eof,1 ../test/data/psl_DJF_anom.grb eval_res eof_res
+../src/cdo -f srv -b 32 eofcoeff eof_res ../test/data/psl_DJF_anom.grb res_pcoeff
+cdo diff: Started child process "abs res_pcoeff00000 (pipe1.1)".
+cdo diff: Started child process "abs ../test/data/pcoeff00000 (pipe1.2)".
+cdo(2) abs: Processed 29 values from 1 variable over 29 timesteps ( 0.00s )
+cdo(3) abs: Processed 29 values from 1 variable over 29 timesteps ( 0.00s )
+cdo diff: Processed 58 values from 2 variables over 58 timesteps ( 0.00s )
+ok 2 - eof/eofcoeff - danielson_lanczos
+PASS: EOF.test 2 - eof/eofcoeff - danielson_lanczos
+../src/cdo -f srv -b 32 eof3d,1 ../test/data/psl_DJF_anom.grb eval_res eof_res
+../src/cdo -f srv -b 32 eofcoeff3d eof_res ../test/data/psl_DJF_anom.grb res_pcoeff
+cdo diff: Started child process "abs res_pcoeff00000 (pipe1.1)".
+cdo diff: Started child process "abs ../test/data/pcoeff00000 (pipe1.2)".
+cdo(2) abs: Processed 29 values from 1 variable over 29 timesteps ( 0.00s )
+cdo(3) abs: Processed 29 values from 1 variable over 29 timesteps ( 0.00s )
+cdo diff: Processed 58 values from 2 variables over 58 timesteps ( 0.00s )
+ok 3 - eof3d/eofcoeff3d - jacobi
+PASS: EOF.test 3 - eof3d/eofcoeff3d - jacobi
+../src/cdo -f srv -b 32 eof3d,1 ../test/data/psl_DJF_anom.grb eval_res eof_res
+../src/cdo -f srv -b 32 eofcoeff3d eof_res ../test/data/psl_DJF_anom.grb res_pcoeff
+cdo diff: Started child process "abs res_pcoeff00000 (pipe1.1)".
+cdo diff: Started child process "abs ../test/data/pcoeff00000 (pipe1.2)".
+cdo(2) abs: Processed 29 values from 1 variable over 29 timesteps ( 0.00s )
+cdo(3) abs: Processed 29 values from 1 variable over 29 timesteps ( 0.00s )
+cdo diff: Processed 58 values from 2 variables over 58 timesteps ( 0.00s )
+ok 4 - eof3d/eofcoeff3d - danielson_lanczos
+PASS: EOF.test 4 - eof3d/eofcoeff3d - danielson_lanczos

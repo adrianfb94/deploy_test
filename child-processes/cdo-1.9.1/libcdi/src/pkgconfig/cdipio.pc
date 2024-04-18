@@ -1,0 +1,43 @@
+prefix=/home/adrianfb/cdo_install/cdo-1.9.1/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+cflags=-I${prefix}/include
+fcflags=${prefix}/include 
+libs=-L${exec_prefix}/lib -lcdipio   -lcdi   -L/usr/lib -lnetcdf   -lnetcdf  -lm 
+threads_libs=
+threads_cflags=
+szlib_cflags=
+szlib_libs=
+netcdf_root=/usr
+netcdf_cflags= -I/usr/include
+netcdf_libs= -L/usr/lib -lnetcdf
+grib_api_cflags=
+grib_api_libs=
+aux_libs=-lnetcdf  -lm 
+cdipio_build_cc=gcc
+cdipio_build_cflags=-I/usr/include/gdal -pthread
+cdipio_build_cppflags=-I/usr/include  -DgFortran
+cdipio_build_ldflags=-L/usr/lib 
+cdipio_build_libs=-lnetcdf  -lm 
+cdipio_build_fc=no
+cdipio_build_fcflags=
+cdipio_build_f77=f77
+cdipio_build_fflags=-g -O2
+cdipio_build_cxx=g++
+cdipio_build_cxxflags=-g -O2
+cdipio_build_enable_grib=yes
+cdipio_build_enable_cgribex=yes
+cdipio_build_enable_service=yes
+cdipio_build_enable_extra=yes
+cdipio_build_enable_ieg=yes
+
+Name: cdipio
+Description: CDI-PIO is the MPI-parallel layer of CDI
+URL: 
+Version: 1.9.1
+Requires: 
+Libs: ${libs}
+Cflags: ${cflags}
+FCflags: ${fcflags}
+

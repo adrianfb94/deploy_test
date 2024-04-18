@@ -1,0 +1,41 @@
+cdo add: Filling up stream2 >../test/data/arithmask.srv< by copying the first variable.
+cdo add: Processed 1428 values from 3 variables over 4 timesteps ( 0.00s )
+cdo expr: Processed 1428 values from 3 variables over 3 timesteps ( 0.00s )
+cdo sub: Filling up stream2 >../test/data/arithmask.srv< by copying the first variable.
+cdo sub: Processed 1428 values from 3 variables over 4 timesteps ( 0.00s )
+cdo expr: Processed 1428 values from 3 variables over 3 timesteps ( 0.00s )
+cdo mul: Filling up stream2 >../test/data/arithmask.srv< by copying the first variable.
+cdo mul: Processed 1428 values from 3 variables over 4 timesteps ( 0.00s )
+cdo expr: Processed 1428 values from 3 variables over 3 timesteps ( 0.00s )
+cdo div: Filling up stream2 >../test/data/arithmask.srv< by copying the first variable.
+cdo div: Processed 1428 values from 3 variables over 4 timesteps ( 0.00s )
+cdo expr: Processed 1428 values from 3 variables over 3 timesteps ( 0.00s )
+1..4
+Running test: 1 - add
+../src/cdo -f srv -b 32 add ../test/data/arith1.srv ../test/data/arithmask.srv arithadd_res
+cdo diff: Processed 2448 values from 4 variables over 6 timesteps ( 0.00s )
+var215=var215+var3;var216=var216+var3;
+cdo diff: Processed 2448 values from 4 variables over 6 timesteps ( 0.00s )
+ok 1 - add
+PASS: Arith.test 1 - add
+Running test: 2 - sub
+../src/cdo -f srv -b 32 sub ../test/data/arith1.srv ../test/data/arithmask.srv arithsub_res
+cdo diff: Processed 2448 values from 4 variables over 6 timesteps ( 0.00s )
+var215=var215-var3;var216=var216-var3;
+cdo diff: Processed 2448 values from 4 variables over 6 timesteps ( 0.00s )
+ok 2 - sub
+PASS: Arith.test 2 - sub
+Running test: 3 - mul
+../src/cdo -f srv -b 32 mul ../test/data/arith1.srv ../test/data/arithmask.srv arithmul_res
+cdo diff: Processed 2448 values from 4 variables over 6 timesteps ( 0.00s )
+var215=var215*var3;var216=var216*var3;
+cdo diff: Processed 2448 values from 4 variables over 6 timesteps ( 0.00s )
+ok 3 - mul
+PASS: Arith.test 3 - mul
+Running test: 4 - div
+../src/cdo -f srv -b 32 div ../test/data/arith1.srv ../test/data/arithmask.srv arithdiv_res
+cdo diff: Processed 2448 values from 4 variables over 6 timesteps ( 0.00s )
+var215=var215/var3;var216=var216/var3;
+cdo diff: Processed 2448 values from 4 variables over 6 timesteps ( 0.00s )
+ok 4 - div
+PASS: Arith.test 4 - div

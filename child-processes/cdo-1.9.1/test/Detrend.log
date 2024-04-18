@@ -1,0 +1,16 @@
+cdo detrend: Processed 100 values from 1 variable over 100 timesteps ( 0.00s )
+cdo trend: Processed 100 values from 1 variable over 100 timesteps ( 0.00s )
+cdo subtrend: Processed 102 values from 3 variables over 102 timesteps ( 0.01s )
+1..2
+Running test: 1
+../src/cdo detrend ../test/data/detrend_data detrend_res
+cdo diff: Processed 200 values from 2 variables over 200 timesteps ( 0.00s )
+ok 1 - detrend
+PASS: Detrend.test 1 - detrend
+Running test: 2
+../src/cdo trend ../test/data/detrend_data ta tb
+Running test: 2
+../src/cdo subtrend ../test/data/detrend_data ta tb detrend_res
+cdo diff: Processed 200 values from 2 variables over 200 timesteps ( 0.00s )
+ok 2 - trend/subtrend
+PASS: Detrend.test 2 - trend/subtrend

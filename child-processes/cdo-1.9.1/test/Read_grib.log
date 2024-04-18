@@ -1,0 +1,31 @@
+cdo sinfo: Processed 1 variable over 12 timesteps ( 0.00s )
+cdo sinfo: Processed 1 variable over 120 timesteps ( 0.00s )
+cdo sinfo: Processed 1 variable over 1 timestep ( 0.00s )
+cdo info: Processed 31104 values from 1 variable over 12 timesteps ( 0.00s )
+cdo info: Processed 120 values from 1 variable over 120 timesteps ( 0.00s )
+cdo info: Processed 35718 values from 1 variable over 1 timestep ( 0.00s )
+1..6
+Running test: 1
+../src/cdo sinfo ../test/data/grib_testfile01.grb
+ok 1 - sinfo testfile01
+PASS: Read_grib.test 1 - sinfo testfile01
+Running test: 2
+../src/cdo sinfo ../test/data/grib_testfile02.grb
+ok 2 - sinfo testfile02
+PASS: Read_grib.test 2 - sinfo testfile02
+Running test: 3
+../src/cdo sinfo ../test/data/grib_testfile03.grb
+ok 3 - sinfo testfile03
+PASS: Read_grib.test 3 - sinfo testfile03
+Running test: 4
+../src/cdo info ../test/data/grib_testfile01.grb
+ok 4 - info testfile01
+PASS: Read_grib.test 4 - info testfile01
+Running test: 5
+../src/cdo info ../test/data/grib_testfile02.grb
+ok 5 - info testfile02
+PASS: Read_grib.test 5 - info testfile02
+Running test: 6
+../src/cdo info ../test/data/grib_testfile03.grb
+ok 6 - info testfile03
+PASS: Read_grib.test 6 - info testfile03

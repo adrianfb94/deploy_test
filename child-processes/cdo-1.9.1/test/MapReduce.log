@@ -1,0 +1,21 @@
+cdo temp:  ( 0.01s )
+cdo gtc: Started child process "temp,../test/data/r18x9_grid (pipe1.1)".
+cdo(2) temp:  ( 0.01s )
+cdo gtc: Processed 162 values from 1 variable over 1 timestep ( 0.01s )
+cdo reducegrid: Processed 162 values from 1 variable over 1 timestep ( 0.00s )
+cdo griddes: Processed 1 variable ( 0.00s )
+cdo temp:  ( 0.00s )
+cdo gtc: Started child process "temp,../test/data/icon_cell_grid (pipe1.1)".
+cdo(2) temp:  ( 0.00s )
+cdo gtc: Processed 80 values from 1 variable over 1 timestep ( 0.00s )
+cdo reducegrid: Processed 80 values from 1 variable over 1 timestep ( 0.00s )
+cdo griddes: Processed 1 variable ( 0.00s )
+1..2
+Running test: 1
+../src/cdo -f nc reducegrid,mask_r18x9.nc data_r18x9.nc reduced_r18x9.nc
+ok 1 - reducegrid on grid r18x9
+PASS: MapReduce.test 1 - reducegrid on grid r18x9
+Running test: 2
+../src/cdo -f nc reducegrid,mask_icon_cell.nc data_icon_cell.nc reduced_icon_cell.nc
+ok 2 - reducegrid on grid icon_cell
+PASS: MapReduce.test 2 - reducegrid on grid icon_cell

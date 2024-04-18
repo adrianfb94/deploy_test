@@ -1,0 +1,7 @@
+cdo after: Processed 1012 values from 2 variables ( 0.00s )
+1..1
+../src/cdo  after ../test/data/gp2sp_ref sp2gp_res
+ Processed Month  1  Year 1978   Terms   1
+cdo diff: Processed 8192 values from 4 variables over 2 timesteps ( 0.00s )
+ok 1 - TYPE=20 FORMAT=1
+PASS: Afterburner.test 1 - TYPE=20 FORMAT=1

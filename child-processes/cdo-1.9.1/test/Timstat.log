@@ -1,0 +1,561 @@
+cdo timmin: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timmin: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timmin: Processed 60 values from 1 variable over 60 timesteps ( 0.01s )
+cdo timmax: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timmax: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timmax: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timrange: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timrange: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timrange: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timsum: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timsum: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timsum: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timavg: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timavg: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timavg: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timmean: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timmean: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timmean: Processed 60 values from 1 variable over 60 timesteps ( 0.01s )
+cdo timstd: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timstd: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timstd: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timstd1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timstd1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timstd1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timvar: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timvar: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+1..40
+Running test: 1
+../src/cdo -f srv timmin ../test/data/ts_mm_5years timmin_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 1
+../src/cdo -f grb timmin ../test/data/ts_mm_5years timmin_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 1
+../src/cdo -f nc timmin ../test/data/ts_mm_5years timmin_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+ok 1 - timmin
+PASS: Timstat.test 1 - timmin
+Running test: 2
+../src/cdo -f srv timmax ../test/data/ts_mm_5years timmax_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 2
+../src/cdo -f grb timmax ../test/data/ts_mm_5years timmax_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 2
+../src/cdo -f nc timmax ../test/data/ts_mm_5years timmax_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+ok 2 - timmax
+PASS: Timstat.test 2 - timmax
+Running test: 3
+../src/cdo -f srv timrange ../test/data/ts_mm_5years timrange_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 3
+../src/cdo -f grb timrange ../test/data/ts_mm_5years timrange_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 3
+../src/cdo -f nc timrange ../test/data/ts_mm_5years timrange_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+ok 3 - timrange
+PASS: Timstat.test 3 - timrange
+Running test: 4
+../src/cdo -f srv timsum ../test/data/ts_mm_5years timsum_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 4
+../src/cdo -f grb timsum ../test/data/ts_mm_5years timsum_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 4
+../src/cdo -f nc timsum ../test/data/ts_mm_5years timsum_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+ok 4 - timsum
+PASS: Timstat.test 4 - timsum
+Running test: 5
+../src/cdo -f srv timavg ../test/data/ts_mm_5years timavg_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 5
+../src/cdo -f grb timavg ../test/data/ts_mm_5years timavg_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 5
+../src/cdo -f nc timavg ../test/data/ts_mm_5years timavg_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+ok 5 - timavg
+PASS: Timstat.test 5 - timavg
+Running test: 6
+../src/cdo -f srv timmean ../test/data/ts_mm_5years timmean_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 6
+../src/cdo -f grb timmean ../test/data/ts_mm_5years timmean_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 6
+../src/cdo -f nc timmean ../test/data/ts_mm_5years timmean_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+ok 6 - timmean
+PASS: Timstat.test 6 - timmean
+Running test: 7
+../src/cdo -f srv timstd ../test/data/ts_mm_5years timstd_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 7
+../src/cdo -f grb timstd ../test/data/ts_mm_5years timstd_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 7
+../src/cdo -f nc timstd ../test/data/ts_mm_5years timstd_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+ok 7 - timstd
+PASS: Timstat.test 7 - timstd
+Running test: 8
+../src/cdo -f srv timstd1 ../test/data/ts_mm_5years timstd1_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 8
+../src/cdo -f grb timstd1 ../test/data/ts_mm_5years timstd1_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 8
+../src/cdo -f nc timstd1 ../test/data/ts_mm_5years timstd1_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+ok 8 - timstd1
+PASS: Timstat.test 8 - timstd1
+Running test: 9
+../src/cdo -f srv timvar ../test/data/ts_mm_5years timvar_res
+cdo diff: Prcdo timvar: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timvar1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timvar1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo timvar1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearmin: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearmin: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearmin: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearmax: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearmax: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearmax: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearrange: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearrange: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearrange: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearsum: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearsum: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearsum: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearavg: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearavg: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearavg: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearmean: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearmean: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearmean: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearstd: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearstd: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearstd: Processed 60 values from 1 variable over 60 timesteps ( 0.01s )
+ocessed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 9
+../src/cdo -f grb timvar ../test/data/ts_mm_5years timvar_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 9
+../src/cdo -f nc timvar ../test/data/ts_mm_5years timvar_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+ok 9 - timvar
+PASS: Timstat.test 9 - timvar
+Running test: 10
+../src/cdo -f srv timvar1 ../test/data/ts_mm_5years timvar1_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 10
+../src/cdo -f grb timvar1 ../test/data/ts_mm_5years timvar1_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+Running test: 10
+../src/cdo -f nc timvar1 ../test/data/ts_mm_5years timvar1_res
+cdo diff: Processed 2 values from 2 variables over 2 timesteps ( 0.00s )
+ok 10 - timvar1
+PASS: Timstat.test 10 - timvar1
+Running test: 11
+../src/cdo -f srv yearmin ../test/data/ts_mm_5years yearmin_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 11
+../src/cdo -f grb yearmin ../test/data/ts_mm_5years yearmin_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 11
+../src/cdo -f nc yearmin ../test/data/ts_mm_5years yearmin_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+ok 11 - yearmin
+PASS: Timstat.test 11 - yearmin
+Running test: 12
+../src/cdo -f srv yearmax ../test/data/ts_mm_5years yearmax_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 12
+../src/cdo -f grb yearmax ../test/data/ts_mm_5years yearmax_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 12
+../src/cdo -f nc yearmax ../test/data/ts_mm_5years yearmax_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.01s )
+ok 12 - yearmax
+PASS: Timstat.test 12 - yearmax
+Running test: 13
+../src/cdo -f srv yearrange ../test/data/ts_mm_5years yearrange_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 13
+../src/cdo -f grb yearrange ../test/data/ts_mm_5years yearrange_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 13
+../src/cdo -f nc yearrange ../test/data/ts_mm_5years yearrange_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+ok 13 - yearrange
+PASS: Timstat.test 13 - yearrange
+Running test: 14
+../src/cdo -f srv yearsum ../test/data/ts_mm_5years yearsum_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 14
+../src/cdo -f grb yearsum ../test/data/ts_mm_5years yearsum_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 14
+../src/cdo -f nc yearsum ../test/data/ts_mm_5years yearsum_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+ok 14 - yearsum
+PASS: Timstat.test 14 - yearsum
+Running test: 15
+../src/cdo -f srv yearavg ../test/data/ts_mm_5years yearavg_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 15
+../src/cdo -f grb yearavg ../test/data/ts_mm_5years yearavg_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 15
+../src/cdo -f nc yearavg ../test/data/ts_mm_5years yearavg_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+ok 15 - yearavg
+PASS: Timstat.test 15 - yearavg
+Running test: 16
+../src/cdo -f srv yearmean ../test/data/ts_mm_5years yearmean_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 16
+../src/cdo -f grb yearmean ../test/data/ts_mm_5years yearmean_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 16
+../src/cdo -f nc yearmean ../test/data/ts_mm_5years yearmean_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+ok 16 - yearmean
+PASS: Timstat.test 16 - yearmean
+Running test: 17
+../src/cdo -f srv yearstd ../test/data/ts_mm_5yearcdo yearstd1: Processed 60 values from 1 variable over 60 timesteps ( 0.01s )
+cdo yearstd1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearstd1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearvar: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearvar: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearvar: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearvar1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearvar1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo yearvar1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo monmin: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monmin: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monmin: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monmax: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monmax: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monmax: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monrange: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monrange: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monrange: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monsum: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monsum: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monsum: Processed 365 values from 1 variable over 365 timesteps ( 0.01s )
+cdo monavg: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monavg: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monavg: Processed 365 values from 1 variable over 365 timesteps ( 0.01s )
+cdo monmean: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monmean: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+s yearstd_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 17
+../src/cdo -f grb yearstd ../test/data/ts_mm_5years yearstd_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 17
+../src/cdo -f nc yearstd ../test/data/ts_mm_5years yearstd_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.01s )
+ok 17 - yearstd
+PASS: Timstat.test 17 - yearstd
+Running test: 18
+../src/cdo -f srv yearstd1 ../test/data/ts_mm_5years yearstd1_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 18
+../src/cdo -f grb yearstd1 ../test/data/ts_mm_5years yearstd1_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 18
+../src/cdo -f nc yearstd1 ../test/data/ts_mm_5years yearstd1_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+ok 18 - yearstd1
+PASS: Timstat.test 18 - yearstd1
+Running test: 19
+../src/cdo -f srv yearvar ../test/data/ts_mm_5years yearvar_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 19
+../src/cdo -f grb yearvar ../test/data/ts_mm_5years yearvar_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 19
+../src/cdo -f nc yearvar ../test/data/ts_mm_5years yearvar_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+ok 19 - yearvar
+PASS: Timstat.test 19 - yearvar
+Running test: 20
+../src/cdo -f srv yearvar1 ../test/data/ts_mm_5years yearvar1_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 20
+../src/cdo -f grb yearvar1 ../test/data/ts_mm_5years yearvar1_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+Running test: 20
+../src/cdo -f nc yearvar1 ../test/data/ts_mm_5years yearvar1_res
+cdo diff: Processed 10 values from 2 variables over 10 timesteps ( 0.00s )
+ok 20 - yearvar1
+PASS: Timstat.test 20 - yearvar1
+Running test: 21
+../src/cdo -f srv monmin ../test/data/ts_1d_1year monmin_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 21
+../src/cdo -f grb monmin ../test/data/ts_1d_1year monmin_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 21
+../src/cdo -f nc monmin ../test/data/ts_1d_1year monmin_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+ok 21 - monmin
+PASS: Timstat.test 21 - monmin
+Running test: 22
+../src/cdo -f srv monmax ../test/data/ts_1d_1year monmax_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 22
+../src/cdo -f grb monmax ../test/data/ts_1d_1year monmax_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 22
+../src/cdo -f nc monmax ../test/data/ts_1d_1year monmax_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+ok 22 - monmax
+PASS: Timstat.test 22 - monmax
+Running test: 23
+../src/cdo -f srv monrange ../test/data/ts_1d_1year monrange_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 23
+../src/cdo -f grb monrange ../test/data/ts_1d_1year monrange_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 23
+../src/cdo -f nc monrange ../test/data/ts_1d_1year monrange_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+ok 23 - monrange
+PASS: Timstat.test 23 - monrange
+Running test: 24
+../src/cdo -f srv monsum ../test/data/ts_1d_1year monsum_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 24
+../src/cdo -f grb monsum ../test/data/ts_1d_1year monsum_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 24
+../src/cdo -f nc monsum ../test/data/ts_1d_1year monsum_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.01s )
+ok 24 - monsum
+PASS: Timstat.test 24 - monsum
+Running test: 25
+../src/cdo -f srv monavg ../test/data/cdo monmean: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monstd: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monstd: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monstd: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monstd1: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monstd1: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monstd1: Processed 365 values from 1 variable over 365 timesteps ( 0.01s )
+cdo monvar: Processed 365 values from 1 variable over 365 timesteps ( 0.01s )
+cdo monvar: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monvar: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monvar1: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monvar1: Processed 365 values from 1 variable over 365 timesteps ( 0.00s )
+cdo monvar1: Processed 365 values from 1 variable over 365 timesteps ( 0.01s )
+cdo daymin: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo daymin: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo daymin: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo daymax: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo daymax: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo daymax: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo dayrange: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo dayrange: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo dayrange: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo daysum: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo daysum: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo daysum: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+ts_1d_1year monavg_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 25
+../src/cdo -f grb monavg ../test/data/ts_1d_1year monavg_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 25
+../src/cdo -f nc monavg ../test/data/ts_1d_1year monavg_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+ok 25 - monavg
+PASS: Timstat.test 25 - monavg
+Running test: 26
+../src/cdo -f srv monmean ../test/data/ts_1d_1year monmean_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 26
+../src/cdo -f grb monmean ../test/data/ts_1d_1year monmean_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 26
+../src/cdo -f nc monmean ../test/data/ts_1d_1year monmean_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+ok 26 - monmean
+PASS: Timstat.test 26 - monmean
+Running test: 27
+../src/cdo -f srv monstd ../test/data/ts_1d_1year monstd_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 27
+../src/cdo -f grb monstd ../test/data/ts_1d_1year monstd_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 27
+../src/cdo -f nc monstd ../test/data/ts_1d_1year monstd_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+ok 27 - monstd
+PASS: Timstat.test 27 - monstd
+Running test: 28
+../src/cdo -f srv monstd1 ../test/data/ts_1d_1year monstd1_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 28
+../src/cdo -f grb monstd1 ../test/data/ts_1d_1year monstd1_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.01s )
+Running test: 28
+../src/cdo -f nc monstd1 ../test/data/ts_1d_1year monstd1_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+ok 28 - monstd1
+PASS: Timstat.test 28 - monstd1
+Running test: 29
+../src/cdo -f srv monvar ../test/data/ts_1d_1year monvar_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 29
+../src/cdo -f grb monvar ../test/data/ts_1d_1year monvar_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 29
+../src/cdo -f nc monvar ../test/data/ts_1d_1year monvar_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+ok 29 - monvar
+PASS: Timstat.test 29 - monvar
+Running test: 30
+../src/cdo -f srv monvar1 ../test/data/ts_1d_1year monvar1_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 30
+../src/cdo -f grb monvar1 ../test/data/ts_1d_1year monvar1_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.00s )
+Running test: 30
+../src/cdo -f nc monvar1 ../test/data/ts_1d_1year monvar1_res
+cdo diff: Processed 24 values from 2 variables over 24 timesteps ( 0.01s )
+ok 30 - monvar1
+PASS: Timstat.test 30 - monvar1
+Running test: 31
+../src/cdo -f srv daymin ../test/data/ts_6h_1mon daymin_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 31
+../src/cdo -f grb daymin ../test/data/ts_6h_1mon daymin_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 31
+../src/cdo -f nc daymin ../test/data/ts_6h_1mon daymin_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+ok 31 - daymin
+PASS: Timstat.test 31 - daymin
+Running test: 32
+../src/cdo -f srv daymax ../test/data/ts_6h_1mon daymax_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 32
+../src/cdo -f grb daymax ../test/data/ts_6h_1mon daymax_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 32
+../src/cdo -f nc daymax ../test/data/ts_6h_1mon daymax_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+ok 32 - daymax
+PASS: Timstat.test 32 - daymax
+Running test: 33
+../src/cdo -f srv dayrange ../test/data/ts_6h_1mon dayrange_res
+cdo diff: Processed cdo dayavg: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo dayavg: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo dayavg: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo daymean: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo daymean: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo daymean: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo daystd: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo daystd: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo daystd: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo daystd1: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo daystd1: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo daystd1: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo dayvar: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo dayvar: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo dayvar: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo dayvar1: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo dayvar1: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+cdo dayvar1: Processed 124 values from 1 variable over 124 timesteps ( 0.00s )
+62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 33
+../src/cdo -f grb dayrange ../test/data/ts_6h_1mon dayrange_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 33
+../src/cdo -f nc dayrange ../test/data/ts_6h_1mon dayrange_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+ok 33 - dayrange
+PASS: Timstat.test 33 - dayrange
+Running test: 34
+../src/cdo -f srv daysum ../test/data/ts_6h_1mon daysum_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 34
+../src/cdo -f grb daysum ../test/data/ts_6h_1mon daysum_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 34
+../src/cdo -f nc daysum ../test/data/ts_6h_1mon daysum_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.01s )
+ok 34 - daysum
+PASS: Timstat.test 34 - daysum
+Running test: 35
+../src/cdo -f srv dayavg ../test/data/ts_6h_1mon dayavg_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 35
+../src/cdo -f grb dayavg ../test/data/ts_6h_1mon dayavg_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 35
+../src/cdo -f nc dayavg ../test/data/ts_6h_1mon dayavg_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+ok 35 - dayavg
+PASS: Timstat.test 35 - dayavg
+Running test: 36
+../src/cdo -f srv daymean ../test/data/ts_6h_1mon daymean_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 36
+../src/cdo -f grb daymean ../test/data/ts_6h_1mon daymean_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 36
+../src/cdo -f nc daymean ../test/data/ts_6h_1mon daymean_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+ok 36 - daymean
+PASS: Timstat.test 36 - daymean
+Running test: 37
+../src/cdo -f srv daystd ../test/data/ts_6h_1mon daystd_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 37
+../src/cdo -f grb daystd ../test/data/ts_6h_1mon daystd_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 37
+../src/cdo -f nc daystd ../test/data/ts_6h_1mon daystd_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+ok 37 - daystd
+PASS: Timstat.test 37 - daystd
+Running test: 38
+../src/cdo -f srv daystd1 ../test/data/ts_6h_1mon daystd1_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 38
+../src/cdo -f grb daystd1 ../test/data/ts_6h_1mon daystd1_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 38
+../src/cdo -f nc daystd1 ../test/data/ts_6h_1mon daystd1_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+ok 38 - daystd1
+PASS: Timstat.test 38 - daystd1
+Running test: 39
+../src/cdo -f srv dayvar ../test/data/ts_6h_1mon dayvar_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 39
+../src/cdo -f grb dayvar ../test/data/ts_6h_1mon dayvar_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 39
+../src/cdo -f nc dayvar ../test/data/ts_6h_1mon dayvar_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+ok 39 - dayvar
+PASS: Timstat.test 39 - dayvar
+Running test: 40
+../src/cdo -f srv dayvar1 ../test/data/ts_6h_1mon dayvar1_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 40
+../src/cdo -f grb dayvar1 ../test/data/ts_6h_1mon dayvar1_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+Running test: 40
+../src/cdo -f nc dayvar1 ../test/data/ts_6h_1mon dayvar1_res
+cdo diff: Processed 62 values from 2 variables over 62 timesteps ( 0.00s )
+ok 40 - dayvar1
+PASS: Timstat.test 40 - dayvar1

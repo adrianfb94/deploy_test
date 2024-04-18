@@ -1,0 +1,141 @@
+cdo runmin: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runmin: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runmin: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runmax: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runmax: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runmax: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runrange: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runrange: Processed 60 values from 1 variable over 60 timesteps ( 0.01s )
+cdo runrange: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runsum: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runsum: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runsum: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runavg: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runavg: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runavg: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runmean: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runmean: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runmean: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runstd: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runstd: Processed 60 values from 1 variable over 60 timesteps ( 0.01s )
+cdo runstd: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runstd1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runstd1: Processed 60 values from 1 variable over 60 timesteps ( 0.01s )
+cdo runstd1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runvar: Processed 60 values from 1 variable over 60 timesteps ( 0.01s )
+1..10
+Running test: 1
+../src/cdo -f srv runmin,12 ../test/data/ts_mm_5years runmin_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 1
+../src/cdo -f grb runmin,12 ../test/data/ts_mm_5years runmin_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 1
+../src/cdo -f nc runmin,12 ../test/data/ts_mm_5years runmin_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+ok 1 - runmin
+PASS: Runstat.test 1 - runmin
+Running test: 2
+../src/cdo -f srv runmax,12 ../test/data/ts_mm_5years runmax_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 2
+../src/cdo -f grb runmax,12 ../test/data/ts_mm_5years runmax_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 2
+../src/cdo -f nc runmax,12 ../test/data/ts_mm_5years runmax_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+ok 2 - runmax
+PASS: Runstat.test 2 - runmax
+Running test: 3
+../src/cdo -f srv runrange,12 ../test/data/ts_mm_5years runrange_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 3
+../src/cdo -f grb runrange,12 ../test/data/ts_mm_5years runrange_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 3
+../src/cdo -f nc runrange,12 ../test/data/ts_mm_5years runrange_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+ok 3 - runrange
+PASS: Runstat.test 3 - runrange
+Running test: 4
+../src/cdo -f srv runsum,12 ../test/data/ts_mm_5years runsum_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 4
+../src/cdo -f grb runsum,12 ../test/data/ts_mm_5years runsum_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 4
+../src/cdo -f nc runsum,12 ../test/data/ts_mm_5years runsum_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.01s )
+ok 4 - runsum
+PASS: Runstat.test 4 - runsum
+Running test: 5
+../src/cdo -f srv runavg,12 ../test/data/ts_mm_5years runavg_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 5
+../src/cdo -f grb runavg,12 ../test/data/ts_mm_5years runavg_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 5
+../src/cdo -f nc runavg,12 ../test/data/ts_mm_5years runavg_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+ok 5 - runavg
+PASS: Runstat.test 5 - runavg
+Running test: 6
+../src/cdo -f srv runmean,12 ../test/data/ts_mm_5years runmean_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 6
+../src/cdo -f grb runmean,12 ../test/data/ts_mm_5years runmean_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 6
+../src/cdo -f nc runmean,12 ../test/data/ts_mm_5years runmean_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+ok 6 - runmean
+PASS: Runstat.test 6 - runmean
+Running test: 7
+../src/cdo -f srv runstd,12 ../test/data/ts_mm_5years runstd_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 7
+../src/cdo -f grb runstd,12 ../test/data/ts_mm_5years runstd_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 7
+../src/cdo -f nc runstd,12 ../test/data/ts_mm_5years runstd_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+ok 7 - runstd
+PASS: Runstat.test 7 - runstd
+Running test: 8
+../src/cdo -f srv runstd1,12 ../test/data/ts_mm_5years runstd1_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.01s )
+Running test: 8
+../src/cdo -f grb runstd1,12 ../test/data/ts_mm_5years runstd1_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 8
+../src/cdo -f nc runstd1,12 ../test/data/ts_mm_5years runstd1_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+ok 8 - runstd1
+Pcdo runvar: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runvar: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runvar1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runvar1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+cdo runvar1: Processed 60 values from 1 variable over 60 timesteps ( 0.00s )
+ASS: Runstat.test 8 - runstd1
+Running test: 9
+../src/cdo -f srv runvar,12 ../test/data/ts_mm_5years runvar_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 9
+../src/cdo -f grb runvar,12 ../test/data/ts_mm_5years runvar_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 9
+../src/cdo -f nc runvar,12 ../test/data/ts_mm_5years runvar_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+ok 9 - runvar
+PASS: Runstat.test 9 - runvar
+Running test: 10
+../src/cdo -f srv runvar1,12 ../test/data/ts_mm_5years runvar1_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 10
+../src/cdo -f grb runvar1,12 ../test/data/ts_mm_5years runvar1_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+Running test: 10
+../src/cdo -f nc runvar1,12 ../test/data/ts_mm_5years runvar1_res
+cdo diff: Processed 98 values from 2 variables over 98 timesteps ( 0.00s )
+ok 10 - runvar1
+PASS: Runstat.test 10 - runvar1

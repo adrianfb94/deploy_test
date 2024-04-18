@@ -1,0 +1,12 @@
+cdo fldmean: Started child process "timmean -select,code=129,130,152 ../test/data/pl_data (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=129,130,152 ../test/data/pl_data (pipe2.1)".
+cdo fldmean (Warning): Grid cell bounds not available, using constant grid cell area weights for variable var130!
+cdo(3) select: Processed 2160 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 2160 values from 3 variables over 5 timesteps ( 0.00s )
+cdo fldmean: Processed 432 values from 3 variables over 1 timestep ( 0.00s )
+1..1
+Running test: 1 - chaining set 1
+../src/cdo -f srv -b 32 -fldmean -timmean -select,code=129,130,152 ../test/data/pl_data tsformat1_res
+cdo diff: Processed 12 values from 6 variables over 2 timesteps ( 0.00s )
+ok 1 - chaining set 1
+PASS: threads.test 1 - chaining set 1

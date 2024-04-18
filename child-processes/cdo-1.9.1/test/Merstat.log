@@ -1,0 +1,61 @@
+cdo mermin: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo mermax: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo merrange: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo mersum: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo meravg: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo mermean: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo merstd: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo merstd1: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo mervar: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+cdo mervar1: Processed 4096 values from 2 variables over 1 timestep ( 0.00s )
+1..10
+Running test: 1
+../src/cdo -f srv -b 32 mermin ../test/data/t21_geosp_tsurf.grb mermin_res
+cdo diff: Processed 256 values from 4 variables over 2 timesteps ( 0.00s )
+ok 1 - mermin
+PASS: Merstat.test 1 - mermin
+Running test: 2
+../src/cdo -f srv -b 32 mermax ../test/data/t21_geosp_tsurf.grb mermax_res
+cdo diff: Processed 256 values from 4 variables over 2 timesteps ( 0.00s )
+ok 2 - mermax
+PASS: Merstat.test 2 - mermax
+Running test: 3
+../src/cdo -f srv -b 32 merrange ../test/data/t21_geosp_tsurf.grb merrange_res
+cdo diff: Processed 256 values from 4 variables over 2 timesteps ( 0.00s )
+ok 3 - merrange
+PASS: Merstat.test 3 - merrange
+Running test: 4
+../src/cdo -f srv -b 32 mersum ../test/data/t21_geosp_tsurf.grb mersum_res
+cdo diff: Processed 256 values from 4 variables over 2 timesteps ( 0.00s )
+ok 4 - mersum
+PASS: Merstat.test 4 - mersum
+Running test: 5
+../src/cdo -f srv -b 32 meravg ../test/data/t21_geosp_tsurf.grb meravg_res
+cdo diff: Processed 256 values from 4 variables over 2 timesteps ( 0.00s )
+ok 5 - meravg
+PASS: Merstat.test 5 - meravg
+Running test: 6
+../src/cdo -f srv -b 32 mermean ../test/data/t21_geosp_tsurf.grb mermean_res
+cdo diff: Processed 256 values from 4 variables over 2 timesteps ( 0.00s )
+ok 6 - mermean
+PASS: Merstat.test 6 - mermean
+Running test: 7
+../src/cdo -f srv -b 32 merstd ../test/data/t21_geosp_tsurf.grb merstd_res
+cdo diff: Processed 256 values from 4 variables over 2 timesteps ( 0.00s )
+ok 7 - merstd
+PASS: Merstat.test 7 - merstd
+Running test: 8
+../src/cdo -f srv -b 32 merstd1 ../test/data/t21_geosp_tsurf.grb merstd1_res
+cdo diff: Processed 256 values from 4 variables over 2 timesteps ( 0.00s )
+ok 8 - merstd1
+PASS: Merstat.test 8 - merstd1
+Running test: 9
+../src/cdo -f srv -b 32 mervar ../test/data/t21_geosp_tsurf.grb mervar_res
+cdo diff: Processed 256 values from 4 variables over 2 timesteps ( 0.00s )
+ok 9 - mervar
+PASS: Merstat.test 9 - mervar
+Running test: 10
+../src/cdo -f srv -b 32 mervar1 ../test/data/t21_geosp_tsurf.grb mervar1_res
+cdo diff: Processed 256 values from 4 variables over 2 timesteps ( 0.00s )
+ok 10 - mervar1
+PASS: Merstat.test 10 - mervar1

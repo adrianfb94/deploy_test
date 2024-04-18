@@ -1,0 +1,74 @@
+#! /bin/bash
+echo 1..4 # Number of tests to be executed.
+#
+test -n "$CDO"      || CDO=cdo
+test -n "$DATAPATH" || DATAPATH=./data
+#
+CDOOUT=cout$$
+CDOERR=cerr$$
+FORMAT="-f srv -b 32"
+STATS="add sub mul div"
+#
+NTEST=1
+#
+for STAT in $STATS; do
+  RSTAT=0
+
+  RFILE=$DATAPATH/arith${STAT}_ref
+
+  CDOTEST="$STAT"
+  echo "Running test: $NTEST - $CDOTEST"
+
+# stat vars mask
+
+  IFILE1=$DATAPATH/arith1.srv
+  IFILE2=$DATAPATH/arithmask.srv
+  OFILE=arith${STAT}_res
+
+  CDOCOMMAND="$CDO $FORMAT ${STAT} $IFILE1 $IFILE2 $OFILE"
+  echo $CDOCOMMAND
+
+  $CDOCOMMAND
+  test $? -eq 0 || let RSTAT+=1
+
+  $CDO diff $OFILE $RFILE > $CDOOUT 2> $CDOERR
+  test $? -eq 0 || let RSTAT+=1
+  test -s $CDOOUT && let RSTAT+=1
+  cat $CDOOUT $CDOERR
+
+  rm -f $OFILE
+
+# expr,instr var
+
+  OP=""
+  if [ "$STAT" = add ] ; then OP='+' ; fi
+  if [ "$STAT" = sub ] ; then OP='-' ; fi
+  if [ "$STAT" = mul ] ; then OP='*' ; fi
+  if [ "$STAT" = div ] ; then OP='/' ; fi
+
+  IFILE=$DATAPATH/expr1.srv
+  OFILE=expr${STAT}_res
+
+  INSTR="var215=var215${OP}var3;var216=var216${OP}var3;"
+  echo $INSTR
+  CDOCOMMAND="$CDO $FORMAT expr,$INSTR $IFILE $OFILE"
+
+  $CDOCOMMAND
+  test $? -eq 0 || let RSTAT+=1
+
+  $CDO diff $OFILE $RFILE > $CDOOUT 2> $CDOERR
+  test $? -eq 0 || let RSTAT+=1
+  test -s $CDOOUT && let RSTAT+=1
+  cat $CDOOUT $CDOERR
+
+  rm -f $OFILE
+
+  test $RSTAT -eq 0 && echo "ok $NTEST - $CDOTEST"
+  test $RSTAT -eq 0 || echo "not ok $NTEST - $CDOTEST"
+
+  let NTEST+=1
+done
+#
+rm -f $CDOOUT $CDOERR
+#
+exit 0

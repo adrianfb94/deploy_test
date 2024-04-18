@@ -1,0 +1,6 @@
+cdo gradsdes: Processed 2160 values from 3 variables over 5 timesteps ( 0.00s )
+1..1
+Running test: 1 - gradsdes GRIB1
+../src/cdo gradsdes pl_data.grb
+ok 1 - gradsdes GRIB1
+PASS: Gradsdes.test 1 - gradsdes GRIB1

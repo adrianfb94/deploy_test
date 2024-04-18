@@ -1,0 +1,239 @@
+cdo setgrid: Processed 2160 values from 3 variables over 5 timesteps ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo setgrid: Processed 2160 values from 3 variables over 5 timesteps ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo setgrid: Processed 2160 values from 3 variables over 5 timesteps ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.01s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.01s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.01s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo setgrid: Processed 2160 values from 3 variables over 5 timesteps ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo setgrid: Processed 2160 values from 3 variables over 5 timesteps ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.01s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.01s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.01s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo setgrid: Processed 2160 values from 3 variables over 5 timesteps ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo setgrid: Processed 2160 values from 3 variables over 5 timesteps ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.01s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.01s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.01s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.01s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.01s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.01s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+cdo fldmin: Started child process "timmean -select,code=130 ifile168409 (pipe1.1)".
+cdo(2) timmean: Started child process "select,code=130 ifile168409 (pipe2.1)".
+cdo(3) select: Processed 1440 values from 3 variables over 5 timesteps ( 0.00s )
+cdo(2) timmean: Processed 1440 values from 1 variable over 5 timesteps ( 0.00s )
+cdo fldmin: Processed 288 values from 1 variable over 1 timestep ( 0.00s )
+1..8
+Running test: 1 - chaining set 1 with SERVICE
+../src/cdo -fldmin -timmean -select,code=130 ../test/data/pl_data(srv) thread1_res
+cdo diff: Started child process "selcode,130 ../test/data/tsformat1_ref (pipe1.1)".
+cdo(2) selcode: Processed 4 values from 3 variables over 1 timestep ( 0.00s )
+cdo diff: Processed 8 values from 2 variables over 2 timesteps ( 0.00s )
+ok 1 - chaining set 1 with SERVICE
+PASS: tsformat.test 1 - chaining set 1 with SERVICE
+Running test: 2 - chaining set 1 with EXTRA
+../src/cdo -fldmin -timmean -select,code=130 ../test/data/pl_data(ext) thread2_res
+cdo diff: Started child process "selcode,130 ../test/data/tsformat1_ref (pipe1.1)".
+cdo(2) selcode: Processed 4 values from 3 variables over 1 timestep ( 0.00s )
+cdo diff: Processed 8 values from 2 variables over 2 timesteps ( 0.00s )
+ok 2 - chaining set 1 with EXTRA
+PASS: tsformat.test 2 - chaining set 1 with EXTRA
+Running test: 3 - chaining set 1 with IEG
+../src/cdo -fldmin -timmean -select,code=130 ../test/data/pl_data(ieg) thread3_res
+iegDefLevel        : Changed zaxis type from generic to pressure
+cdo diff: Started child process "selcode,130 ../test/data/tsformat1_ref (pipe1.1)".
+cdo(2) selcode: Processed 4 values from 3 variables over 1 timestep ( 0.00s )
+cdo diff: Processed 8 values from 2 variables over 2 timesteps ( 0.00s )
+ok 3 - chaining set 1 with IEG
+PASS: tsformat.test 3 - chaining set 1 with IEG
+Running test: 4 - chaining set 1 with GRIB
+../src/cdo -fldmin -timmean -select,code=130 ../test/data/pl_data(grb) thread4_res
+cgribexDefLevel    : Changed zaxis type from generic to pressure
+cdo diff: Started child process "selcode,130 ../test/data/tsformat1_ref (pipe1.1)".
+cdo diff (Warning): Input parameters have different levels!
+cdo(2) selcode: Processed 4 values from 3 variables over 1 timestep ( 0.00s )
+cdo diff: Processed 8 values from 2 variables over 2 timesteps ( 0.00s )
+ok 4 - chaining set 1 with GRIB
+PASS: tsformat.test 4 - chaining set 1 with GRIB
+Running test: 5 - chaining set 1 with GRIB_API
+../src/cdo -fldmin -timmean -select,code=130 ../test/data/pl_data(grb2) thread5_res
+ok 5 - chaining set 1 with GRIB_API # SKIP GRIB_API not enabled
+SKIP: tsformat.test 5 - chaining set 1 with GRIB_API # SKIP GRIB_API not enabled
+Running test: 6 - chaining set 1 with netCDF
+../src/cdo -fldmin -timmean -select,code=130 ../test/data/pl_data(nc) thread6_res
+cdo diff: Started child process "selcode,130 ../test/data/tsformat1_ref (pipe1.1)".
+cdo(2) selcode: Processed 4 values from 3 variables over 1 timestep ( 0.00s )
+cdo diff: Processed 8 values from 2 variables over 2 timesteps ( 0.00s )
+ok 6 - chaining set 1 with netCDF
+PASS: tsformat.test 6 - chaining set 1 with netCDF
+Running test: 7 - chaining set 1 with netCDF2
+../src/cdo -fldmin -timmean -select,code=130 ../test/data/pl_data(nc2) thread7_res
+cdo diff: Started child process "selcode,130 ../test/data/tsformat1_ref (pipe1.1)".
+cdo(2) selcode: Processed 4 values from 3 variables over 1 timestep ( 0.00s )
+cdo diff: Processed 8 values from 2 variables over 2 timesteps ( 0.00s )
+ok 7 - chaining set 1 with netCDF2
+PASS: tsformat.test 7 - chaining set 1 with netCDF2
+Running test: 8 - chaining set 1 with netCDF4
+../src/cdo -fldmin -timmean -select,code=130 ../test/data/pl_data(nc4) thread8_res
+cdo diff: Started child process "selcode,130 ../test/data/tsformat1_ref (pipe1.1)".
+cdo(2) selcode: Processed 4 values from 3 variables over 1 timestep ( 0.00s )
+cdo diff: Processed 8 values from 2 variables over 2 timesteps ( 0.00s )
+ok 8 - chaining set 1 with netCDF4
+PASS: tsformat.test 8 - chaining set 1 with netCDF4
