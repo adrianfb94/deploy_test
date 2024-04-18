@@ -1,7 +1,6 @@
 #!/bin/bash
 
-tar -xzf cdo-1.9.9.tar.gz
-cd cdo-1.9.9
-./configure 
-make 
-make install
+home=`pwd`/child-processes/cdo-1.9.1
+cd $home
+./configure --with-netcdf=/usr -prefix=$home
+make && make check && make install
