@@ -279,8 +279,9 @@ if not os.path.exists(ifile+'.nc'):
 
 
 def install_cdo():
-    subprocess.run('chmod a+x install_cdo.sh', shell=True)
-    subprocess.run('./install_cdo.sh', shell=True)
+    sh_file = '/'.join([root_dir,'child-processes/install_cdo.sh'])
+    subprocess.run('chmod a+x {}'.format(sh_file), shell=True)
+    subprocess.run('./{}'.format(sh_file), shell=True)
     print("CDO was instaled success!")
 
 
