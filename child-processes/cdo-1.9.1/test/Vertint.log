@@ -1,6 +1,0 @@
-cdo ml2pl: Processed 21 values from 3 variables over 1 timestep ( 0.00s )
-1..1
-../src/cdo -f srv -b 32 ml2pl,92500,85000,50000,20000 ../test/data/hl_l19.grb ml2pl_res
-cdo diff: Processed 12 values from 6 variables over 2 timesteps ( 0.00s )
-ok  - ml2pl
-PASS: Vertint.test 1 - ml2pl

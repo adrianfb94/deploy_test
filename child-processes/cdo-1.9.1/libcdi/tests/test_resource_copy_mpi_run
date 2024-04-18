@@ -1,5 +1,0 @@
-#! /bin/bash
-set -e
-mpi_task_num="${mpi_task_num-1}"
-../libtool --mode=execute /home/adrianfb/cdo_install/cdo-1.9.1/libcdi/util/serialrun -n ${mpi_task_num} \
-  ./test_resource_copy_mpi
