@@ -12,7 +12,6 @@ import xarray as xr
 import numpy.ma as ma
 
 
-
 fechahora = str(datetime.datetime.now())
 fecha = fechahora.split(' ')[0].replace('-','')
 hora = fechahora.split(' ')[1].split('.')[0].replace(':','_')
@@ -119,17 +118,17 @@ def get_ip(raw_ip):
 
 
 
-# SERVER
-server_cad = sys.argv[1:][0]
-argumentos = server_cad.split('&')
-client_ip = sys.argv[1:][1]
-ip = get_ip(client_ip)
-
-
-# # LOCAL
-# server_cad = 'latiN=29&longW=-94.6&longE=-50&latiS=5&modelo=3&indice=1&periodoS=1&annoIRef=1961&annoFRef=1980&annoIEva=1961&annoFEva=1980&moddro=-1&sevdro=-1.5&extdrou=-2&umbral=-0.5&def=2&comportamiento=0&lsm=1'
+# # SERVER
+# server_cad = sys.argv[1:][0]
 # argumentos = server_cad.split('&')
-# ip = '127.0.0.1'
+# client_ip = sys.argv[1:][1]
+# ip = get_ip(client_ip)
+
+
+# LOCAL
+server_cad = 'latiN=29&longW=-94.6&longE=-50&latiS=5&modelo=3&indice=1&periodoS=1&annoIRef=1961&annoFRef=1980&annoIEva=1961&annoFEva=1980&moddro=-1&sevdro=-1.5&extdrou=-2&umbral=-0.5&def=2&comportamiento=0&lsm=1'
+argumentos = server_cad.split('&')
+ip = '127.0.0.1'
 
 dict = {}
 for item in argumentos:
@@ -279,27 +278,38 @@ if not os.path.exists(ifile+'.nc'):
 
 
 
-
-install_cdo = False
-
-if install_cdo:
+def install_cdo():
     subprocess.run('chmod a+x install_cdo.sh', shell=True)
     subprocess.run('./install_cdo.sh', shell=True)
+    print("CDO was instaled success!")
 
 
-from cdo import *
-cdo = Cdo()
-print('\n')
-print('cdo.version(): {}'.format(cdo.version()))
-print()
-nvar = cdo.showname(input=ifile+'.nc')
-print("namevar: {}".format(nvar))
-print()
-grid = cdo.griddes(input=ifile+'.nc')
-print("griddes: {}".format(grid))
-print()
-ntime = cdo.ntime(input=ifile+'.nc')
-print("ntime: {}".format(ntime))
+install_cdo()
+
+cdo_dir = '/'.join([root_dir,'child-processes/cdo-1.9.1/bin/cdo'])
+# local_cdo_dir = '/home/adrianfb/cdo_install/cdo-1.9.1/local/bin/cdo'
+
+# print(cdo_dir)
+
+cdo_version = subprocess.run('{} --version'.format(cdo_dir), shell=True, encoding='utf-8', capture_output=True)
+# cdo_version = subprocess.run('{} --version'.format(local_cdo_dir), shell=True, encoding='utf-8', capture_output=True)
+print(cdo_version.stderr.split('\n')[0])
+print(cdo_version.stderr.split('\n')[1])
+
+
+# from cdo import *
+# cdo = Cdo()
+# print('\n')
+# print('cdo.version(): {}'.format(cdo.version()))
+# print()
+# nvar = cdo.showname(input=ifile+'.nc')
+# print("namevar: {}".format(nvar))
+# print()
+# grid = cdo.griddes(input=ifile+'.nc')
+# print("griddes: {}".format(grid))
+# print()
+# ntime = cdo.ntime(input=ifile+'.nc')
+# print("ntime: {}".format(ntime))
 
 exit()
 
