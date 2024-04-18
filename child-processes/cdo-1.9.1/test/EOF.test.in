@@ -1,0 +1,69 @@
+#! @BASH@
+#
+echo 1..4 # Number of tests to be executed.
+#
+test -n "$CDO"      || CDO=cdo
+test -n "$DATAPATH" || DATAPATH=./data
+#
+export CDO_FILE_SUFFIX=NULL
+export CDO_WEIGHT_MODE=off
+#export CDO_SVD_MODE=danielson_lanczos
+#
+CDOOUT=cout$$
+CDOERR=cerr$$
+FORMAT="-f srv -b 32"
+NTEST=1
+######################################################
+IFILE=$DATAPATH/psl_DJF_anom.grb
+RFILE1=$DATAPATH/eval_ref
+RFILE2=$DATAPATH/eof_ref
+RFILE3=$DATAPATH/pcoeff00000
+OFILE1=eval_res
+OFILE2=eof_res
+OFILE3=res_pcoeff
+#
+DIM=""
+#
+for X in 1 2; do
+if [ $X = 2 ] ; then DIM=3d ; fi
+for MODE in jacobi danielson_lanczos; do
+  export CDO_SVD_MODE=$MODE
+  RSTAT=0
+  CDOTEST="eof${DIM}/eofcoeff${DIM} - $MODE"
+  CDOCOMMAND="$CDO $FORMAT eof${DIM},1 $IFILE $OFILE1 $OFILE2"
+  echo "$CDOCOMMAND"
+
+  $CDOCOMMAND
+  test $? -eq 0 || let RSTAT+=1
+#
+  $CDO diff,1e-8 $OFILE1 $RFILE1 > $CDOOUT 2> $CDOERR
+  test $? -eq 0 || let RSTAT+=1
+  test -s $CDOOUT && let RSTAT+=1
+#
+  $CDO diff,1e-7 -abs $OFILE2 -abs $RFILE2 > $CDOOUT 2> $CDOERR
+  test $? -eq 0 || let RSTAT+=1
+  test -s $CDOOUT && let RSTAT+=1
+
+  CDOCOMMAND="$CDO $FORMAT eofcoeff${DIM} $OFILE2 $IFILE $OFILE3"
+  echo "$CDOCOMMAND"
+
+  $CDOCOMMAND
+  test $? -eq 0 || let RSTAT+=1
+#
+  $CDO diff,0.02 -abs ${OFILE3}00000 -abs $RFILE3 > $CDOOUT 2> $CDOERR
+  test $? -eq 0 || let RSTAT+=1
+  test -s $CDOOUT && let RSTAT+=1
+
+  cat $CDOOUT $CDOERR
+#
+  test $RSTAT -eq 0 && echo "ok $NTEST - $CDOTEST"
+  test $RSTAT -eq 0 || echo "not ok $NTEST - $CDOTEST"
+#
+  let NTEST+=1
+  rm -f $OFILE1 $OFILE2 ${OFILE3}00000
+done
+done
+#
+rm -f $CDOOUT $CDOERR
+#
+exit 0
