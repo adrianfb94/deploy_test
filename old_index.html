@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario POST</h1>
+    <form action="/datosform" method="post">
+        <div>
+            <label for="nombre">Nombre</label>
+            <br>
+            <input type="text" name="nombre">
+        </div>
+
+        <div>
+            <label for="apellido">Apellido</label>
+            <br>
+            <input type="text" name="apellido">
+        </div>
+
+        <input type="submit" value="Enviar formulario POST">
+    </form>
+
+    <h1>Formulario GET</h1>
+    <form action="/formconGet" method="get">
+        <div>
+            <label for="nombreg">Nombre</label>
+            <br>
+            <input type="text" name="nombreg">
+        </div>
+
+        <div>
+            <label for="apellidog">Apellido</label>
+            <br>
+            <input type="text" name="apellidog">
+        </div>
+
+        <input type="submit" value="Enviar formulario GET">
+    </form>
+    <br>
+    <img src="./uploads/car1.jpeg" alt="Carro1">
+    <br>
+    <a href="/descargar/car1.jpeg"><button>Descargar</button></a>
+    <br>
+    <br>
+    <br>
+    <img src="./uploads/car2.jpeg" alt="Carro2">
+    <br>
+    <a href="/descargar/car2.jpeg"><button>Descargar</button></a>
+    <br>
+    <br>
+
+    <a href="/descargar/adrian.txt">adrian.txt</a>
+    <br>
+    <br>
+    <a  href="/descargar/ficheros.zip">Ficheros</a>
+    <br>
+    <br>
+    <h1>Se ejecutaron los scripts de Python y se generaron los ficheros ".nc"</h1> 
+    <h1>Haz<a href="/descargar/nc_files.tar.gz"> clic aquí </a> para descargar</h1>
+    <br>
+    <!-- <a href="http://www.stackoverflow.com/">hola<button>Click me</button></a>
+    <br>
+    <form action="https://google.com">
+        <input type="submit" value="Go to Google" />
+    </form>
+    <br>
+    <img src="./uploads/car.jpeg" alt="Carro">
+    <br>
+    <input type="button" onclick="location.href='/descargar/car.jpeg'" value="DESCARGAR"> -->
+
+    <script>
+        function escribir(){
+            document.getElementById('cont1').innerHTML='Párrafo de texto';
+            }
+    </script>
+
+
+    <a href="javascript:escribir()">Escribir</a>
+    <br>
+    <br>
+    <div id="cont1"></div>
+
+
+
+
+    <br>
+    <script>
+        function changeColor(newColor) {
+            const elem = document.getElementById("para");
+            elem.style.color = newColor;
+            }        
+    </script>
+    <p id="para">Some text here</p>
+    <button onclick="changeColor('blue');">blue</button>
+    <button onclick="changeColor('red');">red</button>
+
+    <br>
+    <br>
+
+    <script>
+        document.write('Hola');
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <input type="button" onclick="location.href='/descargar/car.jpeg'" value="DESCARGAR">
+</body>
+</html>

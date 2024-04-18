@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ya tengo los imagen</title>
+</head>
+<body>
+    <h1>Process finished success</h1>
+    <!-- <h3>Se ejecutaron los scripts de Python y se generaron los ficheros ".nc"</h3>  -->
+    <h3>Se ejecutaron los scripts de Python y se comprimieron los ficheros.</h3> 
+
+    <script>
+        function escribir(){
+            document.getElementById('cont1').innerHTML='%fichero1%<br/>%fichero2%';
+            }
+    </script>
+
+    <a href="javascript:escribir()">Lista de ficheros</a>
+    <br>
+    <br>
+    <div id="cont1" ></div>
+
+
+    <br>
+    <img src="./uploads/%namefig%" style="width: 0.4%; min-width: 330px" alt="image">
+    <br>
+
+    <h3>Haz<a href="/descargar/%namefig%"> clic aquí </a> para descargar "%namefig%"</h3>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv = "refresh" content = "2; url = /api/ClientProject/" /> -->
+    <title>Welcome</title>
+</head>
+
+<body>
+    <center>
+        <h1 style="background-color:orange;width: 90%;">Welcome to ClientProject Web Page</h1>
+
+        <!-- <h3>Completar los campos para ejecutar el script de Python</h3>
+        <p>Si no tienes las entradas del script de python, presiona el siguiente boton para completar el Formulario</p>
+        <a href="/api/ClientProject/index_query_false" target="_self" ><button>Set Config</button></a> -->
+
+        <br>
+
+        <form action="/api/ClientProject/index_query_false" target="_self" method="get" style="border:orange; border-width:5px; border-style:solid; width: 90%;">
+            <!-- <h3>Completar los campos para ejecutar el script de Python</h3> -->
+            <h3>Fill out FORM to run Python script</h3>
+            <p>If you do not have the python script entries, press the following button to complete the FORM</p>
+            <!-- <p>Si no tienes las entradas del script de python, presiona el siguiente botón para completar el Formulario</p> -->
+            <input type="submit"  value="Set Config">
+            <br>
+            <br>
+    
+        </form>
+
+        <br>
+
+        <form action="/api/ClientProject/index_query_true" target="_self" method="get" style="border:orange; border-width:5px; border-style:solid; width: 90%;">
+
+            <!-- <h3>Ejecutar el script de Python a partir de una línea de entrada</h3> -->
+            <h3>Run Python script from an input line</h3>
+
+            <!-- <p>Si ya tienes las entradas del script de python, pega aquí y presiona el siguiente botón</p> -->
+            <p>If you already have the python script entries, paste here and press the following button</p>
+    
+            <div>
+                <label for="cad"> Put <b>command line</b> below</label>
+                <br>
+                <input type="text" style="height:20px; width:80%;" placeholder="latiS=5.0&longW=-94.6&latiN=29.0&longE=-50.0&modelo=3&indice=1&periodoS=1&annoIRef=1961&annoIEva=1961&annoFRef=1980&annoFEva=1980&moddro=-1.0&sevdro=-1.5&extdrou=-2&umbral=-0.5&def=2&comportamiento=0&lsm=0" required name="cad">
+
+            </div>
+            <br>
+            <input type="submit"  value="Run Script">
+            <br>
+            <br>
+
+        </form>
+
+
+    </center>
+
+</body>
+
+</html>
