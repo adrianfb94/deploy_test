@@ -12,13 +12,84 @@ import xarray as xr
 import numpy.ma as ma
 
 # pip install python-dotenv
-
 from dotenv import load_dotenv
+
+# pip install gitpython
+from git import Repo
+
 
 load_dotenv()
 
 my_id = os.getenv('ID')
+username = os.getenv('USERNAME')
+password = os.getenv('PASSWORD')
+token = os.getenv('TOKEN')
+
+
+
+
+home = os.getcwd()
+repo_name = home.split('/')[-1].split('.')[0]
+
+print('HOME is: {}'.format(home))
+print('repo_name is: {}'.format(repo_name))
 print("Mi numero de carne es: {}".format(my_id))
+print("Mi username: {}".format(username))
+print("Mi password: {}".format(password))
+print("Mi token: {}".format(token))
+
+print('tengo el REPO')
+file = 'file_added_from_server.txt'
+if not os.path.exists('/'.join([home,file])):
+    subprocess.run('touch {}'.format('/'.join([home,file])), shell=True)
+    print('{} was created'.format(file))
+    repo = Repo(home)
+    repo.git.add("{}".format(file))
+    print('ya hice el add')
+    repo.index.commit("added from SERVER{}".format(file))
+    print('ya hice el commit')
+
+
+    remote = repo.remote(name='origin')
+    repo.delete_remote(remote)
+    repo.create_remote("origin", "https://{}@github.com/{}/{}.git".format(token, username, repo_name)) 
+    repo.git.push("origin", "HEAD:main")
+    print('ya hice el push')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 exit()
 
