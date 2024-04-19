@@ -67,9 +67,12 @@ else:
     subprocess.run('git commit -m "added from SERVER"', shell=True, capture_output=True)
     print('ya hice el commit')
 
+    print("estoy haciendo el git remote")
+    subprocess.run('git remote add origin https://{}@github.com/{}/{}.git'.format(token, username, repo_name), shell=True)
+    print("git remote listo")
+
     print("estoy haciendo el push")
-    subprocess.run('git remote set-url upstream https://{}@github.com/{}/{}.git'.format(token, username, repo_name), shell=True)
-    subprocess.run('git push origin main', shell=True)
+    subprocess.run('git push -u origin main', shell=True)
     print('ya hice el push')
 
 
