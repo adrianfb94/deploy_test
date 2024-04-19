@@ -53,7 +53,7 @@ subprocess.run('git config user.name "adrianfb94"', shell=True)
 url = f"https://{token}@github.com/{username}/{repo_name}.git"
 
 print('tengo el REPO')
-file = 'file_added_from_server.txt'
+file = 'another_file_added_from_server.txt'
 if not os.path.exists('/'.join([home,file])):
     print("no existe {}".format('/'.join([home,file])))
 
@@ -69,12 +69,12 @@ else:
     print('ya hice el init')
 
     print("estoy haciendo el add")
-    subprocess.run('git add file_added_from_server.txt', shell=True, capture_output=True)
+    subprocess.run('git add {}'.format(file), shell=True, capture_output=True)
     # os.system('git add file_added_from_server.txt')
     print('ya hice el add')
 
     print("estoy haciendo el commit")
-    subprocess.run('git commit -m "added from SERVER"', shell=True, capture_output=True)
+    subprocess.run('git commit -m "added {} from SERVER"'.format(file), shell=True, capture_output=True)
     # os.system('git commit -m "added from SERVER"')
     print('ya hice el commit')
 
