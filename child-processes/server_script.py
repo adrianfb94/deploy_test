@@ -66,9 +66,6 @@ if not os.path.exists('/'.join([home,file])):
 else:
     print("si existe {}".format('/'.join([home,file])))
 
-    repo.git.add(update=True)
-    repo.index.commit("added remote")
-
     repo.git.add('file_added_from_server.txt')
     print('ya hice el add')
     repo.index.commit("added file by SERVER")
