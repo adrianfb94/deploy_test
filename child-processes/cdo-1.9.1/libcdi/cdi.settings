@@ -1,0 +1,69 @@
+{
+  "build" : {
+    "tools" : {
+      "CC"       : "gcc",
+      "CPP"      : "gcc -E",
+      "CPPFLAGS" : "-I/usr/include  ",
+      "CFLAGS"   : "-g -O2 -pthread",
+      "LDFLAGS"  : "-L/usr/lib ",
+      "LIBS"     : "-lnetcdf  -lm ",
+      "FC"       : "no",
+      "F77"      : "",
+      "FCFLAGS"  : "",
+      "LD"       : "/usr/bin/ld -m elf_x86_64",
+      "NM"       : "/usr/bin/nm -B",
+      "AR"       : "ar",
+      "AS"       : "@AS@",
+      "DLLTOOL"  : "false",
+      "OBJDUMP"  : "objdump",
+      "STRIP"    : "strip",
+      "RANLIB"   : "ranlib",
+      "INSTALL"  : "/usr/bin/install -c"
+    },
+    "platform" : {
+      "USER_NAME"   : "unknown",
+      "HOST_NAME"   : "srv-cogj364f7o1s73808kig-hibernate-59f6d9b6b8-kw7ln",
+      "SYSTEM_TYPE" : "x86_64-pc-linux-gnu"
+    },
+    "libraries" : {
+      "threads"    : {
+        "lib"      : "",
+        "include"  : ""
+      },
+      "mpi"        : {
+        "libs"     : "",
+        "cflags"   : "",
+        "fclibs"   : "",
+        "fcflags"  : ""
+      },
+      "szlib"    : {
+        "lib"      : "",
+        "include"  : ""
+      },
+      "netcdf"   : {
+        "lib"      : " -L/usr/lib -lnetcdf",
+        "include"  : " -I/usr/include"
+      },
+      "grib_api" : {
+        "lib"      : "",
+        "include"  : ""
+      }
+      "eccodes" : {
+        "lib"      : "",
+        "include"  : ""
+      }
+    }
+  },
+  "features" : {
+    "enable_cdi_lib" : false,
+    "grib"           : "yes",
+    "cgribex"        : "yes",
+    "service"        : "yes",
+    "extra"          : "yes",
+    "ieg"            : "yes",
+    "enable_mpi"    : false,
+    "parallel_nc4"  : 0,
+    "enable_python" : false,
+    "enable_ruby"   : false
+  }
+}

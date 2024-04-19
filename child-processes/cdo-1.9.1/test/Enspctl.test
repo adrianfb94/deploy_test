@@ -1,0 +1,47 @@
+#! /bin/bash
+echo 1..1 # Number of tests to be executed.
+#
+test -n "$CDO"      || CDO=cdo
+test -n "$DATAPATH" || DATAPATH=./data
+#
+CDOOUT=cout$$
+CDOERR=cerr$$
+PCTLS="1 20 25 33 50 66 75 80 99 100"
+#
+IFILE=$DATAPATH/ts_mm_5years
+export CDO_FILE_SUFFIX=NULL
+$CDO splityear $IFILE ${$}ts_year
+IFILES="${$}ts_year????"
+#
+NTEST=1
+RSTAT=0
+echo "Running test: $NTEST"
+#
+for PCTL in $PCTLS; do
+  RFILE=$DATAPATH/enspctl${PCTL}_ref
+  OFILE=enspctl${STAT}_res
+
+  CDOTEST="enspctl"
+  CDOCOMMAND="$CDO enspctl,${PCTL} $IFILES $OFILE"
+
+  echo "$CDOCOMMAND"
+
+  $CDOCOMMAND
+  test $? -eq 0 || let RSTAT+=1
+
+  $CDO diff $OFILE $RFILE > $CDOOUT 2> $CDOERR
+  test $? -eq 0 || let RSTAT+=1
+  test -s $CDOOUT && let RSTAT+=1
+  cat $CDOOUT $CDOERR
+
+#  let NTEST+=1
+  rm -f $OFILE
+done
+#
+test $RSTAT -eq 0 && echo "ok $NTEST - $CDOTEST"
+test $RSTAT -eq 0 || echo "not ok $NTEST - $CDOTEST"
+#
+rm -f $CDOOUT $CDOERR
+rm -f $IFILES
+#
+exit 0
