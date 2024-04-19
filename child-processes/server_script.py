@@ -15,7 +15,7 @@ import numpy.ma as ma
 from dotenv import load_dotenv
 
 # pip install gitpython
-import git
+# import git
 
 
 load_dotenv()
