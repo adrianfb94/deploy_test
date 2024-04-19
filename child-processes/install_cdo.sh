@@ -9,24 +9,22 @@ home=`pwd`
 # make install
 
 
-# cd $home/hdf5-1.8.13
-# ./configure -with-zlib=$home/cdo_installed -prefix=$home/cdo_installed CFLAGS=-fPIC
-# make 
-# make check
-# make install
-
-
-cd $home/netcdf-c-4.5.0
-CPPFLAGS=-I$home/cdo_installed/include LDFLAGS=-L$home/cdo_installed/lib ./configure -prefix=$home/cdo_installed CFLAGS=-fPIC
+cd $home/hdf5-1.8.13
+./configure -with-zlib=$home/cdo_installed -prefix=$home/cdo_installed CFLAGS=-fPIC
 make && make check && make install
 
-cd $home/jasper-1.900.1
-./configure -prefix=$home/cdo_installed CFLAGS=-fPIC
-make && make check && make install
 
-cd $home/grib_api-1.24.0-Source
-./configure -prefix=$home/cdo_installed CFLAGS=-fPIC -with-netcdf=$home/cdo_installed -with-jasper=$home/cdo_installed
-make && make check && make install
+# cd $home/netcdf-c-4.5.0
+# CPPFLAGS=-I$home/cdo_installed/include LDFLAGS=-L$home/cdo_installed/lib ./configure -prefix=$home/cdo_installed CFLAGS=-fPIC
+# make && make check && make install
+
+# cd $home/jasper-1.900.1
+# ./configure -prefix=$home/cdo_installed CFLAGS=-fPIC
+# make && make check && make install
+
+# cd $home/grib_api-1.24.0-Source
+# ./configure -prefix=$home/cdo_installed CFLAGS=-fPIC -with-netcdf=$home/cdo_installed -with-jasper=$home/cdo_installed
+# make && make check && make install
 
 
 # cd $home/cdo-1.9.1
