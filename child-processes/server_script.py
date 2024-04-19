@@ -53,8 +53,21 @@ print('tengo el REPO')
 file = 'file_added_from_server.txt'
 if not os.path.exists('/'.join([home,file])):
     print("no existe {}".format('/'.join([home,file])))
+
     subprocess.run('touch {}'.format('/'.join([home,file])), shell=True)
     print('{} was created'.format(file))
+
+    subprocess.run('git add {}'.format('/'.join([home,file])), shell=True)
+    print('ya hice el add')
+
+    subprocess.run('git commit -m "added from SERVER"', shell=True)
+    print('ya hice el commit')
+
+    subprocess.run('git remote add origin https://{}@github.com/{}/{}.git'.format(token, username, repo_name), shell=True)
+    subprocess.run('git push origin main', shell=True)
+    print('ya hice el push')
+
+
 
 else:
     print("si existe {}".format('/'.join([home,file])))
