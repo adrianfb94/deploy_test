@@ -31,7 +31,8 @@ subprocess.run('git config user.name "adrianfb94"', shell=True)
 
 home = os.getcwd()
 repo_name = home.split('/')[-1].split('.')[0]
-
+print("repo_name",repo_name)
+exit()
 print('HOME is: {}'.format(home))
 print('repo_name is: {}'.format(repo_name))
 print("Mi numero de carne es: {}".format(my_id))
