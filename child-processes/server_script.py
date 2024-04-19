@@ -11,6 +11,16 @@ import os, glob
 import xarray as xr
 import numpy.ma as ma
 
+# pip install python-dotenv
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+my_id = os.getenv('ID')
+print("Mi numero de carne es: {}".format(my_id))
+
+exit()
 
 fechahora = str(datetime.datetime.now())
 fecha = fechahora.split(' ')[0].replace('-','')
