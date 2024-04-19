@@ -526,6 +526,6 @@ var server = app.listen(puerto, ()=>{
 });
 
 
-server.keepAliveTimeout = 1500 * 1000;
-server.headersTimeout = 1800 * 1000; // 
+server.keepAliveTimeout = 45 * 60 * 1000;
+server.headersTimeout = 50 * 60 * 1000; 
 
