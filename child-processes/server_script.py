@@ -398,26 +398,26 @@ print('ya hice el init')
 
 
 
-# print("estoy haciendo el add hdf5")
-# subprocess.run('git add -A {}'.format('/'.join(['child-processes','hdf5-1.8.13'])), shell=True, capture_output=False)
-# # os.system('git add file_added_from_server.txt')
-# print('ya hice el add')
-
-# print("estoy haciendo el commit hdf5")
-# subprocess.run('git commit -m "added hdf5 from SERVER"', shell=True, capture_output=False)
-# # os.system('git commit -m "added from SERVER"')
-# print('ya hice el commit')
-
-
-print("estoy haciendo el add netcdf")
-subprocess.run('git add -A {}'.format('/'.join(['child-processes','netcdf-c-4.5.0'])), shell=True, capture_output=False)
+print("estoy haciendo el add hdf5")
+subprocess.run('git add -A {}'.format('/'.join(['child-processes','hdf5-1.8.13'])), shell=True, capture_output=False)
 # os.system('git add file_added_from_server.txt')
 print('ya hice el add')
 
-print("estoy haciendo el commit netcdf")
-subprocess.run('git commit -m "added netcdf from SERVER"', shell=True, capture_output=False)
+print("estoy haciendo el commit hdf5")
+subprocess.run('git commit -m "added hdf5 from SERVER"', shell=True, capture_output=False)
 # os.system('git commit -m "added from SERVER"')
 print('ya hice el commit')
+
+
+# print("estoy haciendo el add netcdf")
+# subprocess.run('git add -A {}'.format('/'.join(['child-processes','netcdf-c-4.5.0'])), shell=True, capture_output=False)
+# # os.system('git add file_added_from_server.txt')
+# print('ya hice el add')
+
+# print("estoy haciendo el commit netcdf")
+# subprocess.run('git commit -m "added netcdf from SERVER"', shell=True, capture_output=False)
+# # os.system('git commit -m "added from SERVER"')
+# print('ya hice el commit')
 
 
 
