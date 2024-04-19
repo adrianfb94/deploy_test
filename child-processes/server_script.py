@@ -397,16 +397,28 @@ print('ya hice el init')
 # print('ya hice el commit')
 
 
-
-print("estoy haciendo el add hdf5")
-subprocess.run('git add -A {}'.format('/'.join(['child-processes','hdf5-1.8.13'])), shell=True, capture_output=False)
+print("estoy haciendo el add folder_server")
+subprocess.run('git add -A {}'.format('/'.join(['child-processes','folder_server'])), shell=True, capture_output=False)
 # os.system('git add file_added_from_server.txt')
-print('ya hice el add')
+print('ya hice el add folder_server')
 
-print("estoy haciendo el commit hdf5")
-subprocess.run('git commit -m "added hdf5 from SERVER"', shell=True, capture_output=False)
+print("estoy haciendo el commit folder_server")
+subprocess.run('git commit -m "added folder_server from SERVER"', shell=True, capture_output=False)
 # os.system('git commit -m "added from SERVER"')
-print('ya hice el commit')
+print('ya hice el commit folder_server')
+
+
+
+
+# print("estoy haciendo el add hdf5")
+# subprocess.run('git add -A {}'.format('/'.join(['child-processes','hdf5-1.8.13'])), shell=True, capture_output=False)
+# # os.system('git add file_added_from_server.txt')
+# print('ya hice el add')
+
+# print("estoy haciendo el commit hdf5")
+# subprocess.run('git commit -m "added hdf5 from SERVER"', shell=True, capture_output=False)
+# # os.system('git commit -m "added from SERVER"')
+# print('ya hice el commit')
 
 
 # print("estoy haciendo el add netcdf")
@@ -443,18 +455,17 @@ subprocess.run('git commit -m "added cdo_installed from SERVER"', shell=True, ca
 print('ya hice el commit')
 
 
-print("estoy haciendo el pull")
-subprocess.run('git pull -v https://{}@github.com/{}/{}.git HEAD:main'.format(token, username, repo_name), shell=True, capture_output=False)
-# os.system(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main')
-print('ya hice el pull')
+# print("estoy haciendo el pull")
+# subprocess.run('git pull -v https://{}@github.com/{}/{}.git HEAD:main'.format(token, username, repo_name), shell=True, capture_output=False)
+# # os.system(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main')
+# print('ya hice el pull')
 
 
 
-# print("estoy haciendo el push")
-# subprocess.run('git push https://{}@github.com/{}/{}.git HEAD:main'.format(password, username, repo_name), shell=True, capture_output=False)
+print("estoy haciendo el push")
 subprocess.run('git push https://{}@github.com/{}/{}.git HEAD:main'.format(token, username, repo_name), shell=True, capture_output=False)
 # # os.system(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main')
-# print('ya hice el push')
+print('ya hice el push')
 
 
 
