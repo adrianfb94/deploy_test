@@ -373,6 +373,13 @@ print('dir_home')
 print(dir_home)
 
 print()
+
+dir_child_process = os.listdir('/'.join([home_server, 'child-processes']))
+print('dir_child_process')
+print(dir_child_process)
+print()
+
+
 exit()
 print('estoy haciendo el init')
 subprocess.run('git init', shell=True, capture_output=True)
