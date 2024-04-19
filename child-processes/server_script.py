@@ -63,8 +63,9 @@ else:
     subprocess.run('git add file_added_from_server.txt', shell=True)
     print('ya hice el add')
 
-    # subprocess.run('git commit -m "added from SERVER"', shell=True)
-    # print('ya hice el commit')
+    print("estoy haciendo el commit")
+    subprocess.run('git commit -m "added from SERVER"', shell=True)
+    print('ya hice el commit')
 
     # subprocess.run('git remote add origin https://{}@github.com/{}/{}.git'.format(token, username, repo_name), shell=True)
     # subprocess.run('git push origin main', shell=True)
