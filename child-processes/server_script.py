@@ -53,6 +53,9 @@ print('tengo el REPO')
 file = 'file_added_from_server.txt'
 if not os.path.exists('/'.join([home,file])):
     print("no existe {}".format('/'.join([home,file])))
+    subprocess.run('touch {}'.format('/'.join([home,file])), shell=True)
+    print('{} was created'.format(file))
+
 else:
     print("si existe {}".format('/'.join([home,file])))
 
