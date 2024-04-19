@@ -20,26 +20,37 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-my_id = os.getenv('ID')
-username = os.getenv('USERNAME')
-password = os.getenv('PASSWORD')
-token = os.getenv('TOKEN')
 
 subprocess.run('git config user.email "adrianfuentesbarrios@gmail.com"', shell=True)
 subprocess.run('git config user.name "adrianfb94"', shell=True)
 
 
+my_id = os.getenv('ID')
+username = os.getenv('USERNAME')
+password = os.getenv('PASSWORD')
+token = os.getenv('TOKEN')
 home = os.getcwd()
-print("home:", home)
-repo_name = home.split('/')[-1].split('.')[0]
-print("repo_name:",repo_name)
-exit()
+repo_name = 'deploy_test'
+full_local_path = '/'.join([home,repo_name])
+
+
+
+
+
 print('HOME is: {}'.format(home))
 print('repo_name is: {}'.format(repo_name))
+print("full_local_path: {}".format(full_local_path))
 print("Mi numero de carne es: {}".format(my_id))
 print("Mi username: {}".format(username))
 print("Mi password: {}".format(password))
 print("Mi token: {}".format(token))
+
+
+dir_repo = os.listdir(full_local_path)
+print('dir_repo')
+print(dir_repo)
+
+exit()
 
 print('tengo el REPO')
 file = 'file_added_from_server.txt'
