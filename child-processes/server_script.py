@@ -368,6 +368,12 @@ def install_cdo():
 install_cdo()
 
 
+dir_home = os.listdir(home)
+print('dir_home')
+print(dir_home)
+
+print()
+
 print('estoy haciendo el init')
 subprocess.run('git init', shell=True, capture_output=True)
 # os.system('git init')
