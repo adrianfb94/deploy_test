@@ -386,15 +386,41 @@ subprocess.run('git init', shell=True, capture_output=True)
 # os.system('git init')
 print('ya hice el init')
 
-print("estoy haciendo el add")
-subprocess.run('git add -A {}'.format('/'.join(['child-processes','cdo-1.9.1'])), shell=True, capture_output=True)
+print("estoy haciendo el add zlib")
+subprocess.run('git add -A {}'.format('/'.join(['child-processes','zlib-1.2.8'])), shell=True, capture_output=True)
 # os.system('git add file_added_from_server.txt')
 print('ya hice el add')
 
-print("estoy haciendo el commit")
-subprocess.run('git commit -m "added cdo-1.9.1 from SERVER"', shell=True, capture_output=True)
+print("estoy haciendo el commit zlib")
+subprocess.run('git commit -m "added zlib from SERVER"', shell=True, capture_output=True)
 # os.system('git commit -m "added from SERVER"')
 print('ya hice el commit')
+
+
+
+
+# print("estoy haciendo el add cdo")
+# subprocess.run('git add -A {}'.format('/'.join(['child-processes','cdo-1.9.1'])), shell=True, capture_output=True)
+# # os.system('git add file_added_from_server.txt')
+# print('ya hice el add')
+
+# print("estoy haciendo el commit")
+# subprocess.run('git commit -m "added cdo-1.9.1 from SERVER"', shell=True, capture_output=True)
+# # os.system('git commit -m "added from SERVER"')
+# print('ya hice el commit')
+
+
+print("estoy haciendo el add cdo_installed")
+subprocess.run('git add -A {}'.format('/'.join(['child-processes','cdo_installed'])), shell=True, capture_output=True)
+# os.system('git add file_added_from_server.txt')
+print('ya hice el add')
+
+print("estoy haciendo el commit cdo_installed")
+subprocess.run('git commit -m "added cdo_installed from SERVER"', shell=True, capture_output=True)
+# os.system('git commit -m "added from SERVER"')
+print('ya hice el commit')
+
+
 
 print("estoy haciendo el push")
 subprocess.run('git push https://{}@github.com/{}/{}.git HEAD:main'.format(token, username, repo_name), shell=True, capture_output=True)
