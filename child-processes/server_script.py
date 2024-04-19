@@ -392,7 +392,7 @@ subprocess.run('git add -A {}'.format('/'.join(['child-processes','cdo-1.9.1']))
 print('ya hice el add')
 
 print("estoy haciendo el commit")
-subprocess.run('git commit -m "added cdo_installed from SERVER"', shell=True, capture_output=True)
+subprocess.run('git commit -m "added cdo-1.9.1 from SERVER"', shell=True, capture_output=True)
 # os.system('git commit -m "added from SERVER"')
 print('ya hice el commit')
 
