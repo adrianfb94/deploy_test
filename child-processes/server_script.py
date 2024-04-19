@@ -39,7 +39,7 @@ print("Mi username: {}".format(username))
 print("Mi password: {}".format(password))
 print("Mi token: {}".format(token))
 
-subprocess.run('git config --global http.postBuffer 1048576000', shell=True)
+subprocess.run('git config http.postBuffer 1048576000', shell=True)
 subprocess.run('git config user.email "adrianfuentesbarrios@gmail.com"', shell=True)
 subprocess.run('git config user.name "adrianfb94"', shell=True)
 
