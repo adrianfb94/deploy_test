@@ -15,7 +15,7 @@ import numpy.ma as ma
 from dotenv import load_dotenv
 
 # pip install gitpython
-from git import Repo
+# from git import Repo
 
 
 load_dotenv()
@@ -43,17 +43,31 @@ file = 'file_added_from_server.txt'
 if not os.path.exists('/'.join([home,file])):
     subprocess.run('touch {}'.format('/'.join([home,file])), shell=True)
     print('{} was created'.format(file))
-    repo = Repo(home)
-    repo.git.add("{}".format(file))
+
+    # repo = Repo(home)
+    # repo.git.add("{}".format(file))
+    subprocess.run('git add {}'.format('/'.join([home,file])), shell=True)
+
     print('ya hice el add')
-    repo.index.commit("added from SERVER{}".format(file))
+
+    # repo.index.commit("added from SERVER{}".format(file))
+    subprocess.run('git commit -m "added from SERVER"', shell=True)
+
     print('ya hice el commit')
 
 
-    remote = repo.remotes.origin
-    print('remote: {}'.format(remote))
+    # repo.remotes.remove()
+    # print('remote: {}'.format(remote))
+    # # repo.delete_remote(remote)
+    # # repo.create_remote("origin", "https://{}@github.com/{}/{}.git".format(token, username, repo_name)) 
+    # # repo.git.push("origin", "HEAD:main")
+    # print('ya hice el push')
+
+
+    subprocess.run('git remote add origin https://{}@github.com/{}/{}.git'.format(token, username, repo_name), shell=True)
     # repo.delete_remote(remote)
     # repo.create_remote("origin", "https://{}@github.com/{}/{}.git".format(token, username, repo_name)) 
+    subprocess.run('git push origin main', shell=True)
     # repo.git.push("origin", "HEAD:main")
     print('ya hice el push')
 
