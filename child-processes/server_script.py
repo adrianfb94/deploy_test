@@ -96,10 +96,10 @@ else:
     os.system('git commit -m "added from SERVER"')
     print('ya hice el commit')
 
-    print("estoy haciendo el git remote")
-    # subprocess.run(f'git remote set-url origin https://{token}@github.com/{username}/{repo_name}.git', shell=True)
-    os.system(f"git remote set-url origin https://{token}@github.com/{username}/{repo_name}.git")
-    print("git remote listo")
+    # print("estoy haciendo el git remote")
+    # # subprocess.run(f'git remote set-url origin https://{token}@github.com/{username}/{repo_name}.git', shell=True)
+    # os.system(f"git remote set-url origin https://{token}@github.com/{username}/{repo_name}.git")
+    # print("git remote listo")
 
     print("estoy haciendo el push")
     # subprocess.run('git push -u origin main', shell=True)
