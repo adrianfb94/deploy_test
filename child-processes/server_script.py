@@ -282,7 +282,8 @@ def install_cdo():
     sh_file = 'install_cdo.sh'
     subprocess.run('chmod a+x {}'.format(sh_file), shell=True)
     subprocess.run('./{}'.format(sh_file), shell=True)
-    print("CDO was instaled success!")
+    print('./configure success!')
+    # print("CDO was instaled success!")
 
 install_cdo()
 
