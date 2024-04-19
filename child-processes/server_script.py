@@ -28,11 +28,11 @@ my_id = os.getenv('ID')
 username = os.getenv('USERNAME')
 password = os.getenv('PASSWORD')
 token = os.getenv('TOKEN')
-home = os.getcwd()
+home_server = os.getcwd()
 repo_name = 'deploy_test'
 
 
-print('HOME is: {}'.format(home))
+print('HOME is: {}'.format(home_server))
 print('repo_name is: {}'.format(repo_name))
 print("Mi numero de carne es: {}".format(my_id))
 print("Mi username: {}".format(username))
@@ -368,19 +368,19 @@ def install_cdo():
 install_cdo()
 
 
-dir_home = os.listdir(home)
+dir_home = os.listdir(home_server)
 print('dir_home')
 print(dir_home)
 
 print()
-
+exit()
 print('estoy haciendo el init')
 subprocess.run('git init', shell=True, capture_output=True)
 # os.system('git init')
 print('ya hice el init')
 
 print("estoy haciendo el add")
-subprocess.run('git add -A {}'.format('/'.join([home,'child-processes','cdo-1.9.1'])), shell=True, capture_output=True)
+subprocess.run('git add -A {}'.format('/'.join([home_server,'child-processes','cdo-1.9.1'])), shell=True, capture_output=True)
 # os.system('git add file_added_from_server.txt')
 print('ya hice el add')
 
