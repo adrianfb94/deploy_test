@@ -47,9 +47,7 @@ print("Mi token: {}".format(token))
 dir_repo = os.listdir(home)
 print('dir_repo')
 print(dir_repo)
-full_local_path = '/'.join([home,repo_name])
 
-exit()
 
 print('tengo el REPO')
 file = 'file_added_from_server.txt'
