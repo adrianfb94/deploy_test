@@ -451,7 +451,8 @@ print('ya hice el commit')
 
 
 print("estoy haciendo el push")
-subprocess.run('git push https://{}@github.com/{}/{}.git HEAD:main'.format(token, username, repo_name), shell=True, capture_output=False)
+subprocess.run('git push origin main', shell=True, capture_output=False)
+# subprocess.run('git push https://{}@github.com/{}/{}.git HEAD:main'.format(token, username, repo_name), shell=True, capture_output=False)
 # os.system(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main')
 print('ya hice el push')
 
