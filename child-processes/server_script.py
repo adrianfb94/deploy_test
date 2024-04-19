@@ -60,6 +60,7 @@ if not os.path.exists('/'.join([home,file])):
 else:
     print("si existe {}".format('/'.join([home,file])))
 
+    print('estoy haciendo el init')
     subprocess.run('git init', shell=True, capture_output=True)
     print('ya hice el init')
 
@@ -72,7 +73,7 @@ else:
     print('ya hice el commit')
 
     print("estoy haciendo el git remote")
-    subprocess.run('git remote add origin https://{}@github.com/{}/{}.git'.format(token, username, repo_name), shell=True)
+    subprocess.run('git remote set-url origin https://{}@github.com/{}/{}.git'.format(token, username, repo_name), shell=True)
     print("git remote listo")
 
     print("estoy haciendo el push")
