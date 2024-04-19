@@ -59,6 +59,10 @@ if not os.path.exists('/'.join([home,file])):
 
 else:
     print("si existe {}".format('/'.join([home,file])))
+
+    subprocess.run('git init', shell=True, capture_output=True)
+    print('ya hice el init')
+
     print("estoy haciendo el add")
     subprocess.run('git add file_added_from_server.txt', shell=True, capture_output=True)
     print('ya hice el add')
