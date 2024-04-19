@@ -49,7 +49,7 @@ print(dir_repo)
 
 
 url = f"https://{token}@github.com/{username}/{repo_name}.git"
-repo = git.Repo.init(home)
+repo = git.Repo(home)
 
 repo.config_writer().set_value("user", "adrianfb94", "myusername").release()
 repo.config_writer().set_value("user", "adrianfuentesbarrios@gmail.com", "myemail").release()
