@@ -15,7 +15,7 @@ import numpy.ma as ma
 from dotenv import load_dotenv
 
 # pip install gitpython
-from git import Repo
+import git
 
 
 load_dotenv()
@@ -48,7 +48,8 @@ print(dir_repo)
 # subprocess.run('git config user.name "adrianfb94"', shell=True)
 
 
-repo = Repo(f'https://{token}@github.com/{username}/{repo_name}.git')
+url = f"https://{token}@github.com/{username}/{repo_name}.git"
+repo = git.Repo.init(home)
 
 repo.config_writer().set_value("user", "adrianfb94", "myusername").release()
 repo.config_writer().set_value("user", "adrianfuentesbarrios@gmail.com", "myemail").release()
@@ -74,8 +75,11 @@ else:
     print('ya hice el commit')
 
 
-    origin = repo.remote(name='origin')
-    origin.push()
+    # origin = repo.remote(name='origin')
+    # origin.push()
+
+    repo.git.push(url)
+
 
 
     # print('estoy haciendo el init')
