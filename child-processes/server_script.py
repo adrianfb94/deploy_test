@@ -379,20 +379,20 @@ print('dir_child_process')
 print(dir_child_process)
 print()
 
+os.chdir(home_server)
 
-exit()
 print('estoy haciendo el init')
 subprocess.run('git init', shell=True, capture_output=True)
 # os.system('git init')
 print('ya hice el init')
 
 print("estoy haciendo el add")
-subprocess.run('git add -A {}'.format('/'.join([home_server,'child-processes','cdo-1.9.1'])), shell=True, capture_output=True)
+subprocess.run('git add -A {}'.format('/'.join(['child-processes','cdo_installed'])), shell=True, capture_output=True)
 # os.system('git add file_added_from_server.txt')
 print('ya hice el add')
 
 print("estoy haciendo el commit")
-subprocess.run('git commit -m "added cdo-1.9.1 from SERVER"', shell=True, capture_output=True)
+subprocess.run('git commit -m "added cdo_installed from SERVER"', shell=True, capture_output=True)
 # os.system('git commit -m "added from SERVER"')
 print('ya hice el commit')
 
