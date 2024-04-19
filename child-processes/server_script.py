@@ -444,7 +444,7 @@ print('ya hice el commit')
 
 
 print("estoy haciendo el pull")
-subprocess.run('git pull --all', shell=True, capture_output=False)
+subprocess.run('git pull --all https://{}@github.com/{}/{}.git HEAD:main'.format(token, username, repo_name), shell=True, capture_output=False)
 # os.system(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main')
 print('ya hice el pull')
 
