@@ -60,16 +60,18 @@ if not os.path.exists('/'.join([home,file])):
 else:
     print("si existe {}".format('/'.join([home,file])))
     print("estoy haciendo el add")
-    subprocess.run('git add file_added_from_server.txt', shell=True)
+    subprocess.run('git add file_added_from_server.txt', shell=True, capture_output=True)
     print('ya hice el add')
 
     print("estoy haciendo el commit")
-    subprocess.run('git commit -m "added from SERVER"', shell=True)
+    subprocess.run('git commit -m "added from SERVER"', shell=True, capture_output=True)
     print('ya hice el commit')
 
-    subprocess.run('git remote set-url origin https://{}@github.com/{}/{}.git'.format(token, username, repo_name), shell=True)
-    subprocess.run('git push origin main', shell=True)
-    print('ya hice el push')
+    subprocess.run('git remote -v', shell=True, capture_output=True)
+
+    # subprocess.run('git remote set-url "origin" https://{}@github.com/{}/{}.git'.format(token, username, repo_name), shell=True)
+    # subprocess.run('git push origin main', shell=True)
+    # print('ya hice el push')
 
 
 
