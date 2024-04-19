@@ -517,16 +517,15 @@ app.get('/api/ClientProject/python_script/:query/:ip',(req, res)=>{
 });
 
 
-
-
-app.listen(puerto, ()=>{
+var server = app.listen(puerto, ()=>{
     require('log-timestamp')
     console.log('#########################################################')
     console.log(`Server Client Project on port ${puerto}: Connected`);
     console.log('#########################################################\n')
 
-
-
 });
 
+
+server.keepAliveTimeout = 300 * 1000;
+server.headersTimeout = 300 * 1000; // 
 
