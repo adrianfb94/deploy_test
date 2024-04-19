@@ -1,7 +1,7 @@
 #!/bin/bash
 
 home=`pwd`
-mkdir -p $home/cdo_installed
+# mkdir -p $home/cdo_installed
 
 
 cd $home/cdo-1.9.1
