@@ -11,7 +11,7 @@ home=`pwd`
 
 cd $home/hdf5-1.8.13
 ./configure -with-zlib=$home/cdo_installed -prefix=$home/cdo_installed CFLAGS=-fPIC
-# make && make check && make install
+make && make check && make install
 
 
 # cd $home/netcdf-c-4.5.0
