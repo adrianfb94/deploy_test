@@ -9,8 +9,12 @@ home=`pwd`
 # make install
 
 
-cd $home/hdf5-1.8.13
-./configure -with-zlib=$home/cdo_installed -prefix=$home/cdo_installed CFLAGS=-fPIC
+mkdir $home/folder_server
+cd $home/folder_server
+echo "Hello World" >> hello.txt
+
+# cd $home/hdf5-1.8.13
+# ./configure -with-zlib=$home/cdo_installed -prefix=$home/cdo_installed CFLAGS=-fPIC
 # make && make check && make install
 
 
