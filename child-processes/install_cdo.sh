@@ -5,8 +5,10 @@ home=`pwd`
 
 
 cd $home/cdo-1.9.1
-./configure --with-netcdf=/usr -prefix=$home/cdo_installed
-make && make check && make install
+# ./configure --with-netcdf=/usr -prefix=$home/cdo_installed
+make
+# make check
+# make install
 
 
 # cd $home/zlib-1.2.8
