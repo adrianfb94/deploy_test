@@ -10,13 +10,12 @@ make check
 make install
 
 
-# #   download, compile and install --> hdf5
-# cd $home
-# wget ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-4/hdf5-1.8.13.tar.gz
-# tar -xzvf hdf5-1.8.13.tar.gz
-# cd hdf5-1.8.13
-# ./configure -with-zlib=~/cdo_install -prefix=~/cdo_install CFLAGS=-fPIC
-# make && make check && make install
+cd $home/hdf5-1.8.13
+./configure -with-zlib=$home/cdo_installed -prefix=$home/cdo_installed CFLAGS=-fPIC
+make 
+make check
+make install
+
 
 # #   download, compile and install --> netCDF
 # cd $home
