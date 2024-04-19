@@ -25,7 +25,8 @@ username = os.getenv('USERNAME')
 password = os.getenv('PASSWORD')
 token = os.getenv('TOKEN')
 
-
+subprocess.run('git config user.email "adrianfuentesbarrios@gmail.com"', shell=True)
+subprocess.run('git config user.name "adrianfb94"', shell=True)
 
 
 home = os.getcwd()
