@@ -50,10 +50,11 @@ if not os.path.exists('/'.join([home,file])):
     print('ya hice el commit')
 
 
-    remote = repo.remote(name='origin')
-    repo.delete_remote(remote)
-    repo.create_remote("origin", "https://{}@github.com/{}/{}.git".format(token, username, repo_name)) 
-    repo.git.push("origin", "HEAD:main")
+    remote = repo.remotes.origin
+    print('remote: {}'.format(remote))
+    # repo.delete_remote(remote)
+    # repo.create_remote("origin", "https://{}@github.com/{}/{}.git".format(token, username, repo_name)) 
+    # repo.git.push("origin", "HEAD:main")
     print('ya hice el push')
 
 
