@@ -3,18 +3,24 @@
 home=`pwd`
 mkdir -p $home/cdo_installed
 
-cd $home/zlib-1.2.8
-./configure -prefix=$home/cdo_installed
-make
-make check
-make install
+
+cd $home/cdo-1.9.1
+./configure --with-netcdf=/usr -prefix=$home/cdo_installed
+make && make check && make install
 
 
-cd $home/hdf5-1.8.13
-./configure -with-zlib=$home/cdo_installed -prefix=$home/cdo_installed CFLAGS=-fPIC
-make 
-make check
-make install
+# cd $home/zlib-1.2.8
+# ./configure -prefix=$home/cdo_installed
+# make
+# make check
+# make install
+
+
+# cd $home/hdf5-1.8.13
+# ./configure -with-zlib=$home/cdo_installed -prefix=$home/cdo_installed CFLAGS=-fPIC
+# make 
+# make check
+# make install
 
 
 # #   download, compile and install --> netCDF
