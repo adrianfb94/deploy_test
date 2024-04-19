@@ -1,0 +1,58 @@
+#! /bin/bash
+echo 1..9 # Number of tests to be executed.
+#
+test -n "$CDO"      || CDO=cdo
+test -n "$DATAPATH" || DATAPATH=./data
+#
+CDOOUT=cout$$
+CDOERR=cerr$$
+#
+GRIDTYPES="regular generic curvilinear"
+DISTS="4,3 12,1 1,6"
+#
+NTEST=1
+#
+for GRIDTYPE in $GRIDTYPES; do
+  for DIST in $DISTS; do
+    RSTAT=0
+    GT=$(echo $GRIDTYPE | cut -c1)
+    FILE=data${GT}.nc
+    IFILE=$DATAPATH/${FILE}
+    OFILE=${OPERATOR}_${FILE}
+
+    CDOTEST="$GRIDTYPE $DIST"
+
+    if [ "yes" = yes ] ; then
+      nx=$(echo $DIST | sed 's/,.*//')
+      NX=""
+      if [ $FILE != datar.nc ] ; then NX=",$nx" ; fi
+      CDOCOMMAND="$CDO collgrid$NX xxx* $OFILE"
+      echo "Running test: $NTEST"
+      echo "$CDOCOMMAND"
+
+      $CDO distgrid,$DIST $IFILE xxx
+      test $? -eq 0 || let RSTAT+=1
+
+      $CDOCOMMAND
+      test $? -eq 0 || let RSTAT+=1
+
+      $CDO diff $IFILE $OFILE > $CDOOUT 2> $CDOERR
+      test $? -eq 0 || let RSTAT+=1
+      test -s $CDOOUT && let RSTAT+=1
+      cat $CDOOUT $CDOERR
+ 
+      rm -f $OFILE xxx*
+
+      test $RSTAT -eq 0 && echo "ok $NTEST - $CDOTEST"
+      test $RSTAT -eq 0 || echo "not ok $NTEST - $CDOTEST"
+    else
+      test $RSTAT -eq 0 && echo "ok $NTEST - $CDOTEST # SKIP netCDF not enabled"
+    fi
+
+    let NTEST+=1
+  done
+done
+#
+rm -f $CDOOUT $CDOERR
+#
+exit 0

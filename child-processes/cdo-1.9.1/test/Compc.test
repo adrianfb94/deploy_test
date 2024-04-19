@@ -1,0 +1,44 @@
+#! /bin/bash
+echo 1..6 # Number of tests to be executed.
+#
+test -n "$CDO"      || CDO=cdo
+test -n "$DATAPATH" || DATAPATH=./data
+#
+CDOOUT=cout$$
+CDOERR=cerr$$
+FORMAT="-f srv -b 32"
+STATS="eqc nec lec ltc gec gtc"
+CONST=300
+#
+IFILE=$DATAPATH/comptest.srv
+NTEST=1
+#
+for STAT in $STATS; do
+  RSTAT=0
+  RFILE=$DATAPATH/comp_${STAT}_ref
+  OFILE=comp_${STAT}_res
+
+  CDOTEST="$STAT"
+  CDOCOMMAND="$CDO $FORMAT ${STAT},${CONST} $IFILE $OFILE"
+
+  echo "Running test: $NTEST - $CDOTEST"
+  echo "$CDOCOMMAND"
+
+  $CDOCOMMAND
+  test $? -eq 0 || let RSTAT+=1
+
+  $CDO diff $OFILE $RFILE > $CDOOUT 2> $CDOERR
+  test $? -eq 0 || let RSTAT+=1
+  test -s $CDOOUT && let RSTAT+=1
+  cat $CDOOUT $CDOERR
+
+  test $RSTAT -eq 0 && echo "ok $NTEST - $CDOTEST"
+  test $RSTAT -eq 0 || echo "not ok $NTEST - $CDOTEST"
+
+  let NTEST+=1
+  rm -f $OFILE
+done
+#
+rm -f $CDOOUT $CDOERR
+#
+exit 0
