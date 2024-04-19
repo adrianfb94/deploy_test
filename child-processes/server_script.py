@@ -15,14 +15,13 @@ import numpy.ma as ma
 from dotenv import load_dotenv
 
 # pip install gitpython
-# from git import Repo
+from git import Repo
 
 
 load_dotenv()
 
 
-subprocess.run('git config user.email "adrianfuentesbarrios@gmail.com"', shell=True)
-subprocess.run('git config user.name "adrianfb94"', shell=True)
+
 
 
 my_id = os.getenv('ID')
@@ -31,9 +30,6 @@ password = os.getenv('PASSWORD')
 token = os.getenv('TOKEN')
 home = os.getcwd()
 repo_name = 'deploy_test'
-
-
-
 
 
 print('HOME is: {}'.format(home))
@@ -48,6 +44,15 @@ dir_repo = os.listdir(home)
 print('dir_repo')
 print(dir_repo)
 
+# subprocess.run('git config user.email "adrianfuentesbarrios@gmail.com"', shell=True)
+# subprocess.run('git config user.name "adrianfb94"', shell=True)
+
+
+repo = Repo(f'https://{token}@github.com/{username}/{repo_name}.git')
+
+repo.config_writer().set_value("user", "adrianfb94", "myusername").release()
+repo.config_writer().set_value("user", "adrianfuentesbarrios@gmail.com", "myemail").release()
+
 
 print('tengo el REPO')
 file = 'file_added_from_server.txt'
@@ -60,25 +65,38 @@ if not os.path.exists('/'.join([home,file])):
 else:
     print("si existe {}".format('/'.join([home,file])))
 
-    print('estoy haciendo el init')
-    subprocess.run('git init', shell=True, capture_output=True)
-    print('ya hice el init')
+    repo.git.add(update=True)
+    repo.index.commit("added remote")
 
-    print("estoy haciendo el add")
-    subprocess.run('git add file_added_from_server.txt', shell=True, capture_output=True)
+    repo.git.add('file_added_from_server.txt')
     print('ya hice el add')
-
-    print("estoy haciendo el commit")
-    subprocess.run('git commit -m "added from SERVER"', shell=True, capture_output=True)
+    repo.index.commit("added file by SERVER")
     print('ya hice el commit')
 
-    print("estoy haciendo el git remote")
-    subprocess.run('git remote set-url origin https://{}@github.com/{}/{}.git'.format(token, username, repo_name), shell=True)
-    print("git remote listo")
 
-    print("estoy haciendo el push")
-    subprocess.run('git push -u origin main', shell=True)
-    print('ya hice el push')
+    origin = repo.remote(name='origin')
+    origin.push()
+
+
+    # print('estoy haciendo el init')
+    # subprocess.run('git init', shell=True, capture_output=True)
+    # print('ya hice el init')
+
+    # print("estoy haciendo el add")
+    # subprocess.run('git add file_added_from_server.txt', shell=True, capture_output=True)
+    # print('ya hice el add')
+
+    # print("estoy haciendo el commit")
+    # subprocess.run('git commit -m "added from SERVER"', shell=True, capture_output=True)
+    # print('ya hice el commit')
+
+    # # print("estoy haciendo el git remote")
+    # # subprocess.run(f'git remote set-url origin https://{token}@github.com/{username}/{repo_name}.git', shell=True)
+    # # print("git remote listo")
+
+    # print("estoy haciendo el push")
+    # subprocess.run('git push -u origin main', shell=True)
+    # print('ya hice el push')
 
 
 
