@@ -31,7 +31,6 @@ password = os.getenv('PASSWORD')
 token = os.getenv('TOKEN')
 home = os.getcwd()
 repo_name = 'deploy_test'
-full_local_path = '/'.join([home,repo_name])
 
 
 
@@ -46,9 +45,10 @@ print("Mi password: {}".format(password))
 print("Mi token: {}".format(token))
 
 
-dir_repo = os.listdir(full_local_path)
+dir_repo = os.listdir(home)
 print('dir_repo')
 print(dir_repo)
+full_local_path = '/'.join([home,repo_name])
 
 exit()
 
