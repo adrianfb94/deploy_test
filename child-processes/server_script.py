@@ -103,7 +103,7 @@ else:
 
     print("estoy haciendo el push")
     # subprocess.run('git push -u origin main', shell=True)
-    os.system('git push')
+    os.system(f'git push https://{token}@github.com/{username}/{repo_name}.git')
     print('ya hice el push')
 
 
