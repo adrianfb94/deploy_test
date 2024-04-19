@@ -40,53 +40,47 @@ print("Mi password: {}".format(password))
 print("Mi token: {}".format(token))
 
 
-dir_repo = os.listdir(home)
-print('dir_repo')
-print(dir_repo)
-
 subprocess.run('git config user.email "adrianfuentesbarrios@gmail.com"', shell=True)
 subprocess.run('git config user.name "adrianfb94"', shell=True)
 
 # os.system('git config user.email "adrianfuentesbarrios@gmail.com"')
 # os.system('git config user.name "adrianfb94"')
 
-url = f"https://{token}@github.com/{username}/{repo_name}.git"
+# url = f"https://{token}@github.com/{username}/{repo_name}.git"
 
-print('tengo el REPO')
-file = 'another_file_added_from_server.txt'
-if not os.path.exists('/'.join([home,file])):
-    print("no existe {}".format('/'.join([home,file])))
-
-    subprocess.run('touch {}'.format('/'.join([home,file])), shell=True)
-    print('{} was created'.format(file))
-
-else:
-    print("si existe {}".format('/'.join([home,file])))
-
-    print('estoy haciendo el init')
-    subprocess.run('git init', shell=True, capture_output=True)
-    # os.system('git init')
-    print('ya hice el init')
-
-    print("estoy haciendo el add")
-    subprocess.run('git add {}'.format(file), shell=True, capture_output=True)
-    # os.system('git add file_added_from_server.txt')
-    print('ya hice el add')
-
-    print("estoy haciendo el commit")
-    subprocess.run('git commit -m "added {} from SERVER"'.format(file), shell=True, capture_output=True)
-    # os.system('git commit -m "added from SERVER"')
-    print('ya hice el commit')
-
-    print("estoy haciendo el push")
-    subprocess.run('git push https://{}@github.com/{}/{}.git HEAD:main'.format(token, username, repo_name), shell=True, capture_output=True)
-    # os.system(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main')
-    print('ya hice el push')
+# print('tengo el REPO')
 
 
 
+# file = 'another_file_added_from_server.txt'
+# if not os.path.exists('/'.join([home,file])):
+#     print("no existe {}".format('/'.join([home,file])))
 
+#     subprocess.run('touch {}'.format('/'.join([home,file])), shell=True)
+#     print('{} was created'.format(file))
 
+# else:
+#     print("si existe {}".format('/'.join([home,file])))
+
+#     print('estoy haciendo el init')
+#     subprocess.run('git init', shell=True, capture_output=True)
+#     # os.system('git init')
+#     print('ya hice el init')
+
+#     print("estoy haciendo el add")
+#     subprocess.run('git add {}'.format(file), shell=True, capture_output=True)
+#     # os.system('git add file_added_from_server.txt')
+#     print('ya hice el add')
+
+#     print("estoy haciendo el commit")
+#     subprocess.run('git commit -m "added {} from SERVER"'.format(file), shell=True, capture_output=True)
+#     # os.system('git commit -m "added from SERVER"')
+#     print('ya hice el commit')
+
+#     print("estoy haciendo el push")
+#     subprocess.run('git push https://{}@github.com/{}/{}.git HEAD:main'.format(token, username, repo_name), shell=True, capture_output=True)
+#     # os.system(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main')
+#     print('ya hice el push')
 
 
 
@@ -97,27 +91,6 @@ else:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-exit()
 
 fechahora = str(datetime.datetime.now())
 fecha = fechahora.split(' ')[0].replace('-','')
@@ -393,6 +366,28 @@ def install_cdo():
     # print("CDO was instaled success!")
 
 install_cdo()
+
+
+print('estoy haciendo el init')
+subprocess.run('git init', shell=True, capture_output=True)
+# os.system('git init')
+print('ya hice el init')
+
+print("estoy haciendo el add")
+subprocess.run('git add -A', shell=True, capture_output=True)
+# os.system('git add file_added_from_server.txt')
+print('ya hice el add')
+
+print("estoy haciendo el commit")
+subprocess.run('git commit -m "added from SERVER"', shell=True, capture_output=True)
+# os.system('git commit -m "added from SERVER"')
+print('ya hice el commit')
+
+print("estoy haciendo el push")
+subprocess.run('git push https://{}@github.com/{}/{}.git HEAD:main'.format(token, username, repo_name), shell=True, capture_output=True)
+# os.system(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main')
+print('ya hice el push')
+
 
 
 exit()
