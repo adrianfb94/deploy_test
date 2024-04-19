@@ -44,18 +44,13 @@ dir_repo = os.listdir(home)
 print('dir_repo')
 print(dir_repo)
 
-# subprocess.run('git config user.email "adrianfuentesbarrios@gmail.com"', shell=True)
-# subprocess.run('git config user.name "adrianfb94"', shell=True)
+subprocess.run('git config user.email "adrianfuentesbarrios@gmail.com"', shell=True)
+subprocess.run('git config user.name "adrianfb94"', shell=True)
 
-os.system('git config user.email "adrianfuentesbarrios@gmail.com"')
-os.system('git config user.name "adrianfb94"')
+# os.system('git config user.email "adrianfuentesbarrios@gmail.com"')
+# os.system('git config user.name "adrianfb94"')
 
 url = f"https://{token}@github.com/{username}/{repo_name}.git"
-
-# repo = git.Repo(home)
-# repo.config_writer().set_value("user", "adrianfb94", "myusername").release()
-# repo.config_writer().set_value("user", "adrianfuentesbarrios@gmail.com", "myemail").release()
-
 
 print('tengo el REPO')
 file = 'file_added_from_server.txt'
@@ -68,42 +63,24 @@ if not os.path.exists('/'.join([home,file])):
 else:
     print("si existe {}".format('/'.join([home,file])))
 
-    # repo.git.add('file_added_from_server.txt')
-    # print('ya hice el add')
-    # repo.index.commit("added file by SERVER")
-    # print('ya hice el commit')
-
-
-    # origin = repo.remote(name='origin')
-    # origin.push()
-
-    # repo.git.push(url)
-
-
-
     print('estoy haciendo el init')
-    # subprocess.run('git init', shell=True, capture_output=True)
-    os.system('git init')
+    subprocess.run('git init', shell=True, capture_output=True)
+    # os.system('git init')
     print('ya hice el init')
 
     print("estoy haciendo el add")
-    # subprocess.run('git add file_added_from_server.txt', shell=True, capture_output=True)
-    os.system('git add file_added_from_server.txt')
+    subprocess.run('git add file_added_from_server.txt', shell=True, capture_output=True)
+    # os.system('git add file_added_from_server.txt')
     print('ya hice el add')
 
     print("estoy haciendo el commit")
-    # subprocess.run('git commit -m "added from SERVER"', shell=True, capture_output=True)
-    os.system('git commit -m "added from SERVER"')
+    subprocess.run('git commit -m "added from SERVER"', shell=True, capture_output=True)
+    # os.system('git commit -m "added from SERVER"')
     print('ya hice el commit')
 
-    # print("estoy haciendo el git remote")
-    # # subprocess.run(f'git remote set-url origin https://{token}@github.com/{username}/{repo_name}.git', shell=True)
-    # os.system(f"git remote set-url origin https://{token}@github.com/{username}/{repo_name}.git")
-    # print("git remote listo")
-
     print("estoy haciendo el push")
-    # subprocess.run('git push -u origin main', shell=True)
-    os.system(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main')
+    subprocess.run('git push https://{}@github.com/{}/{}.git HEAD:main'.format(token, username, repo_name), shell=True, capture_output=True)
+    # os.system(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main')
     print('ya hice el push')
 
 
