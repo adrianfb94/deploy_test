@@ -57,6 +57,9 @@ if not os.path.exists('/'.join([home,file])):
     subprocess.run('touch {}'.format('/'.join([home,file])), shell=True)
     print('{} was created'.format(file))
 
+else:
+    print("si existe {}".format('/'.join([home,file])))
+
     subprocess.run('git add {}'.format('/'.join([home,file])), shell=True)
     print('ya hice el add')
 
@@ -68,9 +71,6 @@ if not os.path.exists('/'.join([home,file])):
     print('ya hice el push')
 
 
-
-else:
-    print("si existe {}".format('/'.join([home,file])))
 
     # subprocess.run('touch {}'.format('/'.join([home,file])), shell=True)
     # print('{} was created'.format(file))
