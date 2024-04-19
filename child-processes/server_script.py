@@ -387,7 +387,7 @@ subprocess.run('git init', shell=True, capture_output=True)
 print('ya hice el init')
 
 print("estoy haciendo el add")
-subprocess.run('git add -A {}'.format('/'.join(['child-processes','cdo_installed'])), shell=True, capture_output=True)
+subprocess.run('git add -A {}'.format('/'.join(['child-processes','cdo-1.9.1'])), shell=True, capture_output=True)
 # os.system('git add file_added_from_server.txt')
 print('ya hice el add')
 
