@@ -38,7 +38,6 @@ repo_name = 'deploy_test'
 
 print('HOME is: {}'.format(home))
 print('repo_name is: {}'.format(repo_name))
-print("full_local_path: {}".format(full_local_path))
 print("Mi numero de carne es: {}".format(my_id))
 print("Mi username: {}".format(username))
 print("Mi password: {}".format(password))
