@@ -1,8 +1,10 @@
 #!/bin/bash
 
-home=`pwd`/cdo-1.9.1
-cd $home
-./configure --with-netcdf=/usr -prefix=$home
+home=`pwd`
+mkdir -p $home/cdo_installed
+
+cd $home/cdo-1.9.1
+./configure --with-netcdf=/usr -prefix=$home/cdo_installed
 # make
 # make check
 # make install
