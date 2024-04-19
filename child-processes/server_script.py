@@ -443,10 +443,10 @@ subprocess.run('git commit -m "added cdo_installed from SERVER"', shell=True, ca
 print('ya hice el commit')
 
 
-print("estoy haciendo el pull")
-subprocess.run('git pull --all https://{}@github.com/{}/{}.git HEAD:main'.format(token, username, repo_name), shell=True, capture_output=False)
-# os.system(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main')
-print('ya hice el pull')
+# print("estoy haciendo el pull")
+# subprocess.run('git pull origin https://{}@github.com/{}/{}.git HEAD:main'.format(token, username, repo_name), shell=True, capture_output=False)
+# # os.system(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main')
+# print('ya hice el pull')
 
 
 
