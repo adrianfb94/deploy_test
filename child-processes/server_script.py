@@ -356,6 +356,14 @@ if not os.path.exists(ifile+'.nc'):
 # exit()
 
 
+print('********* nc-config *********')
+print()
+subprocess.run('nc-config --all', shell=True, capture_output=False)
+print()
+print('********* nc-config *********')
+
+exit()
+
 
 def install_cdo():
     os.chdir('/'.join([root_dir,'child-processes']))
