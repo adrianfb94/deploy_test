@@ -380,10 +380,10 @@ print(dir_child_process)
 print()
 
 os.chdir('/'.join([home_server, 'child-processes']))
-tar_file='/'.join([home_server,'child-processes/cdo_from_sh.tar.gz'])
+tar_file='/'.join([home_server,'child-processes/cdo_installed_sh.tar.gz'])
 
 subprocess.run(f'tar -xzvf {tar_file}', shell=True, capture_output=False)
-cdo_dir = '/'.join([root_dir,'child-processes/cdo_from_sh/bin/cdo'])
+cdo_dir = '/'.join([root_dir,'child-processes/cdo_installed_sh/bin/cdo'])
 # local_cdo_dir = '/home/adrianfb/cdo_install/cdo-1.9.1/local/bin/cdo'
 # print(cdo_dir)
 print()
