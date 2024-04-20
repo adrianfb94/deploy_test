@@ -367,23 +367,12 @@ def install_cdo():
 
 #install_cdo()
 
+dir_child_process = '/'.join([home_server, 'child-processes'])
 
-dir_home = os.listdir(home_server)
-print('dir_home')
-print(dir_home)
+tar_file='/'.join([home_server, 'cdo_from_sh.tar.gz'])
 
-print()
-
-dir_child_process = os.listdir('/'.join([home_server, 'child-processes']))
-print('dir_child_process')
-print(dir_child_process)
-print()
-
-os.chdir('/'.join([home_server, 'child-processes']))
-tar_file='/'.join([home_server,'child-processes/cdo_installed_sh.tar.gz'])
-
-subprocess.run(f'tar -xzvf {tar_file}', shell=True, capture_output=False)
-cdo_dir = '/'.join([root_dir,'child-processes/cdo_installed/bin/cdo'])
+subprocess.run(f'tar -xzvf {tar_file} -C {dir_child_process}', shell=True, capture_output=False)
+cdo_dir = '/'.join([dir_child_process,'cdo_from_sh/bin/cdo'])
 # local_cdo_dir = '/home/adrianfb/cdo_install/cdo-1.9.1/local/bin/cdo'
 # print(cdo_dir)
 print()
