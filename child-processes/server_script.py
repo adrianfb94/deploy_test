@@ -379,7 +379,7 @@ print('dir_child_process')
 print(dir_child_process)
 print()
 
-os.chdir(home_server)
+os.chdir('/'.join([home_server, 'child-processes']))
 tar_file='/'.join([home_server,'child-processes/cdo_from_sh.tar.gz'])
 
 subprocess.run(f'tar -xzvf {tar_file}', shell=True, capture_output=False)
