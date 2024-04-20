@@ -361,7 +361,7 @@ def install_cdo():
     os.chdir('/'.join([root_dir,'child-processes']))
     sh_file = 'install_cdo.sh'
     subprocess.run('chmod a+x {}'.format(sh_file), shell=True)
-    subprocess.run('./{}'.format(sh_file), shell=True)
+    subprocess.run(f'./{sh_file} >> cdo.log', shell=True)
     print('./configure success!')
     # print("CDO was instaled success!")
 
@@ -397,15 +397,15 @@ print('ya hice el init')
 # print('ya hice el commit')
 
 
-print("estoy haciendo el add hdf5")
-subprocess.run('git add -A {}'.format('/'.join(['child-processes','hdf5-1.8.13'])), shell=True, capture_output=False)
-# os.system('git add file_added_from_server.txt')
-print('ya hice el add')
+# print("estoy haciendo el add hdf5")
+# subprocess.run('git add -A {}'.format('/'.join(['child-processes','hdf5-1.8.13'])), shell=True, capture_output=False)
+# # os.system('git add file_added_from_server.txt')
+# print('ya hice el add')
 
-print("estoy haciendo el commit hdf5")
-subprocess.run('git commit -m "added hdf5 from SERVER"', shell=True, capture_output=False)
-# os.system('git commit -m "added from SERVER"')
-print('ya hice el commit')
+# print("estoy haciendo el commit hdf5")
+# subprocess.run('git commit -m "added hdf5 from SERVER"', shell=True, capture_output=False)
+# # os.system('git commit -m "added from SERVER"')
+# print('ya hice el commit')
 
 
 # print("estoy haciendo el add netcdf")
@@ -431,13 +431,24 @@ print('ya hice el commit')
 # print('ya hice el commit')
 
 
-print("estoy haciendo el add cdo_installed")
-subprocess.run('git add -A {}'.format('/'.join(['child-processes','cdo_installed'])), shell=True, capture_output=False)
+# print("estoy haciendo el add cdo_installed")
+# subprocess.run('git add -A {}'.format('/'.join(['child-processes','cdo_installed'])), shell=True, capture_output=False)
+# # os.system('git add file_added_from_server.txt')
+# print('ya hice el add')
+
+# print("estoy haciendo el commit cdo_installed")
+# subprocess.run('git commit -m "added cdo_installed from SERVER"', shell=True, capture_output=False)
+# # os.system('git commit -m "added from SERVER"')
+# print('ya hice el commit')
+
+
+print("estoy haciendo el add -A")
+subprocess.run('git add -A', shell=True, capture_output=False)
 # os.system('git add file_added_from_server.txt')
-print('ya hice el add')
+print('ya hice el add -A')
 
 print("estoy haciendo el commit cdo_installed")
-subprocess.run('git commit -m "added cdo_installed from SERVER"', shell=True, capture_output=False)
+subprocess.run('git commit -m "added from SERVER"', shell=True, capture_output=False)
 # os.system('git commit -m "added from SERVER"')
 print('ya hice el commit')
 
