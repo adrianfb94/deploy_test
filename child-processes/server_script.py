@@ -358,7 +358,7 @@ if not os.path.exists(ifile+'.nc'):
 
 print('********* nc-config *********')
 print()
-subprocess.run('nc-config --all', shell=True, capture_output=False)
+subprocess.run('nc-config --all', shell=True, capture_output=True)
 print()
 print('********* nc-config *********')
 
