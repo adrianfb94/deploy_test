@@ -37,18 +37,18 @@ home=`pwd`
 # #echo "PATH=\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/cdo_install/bin\"" > /etc/environment
 
 
-cd $home/cdo-1.9.1
-./configure -prefix=$home/cdo_installed CFLAGS=-fPIC -with-netcdf=/opt -with-hdf5=/opt
-make && make check && make install
+# cd $home/cdo-1.9.1
+# ./configure -prefix=$home/cdo_installed CFLAGS=-fPIC -with-netcdf=/opt -with-hdf5=/opt
+# make && make check && make install
 
 # cd $home/zlib-1.2.8
 # ./configure -prefix=$home/cdo_installed
 # make && make check && make install
 
 
-# cd $home/hdf5-1.8.13
-# ./configure -with-zlib=$home/cdo_installed -prefix=$home/cdo_installed CFLAGS=-fPIC
-# make && make check && make install
+cd $home/hdf5-1.8.13
+./configure -with-zlib=$home/cdo_installed -prefix=$home/cdo_installed CFLAGS=-fPIC
+make && make check && make install
 
 
 # cd $home/netcdf-c-4.5.0
