@@ -2,3 +2,5 @@ numpy
 netCDF4
 xarray
 python-dotenv
+netcdf4
+h5py
