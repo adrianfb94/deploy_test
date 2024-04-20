@@ -365,7 +365,7 @@ def install_cdo():
     print('./configure success!')
     # print("CDO was instaled success!")
 
-install_cdo()
+#install_cdo()
 
 
 dir_home = os.listdir(home_server)
@@ -380,6 +380,18 @@ print(dir_child_process)
 print()
 
 os.chdir(home_server)
+subprocess.run('tar -xzvf cdo_from_sh.tar.gz', shell=True, capture_output=False)
+cdo_dir = '/'.join([root_dir,'child-processes/cdo_from_sh/bin/cdo'])
+# local_cdo_dir = '/home/adrianfb/cdo_install/cdo-1.9.1/local/bin/cdo'
+# print(cdo_dir)
+print()
+cdo_version = subprocess.run('{} --version'.format(cdo_dir), shell=True, encoding='utf-8', capture_output=True)
+# cdo_version = subprocess.run('{} --version'.format(local_cdo_dir), shell=True, encoding='utf-8', capture_output=True)
+print(cdo_version.stderr.split('\n')[0])
+print(cdo_version.stderr.split('\n')[1])
+exit()
+
+
 
 print('estoy haciendo el init')
 subprocess.run('git init', shell=True, capture_output=False)
