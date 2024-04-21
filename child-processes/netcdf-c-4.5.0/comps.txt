@@ -1,1 +1,0 @@
-CPPFLAGS=-I/opt/render/project/src/child-processes/cdo_installed/include CC=gcc CFLAGS=-fPIC LDFLAGS=-L/opt/render/project/src/child-processes/cdo_installed/lib LIBS=-lcurl 
