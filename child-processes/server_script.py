@@ -364,8 +364,10 @@ def find_files(filename, search_path):
          result.append(os.path.join(root, filename))
    return result
 
-print(find_files("g++","/usr"))
-exit()
+# print(find_files("g++","/usr"))
+# exit()
+
+
 # print('********* nc-config *********')
 # print()
 # subprocess.run('nc-config --all', shell=True, capture_output=True)
