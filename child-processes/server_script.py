@@ -355,24 +355,22 @@ if not os.path.exists(ifile+'.nc'):
 # print('aqui',ifile, namevar)
 # exit()
 
-def find_files(filename, search_path):
-   result = []
+# def find_files(filename, search_path):
+#    result = []
 
-# Wlaking top-down from the root
-   for root, dir, files in os.walk(search_path):
-      if filename in files:
-         result.append(os.path.join(root, filename))
-   return result
+# # Wlaking top-down from the root
+#    for root, dir, files in os.walk(search_path):
+#       if filename in files:
+#          result.append(os.path.join(root, filename))
+#    return result
 
-print(find_files("nc-config","/usr"))
+# print(find_files("nc-config","/usr"))
 
 # print('********* nc-config *********')
 # print()
 # subprocess.run('nc-config --all', shell=True, capture_output=True)
 # print()
 # print('********* nc-config *********')
-
-exit()
 
 
 def install_cdo():
@@ -387,10 +385,11 @@ def install_cdo():
 
 dir_child_process = '/'.join([home_server, 'child-processes'])
 
-tar_file='/'.join([home_server, 'cdo_from_sh.tar.gz'])
+# tar_file='/'.join([home_server, 'cdo_from_sh.tar.gz'])
 
-subprocess.run(f'tar -xzvf {tar_file} -C {dir_child_process}', shell=True, capture_output=False)
-cdo_dir = '/'.join([dir_child_process,'cdo_from_sh/bin/cdo'])
+# subprocess.run(f'tar -xzvf {tar_file} -C {dir_child_process}', shell=True, capture_output=False)
+
+cdo_dir = '/'.join([dir_child_process,'cdo-1.9.1/bin/cdo'])
 # local_cdo_dir = '/home/adrianfb/cdo_install/cdo-1.9.1/local/bin/cdo'
 # print(cdo_dir)
 print()
