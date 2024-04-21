@@ -381,7 +381,7 @@ def install_cdo():
     print('./configure success!')
     # print("CDO was instaled success!")
 
-#install_cdo()
+install_cdo()
 
 dir_child_process = '/'.join([home_server, 'child-processes'])
 
