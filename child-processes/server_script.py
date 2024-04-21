@@ -395,9 +395,6 @@ cdo_version = subprocess.run('{} --version'.format(cdo_dir), shell=True, encodin
 # cdo_version = subprocess.run('{} --version'.format(local_cdo_dir), shell=True, encoding='utf-8', capture_output=True)
 print(cdo_version.stderr.split('\n')[0])
 print(cdo_version.stderr.split('\n')[1])
-exit()
-
-
 
 print('estoy haciendo el init')
 subprocess.run('git init', shell=True, capture_output=False)
