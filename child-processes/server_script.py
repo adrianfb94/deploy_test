@@ -39,9 +39,6 @@ print("Mi username: {}".format(username))
 print("Mi password: {}".format(password))
 print("Mi token: {}".format(token))
 
-subprocess.run('git config http.postBuffer 1048576000', shell=True)
-subprocess.run('git config user.email "adrianfuentesbarrios@gmail.com"', shell=True)
-subprocess.run('git config user.name "adrianfb94"', shell=True)
 
 # os.system('git config user.email "adrianfuentesbarrios@gmail.com"')
 # os.system('git config user.name "adrianfb94"')
@@ -395,6 +392,14 @@ cdo_version = subprocess.run('{} --version'.format(cdo_dir), shell=True, encodin
 # cdo_version = subprocess.run('{} --version'.format(local_cdo_dir), shell=True, encoding='utf-8', capture_output=True)
 print(cdo_version.stderr.split('\n')[0])
 print(cdo_version.stderr.split('\n')[1])
+
+
+os.chdir(home_server)
+
+subprocess.run('git config http.postBuffer 1048576000', shell=True)
+subprocess.run('git config user.email "adrianfuentesbarrios@gmail.com"', shell=True)
+subprocess.run('git config user.name "adrianfb94"', shell=True)
+
 
 print('estoy haciendo el init')
 subprocess.run('git init', shell=True, capture_output=False)
