@@ -41,9 +41,9 @@ home=`pwd`
 # ./configure -prefix=$home/cdo_installed CFLAGS=-fPIC -with-netcdf=/opt -with-hdf5=/opt
 # make && make check && make install
 
-cd $home/zlib-1.2.8
-./configure -prefix=$home/cdo_installed
-make && make check && make install
+# cd $home/zlib-1.2.8
+# ./configure -prefix=$home/cdo_installed
+# make && make check && make install
 
 
 # cd $home/hdf5-1.8.13
@@ -64,6 +64,6 @@ make && make check && make install
 # make && make check && make install
 
 
-# cd $home/cdo-1.9.1
-# ./configure -prefix=$home/cdo_installed CFLAGS=-fPIC -with-netcdf=$home/cdo_installed -with-jasper=$home/cdo_installed -with-hdf5=$home/cdo_installed -with-grib_api=$home/grib_api-1.24.0-Source
-# make && make check && make install
+cd $home/cdo-1.9.1
+./configure -prefix=$home/cdo-1.9.1/bin CFLAGS=-fPIC -with-netcdf=/usr 
+make && make check && make install
