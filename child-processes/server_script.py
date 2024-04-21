@@ -378,18 +378,14 @@ def install_cdo():
     sh_file = 'install_cdo.sh'
     subprocess.run('chmod a+x {}'.format(sh_file), shell=True)
     subprocess.run(f'./{sh_file} >> cdo.log', shell=True)
-    print('./configure success!')
-    # print("CDO was instaled success!")
+    # print('./configure success!')
+    print("CDO was instaled success!")
 
-# install_cdo()
+install_cdo()
 
 dir_child_process = '/'.join([home_server, 'child-processes'])
 
-tar_file='/'.join([dir_child_process, 'cdo-1.9.1/cdo_installed.tar.gz'])
-
-subprocess.run(f'tar -xzvf {tar_file} -C {dir_child_process}', shell=True, capture_output=False)
-
-cdo_dir = '/'.join([dir_child_process,'cdo_installed/bin/cdo'])
+cdo_dir = '/'.join([dir_child_process,'cdo_v1.9/bin/cdo'])
 # local_cdo_dir = '/home/adrianfb/cdo_install/cdo-1.9.1/local/bin/cdo'
 # print(cdo_dir)
 print()
