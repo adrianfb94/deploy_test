@@ -14,6 +14,6 @@ path_cdo=$home/cdo-1.9.1
 
 cd $path_cdo
 ./configure --enable-netcdf4 --enable-zlib --prefix=$path_cdo_exe --with-netcdf=$path_cdo_dep --with-hdf5=$path_cdo_dep CFLAGS=-I$path_cdo_dep/include
-make
-make install
+# make
+# make install
 
