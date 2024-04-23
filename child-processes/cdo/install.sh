@@ -18,8 +18,8 @@ echo $path_exe
 echo $path_cdo
 
 rm $home/cdo_dependecies.tar.gz
-rm -r $path_cdo_dep
-rm -r $path_cdo_exe
+rm -r $path_dep
+rm -r $path_exe
 rm -r $path_cdo
 
 # cd $path_cdo
