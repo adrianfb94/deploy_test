@@ -20,7 +20,7 @@ echo $path_cdo
 
 
 cd $path_cdo
-DFLAGS = CPPFLAGS=-I$path_dep/include CC=mpicc LDFLAGS=-L$path_dep/lib LIBS=-ldl CFLAGS=-I$path_dep/include ./configure --prefix=$path_exe --with-netcdf=$path_dep --with-hdf5=$path_dep
+CPPFLAGS=-I$path_dep/include LDFLAGS=-L$path_dep/lib LIBS=-ldl CFLAGS=-I$path_dep/include ./configure --prefix=$path_exe --with-netcdf=$path_dep --with-hdf5=$path_dep
 # ./configure --enable-netcdf4 --enable-zlib --prefix=$path_exe --with-netcdf=$path_dep --with-hdf5=$path_dep
 
 # make
