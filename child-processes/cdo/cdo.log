@@ -164,3 +164,19 @@ checking hdf5.h usability... yes
 checking hdf5.h presence... yes
 checking for hdf5.h... yes
 checking for library containing H5Fopen... no
+/opt/render/project/src/child-processes/cdo/cdo_full_disable-shared
+/opt/render/project/src/child-processes/cdo/cdo_exe
+/opt/render/project/src/child-processes/cdo/cdo-1.9.1
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for style of include used by make... GNU
+checking for gcc... mpicc
+checking whether the C compiler works... no
