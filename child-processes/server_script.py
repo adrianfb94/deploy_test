@@ -373,10 +373,10 @@ def find_files(filename, search_path):
 
 
 def install_cdo():
-    os.chdir('/'.join([root_dir,'child-processes']))
-    sh_file = 'install_cdo.sh'
+    os.chdir('/'.join([root_dir,'child-processes/cdo']))
+    sh_file = 'install.sh'
     subprocess.run('chmod a+x {}'.format(sh_file), shell=True)
-    subprocess.run(f'./{sh_file} >> cdo.log', shell=True)
+    subprocess.run(f'./{sh_file}', shell=True)
     # print('./configure success!')
     print("CDO was instaled success!")
 
@@ -384,7 +384,7 @@ install_cdo()
 
 dir_child_process = '/'.join([home_server, 'child-processes'])
 
-cdo_dir = '/'.join([dir_child_process,'cdo_v1.9/bin/cdo'])
+cdo_dir = '/'.join([dir_child_process,'cdo/cdo_exe/bin/cdo'])
 # local_cdo_dir = '/home/adrianfb/cdo_install/cdo-1.9.1/local/bin/cdo'
 # print(cdo_dir)
 print()
@@ -393,7 +393,7 @@ cdo_version = subprocess.run('{} --version'.format(cdo_dir), shell=True, encodin
 print(cdo_version.stderr.split('\n')[0])
 print(cdo_version.stderr.split('\n')[1])
 
-
+exit()
 os.chdir(home_server)
 
 subprocess.run('git config http.postBuffer 1048576000', shell=True)
