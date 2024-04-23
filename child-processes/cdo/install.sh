@@ -17,8 +17,10 @@ echo $path_dep
 echo $path_exe
 echo $path_cdo
 
+
+
 cd $path_cdo
-CPPFLAGS="-I$path_dep/include" CC=mpicc LDFLAGS=-L$path_dep/lib LIBS=-ldl CFLAGS=-I$path_dep/include ./configure --prefix=$path_exe --with-netcdf=$path_dep --with-hdf5=$path_dep
+DFLAGS = CPPFLAGS=-I$path_dep/include CC=mpicc LDFLAGS=-L$path_dep/lib LIBS=-ldl CFLAGS=-I$path_dep/include ./configure --prefix=$path_exe --with-netcdf=$path_dep --with-hdf5=$path_dep
 # ./configure --enable-netcdf4 --enable-zlib --prefix=$path_exe --with-netcdf=$path_dep --with-hdf5=$path_dep
 
 # make
