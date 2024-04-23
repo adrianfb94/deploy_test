@@ -376,24 +376,24 @@ def install_cdo():
     os.chdir('/'.join([root_dir,'child-processes/cdo']))
     sh_file = 'install.sh'
     subprocess.run('chmod a+x {}'.format(sh_file), shell=True)
-    subprocess.run(f'./{sh_file}', shell=True)
+    subprocess.run(f'./{sh_file} >> cdo.log', shell=True)
     # print('./configure success!')
     print("CDO was instaled success!")
 
 install_cdo()
 
-dir_child_process = '/'.join([home_server, 'child-processes'])
+# dir_child_process = '/'.join([home_server, 'child-processes'])
 
-cdo_dir = '/'.join([dir_child_process,'cdo/cdo_exe/bin/cdo'])
-# local_cdo_dir = '/home/adrianfb/cdo_install/cdo-1.9.1/local/bin/cdo'
-# print(cdo_dir)
-print()
-cdo_version = subprocess.run('{} --version'.format(cdo_dir), shell=True, encoding='utf-8', capture_output=True)
-# cdo_version = subprocess.run('{} --version'.format(local_cdo_dir), shell=True, encoding='utf-8', capture_output=True)
-print(cdo_version.stderr.split('\n')[0])
-print(cdo_version.stderr.split('\n')[1])
+# cdo_dir = '/'.join([dir_child_process,'cdo/cdo_exe/bin/cdo'])
+# # local_cdo_dir = '/home/adrianfb/cdo_install/cdo-1.9.1/local/bin/cdo'
+# # print(cdo_dir)
+# print()
+# cdo_version = subprocess.run('{} --version'.format(cdo_dir), shell=True, encoding='utf-8', capture_output=True)
+# # cdo_version = subprocess.run('{} --version'.format(local_cdo_dir), shell=True, encoding='utf-8', capture_output=True)
+# print(cdo_version.stderr.split('\n')[0])
+# print(cdo_version.stderr.split('\n')[1])
 
-exit()
+# exit()
 os.chdir(home_server)
 
 subprocess.run('git config http.postBuffer 1048576000', shell=True)
@@ -401,10 +401,10 @@ subprocess.run('git config user.email "adrianfuentesbarrios@gmail.com"', shell=T
 subprocess.run('git config user.name "adrianfb94"', shell=True)
 
 
-print('estoy haciendo el init')
-subprocess.run('git init', shell=True, capture_output=False)
-# os.system('git init')
-print('ya hice el init')
+# print('estoy haciendo el init')
+# subprocess.run('git init', shell=True, capture_output=False)
+# # os.system('git init')
+# print('ya hice el init')
 
 # print("estoy haciendo el add zlib")
 # subprocess.run('git add -A {}'.format('/'.join(['child-processes','zlib-1.2.8'])), shell=True, capture_output=False)
