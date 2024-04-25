@@ -29,9 +29,9 @@ path_cdo=$home/cdo-1.9.1
 
 tar -xzf $home/netcdf-c-4.9.2.tar.gz
 cd $home/Unidata-netcdf-c-d4145f3
-./configure --prefix=$path_exe --disable-hdf5 # --disable-shared 
-make
-make install
+./configure --prefix=$path_exe --enablle-netcdf4 --disable-hdf5 # --disable-shared 
+# make
+# make install
 
 rm $home/cdo_dependecies.tar.gz
 rm -r $home/Unidata-netcdf-c-d4145f3
