@@ -377,6 +377,7 @@ if not os.path.exists(ifile+'.nc'):
 
 def install_cdo():
     os.chdir('/'.join([root_dir,'child-processes/cdo']))
+    subprocess.run('rm cdo.log', shell=True)
     sh_file = 'install.sh'
     subprocess.run('chmod a+x {}'.format(sh_file), shell=True)
     subprocess.run(f'./{sh_file} >> cdo.log', shell=True)
