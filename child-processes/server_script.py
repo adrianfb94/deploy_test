@@ -352,18 +352,18 @@ if not os.path.exists(ifile+'.nc'):
 # print('aqui',ifile, namevar)
 # exit()
 
-def find_files(filename, search_path):
-   result = []
+# def find_files(filename, search_path):
+#    result = []
 
-# Wlaking top-down from the root
-   for root, dir, files in os.walk(search_path):
-      if filename in files:
-         result.append(os.path.join(root, filename))
-   return result
+# # Wlaking top-down from the root
+#    for root, dir, files in os.walk(search_path):
+#       if filename in files:
+#          result.append(os.path.join(root, filename))
+#    return result
 
-result = find_files(".bashrc","/home")
+# result = find_files(".bashrc","/home")
 
-print(result)
+# print(result)
 
 # print(find_files("g++","/usr"))
 # exit()
@@ -384,7 +384,7 @@ def install_cdo():
     # print('./configure success!')
     # print("CDO was instaled success!")
 
-#install_cdo()
+install_cdo()
 
 # dir_child_process = '/'.join([home_server, 'child-processes'])
 
