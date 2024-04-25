@@ -1,13 +1,5 @@
 #!/bin/bash
 
-# .venv/lib/python3.11/site-packages/netCDF4.libs
-
-# ~/ -> /opt/render
-# /opt/render/project/src/child-processes/cdo/cdo.log
-
-
-
-
 home=`pwd`
 
 # split -b 1M cdo_dependecies.tar.gz cdo_dependecies.tar.gz.part
@@ -18,14 +10,19 @@ tar -xzf $home/cdo_dependecies.tar.gz
 
 path_dep=$home/cdo_full_disable-shared
 # path_dep=/opt/render/project/src/.venv/lib/python3.11/site-packages/netCDF4.libs
-
 path_exe=$home/cdo_exe
 path_cdo=$home/cdo-1.9.1
 
 
-# cd $path_cdo
+# export CPPFLAGS=-I$path_dep/include 
+# export LDFLAGS=-L$path_dep/lib 
+# export CFLAGS=-I$path_dep/include
+
+
+cd $path_cdo
 # CPPFLAGS=-I$path_dep/include LDFLAGS=-L$path_dep/lib CFLAGS=-I$path_dep/include ./configure --prefix=$path_exe --with-netcdf=$path_dep # --with-hdf5=$path_dep
-# ./configure --enable-netcdf4 --enable-zlib --prefix=$path_exe 
+./configure --prefix=$path_exe --enable-netcdf4 
+# ./configure --enable-netcdf4 --enable-zlib --prefix=$path_exe --with-netcdf=$path_dep --with-hdf5=$path_dep
 
 # make
 # make install

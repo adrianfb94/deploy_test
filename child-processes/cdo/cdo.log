@@ -1,0 +1,612 @@
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking for ar... ar
+checking the archiver (ar) interface... ar
+configure: setting up libtool
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for bash... /bin/bash
+checking for gcc... (cached) gcc
+checking for g++... g++
+checking for gcc option to accept ISO C99... none needed
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... gcc3
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for C/C++ restrict keyword... __restrict
+checking whether g++ supports C++11 features by default... yes
+checking for gcc option to support OpenMP... -fopenmp
+checking for ar... (cached) ar
+checking for ld... /usr/bin/ld -m elf_x86_64
+checking for nm... /usr/bin/nm -B
+checking for ar... (cached) ar
+checking for as... as
+checking for dlltool... false
+checking for objdump... (cached) objdump
+checking for strip... (cached) strip
+checking for ranlib... (cached) ranlib
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for stdlib.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/param.h... yes
+checking for getpagesize... yes
+checking for working mmap... yes
+checking for malloc in -lmalloc... no
+checking for struct stat.st_blksize... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking sys/times.h usability... yes
+checking sys/times.h presence... yes
+checking for sys/times.h... yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking glob.h usability... yes
+checking glob.h presence... yes
+checking for glob.h... yes
+checking fnmatch.h usability... yes
+checking fnmatch.h presence... yes
+checking for fnmatch.h... yes
+checking wordexp.h usability... yes
+checking wordexp.h presence... yes
+checking for wordexp.h... yes
+checking execinfo.h usability... yes
+checking execinfo.h presence... yes
+checking for execinfo.h... yes
+checking for mallinfo... yes
+checking for backtrace... yes
+checking for getrlimit... yes
+checking for gethostname... yes
+checking for floor in -lm... yes
+checking whether isnan is declared... yes
+checking for sqrtl... yes
+checking for feenableexcept... yes
+checking for fenv_t.__control... no
+checking for fenv_t.__mxcsr... yes
+checking for DATA support... 
+checking if compiler needs -Werror to reject unknown flags... no
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+CC:gcc CFLAGS:-g -O2 -fopenmp  LIBS: -lm 
+checking for szlib library... suppressed
+checking for hdf5 library... suppressed
+checking for NetCDF library... suppressed
+checking for the UDUNITS2 library... suppressed
+checking for the CMOR library... suppressed
+checking for the ECCODES library... suppressed
+checking for the GRIB_API library... suppressed
+checking for GRIB support... yes
+checking for CGRIBEX support... yes
+checking for SERVICE support... yes
+checking for EXTRA support... yes
+checking for IEG support... yes
+checking for FFTW3 support... checking for the PROJ library... suppressed
+checking for the CURL library... suppressed
+checking for MAGICS library... suppressed
+checking for XML2 library... suppressed
+checking for build a separate CDI library and link CDO to it... no
+checking for building an additional static CDO binary... no
+checking for HIRLAM extensions... no
+checking if x86/amd64 assembler speaks SSE4.2... yes
+checking if x86/amd64 assembler speaks AVX... yes
+checking if x86/amd64 assembler speaks AVX2... yes
+checking for gawk... (cached) mawk
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating test/File.test
+config.status: creating test/Read_grib.test
+config.status: creating test/Read_netcdf.test
+config.status: creating test/Copy_netcdf.test
+config.status: creating test/Comp.test
+config.status: creating test/Compc.test
+config.status: creating test/Cat.test
+config.status: creating test/Gridarea.test
+config.status: creating test/Genweights.test
+config.status: creating test/Remap.test
+config.status: creating test/Remap2.test
+config.status: creating test/Remapeta.test
+config.status: creating test/EOF.test
+config.status: creating test/Select.test
+config.status: creating test/Spectral.test
+config.status: creating test/Vertint.test
+config.status: creating test/Timstat.test
+config.status: creating test/Timselstat.test
+config.status: creating test/Seasstat.test
+config.status: creating test/Runstat.test
+config.status: creating test/Multiyearstat.test
+config.status: creating test/Ydrunstat.test
+config.status: creating test/Gridboxstat.test
+config.status: creating test/Vertstat.test
+config.status: creating test/Fldstat.test
+config.status: creating test/Fldpctl.test
+config.status: creating test/Ensstat.test
+config.status: creating test/Enspctl.test
+config.status: creating test/Merstat.test
+config.status: creating test/Zonstat.test
+config.status: creating test/Mergetime.test
+config.status: creating test/Afterburner.test
+config.status: creating test/Detrend.test
+config.status: creating test/Arithc.test
+config.status: creating test/Arith.test
+config.status: creating test/Expr.test
+config.status: creating test/Gradsdes.test
+config.status: creating test/Collgrid.test
+config.status: creating test/threads.test
+config.status: creating test/tsformat.test
+config.status: creating test/wildcard.test
+config.status: creating test/MapReduce.test
+config.status: creating test/Ninfo.test
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating contrib/Makefile
+config.status: creating test/Makefile
+config.status: creating test/data/Makefile
+config.status: creating cdo.spec
+config.status: creating cdo.settings
+config.status: creating src/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+=== configuring in libcdi (/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi)
+configure: running /bin/bash ./configure --disable-option-checking '--prefix=/opt/render/project/src/child-processes/cdo/cdo_exe'  '--enable-netcdf4' --cache-file=/dev/null --srcdir=.
+configuring cdi 1.9.1
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for gcc... gcc
+checking for style of include used by make... GNU
+checking for gcc... (cached) gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking for gcc option to accept ISO C99... none needed
+checking For conformance to POSIX.1-2001.... yes
+checking for C/C++ restrict keyword... __restrict
+checking whether we are using the GNU Fortran compiler... no
+checking whether no accepts -g... no
+checking for g77... no
+checking for xlf... no
+checking for f77... no
+checking for frt... no
+checking for pgf77... no
+checking for cf77... no
+checking for fort77... no
+checking for fl32... no
+checking for af77... no
+checking for xlf90... no
+checking for f90... no
+checking for pgf90... no
+checking for pghpf... no
+checking for epcf90... no
+checking for gfortran... no
+checking for g95... no
+checking for xlf95... no
+checking for f95... no
+checking for fort... no
+checking for ifort... no
+checking for ifc... no
+checking for efc... no
+checking for pgfortran... no
+checking for pgf95... no
+checking for lf95... no
+checking for ftn... no
+checking whether we are using the GNU Fortran 77 compiler... no
+checking whether  accepts -g... no
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... gcc3
+configure: setting up libtool
+checking any compiler has problems building shared objects... no
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+configure: creating ./config.lt
+config.lt: creating libtool
+checking whether byte ordering is bigendian... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for stdlib.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/param.h... yes
+checking for getpagesize... yes
+checking for working mmap... yes
+checking for malloc in -lmalloc... no
+checking for struct stat.st_blksize... yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking uuid.h usability... no
+checking uuid.h presence... no
+checking for uuid.h... no
+checking uuid/uuid.h usability... yes
+checking uuid/uuid.h presence... yes
+checking for uuid/uuid.h... yes
+checking execinfo.h usability... yes
+checking execinfo.h presence... yes
+checking for execinfo.h... yes
+checking size parameter type for backtrace()... int
+checking for library containing backtrace... none required
+checking for mallinfo... yes
+checking for getline... yes
+checking for uuid_generate in -luuid... yes
+checking whether uuid_generate is declared... yes
+checking whether isnan is declared... yes
+checking whether _SC_LARGE_PAGESIZE is declared... no
+checking whether PAGESIZE is declared... no
+checking whether PAGE_SIZE is declared... no
+checking whether _SC_PAGE_SIZE is declared... yes
+checking whether _SC_PAGESIZE is declared... yes
+checking whether _PC_REC_XFER_ALIGN is declared... yes
+checking whether POSIX_REC_XFER_ALIGN is declared... no
+checking whether __builtin_ctz is declared... yes
+checking for floor in -lm... yes
+checking if compiler needs -Werror to reject unknown flags... no
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... no
+checking whether pthreads work with -Kthread... no
+checking whether pthreads work with -kthread... no
+checking for the pthreads library -llthread... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+CC:gcc CFLAGS:-g -O2 -pthread LIBS: -lm 
+checking for szlib library... suppressed
+checking for NetCDF library... suppressed
+checking for the ECCODES library... suppressed
+checking for the GRIB_API library... suppressed
+checking for GRIB support... yes
+checking for CGRIBEX support... yes
+checking for SERVICE support... yes
+checking for EXTRA support... yes
+checking for IEG support... yes
+checking for building an additional static CDI binary... no
+checking for HIRLAM extensions... no
+checking for grib_get_length... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for ruby... no
+checking C preprocessor flags for Fortran calling convention cfortran.h...  (probed)
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating tests/test_cksum_grib
+config.status: creating tests/test_cksum_nc
+config.status: creating tests/test_cksum_nc2
+config.status: creating tests/test_cksum_nc4
+config.status: creating tests/test_cksum_extra
+config.status: creating tests/test_cksum_service
+config.status: creating tests/test_cksum_ieg
+config.status: creating tests/test_chunk_cksum
+config.status: creating tests/test_f2003
+config.status: creating tests/pio_write_run
+config.status: creating tests/pio_write_deco2d_run
+config.status: creating tests/pio_cksum_mpinonb
+config.status: creating tests/pio_cksum_mpi_fw_ordered
+config.status: creating tests/pio_cksum_mpi_fw_at_all
+config.status: creating tests/pio_cksum_mpi_fw_at_reblock
+config.status: creating tests/pio_cksum_fpguard
+config.status: creating tests/pio_cksum_asynch
+config.status: creating tests/pio_cksum_writer
+config.status: creating tests/pio_cksum_cdf
+config.status: creating tests/test_resource_copy_mpi_run
+config.status: creating tests/test_cdf_transformation
+config.status: creating tests/test_cdf_const
+config.status: creating tables/gen_tableheaderfile
+config.status: creating util/serialrun
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating interfaces/Makefile
+config.status: creating app/Makefile
+config.status: creating tests/Makefile
+config.status: creating examples/Makefile
+config.status: creating cdi.settings
+config.status: creating examples/pio/Makefile
+config.status: creating src/pkgconfig/cdi.pc
+config.status: creating src/pkgconfig/cdipio.pc
+config.status: creating src/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: CDI is configured with the following options:
+config.status: creating cdi.settings
+{
+  "build" : {
+    "tools" : {
+      "CC"       : "gcc",
+      "CPP"      : "gcc -E",
+      "CPPFLAGS" : "",
+      "CFLAGS"   : "-g -O2 -pthread",
+      "LDFLAGS"  : "",
+      "LIBS"     : " -lm ",
+      "FC"       : "no",
+      "F77"      : "",
+      "FCFLAGS"  : "",
+      "LD"       : "/usr/bin/ld -m elf_x86_64",
+      "NM"       : "/usr/bin/nm -B",
+      "AR"       : "ar",
+      "AS"       : "@AS@",
+      "DLLTOOL"  : "false",
+      "OBJDUMP"  : "objdump",
+      "STRIP"    : "strip",
+      "RANLIB"   : "ranlib",
+      "INSTALL"  : "/usr/bin/install -c"
+    },
+    "platform" : {
+      "USER_NAME"   : "unknown",
+      "HOST_NAME"   : "srv-colbsh0l5elc73fcm17g-hibernate-766d645877-2sw7s",
+      "SYSTEM_TYPE" : "x86_64-pc-linux-gnu"
+    },
+    "libraries" : {
+      "threads"    : {
+        "lib"      : "",
+        "include"  : ""
+      },
+      "mpi"        : {
+        "libs"     : "",
+        "cflags"   : "",
+        "fclibs"   : "",
+        "fcflags"  : ""
+      },
+      "szlib"    : {
+        "lib"      : "",
+        "include"  : ""
+      },
+      "netcdf"   : {
+        "lib"      : "",
+        "include"  : ""
+      },
+      "grib_api" : {
+        "lib"      : "",
+        "include"  : ""
+      }
+      "eccodes" : {
+        "lib"      : "",
+        "include"  : ""
+      }
+    }
+  },
+  "features" : {
+    "enable_cdi_lib" : false,
+    "grib"           : "yes",
+    "cgribex"        : "yes",
+    "service"        : "yes",
+    "extra"          : "yes",
+    "ieg"            : "yes",
+    "enable_mpi"    : false,
+    "parallel_nc4"  : 0,
+    "enable_python" : false,
+    "enable_ruby"   : false
+  }
+}
+configure:
+
+  Configuration completed.
+
+    You can now say 'make' to compile the CDI package and 'make install' to install it afterwards.
+
+configure: CDO is configured with the following options:
+{
+   "CXX"                : "g++",
+   "CC"                 : "gcc",
+   "CPP"                : "gcc -E",
+   "CPPFLAGS"           : "",
+   "CXXFLAGS"           : "-g -O2 -fopenmp ",
+   "CFLAGS"             : "-g -O2 -fopenmp ",
+   "LDFLAGS"            : "",
+   "LIBS"               : " -lm ",
+   "FCFLAGS"            : "",
+   "INCLUDES"           : "@INCLUDES@",
+   "LD"                 : "/usr/bin/ld -m elf_x86_64",
+   "NM"                 : "/usr/bin/nm -B",
+   "AR"                 : "ar",
+   "AS"                 : "as",
+   "DLLTOOL"            : "false",
+   "OBJDUMP"            : "objdump",
+   "STRIP"              : "strip",
+   "RANLIB"             : "ranlib",
+   "INSTALL"            : "/usr/bin/install -c",
+   "cdi"                : {
+     "enable_cdi_lib" : false
+   },
+  "threads"    : {
+    "lib"      : "",
+    "include"  : ""
+  "szlib"      : {
+    "lib"      : "",
+    "include"  : ""
+  },
+  "hdf5"       : {
+    "lib"      : "",
+    "include"  : ""
+  },
+  "netcdf"     : {
+    "lib"      : "",
+    "include"  : ""
+  },
+  "udunits2"   : {
+    "lib"      : "",
+    "include"  : ""
+  },
+  "proj"       : {
+    "lib"      : "",
+    "include"  : ""
+  },
+  "magics"       : {
+    "lib"      : "",
+    "include"  : ""
+  },
+  "USER_NAME"          : "unknown",
+  "HOST_NAME"          : "srv-colbsh0l5elc73fcm17g-hibernate-766d645877-2sw7s",
+  "SYSTEM_TYPE"        : "x86_64-unknown-linux-gnu"
+}
+configure:
+
+  Configuration completed.
+
+    You can now say 'make' to compile the CDO package and 'make install' to install it afterwards.
+
