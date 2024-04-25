@@ -14,14 +14,14 @@ path_exe=$home/cdo_exe
 path_cdo=$home/cdo-1.9.1
 
 
-export CPPFLAGS=-I$path_dep/include 
-export LDFLAGS=-L$path_dep/lib 
-export CFLAGS=-I$path_dep/include
+# export CPPFLAGS=-I$path_dep/include 
+# export LDFLAGS=-L$path_dep/lib 
+# export CFLAGS=-I$path_dep/include
 
 
 cd $path_cdo
 # CPPFLAGS=-I$path_dep/include LDFLAGS=-L$path_dep/lib CFLAGS=-I$path_dep/include ./configure --prefix=$path_exe --with-netcdf=$path_dep # --with-hdf5=$path_dep
-./configure --prefix=$path_exe --enable-netcdf4 --with-netcdf=/opt/render/project/src/.venv/lib/python3.11/site-packages/netCDF4.libs
+./configure --prefix=$path_exe --enable-netcdf4 
 # ./configure --enable-netcdf4 --enable-zlib --prefix=$path_exe --with-netcdf=$path_dep --with-hdf5=$path_dep
 
 # make
