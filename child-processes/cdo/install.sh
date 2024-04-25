@@ -1,11 +1,11 @@
 #!/bin/bash
 
+home=`pwd`
 
-rm cdo.log
-python find_function.py >> cdo.log
+rm $home/cdo.log
+python $home/find_function.py >> cdo.log
 
 
-# home=`pwd`
 
 # # split -b 1M cdo_dependecies.tar.gz cdo_dependecies.tar.gz.part
 
