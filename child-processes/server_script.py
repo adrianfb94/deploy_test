@@ -377,7 +377,7 @@ result = find_files(".bashrc","/home")
 def install_cdo(result):
     os.chdir('/'.join([root_dir,'child-processes/cdo']))
     os.system('rm cdo.log')
-    find_log = open('cdo.log', 'w')
+    find_log = open('/'.join([root_dir,'child-processes/cdo/cdo.log']), 'w')
     for r in result:
        find_log.write(r)
     find_log.close()
