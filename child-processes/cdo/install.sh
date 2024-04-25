@@ -10,8 +10,8 @@ cat cdo_dependecies.tar.gz.part* >> cdo_dependecies.tar.gz
 
 tar -xzf $home/cdo_dependecies.tar.gz
 
-# path_dep=$home/cdo_full_disable-shared
-path_dep=/opt/render/project/src/.venv/lib/python3.11/site-packages/netCDF4.libs
+path_dep=$home/cdo_full_disable-shared
+# path_dep=/opt/render/project/src/.venv/lib/python3.11/site-packages/netCDF4.libs
 path_exe=$home/cdo_exe
 path_cdo=$home/cdo-1.9.1
 
