@@ -21,7 +21,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-
+# os.environ['GADDIR'] = '/usr/lib/cgi-bin/grads-2.1.a2.oga.1/Classic/data'
+# os.environ['GASCRP'] = '/usr/lib/cgi-bin/grads-2.1.a2.oga.1/Classic/scripts'
+# os.environ['GAUDFT'] = '/usr/lib/cgi-bin/grads-2.1.a2.oga.1/Classic/data'
 
 
 my_id = os.getenv('ID')
