@@ -1,0 +1,454 @@
+configure: netCDF 4.9.2
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking target system type... x86_64-pc-linux-gnu
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether compiler supports -fno-strict-aliasing... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking whether make supports nested variables... yes
+checking dependency style of gcc... gcc3
+checking whether to enable maintainer-specific portions of Makefiles... no
+configure: checking supported formats
+checking whether we should build with netcdf4 (alias for HDF5)... yes (deprecated; Please use with --disable-hdf5)
+checking whether we should build with netcdf-4 (alias for HDF5)... yes
+checking whether we should build with HDF5... no
+checking whether CDF5 support should be disabled... auto
+checking whether reading of HDF4 SD files is to be enabled... no
+checking whether parallel I/O for classic files is to be enabled... no
+checking for curl_easy_setopt in -lcurl... yes
+checking for library containing curl_easy_setopt... -lcurl
+checking whether DAP client(s) are to be built... yes
+checking whether netcdf zarr storage format should be disabled... yes
+checking whether netcdf-4 should be forcibly enabled... yes
+configure: checking user options
+checking whether a NCIO_MINBLOCKSIZE was specified... 256
+checking for valgrind... no
+checking if fsync support is enabled... no
+checking if jna bug workaround is enabled... no
+checking if unit tests should be enabled... yes
+checking do we require hdf5 dynamic-loading support... yes
+checking whether to fetch some sample HDF4 files from Unidata ftp site to test HDF4 reading (requires wget)... no
+checking whether we should attempt to install netcdf-fortran (EXPERIMENTAL)... no
+checking whether parallel IO tests should be run... no
+checking whether a user specified program to run mpi programs... mpiexec
+checking whether a default chunk size in bytes was specified... 4194304
+checking whether a maximum per-variable cache size for HDF5 was specified... 67108864
+checking whether a number of chunks for the default per-variable cache was specified... 10
+checking whether a default file cache size for HDF5 was specified... 16777216
+checking whether a default file cache maximum number of elements for HDF5 was specified... 4133
+checking whether a default cache preemption for HDF5 was specified... 0.75
+checking whether netCDF-4 logging is enabled... no
+checking whether nc_set_log_level() function is included (will do nothing unless enable-logging is also used)... yes
+checking whether CURLOPT_USERNAME is defined... yes
+checking whether CURLOPT_PASSWORD is defined... yes
+checking whether CURLOPT_KEYPASSWD is defined... yes
+checking whether CURLINFO_RESPONSE_CODE is defined... yes
+checking whether CURLOPT_BUFFERSIZE is defined... yes
+checking whether CURLOPT_TCP_KEEPALIVE is defined... yes
+checking whether libcurl is version 7.66 or later?... no
+checking whether to search for and use external libxml2... yes
+checking for xml2-config... xml2-config
+checking for xmlReadMemory in -lxml2... yes
+checking for library containing xmlReadMemory... -lxml2
+checking whether to enable quantize functionality... yes
+checking whether dap use of remotetest server should be enabled... no
+checking whether dap use of remotetest server should be enabled... no
+checking whether use of external servers should be enabled... no
+configure: --disable-dap_remote_tests => --disable-external-server-tests
+checking whether dap authorization testing should be enabled (default off)... no
+checking which remote test server(s) to use... remotetest.unidata.ucar.edu
+checking whether the time-consuming dap tests should be enabled (default off)... no
+configure: --disable-dap-remote|external-server-tests => --disable_dap_long_tests
+checking for blosc_init in -lblosc... no
+checking for ZSTD_compress in -lzstd... yes
+checking for library containing ZSTD_compress... -lzstd
+checking whether libzstd library is available... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for zstd.h... yes
+checking for BZ2_bzCompress in -lbz2... yes
+checking for library containing BZ2_bzCompress... -lbz2
+checking whether libbz2 library is available... yes
+checking for SZ_BufftoBuffCompress in -lsz... yes
+checking for library containing SZ_BufftoBuffCompress... -lsz
+checking whether libsz library is available... yes
+checking for library containing zip_open... no
+checking whether libzip library is available... no
+checking whether nczarr zip support is enabled... no
+checking whether netcdf S3 support should be enabled... no
+checking whether netcdf NCZarr S3 support should be enabled... no
+checking whether AWS S3 SDK library is available... no
+checking whether netcdf zarr S3 testing should be enabled... no
+checking whether a default file cache size for NCZarr was specified... 4194304
+checking whether multi-filter support is enabled... yes
+checking whether to enable strict null-byte header padding when reading (default off)... no
+checking whether FFIO will be used... no
+checking whether STDIO will be used... no
+checking whether examples should be built... yes
+checking whether v2 netCDF API should be built... yes
+checking whether the ncgen/ncdump/nccopy should be built... yes
+checking whether test should be built and run... yes
+checking whether large file (> 2GB) tests should be run... no
+checking whether benchmarks should be run... no
+checking whether extreme numbers should be used in tests... yes
+checking where to put large temp files if large file tests are run... .
+checking Extra values for _NCProperties... 
+checking whether user-defined format 0 was specified... 
+checking whether a magic number for user-defined format 0 was specified... 
+checking whether user-defined format 1 was specified... 
+checking whether a magic number for user-defined format 1 was specified... 
+configure: finding C compiler
+checking for gcc... (cached) gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to enable C11 features... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking for g++... g++
+checking whether the compiler supports GNU C++... yes
+checking whether g++ accepts -g... yes
+checking for g++ option to enable C++11 features... none needed
+checking dependency style of g++... gcc3
+checking for an ANSI C-conforming const... yes
+configure: setting up libtool
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for file... file
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+configure: finding other utilities
+checking for m4... m4
+checking for dot... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+configure: displaying some results
+checking CPPFLAGS... 
+checking CC CFLAGS... gcc  -fno-strict-aliasing
+checking type gcc... gcc is /usr/bin/gcc
+checking CXX... g++
+checking CXXFLAGS... -g -O2
+checking type g++... g++ is /usr/bin/g++
+checking FC... unset
+checking F90... unset
+checking AR... ar
+checking AR_FLAGS... cr
+checking type ar... ar is /usr/bin/ar
+checking NM... /usr/bin/nm -B
+checking NMFLAGS... 
+configure: checking types, headers, and functions
+checking for sys/param.h... yes
+checking for libgen.h... yes
+checking for egrep... (cached) /bin/grep -E
+checking for locale.h... yes
+checking for stdio.h... (cached) yes
+checking for stdarg.h... yes
+checking for fcntl.h... yes
+checking for malloc.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for getopt.h... yes
+checking for sys/time.h... yes
+checking for sys/types.h... (cached) yes
+checking for time.h... yes
+checking for dirent.h... yes
+checking for stdint.h... (cached) yes
+checking for ctype.h... yes
+checking for sys/resource.h... yes
+checking for ftw.h... yes
+checking for execinfo.h... yes
+checking for strlcat... no
+checking for snprintf... yes
+checking for strcasecmp... yes
+checking for fileno... yes
+checking for strdup... yes
+checking for strtoll... yes
+checking for strtoull... yes
+checking for mkstemp... yes
+checking for mktemp... yes
+checking for random... yes
+checking for getrlimit... yes
+checking for gettimeofday... yes
+checking for fsync... yes
+checking for MPI_Comm_f2c... no
+checking for MPI_Info_f2c... no
+checking for strncasecmp... yes
+checking for clock_gettime... yes
+checking for struct timespec... yes
+checking for memmove... yes
+checking for getpagesize... yes
+checking for sysconf... yes
+checking whether mmap is enabled for in-memory files... no
+checking for mmap... yes
+checking for mremap... yes
+checking whether MAP_ANONYMOUS is defined... yes
+configure: mmap functionality is not available: disabling mmap
+checking whether byte range support is enabled... yes
+checking whether nc_finalize should be invoked at exit... yes
+checking for atexit... yes
+checking for dlopen in -ldl... yes
+checking for library containing dlopen... -ldl
+checking whether dynamically loaded plugins is enabled... yes
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for gcc options needed to detect all undeclared functions... none needed
+checking whether isnan is declared... yes
+checking whether isinf is declared... yes
+checking whether isfinite is declared... yes
+checking for struct stat.st_blksize... yes
+checking for IEEE floating point format... yes
+checking for size_t... (cached) yes
+checking for ssize_t... yes
+checking for schar... no
+checking for uchar... no
+checking for longlong... no
+checking for ushort... yes
+checking for uint... yes
+checking for int64... no
+checking for uint64... no
+checking for size64_t... no
+checking for ssize64_t... no
+checking for _off64_t... no
+checking for uint64_t... yes
+checking for ptrdiff_t... yes
+checking for off_t... yes
+checking for uintptr_t... yes
+checking whether char is unsigned... no
+checking whether byte ordering is bigendian... no
+checking size of short... 2
+checking size of int... 4
+checking size of long... 8
+checking size of long long... 8
+checking size of float... 4
+checking size of double... 8
+checking size of off_t... 8
+checking size of size_t... 8
+checking size of unsigned long long... 8
+checking size of unsigned char... 1
+checking size of ushort... 2
+checking size of uint... 4
+checking size of ushort... (cached) 2
+checking size of uint... (cached) 4
+checking size of ssize_t... 8
+checking size of void*... 8
+checking for library containing deflate... -lz
+checking for floor in -lm... yes
+checking whether parallel I/O is enabled for netcdf-4... no
+checking whether we should enable NCZarr filters... yes
+checking whether filter testing should be run... yes
+checking for unsigned long long int... yes
+checking for long long int... yes
+checking for unsigned long long int... (cached) yes
+checking what to call the output of the ftpbin target... binary-netcdf-4.9.2.tar  g++
+checking if libtool needs -no-undefined flag to build shared libraries... no
+checking value of LIBS... -lm -lz -ldl -lsz -lbz2 -lzstd -lxml2 -lcurl 
+checking whether and where we should install plugins... no
+configure: generating header files and makefiles
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating test_common.sh
+config.status: creating nc_test4/findplugin.sh
+config.status: creating nczarr_test/findplugin.sh
+config.status: creating plugins/findplugin.sh
+config.status: creating examples/C/findplugin.sh
+config.status: creating ncdap_test/findtestserver.c
+config.status: creating nc_test/run_pnetcdf_tests.sh
+config.status: creating dap4_test/findtestserver4.c
+config.status: creating dap4_test/pingurl4.c
+config.status: creating h5_test/run_par_tests.sh
+config.status: creating nc_test4/run_par_test.sh
+config.status: creating nc_perf/run_par_bm_test.sh
+config.status: creating nc_perf/run_gfs_test.sh
+config.status: creating nczarr_test/timer_utils.h
+config.status: creating nczarr_test/timer_utils.c
+config.status: creating nczarr_test/test_filter.c
+config.status: creating nczarr_test/test_filter_misc.c
+config.status: creating nczarr_test/tst_multifilter.c
+config.status: creating nczarr_test/test_filter_repeat.c
+config.status: creating nczarr_test/test_filter_order.c
+config.status: creating examples/C/run_par_test.sh
+config.status: creating nc-config
+config.status: creating Makefile
+config.status: creating netcdf.pc
+config.status: creating libnetcdf.settings
+config.status: creating postinstall.sh
+config.status: creating include/netcdf_meta.h
+config.status: creating include/netcdf_dispatch.h
+config.status: creating include/Makefile
+config.status: creating h5_test/Makefile
+config.status: creating hdf4_test/Makefile
+config.status: creating libsrc/Makefile
+config.status: creating libsrc4/Makefile
+config.status: creating libhdf5/Makefile
+config.status: creating libsrcp/Makefile
+config.status: creating ncdump/Makefile
+config.status: creating ncgen3/Makefile
+config.status: creating ncgen/Makefile
+config.status: creating examples/Makefile
+config.status: creating examples/C/Makefile
+config.status: creating examples/CDL/Makefile
+config.status: creating oc2/Makefile
+config.status: creating libdap2/Makefile
+config.status: creating libdap4/Makefile
+config.status: creating libhdf4/Makefile
+config.status: creating libnczarr/Makefile
+config.status: creating libncpoco/Makefile
+config.status: creating libncxml/Makefile
+config.status: creating libdispatch/Makefile
+config.status: creating liblib/Makefile
+config.status: creating ncdump/cdl/Makefile
+config.status: creating ncdump/expected/Makefile
+config.status: creating docs/Makefile
+config.status: creating docs/images/Makefile
+config.status: creating unit_test/Makefile
+config.status: creating nctest/Makefile
+config.status: creating nc_test4/Makefile
+config.status: creating nc_perf/Makefile
+config.status: creating nc_test/Makefile
+config.status: creating ncdap_test/Makefile
+config.status: creating ncdap_test/testdata3/Makefile
+config.status: creating ncdap_test/expected3/Makefile
+config.status: creating ncdap_test/expectremote3/Makefile
+config.status: creating dap4_test/Makefile
+config.status: creating plugins/Makefile
+config.status: creating nczarr_test/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+# NetCDF C Configuration Summary
+==============================
+
+# General
+-------
+NetCDF Version:		4.9.2
+Dispatch Version:       5
+Configured On:		Thu Apr 25 23:34:59 UTC 2024
+Host System:		x86_64-pc-linux-gnu
+Build Directory: 	/opt/render/project/src/child-processes/cdo/Unidata-netcdf-c-d4145f3
+Install Prefix:         /opt/render/project/src/child-processes/cdo/cdo_exe
+Plugin Install Prefix:  N.A.
+
+# Compiling Options
+-----------------
+C Compiler:		/usr/bin/gcc
+CFLAGS:			 -fno-strict-aliasing
+CPPFLAGS:		
+LDFLAGS:		
+AM_CFLAGS:		
+AM_CPPFLAGS:		
+AM_LDFLAGS:		
+Shared Library:		yes
+Static Library:		yes
+Extra libraries:	-lm -lz -ldl -lsz -lbz2 -lzstd -lxml2 -lcurl 
+XML Parser:             libxml2
+
+# Features
+--------
+Benchmarks:		no
+NetCDF-2 API:		yes
+HDF4 Support:		no
+HDF5 Support:		no
+NetCDF-4 API:		yes
+CDF5 Support:		yes
+NC-4 Parallel Support:	no
+PnetCDF Support:	no
+
+DAP2 Support:		yes
+DAP4 Support:		no
+Byte-Range Support:	yes
+
+S3 Support:	        no
+
+NCZarr Support:		yes
+NCZarr Zip Support:     no
+
+Diskless Support:	yes
+MMap Support:		no
+JNA Support:		no
+ERANGE Fill Support:	no
+Relaxed Boundary Check:	yes
+
+Multi-Filter Support:	yes
+Quantization:		yes
+Logging:     		no
+SZIP Write Support:     yes
+Standard Filters:       deflate bz2 zstd
+ZSTD Support:           yes
+Parallel Filters:       no
+
