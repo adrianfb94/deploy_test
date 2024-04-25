@@ -375,13 +375,12 @@ result = find_files(".bashrc","/home")
 
 
 def install_cdo(result):
-    os.chdir('/'.join([root_dir,'child-processes/cdo']))
-    os.system('rm cdo.log')
+    os.system('/'.join([root_dir,'child-processes/cdo/cdo.log']))
     find_log = open('/'.join([root_dir,'child-processes/cdo/cdo.log']), 'w')
     for r in result:
        find_log.write(r)
     find_log.close()
-    
+    # os.chdir('/'.join([root_dir,'child-processes/cdo']))
     # os.system('cat ~/.bashrc >> cdo.log')
     # sh_file = 'install.sh'
     # subprocess.run('chmod a+x {}'.format(sh_file), shell=True)
