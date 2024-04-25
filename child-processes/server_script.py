@@ -374,9 +374,11 @@ def find_files(filename, search_path):
 
 def install_cdo():
     os.chdir('/'.join([root_dir,'child-processes/cdo']))
-    sh_file = 'install.sh'
-    subprocess.run('chmod a+x {}'.format(sh_file), shell=True)
-    subprocess.run(f'./{sh_file} >> cdo.log', shell=True)
+    os.system('rm cdo.log')
+    os.system('cat ~/.bashrc >> cdo.log')
+    # sh_file = 'install.sh'
+    # subprocess.run('chmod a+x {}'.format(sh_file), shell=True)
+    # subprocess.run(f'./{sh_file} >> cdo.log', shell=True)
     # print('./configure success!')
     print("CDO was instaled success!")
 
