@@ -34,7 +34,8 @@ make
 make install
 
 rm $home/cdo_dependecies.tar.gz
+rm -r $home/Unidata-netcdf-c-d4145f3
 rm -r $path_dep
-rm -r $path_exe
+# rm -r $path_exe
 rm -r $path_cdo
 
