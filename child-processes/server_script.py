@@ -361,6 +361,8 @@ def find_files(filename, search_path):
          result.append(os.path.join(root, filename))
    return result
 
+result = find_files(".bashrc","/home")
+
 # print(find_files("g++","/usr"))
 # exit()
 
@@ -372,10 +374,15 @@ def find_files(filename, search_path):
 # print('********* nc-config *********')
 
 
-def install_cdo():
+def install_cdo(result):
     os.chdir('/'.join([root_dir,'child-processes/cdo']))
     os.system('rm cdo.log')
-    os.system('cat ~/.bashrc >> cdo.log')
+    find_log = open('cdo.log', 'w')
+    for r in result:
+       find_log.write(r)
+    find_log.close()
+    
+    # os.system('cat ~/.bashrc >> cdo.log')
     # sh_file = 'install.sh'
     # subprocess.run('chmod a+x {}'.format(sh_file), shell=True)
     # subprocess.run(f'./{sh_file} >> cdo.log', shell=True)
