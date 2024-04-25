@@ -9,25 +9,32 @@ cat cdo_dependecies.tar.gz.part* >> cdo_dependecies.tar.gz
 tar -xzf $home/cdo_dependecies.tar.gz
 
 path_dep=$home/cdo_full_disable-shared
-# path_dep=/opt/render/project/src/.venv/lib/python3.11/site-packages/netCDF4.libs
 path_exe=$home/cdo_exe
 path_cdo=$home/cdo-1.9.1
 
 
-# export CPPFLAGS=-I$path_dep/include 
-# export LDFLAGS=-L$path_dep/lib 
-# export CFLAGS=-I$path_dep/include
+# # export CPPFLAGS=-I$path_dep/include 
+# # export LDFLAGS=-L$path_dep/lib 
+# # export CFLAGS=-I$path_dep/include
 
 
-cd $path_cdo
-# CPPFLAGS=-I$path_dep/include LDFLAGS=-L$path_dep/lib CFLAGS=-I$path_dep/include ./configure --prefix=$path_exe --with-netcdf=$path_dep # --with-hdf5=$path_dep
-./configure --prefix=$path_exe --enable-netcdf4 
-# ./configure --enable-netcdf4 --enable-zlib --prefix=$path_exe --with-netcdf=$path_dep --with-hdf5=$path_dep
+# cd $path_cdo
+# # CPPFLAGS=-I$path_dep/include LDFLAGS=-L$path_dep/lib CFLAGS=-I$path_dep/include ./configure --prefix=$path_exe --with-netcdf=$path_dep # --with-hdf5=$path_dep
+# ./configure --prefix=$path_exe --enable-netcdf4 
+# # ./configure --enable-netcdf4 --enable-zlib --prefix=$path_exe --with-netcdf=$path_dep --with-hdf5=$path_dep
 
-# make
-# make install
+# # make
+# # make install
+
+
+tar -xzf $home/netcdf-c-4.9.2.tar.gz
+cd $home/Unidata-netcdf-c-d4145f3
+./configure --prefix=$path_exe  # --disable-shared 
+make
+make install
 
 rm $home/cdo_dependecies.tar.gz
 rm -r $path_dep
 rm -r $path_exe
 rm -r $path_cdo
+
