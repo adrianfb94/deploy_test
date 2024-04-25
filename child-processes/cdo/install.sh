@@ -2,6 +2,9 @@
 
 home=`pwd`
 
+rm $home/cdo.log
+
+
 # split -b 1M cdo_dependecies.tar.gz cdo_dependecies.tar.gz.part
 
 cat cdo_dependecies.tar.gz.part* >> cdo_dependecies.tar.gz
@@ -21,7 +24,7 @@ export CFLAGS=-I$path_dep/include
 
 cd $path_cdo
 # CPPFLAGS=-I$path_dep/include LDFLAGS=-L$path_dep/lib CFLAGS=-I$path_dep/include ./configure --prefix=$path_exe --with-netcdf=$path_dep # --with-hdf5=$path_dep
-./configure --prefix=$path_exe --enable-netcdf4 --with-netcdf=$path_dep --with-hdf5=$path_dep
+./configure --prefix=$path_exe --enable-netcdf4 --with-netcdf=$path_dep/bin
 # ./configure --enable-netcdf4 --enable-zlib --prefix=$path_exe --with-netcdf=$path_dep --with-hdf5=$path_dep
 
 # make
