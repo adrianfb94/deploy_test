@@ -368,7 +368,6 @@ if not os.path.exists(ifile+'.nc'):
 # print(find_files("g++","/usr"))
 # exit()
 
-
 # print('********* nc-config *********')
 # print()
 # subprocess.run('nc-config --all', shell=True, capture_output=True)
@@ -385,7 +384,7 @@ def install_cdo():
     # print("CDO was instaled success!")
 
 install_cdo()
-
+print('listo!!!')
 # dir_child_process = '/'.join([home_server, 'child-processes'])
 
 # cdo_dir = '/'.join([dir_child_process,'cdo/cdo_exe/bin/cdo'])
