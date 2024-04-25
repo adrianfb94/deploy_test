@@ -352,16 +352,16 @@ if not os.path.exists(ifile+'.nc'):
 # print('aqui',ifile, namevar)
 # exit()
 
-def find_files(filename, search_path):
-   result = []
+# def find_files(filename, search_path):
+#    result = []
 
-# Wlaking top-down from the root
-   for root, dir, files in os.walk(search_path):
-      if filename in files:
-         result.append(os.path.join(root, filename))
-   return result
+# # Wlaking top-down from the root
+#    for root, dir, files in os.walk(search_path):
+#       if filename in files:
+#          result.append(os.path.join(root, filename))
+#    return result
 
-result = find_files(".bashrc","/home")
+# result = find_files(".bashrc","/home")
 
 # print(find_files("g++","/usr"))
 # exit()
@@ -374,21 +374,15 @@ result = find_files(".bashrc","/home")
 # print('********* nc-config *********')
 
 
-def install_cdo(result):
-    os.system('/'.join([root_dir,'child-processes/cdo/cdo.log']))
-    find_log = open('/'.join([root_dir,'child-processes/cdo/cdo.log']), 'w')
-    for r in result:
-       find_log.write(r)
-    find_log.close()
-    # os.chdir('/'.join([root_dir,'child-processes/cdo']))
-    # os.system('cat ~/.bashrc >> cdo.log')
-    # sh_file = 'install.sh'
-    # subprocess.run('chmod a+x {}'.format(sh_file), shell=True)
-    # subprocess.run(f'./{sh_file} >> cdo.log', shell=True)
+def install_cdo():
+    os.chdir('/'.join([root_dir,'child-processes/cdo']))
+    sh_file = 'install.sh'
+    subprocess.run('chmod a+x {}'.format(sh_file), shell=True)
+    subprocess.run(f'./{sh_file} >> cdo.log', shell=True)
     # print('./configure success!')
-    print("CDO was instaled success!")
+    # print("CDO was instaled success!")
 
-install_cdo(result)
+install_cdo()
 
 # dir_child_process = '/'.join([home_server, 'child-processes'])
 
