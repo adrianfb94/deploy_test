@@ -387,18 +387,18 @@ def install_cdo():
     # print("CDO was instaled success!")
 
 install_cdo()
-exit()
-dir_child_process = '/'.join([home_server, 'child-processes'])
-cdo_dir = '/'.join([dir_child_process,'cdo/bin/cdo'])
-# # local_cdo_dir = '/home/adrianfb/cdo_install/cdo-1.9.1/local/bin/cdo'
-# # print(cdo_dir)
-# print()
-cdo_version = subprocess.run('{} --version'.format(cdo_dir), shell=True, encoding='utf-8', capture_output=True)
-# cdo_version = subprocess.run('{} --version'.format(local_cdo_dir), shell=True, encoding='utf-8', capture_output=True)
-print('line00', cdo_version.stderr.split('\n')[0])
-print('line11',cdo_version.stderr.split('\n')[1])
 
-exit()
+# dir_child_process = '/'.join([home_server, 'child-processes'])
+# cdo_dir = '/'.join([dir_child_process,'cdo/bin/cdo'])
+# # # local_cdo_dir = '/home/adrianfb/cdo_install/cdo-1.9.1/local/bin/cdo'
+# # # print(cdo_dir)
+# # print()
+# cdo_version = subprocess.run('{} --version'.format(cdo_dir), shell=True, encoding='utf-8', capture_output=True)
+# # cdo_version = subprocess.run('{} --version'.format(local_cdo_dir), shell=True, encoding='utf-8', capture_output=True)
+# print('line00', cdo_version.stderr.split('\n')[0])
+# print('line11',cdo_version.stderr.split('\n')[1])
+
+# exit()
 
 os.chdir(home_server)
 

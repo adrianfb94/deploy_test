@@ -5,7 +5,6 @@
 # /opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/app
 
 home=`pwd`
-mkdir cdo_exe
 
 cd $home
 tar -xzf zlib-1.2.12.tar.gz
@@ -13,6 +12,8 @@ cd zlib-1.2.12
 ./configure --prefix=$home/cdo_exe
 make
 make install
+
+rm -r $home/zlib-1.2.12
 
 
 # cp $home/hdf5-1.14.3.tar.gz $path_cdo_opt/
