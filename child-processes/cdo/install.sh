@@ -41,4 +41,4 @@ tar -xzf cdo-1.9.1.tar.gz
 cd cdo-1.9.1
 ./configure --enable-netcdf4 --enable-zlib --prefix=$home/cdo_exe --with-netcdf=$home/cdo_exe
 make
-make install
+# make install
