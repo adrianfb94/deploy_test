@@ -1,0 +1,66 @@
+#! /bin/bash
+
+set -e
+if [ yes = yes ]; then
+  exec >test_cdf_const.log 2>&1
+  mkdir -p test_cdf_const.d
+  cd test_cdf_const.d
+  \rm -f *
+  /opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/examples/cdi_write_const
+  ( /opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/app/cdi -s example_const.nc \
+        && /opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/app/cdi example_const.nc) >cdi.$$.stdout 2>cdi.$$.stderr
+  echo "$0"
+  exec 6<cdi.$$.stdout 7<../"$0"
+  while read pattern <&7 ; do
+    [ "$pattern" != "#PATTERNS" ] || break
+  done
+  saved_IFS=$IFS
+  IFS=''
+  while read line <&6 ; do
+    read pattern <&7
+    pattern=`echo "$pattern" | sed -e 's/^#//'`
+    echo "$line" | grep "$pattern"
+  done
+  if [ -s cdi.$$.stderr ]; then
+    echo "unexpected error message from /opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/app/cdi:"
+    cat cdi.$$.stderr
+  fi
+  read pattern <&7
+  [ "$pattern" = '#END PATTERNS' ]
+  exec 5<&- 6<&-
+  \rm cdi.$$.stdout cdi.$$.stderr example_const.nc
+  cd ..
+  rmdir test_cdf_const.d
+  \rm test_cdf_const.log
+else
+  # skip tests for unsupported formats
+  exit 77
+fi
+
+#PATTERNS
+#^   File format : NetCDF
+#^   Var : Institut Source   T Steptype Levels Num    Points Num Dtype : Parameter ID
+#^     1 : unknown  unknown  c instant       1   1        72   1  F32  : -1         
+#^     2 : unknown  unknown  c instant       5   2        72   1  F32  : -2         
+#^   Grid coordinates :
+#^     1 : lonlat                   : points=72 (12x6)
+#^                              lon : 0 to 330 by 30 degrees_east  circular
+#^                              lat : -75 to 75 by 30 degrees_north
+#^   Vertical coordinates :
+#^     1 : surface                  : levels=1
+#^     2 : pressure                 : levels=5
+#^                             plev : 101300 to 20000 Pa
+#^   Rec :       Date     Time   Level Gridsize    Miss :     Minimum        Mean     Maximum : Parameter ID
+#^     1 : 0000-00-00 00:00:00       0       72       0 :      1.1000      1.1000      1.1000 : -1         
+#^     2 : 0000-00-00 00:00:00  101300       72       0 :      2.2000      2.2000      2.2000 : -2         
+#^     3 : 0000-00-00 00:00:00   92500       72       0 :      2.2000      2.2000      2.2000 : -2         
+#^     4 : 0000-00-00 00:00:00   85000       72       0 :      2.2000      2.2000      2.2000 : -2         
+#^     5 : 0000-00-00 00:00:00   50000       72       0 :      2.2000      2.2000      2.2000 : -2         
+#^     6 : 0000-00-00 00:00:00   20000       72       0 :      2.2000      2.2000      2.2000 : -2         
+#END PATTERNS
+
+#
+# Local Variables:
+# mode: sh
+# End:
+#

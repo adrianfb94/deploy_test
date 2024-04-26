@@ -1,0 +1,69 @@
+{
+  "build" : {
+    "tools" : {
+      "CC"       : "gcc",
+      "CPP"      : "gcc -E",
+      "CPPFLAGS" : "-I/opt/render/project/src/child-processes/cdo/cdo_exe/include  ",
+      "CFLAGS"   : "-g -O2 -pthread",
+      "LDFLAGS"  : "-L/opt/render/project/src/child-processes/cdo/cdo_exe/lib ",
+      "LIBS"     : "-lnetcdf  -lm ",
+      "FC"       : "no",
+      "F77"      : "",
+      "FCFLAGS"  : "",
+      "LD"       : "/usr/bin/ld -m elf_x86_64",
+      "NM"       : "/usr/bin/nm -B",
+      "AR"       : "ar",
+      "AS"       : "@AS@",
+      "DLLTOOL"  : "false",
+      "OBJDUMP"  : "objdump",
+      "STRIP"    : "strip",
+      "RANLIB"   : "ranlib",
+      "INSTALL"  : "/usr/bin/install -c"
+    },
+    "platform" : {
+      "USER_NAME"   : "unknown",
+      "HOST_NAME"   : "srv-colbsh0l5elc73fcm17g-hibernate-6db4c8bb45-9v22t",
+      "SYSTEM_TYPE" : "x86_64-pc-linux-gnu"
+    },
+    "libraries" : {
+      "threads"    : {
+        "lib"      : "",
+        "include"  : ""
+      },
+      "mpi"        : {
+        "libs"     : "",
+        "cflags"   : "",
+        "fclibs"   : "",
+        "fcflags"  : ""
+      },
+      "szlib"    : {
+        "lib"      : "",
+        "include"  : ""
+      },
+      "netcdf"   : {
+        "lib"      : " -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib -lnetcdf",
+        "include"  : " -I/opt/render/project/src/child-processes/cdo/cdo_exe/include"
+      },
+      "grib_api" : {
+        "lib"      : "",
+        "include"  : ""
+      }
+      "eccodes" : {
+        "lib"      : "",
+        "include"  : ""
+      }
+    }
+  },
+  "features" : {
+    "enable_cdi_lib" : false,
+    "grib"           : "yes",
+    "cgribex"        : "yes",
+    "service"        : "yes",
+    "extra"          : "yes",
+    "ieg"            : "yes",
+    "enable_mpi"    : false,
+    "parallel_nc4"  : 0,
+    "enable_python" : false,
+    "enable_ruby"   : false
+  }
+}

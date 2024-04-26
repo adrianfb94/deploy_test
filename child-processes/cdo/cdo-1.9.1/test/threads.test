@@ -1,0 +1,55 @@
+#! /bin/bash
+echo 1..1 # Number of tests to be executed.
+#
+test -n "$CDO"      || CDO=cdo
+test -n "$DATAPATH" || DATAPATH=./data
+#
+CDOOUT=cout$$
+CDOERR=cerr$$
+OFORMAT="-f srv -b 32"
+#
+IFILE=$DATAPATH/pl_data
+NTEST=1
+#
+function testfunc()
+{
+  RSTAT=0
+
+  CDOTEST="chaining set $NTEST"
+  echo "Running test: $NTEST - $CDOTEST"
+
+  RFILE=$DATAPATH/thread${NTEST}_ref
+  OFILE=tsformat${NTEST}_res
+
+  CDOCOMMAND="$CDO $OFORMAT $INSTR $IFILE $OFILE"
+      
+  echo "$CDOCOMMAND"
+
+  if [ "yes" = yes ] ; then
+
+    $CDOCOMMAND
+    test $? -eq 0 || let RSTAT+=1
+
+    $CDO diff $RFILE $OFILE > $CDOOUT 2> $CDOERR
+    test $? -eq 0 || let RSTAT+=1
+    test -s $CDOOUT && let RSTAT+=1
+    cat $CDOOUT $CDOERR
+
+    rm -f $OFILE
+
+    test $RSTAT -eq 0 && echo "ok $NTEST - $CDOTEST"
+    test $RSTAT -eq 0 || echo "not ok $NTEST - $CDOTEST"
+  else
+    test $RSTAT -eq 0 && echo "ok $NTEST - $CDOTEST # SKIP threads not enabled"
+  fi
+  
+  let NTEST+=1
+  rm -f $OFILE
+}
+#
+INSTR="-fldmean -timmean -select,code=129,130,152"
+testfunc 
+#
+rm -f $CDOOUT $CDOERR
+#
+exit 0

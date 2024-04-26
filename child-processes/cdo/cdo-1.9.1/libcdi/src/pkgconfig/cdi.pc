@@ -1,0 +1,43 @@
+prefix=/opt/render/project/src/child-processes/cdo/cdo_exe
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+cflags=-I${prefix}/include
+fcflags=${prefix}/include 
+libs=-L${exec_prefix}/lib -lcdi   -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib -lnetcdf   -lnetcdf  -lm 
+threads_libs=
+threads_cflags=
+szlib_cflags=
+szlib_libs=
+netcdf_root=/opt/render/project/src/child-processes/cdo/cdo_exe
+netcdf_cflags= -I/opt/render/project/src/child-processes/cdo/cdo_exe/include
+netcdf_libs= -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib -lnetcdf
+aux_libs=-lnetcdf  -lm 
+grib_api_cflags=
+grib_api_libs=
+cdi_build_cc=gcc
+cdi_build_cflags=-g -O2 -pthread
+cdi_build_cppflags=-I/opt/render/project/src/child-processes/cdo/cdo_exe/include  
+cdi_build_ldflags=-L/opt/render/project/src/child-processes/cdo/cdo_exe/lib 
+cdi_build_libs=-lnetcdf  -lm 
+cdi_build_fc=no
+cdi_build_fcflags=
+cdi_build_f77=
+cdi_build_fflags=
+cdi_build_cxx=g++
+cdi_build_cxxflags=-g -O2
+cdi_build_enable_grib=yes
+cdi_build_enable_cgribex=yes
+cdi_build_enable_service=yes
+cdi_build_enable_extra=yes
+cdi_build_enable_ieg=yes
+
+Name: cdi
+Description: CDI is an Interface to access Climate and NWP model Data.
+URL: 
+Version: 1.9.1
+Requires: 
+Libs: ${libs}
+Cflags: ${cflags}
+FCflags: ${fcflags}
+

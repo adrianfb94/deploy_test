@@ -1,0 +1,266 @@
+Making install in libcdi
+make[1]: Entering directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi'
+Making install in src
+make[2]: Entering directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/src'
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT resource_unpack.lo -MD -MP -MF .deps/resource_unpack.Tpo -c -o resource_unpack.lo resource_unpack.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT resource_unpack.lo -MD -MP -MF .deps/resource_unpack.Tpo -c resource_unpack.c  -fPIC -DPIC -o .libs/resource_unpack.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT resource_unpack.lo -MD -MP -MF .deps/resource_unpack.Tpo -c resource_unpack.c -o resource_unpack.o >/dev/null 2>&1
+mv -f .deps/resource_unpack.Tpo .deps/resource_unpack.Plo
+/bin/bash ../libtool  --tag=CC   --mode=link gcc    -g -O2 -pthread  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib  -o libcdiresunpack.la  resource_unpack.lo  -lnetcdf  -lm 
+libtool: link: rm -fr  .libs/libcdiresunpack.a .libs/libcdiresunpack.la
+libtool: link: ar cru .libs/libcdiresunpack.a .libs/resource_unpack.o 
+libtool: link: ranlib .libs/libcdiresunpack.a
+libtool: link: ( cd ".libs" && rm -f "libcdiresunpack.la" && ln -s "../libcdiresunpack.la" "libcdiresunpack.la" )
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT cdf.lo -MD -MP -MF .deps/cdf.Tpo -c -o cdf.lo cdf.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT cdf.lo -MD -MP -MF .deps/cdf.Tpo -c cdf.c  -fPIC -DPIC -o .libs/cdf.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT cdf.lo -MD -MP -MF .deps/cdf.Tpo -c cdf.c -o cdf.o >/dev/null 2>&1
+mv -f .deps/cdf.Tpo .deps/cdf.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT cdf_int.lo -MD -MP -MF .deps/cdf_int.Tpo -c -o cdf_int.lo cdf_int.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT cdf_int.lo -MD -MP -MF .deps/cdf_int.Tpo -c cdf_int.c  -fPIC -DPIC -o .libs/cdf_int.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT cdf_int.lo -MD -MP -MF .deps/cdf_int.Tpo -c cdf_int.c -o cdf_int.o >/dev/null 2>&1
+mv -f .deps/cdf_int.Tpo .deps/cdf_int.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT cdi_util.lo -MD -MP -MF .deps/cdi_util.Tpo -c -o cdi_util.lo cdi_util.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT cdi_util.lo -MD -MP -MF .deps/cdi_util.Tpo -c cdi_util.c  -fPIC -DPIC -o .libs/cdi_util.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT cdi_util.lo -MD -MP -MF .deps/cdi_util.Tpo -c cdi_util.c -o cdi_util.o >/dev/null 2>&1
+mv -f .deps/cdi_util.Tpo .deps/cdi_util.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT gaussgrid.lo -MD -MP -MF .deps/gaussgrid.Tpo -c -o gaussgrid.lo gaussgrid.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT gaussgrid.lo -MD -MP -MF .deps/gaussgrid.Tpo -c gaussgrid.c  -fPIC -DPIC -o .libs/gaussgrid.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT gaussgrid.lo -MD -MP -MF .deps/gaussgrid.Tpo -c gaussgrid.c -o gaussgrid.o >/dev/null 2>&1
+mv -f .deps/gaussgrid.Tpo .deps/gaussgrid.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT gribapi.lo -MD -MP -MF .deps/gribapi.Tpo -c -o gribapi.lo gribapi.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT gribapi.lo -MD -MP -MF .deps/gribapi.Tpo -c gribapi.c  -fPIC -DPIC -o .libs/gribapi.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT gribapi.lo -MD -MP -MF .deps/gribapi.Tpo -c gribapi.c -o gribapi.o >/dev/null 2>&1
+mv -f .deps/gribapi.Tpo .deps/gribapi.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT grid.lo -MD -MP -MF .deps/grid.Tpo -c -o grid.lo grid.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT grid.lo -MD -MP -MF .deps/grid.Tpo -c grid.c  -fPIC -DPIC -o .libs/grid.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT grid.lo -MD -MP -MF .deps/grid.Tpo -c grid.c -o grid.o >/dev/null 2>&1
+mv -f .deps/grid.Tpo .deps/grid.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT institution.lo -MD -MP -MF .deps/institution.Tpo -c -o institution.lo institution.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT institution.lo -MD -MP -MF .deps/institution.Tpo -c institution.c  -fPIC -DPIC -o .libs/institution.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT institution.lo -MD -MP -MF .deps/institution.Tpo -c institution.c -o institution.o >/dev/null 2>&1
+mv -f .deps/institution.Tpo .deps/institution.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT model.lo -MD -MP -MF .deps/model.Tpo -c -o model.lo model.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT model.lo -MD -MP -MF .deps/model.Tpo -c model.c  -fPIC -DPIC -o .libs/model.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT model.lo -MD -MP -MF .deps/model.Tpo -c model.c -o model.o >/dev/null 2>&1
+mv -f .deps/model.Tpo .deps/model.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT namespace.lo -MD -MP -MF .deps/namespace.Tpo -c -o namespace.lo namespace.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT namespace.lo -MD -MP -MF .deps/namespace.Tpo -c namespace.c  -fPIC -DPIC -o .libs/namespace.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT namespace.lo -MD -MP -MF .deps/namespace.Tpo -c namespace.c -o namespace.o >/dev/null 2>&1
+mv -f .deps/namespace.Tpo .deps/namespace.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT stream_cdf_i.lo -MD -MP -MF .deps/stream_cdf_i.Tpo -c -o stream_cdf_i.lo stream_cdf_i.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_cdf_i.lo -MD -MP -MF .deps/stream_cdf_i.Tpo -c stream_cdf_i.c  -fPIC -DPIC -o .libs/stream_cdf_i.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_cdf_i.lo -MD -MP -MF .deps/stream_cdf_i.Tpo -c stream_cdf_i.c -o stream_cdf_i.o >/dev/null 2>&1
+mv -f .deps/stream_cdf_i.Tpo .deps/stream_cdf_i.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT stream_cdf_o.lo -MD -MP -MF .deps/stream_cdf_o.Tpo -c -o stream_cdf_o.lo stream_cdf_o.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_cdf_o.lo -MD -MP -MF .deps/stream_cdf_o.Tpo -c stream_cdf_o.c  -fPIC -DPIC -o .libs/stream_cdf_o.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_cdf_o.lo -MD -MP -MF .deps/stream_cdf_o.Tpo -c stream_cdf_o.c -o stream_cdf_o.o >/dev/null 2>&1
+mv -f .deps/stream_cdf_o.Tpo .deps/stream_cdf_o.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT stream_cdf_time.lo -MD -MP -MF .deps/stream_cdf_time.Tpo -c -o stream_cdf_time.lo stream_cdf_time.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_cdf_time.lo -MD -MP -MF .deps/stream_cdf_time.Tpo -c stream_cdf_time.c  -fPIC -DPIC -o .libs/stream_cdf_time.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_cdf_time.lo -MD -MP -MF .deps/stream_cdf_time.Tpo -c stream_cdf_time.c -o stream_cdf_time.o >/dev/null 2>&1
+mv -f .deps/stream_cdf_time.Tpo .deps/stream_cdf_time.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT stream_cgribex.lo -MD -MP -MF .deps/stream_cgribex.Tpo -c -o stream_cgribex.lo stream_cgribex.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_cgribex.lo -MD -MP -MF .deps/stream_cgribex.Tpo -c stream_cgribex.c  -fPIC -DPIC -o .libs/stream_cgribex.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_cgribex.lo -MD -MP -MF .deps/stream_cgribex.Tpo -c stream_cgribex.c -o stream_cgribex.o >/dev/null 2>&1
+mv -f .deps/stream_cgribex.Tpo .deps/stream_cgribex.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT stream_ext.lo -MD -MP -MF .deps/stream_ext.Tpo -c -o stream_ext.lo stream_ext.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_ext.lo -MD -MP -MF .deps/stream_ext.Tpo -c stream_ext.c  -fPIC -DPIC -o .libs/stream_ext.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_ext.lo -MD -MP -MF .deps/stream_ext.Tpo -c stream_ext.c -o stream_ext.o >/dev/null 2>&1
+mv -f .deps/stream_ext.Tpo .deps/stream_ext.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT stream_grb.lo -MD -MP -MF .deps/stream_grb.Tpo -c -o stream_grb.lo stream_grb.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_grb.lo -MD -MP -MF .deps/stream_grb.Tpo -c stream_grb.c  -fPIC -DPIC -o .libs/stream_grb.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_grb.lo -MD -MP -MF .deps/stream_grb.Tpo -c stream_grb.c -o stream_grb.o >/dev/null 2>&1
+mv -f .deps/stream_grb.Tpo .deps/stream_grb.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT stream_history.lo -MD -MP -MF .deps/stream_history.Tpo -c -o stream_history.lo stream_history.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_history.lo -MD -MP -MF .deps/stream_history.Tpo -c stream_history.c  -fPIC -DPIC -o .libs/stream_history.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_history.lo -MD -MP -MF .deps/stream_history.Tpo -c stream_history.c -o stream_history.o >/dev/null 2>&1
+mv -f .deps/stream_history.Tpo .deps/stream_history.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT stream_ieg.lo -MD -MP -MF .deps/stream_ieg.Tpo -c -o stream_ieg.lo stream_ieg.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_ieg.lo -MD -MP -MF .deps/stream_ieg.Tpo -c stream_ieg.c  -fPIC -DPIC -o .libs/stream_ieg.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_ieg.lo -MD -MP -MF .deps/stream_ieg.Tpo -c stream_ieg.c -o stream_ieg.o >/dev/null 2>&1
+mv -f .deps/stream_ieg.Tpo .deps/stream_ieg.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT cdi_int.lo -MD -MP -MF .deps/cdi_int.Tpo -c -o cdi_int.lo cdi_int.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT cdi_int.lo -MD -MP -MF .deps/cdi_int.Tpo -c cdi_int.c  -fPIC -DPIC -o .libs/cdi_int.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT cdi_int.lo -MD -MP -MF .deps/cdi_int.Tpo -c cdi_int.c -o cdi_int.o >/dev/null 2>&1
+mv -f .deps/cdi_int.Tpo .deps/cdi_int.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT stream_record.lo -MD -MP -MF .deps/stream_record.Tpo -c -o stream_record.lo stream_record.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_record.lo -MD -MP -MF .deps/stream_record.Tpo -c stream_record.c  -fPIC -DPIC -o .libs/stream_record.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_record.lo -MD -MP -MF .deps/stream_record.Tpo -c stream_record.c -o stream_record.o >/dev/null 2>&1
+mv -f .deps/stream_record.Tpo .deps/stream_record.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT stream_srv.lo -MD -MP -MF .deps/stream_srv.Tpo -c -o stream_srv.lo stream_srv.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_srv.lo -MD -MP -MF .deps/stream_srv.Tpo -c stream_srv.c  -fPIC -DPIC -o .libs/stream_srv.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_srv.lo -MD -MP -MF .deps/stream_srv.Tpo -c stream_srv.c -o stream_srv.o >/dev/null 2>&1
+mv -f .deps/stream_srv.Tpo .deps/stream_srv.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT stream_var.lo -MD -MP -MF .deps/stream_var.Tpo -c -o stream_var.lo stream_var.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_var.lo -MD -MP -MF .deps/stream_var.Tpo -c stream_var.c  -fPIC -DPIC -o .libs/stream_var.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_var.lo -MD -MP -MF .deps/stream_var.Tpo -c stream_var.c -o stream_var.o >/dev/null 2>&1
+mv -f .deps/stream_var.Tpo .deps/stream_var.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT grb_write.lo -MD -MP -MF .deps/grb_write.Tpo -c -o grb_write.lo grb_write.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT grb_write.lo -MD -MP -MF .deps/grb_write.Tpo -c grb_write.c  -fPIC -DPIC -o .libs/grb_write.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT grb_write.lo -MD -MP -MF .deps/grb_write.Tpo -c grb_write.c -o grb_write.o >/dev/null 2>&1
+mv -f .deps/grb_write.Tpo .deps/grb_write.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT grb_read.lo -MD -MP -MF .deps/grb_read.Tpo -c -o grb_read.lo grb_read.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT grb_read.lo -MD -MP -MF .deps/grb_read.Tpo -c grb_read.c  -fPIC -DPIC -o .libs/grb_read.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT grb_read.lo -MD -MP -MF .deps/grb_read.Tpo -c grb_read.c -o grb_read.o >/dev/null 2>&1
+mv -f .deps/grb_read.Tpo .deps/grb_read.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT cdf_write.lo -MD -MP -MF .deps/cdf_write.Tpo -c -o cdf_write.lo cdf_write.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT cdf_write.lo -MD -MP -MF .deps/cdf_write.Tpo -c cdf_write.c  -fPIC -DPIC -o .libs/cdf_write.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT cdf_write.lo -MD -MP -MF .deps/cdf_write.Tpo -c cdf_write.c -o cdf_write.o >/dev/null 2>&1
+mv -f .deps/cdf_write.Tpo .deps/cdf_write.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT cdf_read.lo -MD -MP -MF .deps/cdf_read.Tpo -c -o cdf_read.lo cdf_read.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT cdf_read.lo -MD -MP -MF .deps/cdf_read.Tpo -c cdf_read.c  -fPIC -DPIC -o .libs/cdf_read.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT cdf_read.lo -MD -MP -MF .deps/cdf_read.Tpo -c cdf_read.c -o cdf_read.o >/dev/null 2>&1
+mv -f .deps/cdf_read.Tpo .deps/cdf_read.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT cdf_lazy_grid.lo -MD -MP -MF .deps/cdf_lazy_grid.Tpo -c -o cdf_lazy_grid.lo cdf_lazy_grid.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT cdf_lazy_grid.lo -MD -MP -MF .deps/cdf_lazy_grid.Tpo -c cdf_lazy_grid.c  -fPIC -DPIC -o .libs/cdf_lazy_grid.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT cdf_lazy_grid.lo -MD -MP -MF .deps/cdf_lazy_grid.Tpo -c cdf_lazy_grid.c -o cdf_lazy_grid.o >/dev/null 2>&1
+mv -f .deps/cdf_lazy_grid.Tpo .deps/cdf_lazy_grid.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT subtype.lo -MD -MP -MF .deps/subtype.Tpo -c -o subtype.lo subtype.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT subtype.lo -MD -MP -MF .deps/subtype.Tpo -c subtype.c  -fPIC -DPIC -o .libs/subtype.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT subtype.lo -MD -MP -MF .deps/subtype.Tpo -c subtype.c -o subtype.o >/dev/null 2>&1
+mv -f .deps/subtype.Tpo .deps/subtype.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT table.lo -MD -MP -MF .deps/table.Tpo -c -o table.lo table.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT table.lo -MD -MP -MF .deps/table.Tpo -c table.c  -fPIC -DPIC -o .libs/table.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT table.lo -MD -MP -MF .deps/table.Tpo -c table.c -o table.o >/dev/null 2>&1
+mv -f .deps/table.Tpo .deps/table.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT taxis.lo -MD -MP -MF .deps/taxis.Tpo -c -o taxis.lo taxis.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT taxis.lo -MD -MP -MF .deps/taxis.Tpo -c taxis.c  -fPIC -DPIC -o .libs/taxis.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT taxis.lo -MD -MP -MF .deps/taxis.Tpo -c taxis.c -o taxis.o >/dev/null 2>&1
+mv -f .deps/taxis.Tpo .deps/taxis.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT tsteps.lo -MD -MP -MF .deps/tsteps.Tpo -c -o tsteps.lo tsteps.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT tsteps.lo -MD -MP -MF .deps/tsteps.Tpo -c tsteps.c  -fPIC -DPIC -o .libs/tsteps.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT tsteps.lo -MD -MP -MF .deps/tsteps.Tpo -c tsteps.c -o tsteps.o >/dev/null 2>&1
+mv -f .deps/tsteps.Tpo .deps/tsteps.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT util.lo -MD -MP -MF .deps/util.Tpo -c -o util.lo util.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT util.lo -MD -MP -MF .deps/util.Tpo -c util.c  -fPIC -DPIC -o .libs/util.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT util.lo -MD -MP -MF .deps/util.Tpo -c util.c -o util.o >/dev/null 2>&1
+mv -f .deps/util.Tpo .deps/util.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT varscan.lo -MD -MP -MF .deps/varscan.Tpo -c -o varscan.lo varscan.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT varscan.lo -MD -MP -MF .deps/varscan.Tpo -c varscan.c  -fPIC -DPIC -o .libs/varscan.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT varscan.lo -MD -MP -MF .deps/varscan.Tpo -c varscan.c -o varscan.o >/dev/null 2>&1
+mv -f .deps/varscan.Tpo .deps/varscan.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT vlist.lo -MD -MP -MF .deps/vlist.Tpo -c -o vlist.lo vlist.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT vlist.lo -MD -MP -MF .deps/vlist.Tpo -c vlist.c  -fPIC -DPIC -o .libs/vlist.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT vlist.lo -MD -MP -MF .deps/vlist.Tpo -c vlist.c -o vlist.o >/dev/null 2>&1
+mv -f .deps/vlist.Tpo .deps/vlist.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT cdi_att.lo -MD -MP -MF .deps/cdi_att.Tpo -c -o cdi_att.lo cdi_att.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT cdi_att.lo -MD -MP -MF .deps/cdi_att.Tpo -c cdi_att.c  -fPIC -DPIC -o .libs/cdi_att.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT cdi_att.lo -MD -MP -MF .deps/cdi_att.Tpo -c cdi_att.c -o cdi_att.o >/dev/null 2>&1
+mv -f .deps/cdi_att.Tpo .deps/cdi_att.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT vlist_var.lo -MD -MP -MF .deps/vlist_var.Tpo -c -o vlist_var.lo vlist_var.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT vlist_var.lo -MD -MP -MF .deps/vlist_var.Tpo -c vlist_var.c  -fPIC -DPIC -o .libs/vlist_var.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT vlist_var.lo -MD -MP -MF .deps/vlist_var.Tpo -c vlist_var.c -o vlist_var.o >/dev/null 2>&1
+mv -f .deps/vlist_var.Tpo .deps/vlist_var.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT zaxis.lo -MD -MP -MF .deps/zaxis.Tpo -c -o zaxis.lo zaxis.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT zaxis.lo -MD -MP -MF .deps/zaxis.Tpo -c zaxis.c  -fPIC -DPIC -o .libs/zaxis.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT zaxis.lo -MD -MP -MF .deps/zaxis.Tpo -c zaxis.c -o zaxis.o >/dev/null 2>&1
+mv -f .deps/zaxis.Tpo .deps/zaxis.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT stream.lo -MD -MP -MF .deps/stream.Tpo -c -o stream.lo stream.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream.lo -MD -MP -MF .deps/stream.Tpo -c stream.c  -fPIC -DPIC -o .libs/stream.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream.lo -MD -MP -MF .deps/stream.Tpo -c stream.c -o stream.o >/dev/null 2>&1
+mv -f .deps/stream.Tpo .deps/stream.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT stream_write.lo -MD -MP -MF .deps/stream_write.Tpo -c -o stream_write.lo stream_write.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_write.lo -MD -MP -MF .deps/stream_write.Tpo -c stream_write.c  -fPIC -DPIC -o .libs/stream_write.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_write.lo -MD -MP -MF .deps/stream_write.Tpo -c stream_write.c -o stream_write.o >/dev/null 2>&1
+mv -f .deps/stream_write.Tpo .deps/stream_write.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT stream_read.lo -MD -MP -MF .deps/stream_read.Tpo -c -o stream_read.lo stream_read.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_read.lo -MD -MP -MF .deps/stream_read.Tpo -c stream_read.c  -fPIC -DPIC -o .libs/stream_read.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT stream_read.lo -MD -MP -MF .deps/stream_read.Tpo -c stream_read.c -o stream_read.o >/dev/null 2>&1
+mv -f .deps/stream_read.Tpo .deps/stream_read.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT iterator.lo -MD -MP -MF .deps/iterator.Tpo -c -o iterator.lo iterator.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT iterator.lo -MD -MP -MF .deps/iterator.Tpo -c iterator.c  -fPIC -DPIC -o .libs/iterator.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT iterator.lo -MD -MP -MF .deps/iterator.Tpo -c iterator.c -o iterator.o >/dev/null 2>&1
+mv -f .deps/iterator.Tpo .deps/iterator.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT iterator_fallback.lo -MD -MP -MF .deps/iterator_fallback.Tpo -c -o iterator_fallback.lo iterator_fallback.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT iterator_fallback.lo -MD -MP -MF .deps/iterator_fallback.Tpo -c iterator_fallback.c  -fPIC -DPIC -o .libs/iterator_fallback.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT iterator_fallback.lo -MD -MP -MF .deps/iterator_fallback.Tpo -c iterator_fallback.c -o iterator_fallback.o >/dev/null 2>&1
+mv -f .deps/iterator_fallback.Tpo .deps/iterator_fallback.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.   -I/opt/render/project/src/child-processes/cdo/cdo_exe/include      -g -O2 -pthread -MT iterator_grib.lo -MD -MP -MF .deps/iterator_grib.Tpo -c -o iterator_grib.lo iterator_grib.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT iterator_grib.lo -MD -MP -MF .deps/iterator_grib.Tpo -c iterator_grib.c  -fPIC -DPIC -o .libs/iterator_grib.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -pthread -MT iterator_grib.lo -MD -MP -MF .deps/iterator_grib.Tpo -c iterator_grib.c -o iterator_grib.o >/dev/null 2>&1
+mv -f .deps/iterator_grib.Tpo .deps/iterator_grib.Plo
+/bin/bash ../libtool  --tag=CC   --mode=link gcc    -g -O2 -pthread  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib  -o libcdi.la  basetime.lo binary.lo calendar.lo cdf.lo cdf_int.lo cdf_util.lo cdi_error.lo cdi_util.lo cgribexlib.lo dmemory.lo cksum.lo cdi_cksum.lo error.lo extralib.lo file.lo gaussgrid.lo gribapi.lo grid.lo ieglib.lo input_file.lo institution.lo model.lo namespace.lo serialize.lo referenceCounting.lo resource_handle.lo servicelib.lo stream_cdf_i.lo stream_cdf_o.lo stream_cdf_time.lo stream_cgribex.lo stream_ext.lo stream_grb.lo stream_history.lo stream_ieg.lo cdi_int.lo stream_record.lo stream_srv.lo stream_var.lo grb_write.lo grb_read.lo cdf_write.lo cdf_read.lo cdf_lazy_grid.lo subtype.lo table.lo taxis.lo timebase.lo tsteps.lo util.lo varscan.lo version.lo vlist.lo cdi_att.lo vlist_var.lo zaxis.lo stream.lo stream_write.lo stream_read.lo swap.lo iterator.lo iterator_fallback.lo iterator_grib.lo   -luuid -lnetcdf  -lm 
+libtool: link: rm -fr  .libs/libcdi.a .libs/libcdi.la
+libtool: link: ar cru .libs/libcdi.a .libs/basetime.o .libs/binary.o .libs/calendar.o .libs/cdf.o .libs/cdf_int.o .libs/cdf_util.o .libs/cdi_error.o .libs/cdi_util.o .libs/cgribexlib.o .libs/dmemory.o .libs/cksum.o .libs/cdi_cksum.o .libs/error.o .libs/extralib.o .libs/file.o .libs/gaussgrid.o .libs/gribapi.o .libs/grid.o .libs/ieglib.o .libs/input_file.o .libs/institution.o .libs/model.o .libs/namespace.o .libs/serialize.o .libs/referenceCounting.o .libs/resource_handle.o .libs/servicelib.o .libs/stream_cdf_i.o .libs/stream_cdf_o.o .libs/stream_cdf_time.o .libs/stream_cgribex.o .libs/stream_ext.o .libs/stream_grb.o .libs/stream_history.o .libs/stream_ieg.o .libs/cdi_int.o .libs/stream_record.o .libs/stream_srv.o .libs/stream_var.o .libs/grb_write.o .libs/grb_read.o .libs/cdf_write.o .libs/cdf_read.o .libs/cdf_lazy_grid.o .libs/subtype.o .libs/table.o .libs/taxis.o .libs/timebase.o .libs/tsteps.o .libs/util.o .libs/varscan.o .libs/version.o .libs/vlist.o .libs/cdi_att.o .libs/vlist_var.o .libs/zaxis.o .libs/stream.o .libs/stream_write.o .libs/stream_read.o .libs/swap.o .libs/iterator.o .libs/iterator_fallback.o .libs/iterator_grib.o 
+libtool: link: ranlib .libs/libcdi.a
+libtool: link: ( cd ".libs" && rm -f "libcdi.la" && ln -s "../libcdi.la" "libcdi.la" )
+make[3]: Entering directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/src'
+make  install-exec-hook
+make[4]: Entering directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/src'
+make[4]: Leaving directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/src'
+make  install-data-hook
+make[4]: Entering directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/src'
+make[4]: Leaving directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/src'
+make[3]: Leaving directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/src'
+make[2]: Leaving directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/src'
+Making install in interfaces
+make[2]: Entering directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/interfaces'
+make[3]: Entering directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/interfaces'
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/interfaces'
+make[2]: Leaving directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/interfaces'
+Making install in app
+make[2]: Entering directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/app'
+/bin/bash ../libtool  --tag=CC   --mode=link gcc  -g -O2 -pthread  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib  -o cdi cdi.o ../src/libcdi.la -lnetcdf  -lm  -lnetcdf  -lm 
+libtool: link: gcc -g -O2 -pthread -o cdi cdi.o  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib ../src/.libs/libcdi.a -luuid /opt/render/project/src/child-processes/cdo/cdo_exe/lib/libnetcdf.so -lz -ldl -lsz -lbz2 -lzstd -lxml2 /usr/lib/x86_64-linux-gnu/libcurl.so -lm -pthread -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib
+/bin/bash ../libtool  --tag=CC   --mode=link gcc  -g -O2 -pthread  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib  -o createtable createtable.o ../src/libcdi.la -lnetcdf  -lm 
+libtool: link: gcc -g -O2 -pthread -o createtable createtable.o  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib ../src/.libs/libcdi.a -luuid /opt/render/project/src/child-processes/cdo/cdo_exe/lib/libnetcdf.so -lz -ldl -lsz -lbz2 -lzstd -lxml2 /usr/lib/x86_64-linux-gnu/libcurl.so -lm -pthread -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib
+make[3]: Entering directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/app'
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/app'
+make[2]: Leaving directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/app'
+Making install in examples
+make[2]: Entering directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/examples'
+/bin/bash ../libtool  --tag=CC   --mode=link gcc  -g -O2 -pthread  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib  -o cdi_write cdi_write.o ../src/libcdi.la -lnetcdf  -lm 
+libtool: link: gcc -g -O2 -pthread -o cdi_write cdi_write.o  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib ../src/.libs/libcdi.a -luuid /opt/render/project/src/child-processes/cdo/cdo_exe/lib/libnetcdf.so -lz -ldl -lsz -lbz2 -lzstd -lxml2 /usr/lib/x86_64-linux-gnu/libcurl.so -lm -pthread -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib
+/bin/bash ../libtool  --tag=CC   --mode=link gcc  -g -O2 -pthread  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib  -o cdi_write_relativ cdi_write_relativ.o ../src/libcdi.la -lnetcdf  -lm 
+libtool: link: gcc -g -O2 -pthread -o cdi_write_relativ cdi_write_relativ.o  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib ../src/.libs/libcdi.a -luuid /opt/render/project/src/child-processes/cdo/cdo_exe/lib/libnetcdf.so -lz -ldl -lsz -lbz2 -lzstd -lxml2 /usr/lib/x86_64-linux-gnu/libcurl.so -lm -pthread -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib
+/bin/bash ../libtool  --tag=CC   --mode=link gcc  -g -O2 -pthread  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib  -o cdi_write_ens cdi_write_ens.o ../src/libcdi.la -lnetcdf  -lm 
+libtool: link: gcc -g -O2 -pthread -o cdi_write_ens cdi_write_ens.o  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib ../src/.libs/libcdi.a -luuid /opt/render/project/src/child-processes/cdo/cdo_exe/lib/libnetcdf.so -lz -ldl -lsz -lbz2 -lzstd -lxml2 /usr/lib/x86_64-linux-gnu/libcurl.so -lm -pthread -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib
+/bin/bash ../libtool  --tag=CC   --mode=link gcc  -g -O2 -pthread  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib  -o cdi_write_hybrid cdi_write_hybrid.o ../src/libcdi.la -lnetcdf  -lm 
+libtool: link: gcc -g -O2 -pthread -o cdi_write_hybrid cdi_write_hybrid.o  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib ../src/.libs/libcdi.a -luuid /opt/render/project/src/child-processes/cdo/cdo_exe/lib/libnetcdf.so -lz -ldl -lsz -lbz2 -lzstd -lxml2 /usr/lib/x86_64-linux-gnu/libcurl.so -lm -pthread -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib
+/bin/bash ../libtool  --tag=CC   --mode=link gcc  -g -O2 -pthread  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib  -o cdi_read cdi_read.o ../src/libcdi.la -lnetcdf  -lm 
+libtool: link: gcc -g -O2 -pthread -o cdi_read cdi_read.o  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib ../src/.libs/libcdi.a -luuid /opt/render/project/src/child-processes/cdo/cdo_exe/lib/libnetcdf.so -lz -ldl -lsz -lbz2 -lzstd -lxml2 /usr/lib/x86_64-linux-gnu/libcurl.so -lm -pthread -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib
+/bin/bash ../libtool  --tag=CC   --mode=link gcc  -g -O2 -pthread  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib  -o cdi_copy cdi_copy.o ../src/libcdi.la -lnetcdf  -lm 
+libtool: link: gcc -g -O2 -pthread -o cdi_copy cdi_copy.o  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib ../src/.libs/libcdi.a -luuid /opt/render/project/src/child-processes/cdo/cdo_exe/lib/libnetcdf.so -lz -ldl -lsz -lbz2 -lzstd -lxml2 /usr/lib/x86_64-linux-gnu/libcurl.so -lm -pthread -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib
+/bin/bash ../libtool  --tag=CC   --mode=link gcc  -g -O2 -pthread  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib  -o cdi_write_const cdi_write_const.o ../src/libcdi.la -lnetcdf  -lm 
+libtool: link: gcc -g -O2 -pthread -o cdi_write_const cdi_write_const.o  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib ../src/.libs/libcdi.a -luuid /opt/render/project/src/child-processes/cdo/cdo_exe/lib/libnetcdf.so -lz -ldl -lsz -lbz2 -lzstd -lxml2 /usr/lib/x86_64-linux-gnu/libcurl.so -lm -pthread -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib
+make[3]: Entering directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/examples'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/examples'
+make[2]: Leaving directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/examples'
+Making install in examples/pio
+make[2]: Entering directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/examples/pio'
+/bin/bash ../../libtool  --tag=CC   --mode=link gcc  -g -O2 -pthread  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib  -o collectData collectData.o ../../src/libcdi.la -lnetcdf  -lm 
+libtool: link: gcc -g -O2 -pthread -o collectData collectData.o  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib ../../src/.libs/libcdi.a -luuid /opt/render/project/src/child-processes/cdo/cdo_exe/lib/libnetcdf.so -lz -ldl -lsz -lbz2 -lzstd -lxml2 /usr/lib/x86_64-linux-gnu/libcurl.so -lm -pthread -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib
+/bin/bash ../../libtool  --tag=CC   --mode=link gcc  -g -O2 -pthread  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib  -o collectDataNStreams collectDataNStreams.o ../../src/libcdi.la -lnetcdf  -lm 
+libtool: link: gcc -g -O2 -pthread -o collectDataNStreams collectDataNStreams.o  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib ../../src/.libs/libcdi.a -luuid /opt/render/project/src/child-processes/cdo/cdo_exe/lib/libnetcdf.so -lz -ldl -lsz -lbz2 -lzstd -lxml2 /usr/lib/x86_64-linux-gnu/libcurl.so -lm -pthread -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib -Wl,-rpath -Wl,/opt/render/project/src/child-processes/cdo/cdo_exe/lib
+make[3]: Entering directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/examples/pio'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/examples/pio'
+make[2]: Leaving directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/examples/pio'
+Making install in tests
+make[2]: Entering directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/tests'
+make[3]: Entering directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/tests'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/tests'
+make[2]: Leaving directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/tests'
+make[2]: Entering directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi'
+make[3]: Entering directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi'
+make[2]: Leaving directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi'
+make[1]: Leaving directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi'
+Making install in src
+make[1]: Entering directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/src'
+/bin/bash ../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I.  -I../libcdi/src -I/opt/render/project/src/child-processes/cdo/cdo_exe/include   -g -O2 -fopenmp  -MT libcdo_la-griddes_nc.lo -MD -MP -MF .deps/libcdo_la-griddes_nc.Tpo -c -o libcdo_la-griddes_nc.lo `test -f 'griddes_nc.cc' || echo './'`griddes_nc.cc
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../libcdi/src -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -fopenmp -MT libcdo_la-griddes_nc.lo -MD -MP -MF .deps/libcdo_la-griddes_nc.Tpo -c griddes_nc.cc  -fPIC -DPIC -o .libs/libcdo_la-griddes_nc.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../libcdi/src -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -fopenmp -MT libcdo_la-griddes_nc.lo -MD -MP -MF .deps/libcdo_la-griddes_nc.Tpo -c griddes_nc.cc -o libcdo_la-griddes_nc.o >/dev/null 2>&1
+mv -f .deps/libcdo_la-griddes_nc.Tpo .deps/libcdo_la-griddes_nc.Plo
+/bin/bash ../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I.  -I../libcdi/src -I/opt/render/project/src/child-processes/cdo/cdo_exe/include   -g -O2 -fopenmp  -MT libcdo_la-modules.lo -MD -MP -MF .deps/libcdo_la-modules.Tpo -c -o libcdo_la-modules.lo `test -f 'modules.cc' || echo './'`modules.cc
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../libcdi/src -I/opt/render/project/src/child-processes/cdo/cdo_exe/include -g -O2 -fopenmp -MT libcdo_la-modules.lo -MD -MP -MF .deps/libcdo_la-modules.Tpo -c modules.cc  -fPIC -DPIC -o .libs/libcdo_la-modules.o
+make[1]: Leaving directory '/opt/render/project/src/child-processes/cdo/cdo-1.9.1/src'
