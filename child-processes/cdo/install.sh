@@ -18,16 +18,16 @@ path_cdo=$home/cdo-1.9.1
 # # export CFLAGS=-I$path_dep/include
 
 
-tar -xzf $home/netcdf-c-4.9.2.tar.gz
-cd $home/Unidata-netcdf-c-d4145f3
-./configure --prefix=$path_exe --enable-netcdf4 --disable-hdf5 # --disable-shared 
-make
-make install
+# tar -xzf $home/netcdf-c-4.9.2.tar.gz
+# cd $home/Unidata-netcdf-c-d4145f3
+# ./configure --prefix=$path_exe --enable-netcdf4 --disable-hdf5 # --disable-shared 
+# make
+# make install
 
-# cd $path_cdo
-# # CPPFLAGS=-I$path_dep/include LDFLAGS=-L$path_dep/lib CFLAGS=-I$path_dep/include ./configure --prefix=$path_exe --with-netcdf=$path_dep # --with-hdf5=$path_dep
-# ./configure --prefix=$path_exe --enable-netcdf4 
-# # ./configure --enable-netcdf4 --enable-zlib --prefix=$path_exe --with-netcdf=$path_dep --with-hdf5=$path_dep
+cd $path_cdo
+# CPPFLAGS=-I$path_dep/include LDFLAGS=-L$path_dep/lib CFLAGS=-I$path_dep/include ./configure --prefix=$path_exe --with-netcdf=$path_dep # --with-hdf5=$path_dep
+./configure --prefix=$path_exe --enable-netcdf4 --with-netcdf=$path_exe
+# ./configure --enable-netcdf4 --enable-zlib --prefix=$path_exe --with-netcdf=$path_dep --with-hdf5=$path_dep
 
 # # make
 # # make install
@@ -35,7 +35,7 @@ make install
 cd $home
 
 rm $home/cdo_dependecies.tar.gz
-rm -r $home/Unidata-netcdf-c-d4145f3
+# rm -r $home/Unidata-netcdf-c-d4145f3
 rm -r $path_dep
 # rm -r $path_exe
 rm -r $path_cdo
