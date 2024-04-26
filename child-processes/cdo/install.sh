@@ -32,7 +32,7 @@ make install
 # # make
 # # make install
 
-
+cd $home
 
 rm $home/cdo_dependecies.tar.gz
 rm -r $home/Unidata-netcdf-c-d4145f3
