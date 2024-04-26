@@ -1,0 +1,56 @@
+#! @BASH@
+echo 1..40 # Number of tests to be executed.
+#
+test -n "$CDO"      || CDO=cdo
+test -n "$DATAPATH" || DATAPATH=./data
+#
+CDOOUT=cout$$
+CDOERR=cerr$$
+TYPES="tim year mon day"
+STATS="min max range sum avg mean std std1 var var1"
+FMS="srv grb nc"
+if [ "@ENABLE_NETCDF@" = no ] ; then  FMS="srv grb"; fi
+NTEST=1
+#
+for TYPE in $TYPES; do
+  if [ $TYPE = day ] ; then
+    IFILE=$DATAPATH/ts_6h_1mon
+  elif [ $TYPE = mon ] ; then
+    IFILE=$DATAPATH/ts_1d_1year
+  else
+    IFILE=$DATAPATH/ts_mm_5years
+  fi
+#
+  for STAT in $STATS; do
+    RSTAT=0
+    RFILE=$DATAPATH/${TYPE}${STAT}_ref
+    OFILE=${TYPE}${STAT}_res
+
+    CDOTEST="${TYPE}$STAT"
+
+    for FM in $FMS; do
+      CDOCOMMAND="$CDO -f $FM ${TYPE}${STAT} $IFILE $OFILE"
+
+      echo "Running test: $NTEST"
+      echo "$CDOCOMMAND"
+
+      $CDOCOMMAND
+      test $? -eq 0 || let RSTAT+=1
+
+      $CDO diff,0.004 $OFILE $RFILE > $CDOOUT 2> $CDOERR
+      test $? -eq 0 || let RSTAT+=1
+      test -s $CDOOUT && let RSTAT+=1
+      cat $CDOOUT $CDOERR
+    done
+
+    test $RSTAT -eq 0 && echo "ok $NTEST - $CDOTEST"
+    test $RSTAT -eq 0 || echo "not ok $NTEST - $CDOTEST"
+
+    let NTEST+=1
+    rm -f $OFILE
+  done
+done
+#
+rm -f $CDOOUT $CDOERR
+#
+exit 0

@@ -1,0 +1,401 @@
+#! /bin/sh
+#
+# default configuration options and compiler flags for different hosts
+#
+#
+CONFPATH=`echo $0 | cut -c 1-6`
+if [ "$CONFPATH" != "../../" ] ; then
+  CONFPATH='./'
+fi
+#
+COMP=""
+HOSTNAME=`hostname`
+#
+while test $# != 0
+do
+  case $1 in
+      CC=?*)
+          COMP=`expr "X$1" : 'X[^=]*=\(.*\)'`
+          ;;
+      *)
+          HOSTNAME=$1
+          ;;
+  esac
+  shift
+done
+#
+if test -z "$COMP" ; then COMP=gnu ; fi
+#
+set -x
+#
+case "${HOSTNAME}" in
+# i386-apple-darwin10
+    bailung*|d133*|d134*)
+        CDOLIBS="--enable-nearpt3 \
+                 --with-fftw3 \
+                 --with-eccodes=$HOME/local/eccodes-2.3.0 \
+                 --with-netcdf=$HOME/local/netcdf-4.4.1.1 \
+                 --with-hdf5=$HOME/local/hdf5-1.8.19-threadsafe \
+                 --with-udunits2=/opt/local \
+                 --with-curl=/opt/local \
+                 --with-libxml2=/usr \
+                 --with-proj=/opt/local \
+                 --with-szlib=$HOME/local"
+#                 --with-magics=$HOME/local/Magics-2.25.3 \
+
+        if  test "$COMP" = intel ; then
+	  ${CONFPATH}configure \
+                    $CDOLIBS \
+                    LDFLAGS="-Wl,-rpath,$HOME/local/eccodes-2.3.0/lib -Wl,-rpath,/opt/intel/lib" \
+	            CXX=icpc CXXFLAGS="-g -Wall -O2 -qopt-report=5 -march=native" \
+	            CC=icc   CFLAGS="-g -Wall -O2 -qopt-report=5 -march=native -fp-model strict"
+        elif  test "$COMP" = clang ; then
+	  ${CONFPATH}configure --prefix=$HOME/local \
+                    --enable-maintainer-mode \
+                    $CDOLIBS \
+                    LDFLAGS="-Wl,-rpath,$HOME/local/eccodes-2.3.0/lib" \
+	            CXX=clang++ CXXFLAGS="-g -Wall -O3" \
+	            CC=clang    CFLAGS="-g -Wall -O3"
+        elif  test "$COMP" = gnu4.9 ; then
+	  ${CONFPATH}configure --prefix=$HOME/local \
+                    --enable-maintainer-mode \
+                    $CDOLIBS \
+                    LDFLAGS="-Wl,-rpath,$HOME/local/eccodes-2.3.0/lib" \
+	            CXX=g++-mp-4.9 CXXFLAGS="-g -Wall -W -Wfloat-equal -pedantic -O3 -march=native" \
+                    CC=gcc-mp-4.9  CFLAGS="-g -Wall -W -Wfloat-equal -pedantic -O3 -march=native"
+        elif  test "$COMP" = gnu5 ; then
+	  ${CONFPATH}configure --prefix=$HOME/local \
+                    --enable-maintainer-mode \
+                    $CDOLIBS \
+                    LDFLAGS="/opt/local/lib/gcc5/libstdc++.6.dylib -Wl,-rpath,$HOME/local/eccodes-2.3.0/lib" \
+	            CXX=g++-mp-5 CXXFLAGS="-g -Wall -W -Wfloat-equal -pedantic -O3 -march=native" \
+                    CC=gcc-mp-5  CFLAGS="-g -Wall -W -Wfloat-equal -pedantic -O3 -march=native"
+        elif  test "$COMP" = gnu ; then
+	  ${CONFPATH}configure --prefix=$HOME/local \
+                    --enable-maintainer-mode \
+                    $CDOLIBS \
+                    LDFLAGS="/opt/local/lib/gcc6/libstdc++.6.dylib -Wl,-rpath,$HOME/local/eccodes-2.3.0/lib" \
+	            CXX=g++ CXXFLAGS="-g -Wall -W -Wfloat-equal -pedantic -O3 -march=native" \
+                    CC=gcc  CFLAGS="-g -Wall -W -Wfloat-equal -pedantic -O3 -march=native"
+        elif  test "$COMP" = gribapi ; then
+	  ${CONFPATH}configure --prefix=$HOME/local --disable-cgribex \
+                    $CDOLIBS \
+                    LDFLAGS="/opt/local/lib/gcc6/libstdc++.6.dylib -Wl,-rpath,$HOME/local/eccodes-2.3.0/lib" \
+	            CXX=g++ CXXFLAGS="-g -Wall -W -Wfloat-equal -pedantic -O3 -march=native" \
+                    CC=gcc  CFLAGS="-g -Wall -W -Wfloat-equal -pedantic -O3 -march=native"
+#                    --with-libxml2=/usr 
+#                    --with-magics=/Users/m214003/local/magics-2.14.9
+        else
+	  ${CONFPATH}configure  $CDOLIBS
+        fi
+	;;
+    hama*)
+#        CDOLIBS="--with-fftw3 \
+#                 --with-cmor=/Users/m214003/work/CMOR \
+#                 --with-magics=$HOME/local/magics-2.25.3 \
+#                 --with-curl=/opt/local"
+        CDOLIBS="--enable-nearpt3 \
+                 --with-fftw3 \
+                 --with-szlib=$HOME/local \
+                 --with-eccodes=$HOME/local/eccodes-2.3.0 \
+                 --with-netcdf=$HOME/local/netcdf-c-4.4.1.1 \
+                 --with-hdf5=$HOME/local/hdf5-1.8.18 \
+                 --with-libxml2=/opt/local \
+                 --with-proj=/opt/local"
+
+        if  test "$COMP" = intel ; then
+	  ${CONFPATH}configure --prefix=$HOME/local \
+                    $CDOLIBS LDFLAGS="-Wl,-rpath,$HOME/local/eccodes-2.3.0/lib" \
+	            CXX=icpc CXXFLAGS="-g -Wall -O2 -qopt-report=5 -march=native" \
+	            CC=icc   CFLAGS="-g -Wall -O2 -qopt-report=5 -march=native"
+        elif  test "$COMP" = clang ; then
+	  ${CONFPATH}configure \
+                    $CDOLIBS LDFLAGS="-Wl,-rpath,$HOME/local/eccodes-2.3.0/lib" \
+	            CXX=clang++ CXXFLAGS="-g -Wall -pedantic -O3" \
+	            CC=clang    CFLAGS="-g -Wall -pedantic -O3"
+        elif  test "$COMP" = clang4 ; then
+	  ${CONFPATH}configure \
+                    $CDOLIBS \
+	            CXX=clang++-mp-4.0 CXXFLAGS="-g -Wall -pedantic -O3" \
+	            CC=clang-mp-4.0    CFLAGS="-g -Wall -pedantic -O3"
+        elif  test "$COMP" = pgi ; then
+	  ${CONFPATH}configure --disable-openmp \
+                    $CDOLIBS LDFLAGS="-Wl,-rpath,$HOME/local/eccodes-2.3.0/lib" \
+	            CXX=pgc++ CXXFLAGS="-g -fast" \
+	            CC=pgcc   CFLAGS="-g -fast"
+        else
+	  ${CONFPATH}configure --prefix=$HOME/local \
+                    --enable-maintainer-mode \
+                    $CDOLIBS LDFLAGS="-Wl,-rpath,$HOME/local/eccodes-2.3.0/lib" \
+	            CXX=g++ CXXFLAGS="-g -pipe -Wall -W -Wfloat-equal -pedantic -O3 -march=native -Wa,-q -fstack-protector" \
+	            CC=gcc  CFLAGS="-g -pipe -Wall -W -Wfloat-equal -pedantic -O3 -march=native -Wa,-q -fstack-protector"
+#                    --with-libxml2=/usr \
+#                    --with-magics=/Users/m214003/local/Magics-2.18.14nio \
+        fi
+	;;
+# win7 based cygwin virtual machine
+    cdo4windows-cyg)
+        CDOLIBS="--with-netcdf=/usr/local \
+                 --with-hdf5=/usr/local \
+                 --with-grib_api=/usr/local
+                 --with-udunits2=/usr \
+                 --with-proj=/usr"
+
+        if  test "$COMP" = gnu ; then
+	  ${CONFPATH}configure --prefix=/usr/local \
+                    --enable-maintainer-mode \
+                    $CDOLIBS \
+	            CC=gcc CFLAGS="-g -Wall -O2 -DPIC -pie -mwindows" \
+	            CXX=g++ CXXFLAGS="-g -Wall -O2 -DPIC -pie -mwindows" \
+                    LDFLAGS='-L/usr/local/lib' \
+                    LIBS='-lpthread -lm -lcurl -lhdf5_hl -lhdf5 -lz  -lsz -laec -ldl'
+        fi
+	;;
+    daint*)
+        if  test "$COMP" = icc ; then
+          CDOLIBS="--with-netcdf=/opt/cray/netcdf/4.3.3.1/INTEL/14.0"
+	  ${CONFPATH}configure --prefix=$HOME/local \
+                    $CDOLIBS \
+	            CC=icc CFLAGS="-g -Wall -O2 -qopt-report=5 -march=native -openmp"
+        elif  test "$COMP" = pgcc ; then
+          CDOLIBS="--with-netcdf=/opt/cray/netcdf/4.3.3.1/PGI/15.3"
+	  ${CONFPATH}configure --disable-openmp \
+                    $CDOLIBS \
+	            CC=pgcc CFLAGS="-g -O2"
+        elif  test "$COMP" = cray ; then
+          CDOLIBS="--with-netcdf=/opt/cray/netcdf/4.3.3.1/CRAY/8.3"
+	  ${CONFPATH}configure --disable-openmp \
+                    $CDOLIBS \
+	            CC=cc CFLAGS="-g -O2 -h noomp"
+        else
+          CDOLIBS="--with-netcdf=/opt/cray/netcdf/4.3.3.1/GNU/4.9"
+	  ${CONFPATH}configure --prefix=$HOME/local \
+                    $CDOLIBS \
+	            CC=gcc CFLAGS="-g -pipe -Wall -W -Wfloat-equal -pedantic -O3 -march=native -fstack-protector -Wa,-q"
+        fi
+	;;
+# jessie workstation x64
+    breeze*)
+        CDOLIBS="--with-grib_api=/sw/jessie-x64/grib_api-1.14.3-static-gccsys \
+                 --with-netcdf=/sw/jessie-x64/netcdf-4.3.3.1-gccsys \
+                 --with-udunits2=/sw/jessie-x64/udunits-2.2.20-gccsys \
+                 --with-proj=/sw/jessie-x64/proj4-4.9.3-gccsys LIBS=-lz"
+        if  test "$COMP" = icpc ; then
+          ${CONFPATH}configure --enable-cxx --prefix=$HOME/local --exec_prefix=$HOME/local/thunder \
+                    --with-fftw3 \
+                    $CDOLIBS \
+	            CC=icc CXX=icpc CFLAGS="-g -Wall -O2 -qopt-report=5 -march=native"
+        elif  test "$COMP" = icc ; then
+          ${CONFPATH}configure --prefix=$HOME/local --exec_prefix=$HOME/local/thunder \
+                    --with-fftw3 \
+                    $CDOLIBS \
+	            CC=icc CFLAGS="-g -Wall -O2 -qopt-report=5 -march=native"
+        elif  test "$COMP" = pgcc ; then
+          ${CONFPATH}configure --prefix=$HOME/local --exec_prefix=$HOME/local/thunder \
+                    $CDOLIBS \
+	            CC=pgcc CFLAGS="-g"
+        elif  test "$COMP" = clang ; then
+          ${CONFPATH}configure              --prefix=$HOME/local --exec_prefix=$HOME/local/thunder \
+                    --with-fftw3 \
+                    $CDOLIBS \
+	            CC=clang CXX=clang++ CFLAGS="-g -O2"
+        elif  test "$COMP" = clang++ ; then
+          ${CONFPATH}configure --enable-cxx --prefix=$HOME/local --exec_prefix=$HOME/local/thunder \
+                    --with-fftw3 \
+                    $CDOLIBS \
+	            CC=clang CXX=clang++ CFLAGS="-g -O2"
+        elif  test "$COMP" = g++ ; then
+	  ${CONFPATH}configure --enable-cxx \
+                    $CDOLIBS \
+	            CC=gcc CXX=g++ CFLAGS="-g -Wall -O3"
+	else
+          ${CONFPATH}configure --prefix=$HOME/local --exec_prefix=$HOME/local/thunder \
+                    --with-fftw3 \
+                    $CDOLIBS \
+                    CC=gcc CFLAGS='-g -Wall -O3'
+	fi
+	;;
+# mistral
+    mlogin*)
+        CDOLIBS="--with-eccodes=/sw/rhel6-x64/eccodes/eccodes-2.3.0-gcc48 \
+                 --with-netcdf=/sw/rhel6-x64/netcdf/netcdf_c-4.3.2-gcc48 \
+                 --with-hdf5=/sw/rhel6-x64/hdf5/hdf5-1.8.14-threadsafe-gcc48 \
+                 --with-szlib=/sw/rhel6-x64/sys/libaec-0.3.4-gcc48 \
+                 --with-udunits2=/sw/rhel6-x64/util/udunits-2.2.17-gcc48 \
+                 --with-proj=/sw/rhel6-x64/graphics/proj4-4.9.3-gcc48"
+#                 --with-magics=/sw/rhel6-x64/graphics/magicsxx-2.33.0-gfxonly-gcc48"
+#                 --with-cmor=/sw/rhel6-x64/cmor-2.9.2-shared-gcc48 \
+
+        if  test "$COMP" = intel ; then
+          ${CONFPATH}configure --prefix=$HOME/local \
+                    --with-fftw3 \
+                    $CDOLIBS \
+                    LDFLAGS="-Wl,-rpath,/sw/rhel6-x64/eccodes/eccodes-2.3.0-gcc48/lib" \
+	            CXX=icpc CXXFLAGS="-g -Wall -O2 -qopt-report=5 -march=core-avx2" \
+	            CC=icc   CFLAGS="-g -Wall -O2 -qopt-report=5 -march=core-avx2"
+        elif  test "$COMP" = pgi ; then
+          ${CONFPATH}configure --disable-openmp \
+                    $CDOLIBS \
+                    LDFLAGS="-Wl,-rpath,/sw/rhel6-x64/eccodes/eccodes-2.3.0-gcc48/lib" \
+	            CXX=pgc++ CXXFLAGS="-g -fast" \
+	            CC=pgcc   CFLAGS="-g -fast"
+	else
+          ${CONFPATH}configure --prefix=$HOME/local \
+                    --with-fftw3 \
+                    $CDOLIBS \
+                    LDFLAGS="-Wl,-rpath,/sw/rhel6-x64/eccodes/eccodes-2.3.0-gcc48/lib" \
+                    CXX=g++ CXXFLAGS='-g -Wall -O3 -march=native -mavx2' \
+                    CC=gcc  CFLAGS='-g -Wall -O3 -march=native -mavx2'
+	fi
+	;;
+# x86_64-unknown-linux-gnu
+    btc*)
+        if  test "$COMP" = icc ; then
+          ${CONFPATH}configure --prefix=$HOME/local \
+                    --with-grib_api=/lustre/sw/rhel6-x64/grib_api/grib_api-1.13.0-intel15 \
+	            --with-netcdf=/lustre/sw/rhel6-x64/netcdf/netcdf_c-4.3.2-intel15 \
+                    --with-hdf5=/lustre/sw/rhel6-x64/hdf5/hdf5-1.8.14-threadsafe-intel15 \
+                    --with-fftw3 \
+	            CC=icc CFLAGS="-g -Wall -O2 -qopt-report=5 -xCORE-AVX2"
+	else
+          ${CONFPATH}configure --prefix=$HOME/local \
+                    --with-grib_api=/lustre/sw/rhel6-x64/grib_api/grib_api-1.13.0-gcc48 \
+	            --with-netcdf=/lustre/sw/rhel6-x64/netcdf/netcdf_c-4.3.2-gcc48 \
+                    --with-hdf5=/lustre/sw/rhel6-x64/hdf5/hdf5-1.8.14-threadsafe-gcc48 \
+                    --with-fftw3 \
+                    CC=gcc CFLAGS='-g -Wall -O3 -march=native'
+	fi
+	;;
+# ia64-xxx-linux
+    ds*)
+	${CONFPATH}configure --prefix=$HOME/local \
+                    --with-netcdf=/pool/ia64/netcdf/netcdf-3.6.0-p1 \
+                    --with-szlib=$HOME/local \
+                    CC=icc CFLAGS="-g -O2 -Wall -fno-alias -DMIN_BUF_SIZE=4194304"
+	;;
+    wasser*)
+	${CONFPATH}configure --prefix=$HOME/local \
+                    --with-netcdf=/home/dkrz/m214089/local/ia64 \
+                    CC=icc CFLAGS="-g -O2 -Wall -fno-alias"
+	;;
+# x86_64-archlinux
+    luthien*)
+      case "$COMP" in
+      gcc|clang)
+ 	${CONFPATH}configure --prefix=$HOME/local \
+                    --program-suffix=-dev \
+                    --enable-maintainer-mode \
+                    --enable-data \
+	            --with-magics \
+	            --with-netcdf \
+	              --with-hdf5 \
+                     --with-szlib \
+                  --with-grib_api \
+                  --with-udunits2 \
+                  --with-grib_api \
+                  --with-fftw3    \
+                  --with-proj     \
+                      --with-pic  \
+                      CC=$COMP CPPFLAGS=-I/usr/include/magics CFLAGS="-g -Wall -O3" LIBS="-lopenjpeg" LDFLAGS='-lelf -v'
+        ;;
+      g++|clang++)
+        case "$COMP" in
+          g++)
+            CC=gcc
+            ;;
+          clang++)
+            CC=clang
+            ;;
+        esac
+ 	${CONFPATH}configure --prefix=$HOME/local \
+                    --program-suffix=-dev \
+                    --enable-maintainer-mode \
+                    --enable-data \
+                    --enable-cxx  \
+	            --with-netcdf \
+	              --with-hdf5 \
+                     --with-szlib \
+                  --with-grib_api \
+                  --with-udunits2 \
+                  --with-grib_api \
+                  --with-fftw3    \
+                  --with-proj     \
+                      --with-pic  \
+                      CC=$CC CXX=$COMP CFLAGS="-g -Wall -O2" CXXFLAGS="-g -Wall -O2" LIBS=-lopenjpeg
+	;;
+      esac
+    ;;
+# standard workstations at MPI-M debian jessie
+    mpipc149)
+      CDOLIBS="--prefix=`pwd`/build \
+              --enable-maintainer-mode \
+              --with-netcdf=/sw/jessie-x64/netcdf-4.3.3.1-gccsys \
+              --with-hdf5=/sw/jessie-x64/hdf5-1.8.16-gccsys/ \
+              --with-szlib=/sw/jessie-x64/szip-2.1-gccsys \
+              --with-udunits2=/sw/jessie-x64/udunits-2.2.20-gccsys \
+              --enable-ruby --enable-swig --enable-python "
+      case "$COMP" in
+        gcc)
+          ${CONFPATH}configure \
+            $CDOLIBS \
+            CC=gcc CFLAGS="-g -Wall -W -Wfloat-equal -pedantic -O2" LIBS='-lm  -lpthread '
+          ;;
+        g++) # jessie used gcc 6.1.1
+          ${CONFPATH}configure \
+            $CDOLIBS \
+            --enable-cxx \
+            CC=gcc CXX=g++ CFLAGS="-std=c++11 -g -Wall -W -Wfloat-equal -pedantic -O2" LIBS='-lm  -lpthread '
+          ;;
+        clang)
+          ${CONFPATH}configure \
+            $CDOLIBS \
+            --disable-openmp \
+            CC=/sw/jessie-x64/util/clang+llvm-3.8.0/bin/clang CXX=/sw/jessie-x64/util/clang+llvm-3.8.0/bin/clang++
+        ;;
+        clang++) # recent clang-3.8
+          ${CONFPATH}configure \
+            $CDOLIBS \
+            --disable-openmp \
+            --enable-cxx \
+            CC=/sw/jessie-x64/util/clang+llvm-3.8.0/bin/clang CXX=/sw/jessie-x64/util/clang+llvm-3.8.0/bin/clang++
+        ;;
+      esac
+      ;;
+# standard workstations at MPI-M x86_64-lenny
+    mpipc* )
+	${CONFPATH}configure \
+               --prefix=`pwd`/build \
+               --enable-maintainer-mode \
+               --with-netcdf='/sw/squeeze-x64/netcdf-latest-gccsys' \
+               --with-hdf5='/sw/squeeze-x64/hdf5-latest' \
+               --with-szlib='/sw/squeeze-x64/szip-latest' \
+               --with-proj='/sw/squeeze-x64/proj-latest' \
+               --enable-ruby --enable-swig --enable-python \
+	           CC=gcc CFLAGS="-g -Wall -W -Wfloat-equal -pedantic -O2"
+        ;;
+# dap enabled
+    egmont | columbine)
+ 	  ${CONFPATH}configure --prefix=$HOME/local --exec_prefix=$HOME/local/etch-ia32 \
+	            --with-netcdf=/sw/etch-ia32/netcdf-4.1.1-gcc \
+	            --with-hdf5=/sw/etch-ia32/hdf5-1.8.4-threadsafe \
+                    --with-szlib=/sw/etch-ia32/szip-2.1 \
+                    --withroj=/sw/etch-ia32/proj-4.6.0 \
+	            --enable-all-static CC=icc CFLAGS="-g -fast -openmp" AR=xiar LD=xild
+#	            CC=gcc CFLAGS="-g -Wall -W -Wfloat-equal -pedantic -O2"
+    ;;
+# i386-pc-solaris2.10
+    grim | mil* )
+	${CONFPATH}configure --prefix=$HOME/local --exec_prefix=$HOME/local/solaris10-x86 \
+                    --with-netcdf=/client \
+                    --with-szlib=$HOME/local/solaris10-x86 \
+                    CC=cc CFLAGS="-g -mt -fast"
+	;;
+# x86_64-unknown-linux-gnu (cray)
+    brisi*)
+        ${CONFPATH}configure  \
+                    --with-netcdf=/opt/cray/netcdf/4.3.2/INTEL/140 \
+                    --with-hdf5=/opt/cray/hdf5/1.8.13/INTEL/140 \
+                    --with-fftw3 \
+                    CC=gcc CFLAGS='-g -Wall -O3'
+	;;
+esac

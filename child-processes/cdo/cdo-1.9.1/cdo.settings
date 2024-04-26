@@ -1,0 +1,54 @@
+{
+   "CXX"                : "g++",
+   "CC"                 : "gcc",
+   "CPP"                : "gcc -E",
+   "CPPFLAGS"           : "",
+   "CXXFLAGS"           : "-g -O2 -fopenmp ",
+   "CFLAGS"             : "-g -O2 -fopenmp ",
+   "LDFLAGS"            : "",
+   "LIBS"               : " -lm ",
+   "FCFLAGS"            : "",
+   "INCLUDES"           : "@INCLUDES@",
+   "LD"                 : "/usr/bin/ld -m elf_x86_64",
+   "NM"                 : "/usr/bin/nm -B",
+   "AR"                 : "ar",
+   "AS"                 : "as",
+   "DLLTOOL"            : "false",
+   "OBJDUMP"            : "objdump",
+   "STRIP"              : "strip",
+   "RANLIB"             : "ranlib",
+   "INSTALL"            : "/usr/bin/install -c",
+   "cdi"                : {
+     "enable_cdi_lib" : false
+   },
+  "threads"    : {
+    "lib"      : "",
+    "include"  : ""
+  "szlib"      : {
+    "lib"      : "",
+    "include"  : ""
+  },
+  "hdf5"       : {
+    "lib"      : "",
+    "include"  : ""
+  },
+  "netcdf"     : {
+    "lib"      : "",
+    "include"  : ""
+  },
+  "udunits2"   : {
+    "lib"      : "",
+    "include"  : ""
+  },
+  "proj"       : {
+    "lib"      : "",
+    "include"  : ""
+  },
+  "magics"       : {
+    "lib"      : "",
+    "include"  : ""
+  },
+  "USER_NAME"          : "unknown",
+  "HOST_NAME"          : "srv-colbsh0l5elc73fcm17g-hibernate-86bb7bf66-78lr7",
+  "SYSTEM_TYPE"        : "x86_64-unknown-linux-gnu"
+}
