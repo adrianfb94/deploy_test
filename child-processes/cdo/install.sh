@@ -7,7 +7,7 @@ home=`pwd`
 
 cat cdo.part* >> cdo_dependecies.tar.gz
 
-tar -xzf $home/cdo_dependecies.tar.gz
+tar -xzvf $home/cdo_dependecies.tar.gz
 
 # path_dep=$home/cdo_full_disable-shared
 # path_exe=$home/cdo_exe
@@ -35,6 +35,11 @@ tar -xzf $home/cdo_dependecies.tar.gz
 # cd $home
 
 rm $home/cdo_dependecies.tar.gz
+rm -r bin
+rm -r include
+rm -r lib
+rm -r share
+
 # rm -r $home/Unidata-netcdf-c-d4145f3
 # rm -r $path_dep
 # rm -r $path_exe
