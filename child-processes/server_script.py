@@ -398,7 +398,8 @@ cdo_version = subprocess.run('{} --version'.format(cdo_dir), shell=True, encodin
 print(cdo_version.stderr.split('\n')[0])
 print(cdo_version.stderr.split('\n')[1])
 
-# exit()
+exit()
+
 os.chdir(home_server)
 
 subprocess.run('git config http.postBuffer 1048576000', shell=True)
