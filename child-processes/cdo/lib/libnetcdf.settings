@@ -5,10 +5,10 @@
 -------
 NetCDF Version:		4.9.2
 Dispatch Version:       5
-Configured On:		Fri Apr 26 01:57:07 CDT 2024
+Configured On:		Fri Apr 26 03:55:37 CDT 2024
 Host System:		x86_64-pc-linux-gnu
 Build Directory: 	/opt/render/project/src/child-processes/cdo/Unidata-netcdf-c-d4145f3
-Install Prefix:         /opt/render/project/src/child-processes/cdo
+Install Prefix:         /opt/render/project/src/child-processes/cdo/cdo_exe
 Plugin Install Prefix:  N.A.
 
 # Compiling Options
@@ -20,7 +20,7 @@ LDFLAGS:		-L/opt/render/project/src/child-processes/cdo/lib
 AM_CFLAGS:		
 AM_CPPFLAGS:		
 AM_LDFLAGS:		
-Shared Library:		yes
+Shared Library:		no
 Static Library:		yes
 Extra libraries:	-lhdf5_hl -lhdf5 -lm -lz -ldl -lsz -lzstd -lxml2 -lcurl 
 XML Parser:             libxml2

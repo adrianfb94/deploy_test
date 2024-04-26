@@ -5,10 +5,10 @@
 # It is necessary for linking the library.
 
 # The name that we can dlopen(3).
-dlname='libnetcdf.so.19'
+dlname=''
 
 # Names of this library.
-library_names='libnetcdf.so.19.2.2 libnetcdf.so.19 libnetcdf.so'
+library_names=''
 
 # The name of the static archive.
 old_library='libnetcdf.a'
@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/opt/render/project/src/child-processes/cdo/lib'
+libdir='/opt/render/project/src/child-processes/cdo/cdo_exe/lib'

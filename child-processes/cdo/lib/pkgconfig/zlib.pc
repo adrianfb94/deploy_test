@@ -1,4 +1,4 @@
-prefix=/opt/render/project/src/child-processes/cdo
+prefix=/opt/render/project/src/child-processes/cdo/cdo_exe
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 sharedlibdir=${libdir}

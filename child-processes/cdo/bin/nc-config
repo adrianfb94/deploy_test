@@ -4,7 +4,7 @@
 # various things about the netCDF installation. This code was
 # contributed by netCDF user Arlindo DaSilva. Thanks Arlindo!
 
-prefix=/opt/render/project/src/child-processes/cdo
+prefix=/opt/render/project/src/child-processes/cdo/cdo_exe
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
@@ -16,7 +16,7 @@ fi
 
 cc="gcc"
 cflags="-I${includedir} -I/opt/render/project/src/child-processes/cdo/include"
-libs="-L${libdir} -lnetcdf"
+libs="-L${libdir} -L/opt/render/project/src/child-processes/cdo/lib -lnetcdf -lhdf5_hl -lhdf5 -lm -lz -ldl -lsz -lzstd -lxml2 -lcurl "
 libsprivate="-lhdf5_hl -lhdf5 -lm -lz -ldl -lsz -lzstd -lxml2 -lcurl "
 
 

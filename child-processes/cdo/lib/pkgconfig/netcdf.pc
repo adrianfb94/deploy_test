@@ -1,4 +1,4 @@
-prefix=/opt/render/project/src/child-processes/cdo
+prefix=/opt/render/project/src/child-processes/cdo/cdo_exe
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
@@ -8,6 +8,6 @@ Name: netcdf-c
 Description: NetCDF Client Library for C
 URL: https://www.unidata.ucar.edu/netcdf
 Version: 4.9.2
-Libs: -L${libdir} -lnetcdf
+Libs: -L${libdir} -L/opt/render/project/src/child-processes/cdo/lib -lnetcdf -lhdf5_hl -lhdf5 -lm -lz -ldl -lsz -lzstd -lxml2 -lcurl 
 Libs.private: -lhdf5_hl -lhdf5 -lm -lz -ldl -lsz -lzstd -lxml2 -lcurl 
 Cflags: -I${includedir}
