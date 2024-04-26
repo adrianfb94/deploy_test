@@ -114,10 +114,10 @@
 /* #undef HAVE_LIBMALLOC */
 
 /* Define to 1 for NetCDF OpenDAP */
-/* #undef HAVE_LIBNC_DAP */
+#define HAVE_LIBNC_DAP 1
 
 /* Define to 1 for NetCDF support */
-/* #undef HAVE_LIBNETCDF */
+#define HAVE_LIBNETCDF 1
 
 /* Define to 1 for PROJ support */
 /* #undef HAVE_LIBPROJ */
@@ -165,13 +165,13 @@
 /* #undef HAVE_NC4HDF5_THREADSAFE */
 
 /* Define to 1 for NetCDF2 support */
-/* #undef HAVE_NETCDF2 */
+#define HAVE_NETCDF2 1
 
 /* Define to 1 for NetCDF4 support */
-/* #undef HAVE_NETCDF4 */
+#define HAVE_NETCDF4 1
 
 /* Define to 1 if you have the <netcdf.h> header file. */
-/* #undef HAVE_NETCDF_H */
+#define HAVE_NETCDF_H 1
 
 /* Define to 1 if you have the <proj_api.h> header file. */
 /* #undef HAVE_PROJ_API_H */
@@ -234,7 +234,7 @@
 /* #undef HIRLAM_EXTENSIONS */
 
 /* Host name */
-#define HOST_NAME "srv-colbsh0l5elc73fcm17g-hibernate-86bb7bf66-78lr7"
+#define HOST_NAME "srv-colbsh0l5elc73fcm17g-hibernate-6db4c8bb45-9v22t"
 
 /* Define to the sub-directory in which libtool stores uninstalled libraries.
    */

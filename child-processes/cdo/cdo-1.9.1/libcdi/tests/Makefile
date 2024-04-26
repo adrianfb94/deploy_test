@@ -91,7 +91,7 @@ check_PROGRAMS = cksum_verify$(EXEEXT) test_grib$(EXEEXT) \
 	test_resource_copy$(EXEEXT) cksum_write_chunk$(EXEEXT) \
 	pio_write_deco2d$(EXEEXT) test_table$(EXEEXT) \
 	test_byteswap$(EXEEXT) $(am__EXEEXT_1) $(am__EXEEXT_2)
-#am__append_1 = test_cdf_write test_cdf_read
+am__append_1 = test_cdf_write test_cdf_read
 #am__append_2 = test_resource_copy_mpi_run
 #am__append_3 = test_resource_copy_mpi
 subdir = tests
@@ -154,8 +154,8 @@ CONFIG_CLEAN_FILES = test_cksum_grib test_cksum_nc test_cksum_nc2 \
 	pio_cksum_writer pio_cksum_cdf test_resource_copy_mpi_run \
 	test_cdf_transformation test_cdf_const
 CONFIG_CLEAN_VPATH_FILES =
-#am__EXEEXT_1 = test_cdf_write$(EXEEXT) \
-#	test_cdf_read$(EXEEXT)
+am__EXEEXT_1 = test_cdf_write$(EXEEXT) \
+	test_cdf_read$(EXEEXT)
 #am__EXEEXT_2 = test_resource_copy_mpi$(EXEEXT)
 am_cksum_read_OBJECTS = cksum_read.$(OBJEXT) var_cksum.$(OBJEXT) \
 	stream_cksum.$(OBJEXT) ensure_array_size.$(OBJEXT)
@@ -339,7 +339,7 @@ CCDEPMODE = depmode=gcc3
 CDI_F90_INTERFACE_FCFLAGS = 
 CFLAGS = -g -O2 -pthread
 CPP = gcc -E
-CPPFLAGS = 
+CPPFLAGS = -I/opt/render/project/src/child-processes/cdo/cdo_exe/include  
 CXX = g++
 CXXCPP = g++ -E
 CXXDEPMODE = depmode=gcc3
@@ -362,10 +362,10 @@ ENABLE_EXTRA = yes
 ENABLE_GRIB = yes
 ENABLE_IEG = yes
 ENABLE_MPI = false
-ENABLE_NC2 = no
-ENABLE_NC4 = no
+ENABLE_NC2 = yes
+ENABLE_NC4 = yes
 ENABLE_NC4HDF5 = no
-ENABLE_NETCDF = no
+ENABLE_NETCDF = yes
 ENABLE_PYTHON = false
 ENABLE_RUBY = false
 ENABLE_SERVICE = yes
@@ -387,16 +387,16 @@ GREP = /bin/grep
 GRIB_API_INCLUDE = 
 GRIB_API_LIBS = 
 HAVE_PARALLEL_NC4 = 0
-HOST_NAME = srv-colbsh0l5elc73fcm17g-hibernate-86bb7bf66-78lr7
+HOST_NAME = srv-colbsh0l5elc73fcm17g-hibernate-6db4c8bb45-9v22t
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld -m elf_x86_64
-LDFLAGS = 
+LDFLAGS = -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib 
 LIBOBJS = 
-LIBS =  -lm 
+LIBS = -lnetcdf  -lm 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
@@ -411,10 +411,10 @@ MPI_C_LIB =
 MPI_FC_INCLUDE = 
 MPI_FC_LIB = 
 MPI_LAUNCH = /opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/util/serialrun
-NC_CONFIG = 
-NETCDF_INCLUDE = 
-NETCDF_LIBS = 
-NETCDF_ROOT = 
+NC_CONFIG = /opt/render/project/src/child-processes/cdo/cdo_exe/bin/nc-config
+NETCDF_INCLUDE =  -I/opt/render/project/src/child-processes/cdo/cdo_exe/include
+NETCDF_LIBS =  -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib -lnetcdf
+NETCDF_ROOT = /opt/render/project/src/child-processes/cdo/cdo_exe
 NM = /usr/bin/nm -B
 NMEDIT = 
 OBJDUMP = objdump
@@ -501,7 +501,7 @@ mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = 
+prefix = /opt/render/project/src/child-processes/cdo/cdo_exe
 program_transform_name = s,x,x,
 psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin

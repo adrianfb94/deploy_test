@@ -1,7 +1,7 @@
 #! /bin/bash
 set -e
 [ x${DEBUG+set} != xset ] || set -x
-if [ no != yes ]; then
+if [ yes != yes ]; then
    exit 77
 fi
 ncdatafile="test$$.nc"

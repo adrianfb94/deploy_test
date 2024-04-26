@@ -41,7 +41,7 @@ for GRIDTYPE in "regular" "curvilinear" "unstructured"; do
       if [ "yes" = no -a "$GRIDTYPE" != "regular" ]; then
         test $RSTAT -eq 0 && echo "ok $NTEST - $CDOTEST # SKIP POSIX threads not enabled"
       else
-        if [ "no" = yes ] ; then
+        if [ "yes" = yes ] ; then
           echo "Running test: $NTEST"
           echo "$CDOCOMMAND"
 

@@ -22,7 +22,7 @@ for GRIDTYPE in $GRIDTYPES; do
 
     CDOTEST="$GRIDTYPE $DIST"
 
-    if [ "no" = yes ] ; then
+    if [ "yes" = yes ] ; then
       nx=$(echo $DIST | sed 's/,.*//')
       NX=""
       if [ $FILE != datar.nc ] ; then NX=",$nx" ; fi

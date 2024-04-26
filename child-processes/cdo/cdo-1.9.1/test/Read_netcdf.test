@@ -19,7 +19,7 @@ for OPERATOR in sinfon infon; do
     CDOTEST="$OPERATOR $FILE"
     CDOCOMMAND="$CDO $OPERATOR $IFILE"
 
-    if [ "no" = yes ] ; then
+    if [ "yes" = yes ] ; then
       echo "Running test: $NTEST"
       echo "$CDOCOMMAND"
 

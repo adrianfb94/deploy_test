@@ -2,7 +2,7 @@
 
 set -e
 format=nc
-if [ no = yes -a no = yes ]; then
+if [ yes = yes -a no = yes ]; then
   exec >test_f2003_$format.log 2>&1
   /opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/examples/cdi_write_f2003
   /opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi/examples/cdi_read_f2003 \

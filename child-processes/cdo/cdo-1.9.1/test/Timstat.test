@@ -9,7 +9,7 @@ CDOERR=cerr$$
 TYPES="tim year mon day"
 STATS="min max range sum avg mean std std1 var var1"
 FMS="srv grb nc"
-if [ "no" = no ] ; then  FMS="srv grb"; fi
+if [ "yes" = no ] ; then  FMS="srv grb"; fi
 NTEST=1
 #
 for TYPE in $TYPES; do

@@ -20,7 +20,7 @@ for X in 1 2; do
   CDOTEST="remapeta"
   CDOCOMMAND="$CDO remapeta,$VCT $IFILE $OFILE"
 
-  if [ "no" = yes ] ; then
+  if [ "yes" = yes ] ; then
     echo "Running test: $NTEST"
     echo "$CDOCOMMAND"
 

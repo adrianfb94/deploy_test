@@ -1,7 +1,7 @@
 #! /bin/bash
 
 set -e
-if [ no = yes ]; then
+if [ yes = yes ]; then
   exec >test_cdf_const.log 2>&1
   mkdir -p test_cdf_const.d
   cd test_cdf_const.d

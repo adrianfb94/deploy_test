@@ -9,7 +9,7 @@ CDOERR=cerr$$
 TYPES="ymon yday yhour yseas"
 STATS="min max range sum avg mean std std1 var var1"
 FMS="srv grb nc"
-if [ "no" = no ] ; then  FMS="srv grb"; fi
+if [ "yes" = no ] ; then  FMS="srv grb"; fi
 #
 IFILE=$DATAPATH/ts_mm_5years
 NTEST=1

@@ -2,7 +2,7 @@
 
 set -e
 format=nc2
-if [ no = yes ]; then
+if [ yes = yes ]; then
   exec >test_cksum_$format.log 2>&1
   ./cksum_write -f $format
   ./cksum_read example.$format

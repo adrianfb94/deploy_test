@@ -2,11 +2,11 @@
    "CXX"                : "g++",
    "CC"                 : "gcc",
    "CPP"                : "gcc -E",
-   "CPPFLAGS"           : "",
+   "CPPFLAGS"           : "-I/opt/render/project/src/child-processes/cdo/cdo_exe/include ",
    "CXXFLAGS"           : "-g -O2 -fopenmp ",
    "CFLAGS"             : "-g -O2 -fopenmp ",
-   "LDFLAGS"            : "",
-   "LIBS"               : " -lm ",
+   "LDFLAGS"            : "-L/opt/render/project/src/child-processes/cdo/cdo_exe/lib ",
+   "LIBS"               : "-lnetcdf  -lm ",
    "FCFLAGS"            : "",
    "INCLUDES"           : "@INCLUDES@",
    "LD"                 : "/usr/bin/ld -m elf_x86_64",
@@ -33,8 +33,8 @@
     "include"  : ""
   },
   "netcdf"     : {
-    "lib"      : "",
-    "include"  : ""
+    "lib"      : " -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib -lnetcdf",
+    "include"  : " -I/opt/render/project/src/child-processes/cdo/cdo_exe/include"
   },
   "udunits2"   : {
     "lib"      : "",
@@ -49,6 +49,6 @@
     "include"  : ""
   },
   "USER_NAME"          : "unknown",
-  "HOST_NAME"          : "srv-colbsh0l5elc73fcm17g-hibernate-86bb7bf66-78lr7",
+  "HOST_NAME"          : "srv-colbsh0l5elc73fcm17g-hibernate-6db4c8bb45-9v22t",
   "SYSTEM_TYPE"        : "x86_64-unknown-linux-gnu"
 }

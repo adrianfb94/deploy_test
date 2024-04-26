@@ -30,9 +30,9 @@ function fileformat()
   if [ "yes" = no     -a "${FORMAT}" = ieg  ] ; then  ENABLE_TEST=no; fi
   if [ "yes" = no    -a "${FORMAT}" = grb  ] ; then  ENABLE_TEST=no; fi
   if [ "no" = no -a "${FORMAT}" = grb2 ] ; then  ENABLE_TEST=no; fi
-  if [ "no" = no  -a "${FORMAT}" = nc   ] ; then  ENABLE_TEST=no; fi
-  if [ "no" = no  -a "${FORMAT}" = nc2  ] ; then  ENABLE_TEST=no; fi
-  if [ "no" = no     -a "${FORMAT}" = nc4  ] ; then  ENABLE_TEST=no; fi
+  if [ "yes" = no  -a "${FORMAT}" = nc   ] ; then  ENABLE_TEST=no; fi
+  if [ "yes" = no  -a "${FORMAT}" = nc2  ] ; then  ENABLE_TEST=no; fi
+  if [ "yes" = no     -a "${FORMAT}" = nc4  ] ; then  ENABLE_TEST=no; fi
   if [ "@ENABLE_NC5@" = no     -a "${FORMAT}" = nc5  ] ; then  ENABLE_TEST=no; fi
 }
 #

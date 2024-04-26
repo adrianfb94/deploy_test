@@ -49,7 +49,7 @@ if test 1 -eq $($CDOCOMMAND -topo,r1x1) ; then  echo "ok $NTEST - $CDOCOMMAND -t
 if test 1 -eq $($CDOCOMMAND -topo,global_1) ; then  echo "ok $NTEST - $CDOCOMMAND -topo,global_1"; else echo "not ok $NTEST - $CDOCOMMAND -topo,global_1"; fi; let NTEST+=1
 
 # create temporary data
-if [ "no" = yes ] ; then
+if [ "yes" = yes ] ; then
   $CDO -O -f nc -temp,r18x9 temp.small
   $CDO -O -f nc -temp,global_10 temp.global
   $CDO -O -f nc -merge temp.small temp.global temp.2grids

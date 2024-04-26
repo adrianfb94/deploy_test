@@ -9,7 +9,7 @@ CDOERR=cerr$$
 TYPE=seas
 STATS="min max range sum avg mean std std1 var var1"
 FMS="srv grb nc"
-if [ "no" = no ] ; then  FMS="srv grb"; fi
+if [ "yes" = no ] ; then  FMS="srv grb"; fi
 NTEST=1
 #
 IFILE=$DATAPATH/ts_mm_5years

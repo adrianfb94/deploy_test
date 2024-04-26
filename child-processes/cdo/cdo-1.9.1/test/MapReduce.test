@@ -15,7 +15,7 @@ for OPERATOR in reducegrid; do
 
     CDOTEST="$OPERATOR on grid ${grid}"
 
-    if [ "no" = yes ] ; then
+    if [ "yes" = yes ] ; then
 
       $CDO -f nc -temp,$REFGRID data_${grid}.nc
       $CDO -f nc -gtc,273.15 -temp,$REFGRID mask_${grid}.nc

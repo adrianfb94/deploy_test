@@ -158,7 +158,15 @@ checking for PTHREAD_PRIO_INHERIT... yes
 CC:gcc CFLAGS:-g -O2 -fopenmp  LIBS: -lm 
 checking for szlib library... suppressed
 checking for hdf5 library... suppressed
-configure:  is not a directory! NetCDF suppressed
+checking netcdf.h usability... yes
+checking netcdf.h presence... yes
+checking for netcdf.h... yes
+checking for library containing nc_open... -lnetcdf
+checking nc-config script... checking for nc-config... /opt/render/project/src/child-processes/cdo/cdo_exe/bin/nc-config
+checking netcdf's OpenDAP support... yes
+checking netcdf's nc2 support... yes
+checking netcdf's nc4 support... yes
+checking netcdf's nc4/hdf5 support... no
 checking for the UDUNITS2 library... suppressed
 checking for the CMOR library... suppressed
 checking for the ECCODES library... suppressed
@@ -235,7 +243,7 @@ config.status: creating src/config.h
 config.status: executing depfiles commands
 config.status: executing libtool commands
 === configuring in libcdi (/opt/render/project/src/child-processes/cdo/cdo-1.9.1/libcdi)
-configure: running /bin/bash ./configure --disable-option-checking '--prefix='  '--enable-netcdf4' '--with-netcdf=' --cache-file=/dev/null --srcdir=.
+configure: running /bin/bash ./configure --disable-option-checking '--prefix=/opt/render/project/src/child-processes/cdo/cdo_exe'  '--enable-netcdf4' '--with-netcdf=/opt/render/project/src/child-processes/cdo/cdo_exe' --cache-file=/dev/null --srcdir=.
 configuring cdi 1.9.1
 checking build system type... x86_64-pc-linux-gnu
 checking host system type... x86_64-pc-linux-gnu
@@ -418,7 +426,15 @@ checking if more special flags are required for pthreads... no
 checking for PTHREAD_PRIO_INHERIT... yes
 CC:gcc CFLAGS:-g -O2 -pthread LIBS: -lm 
 checking for szlib library... suppressed
-configure:  is not a directory! NetCDF suppressed
+checking netcdf.h usability... yes
+checking netcdf.h presence... yes
+checking for netcdf.h... yes
+checking for library containing nc_open... -lnetcdf
+checking nc-config script... checking for nc-config... /opt/render/project/src/child-processes/cdo/cdo_exe/bin/nc-config
+checking netcdf's OpenDAP support... yes
+checking netcdf's nc2 support... yes
+checking netcdf's nc4 support... yes
+checking netcdf's nc4/hdf5 support... no
 checking for the ECCODES library... suppressed
 checking for the GRIB_API library... suppressed
 checking for GRIB support... yes
@@ -479,10 +495,10 @@ config.status: creating cdi.settings
     "tools" : {
       "CC"       : "gcc",
       "CPP"      : "gcc -E",
-      "CPPFLAGS" : "",
+      "CPPFLAGS" : "-I/opt/render/project/src/child-processes/cdo/cdo_exe/include  ",
       "CFLAGS"   : "-g -O2 -pthread",
-      "LDFLAGS"  : "",
-      "LIBS"     : " -lm ",
+      "LDFLAGS"  : "-L/opt/render/project/src/child-processes/cdo/cdo_exe/lib ",
+      "LIBS"     : "-lnetcdf  -lm ",
       "FC"       : "no",
       "F77"      : "",
       "FCFLAGS"  : "",
@@ -498,7 +514,7 @@ config.status: creating cdi.settings
     },
     "platform" : {
       "USER_NAME"   : "unknown",
-      "HOST_NAME"   : "srv-colbsh0l5elc73fcm17g-hibernate-86bb7bf66-78lr7",
+      "HOST_NAME"   : "srv-colbsh0l5elc73fcm17g-hibernate-6db4c8bb45-9v22t",
       "SYSTEM_TYPE" : "x86_64-pc-linux-gnu"
     },
     "libraries" : {
@@ -517,8 +533,8 @@ config.status: creating cdi.settings
         "include"  : ""
       },
       "netcdf"   : {
-        "lib"      : "",
-        "include"  : ""
+        "lib"      : " -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib -lnetcdf",
+        "include"  : " -I/opt/render/project/src/child-processes/cdo/cdo_exe/include"
       },
       "grib_api" : {
         "lib"      : "",
@@ -554,11 +570,11 @@ configure: CDO is configured with the following options:
    "CXX"                : "g++",
    "CC"                 : "gcc",
    "CPP"                : "gcc -E",
-   "CPPFLAGS"           : "",
+   "CPPFLAGS"           : "-I/opt/render/project/src/child-processes/cdo/cdo_exe/include ",
    "CXXFLAGS"           : "-g -O2 -fopenmp ",
    "CFLAGS"             : "-g -O2 -fopenmp ",
-   "LDFLAGS"            : "",
-   "LIBS"               : " -lm ",
+   "LDFLAGS"            : "-L/opt/render/project/src/child-processes/cdo/cdo_exe/lib ",
+   "LIBS"               : "-lnetcdf  -lm ",
    "FCFLAGS"            : "",
    "INCLUDES"           : "@INCLUDES@",
    "LD"                 : "/usr/bin/ld -m elf_x86_64",
@@ -585,8 +601,8 @@ configure: CDO is configured with the following options:
     "include"  : ""
   },
   "netcdf"     : {
-    "lib"      : "",
-    "include"  : ""
+    "lib"      : " -L/opt/render/project/src/child-processes/cdo/cdo_exe/lib -lnetcdf",
+    "include"  : " -I/opt/render/project/src/child-processes/cdo/cdo_exe/include"
   },
   "udunits2"   : {
     "lib"      : "",
@@ -601,7 +617,7 @@ configure: CDO is configured with the following options:
     "include"  : ""
   },
   "USER_NAME"          : "unknown",
-  "HOST_NAME"          : "srv-colbsh0l5elc73fcm17g-hibernate-86bb7bf66-78lr7",
+  "HOST_NAME"          : "srv-colbsh0l5elc73fcm17g-hibernate-6db4c8bb45-9v22t",
   "SYSTEM_TYPE"        : "x86_64-unknown-linux-gnu"
 }
 configure:
