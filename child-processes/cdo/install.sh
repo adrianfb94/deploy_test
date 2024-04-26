@@ -35,9 +35,9 @@ tar -xzvf $home/cdo_dependecies.tar.gz
 # cd $home
 
 rm $home/cdo_dependecies.tar.gz
-rm -r $home/bin
-# rm -r $home/include
-# rm -r $home/lib
+# rm -r $home/bin
+rm -r $home/include
+rm -r $home/lib
 rm -r $home/share
 
 # rm -r $home/Unidata-netcdf-c-d4145f3
