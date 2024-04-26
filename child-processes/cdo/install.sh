@@ -24,11 +24,11 @@ home=`pwd`
 # make
 # make install
 
-cd $home
-tar -xzf $home/cdo-1.9.1.tar.gz
+# cd $home
+# tar -xzf $home/cdo-1.9.1.tar.gz
 cd $home/cdo-1.9.1
-./configure --prefix=$path_exe --enable-netcdf4 --with-netcdf=$path_exe
-# make
+# ./configure --prefix=$path_exe --enable-netcdf4 --with-netcdf=$path_exe
+make
 # make install
 
 # cd $home
