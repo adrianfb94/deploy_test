@@ -3,11 +3,11 @@
 
 home=`pwd`
 
-# # split -b 1M cdo_dependecies.tar.gz cdo_dependecies.tar.gz.part
+# split -b 1M cdo_dependecies.tar.gz cdo_dependecies.tar.gz.part
 
-# cat cdo_dependecies.tar.gz.part* >> cdo_dependecies.tar.gz
+cat cdo.part* >> cdo_dependecies.tar.gz
 
-# tar -xzf $home/cdo_dependecies.tar.gz
+tar -xzf $home/cdo_dependecies.tar.gz
 
 # path_dep=$home/cdo_full_disable-shared
 # path_exe=$home/cdo_exe
@@ -27,14 +27,14 @@ home=`pwd`
 
 # cd $home
 # tar -xzf $home/cdo-1.9.1.tar.gz
-cd $home/cdo-1.9.1
+# cd $home/cdo-1.9.1
 # ./configure --prefix=$home/cdo_exe --enable-netcdf4 --with-netcdf=$home/cdo_exe
 # make
-make install
+# make install
 
 # cd $home
 
-# rm $home/cdo_dependecies.tar.gz
+rm $home/cdo_dependecies.tar.gz
 # rm -r $home/Unidata-netcdf-c-d4145f3
 # rm -r $path_dep
 # rm -r $path_exe
