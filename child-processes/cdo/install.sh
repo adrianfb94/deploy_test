@@ -25,7 +25,7 @@ path_cdo=$home/cdo-1.9.1
 # make install
 
 cd $path_cdo
-# ./configure --prefix=$path_exe --enable-netcdf4 --with-netcdf=$path_exe
+./configure --prefix=$path_exe --enable-netcdf4 --with-netcdf=$path_exe
 make
 make install
 
