@@ -386,8 +386,8 @@ def install_cdo():
     # print('./configure success!')
     # print("CDO was instaled success!")
 
-# install_cdo()
-
+install_cdo()
+exit()
 dir_child_process = '/'.join([home_server, 'child-processes'])
 cdo_dir = '/'.join([dir_child_process,'cdo/bin/cdo'])
 # # local_cdo_dir = '/home/adrianfb/cdo_install/cdo-1.9.1/local/bin/cdo'
