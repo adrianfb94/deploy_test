@@ -1,0 +1,74 @@
+#!/bin/sh
+CONFIG_LIBS="-L/opt/render/project/src/child-processes/cdo/lib -lgdal"
+CONFIG_DEP_LIBS="-lcrypto -ljson-c -lfreexl -lqhull -lqhull -lgeos_c -lwebp -lodbc -lodbcinst -lkmlbase -lkmldom -lkmlengine -lkmlxsd -lkmlregionator -lexpat -lxerces-c -lpthread -lopenjp2 -L/usr/lib/x86_64-linux-gnu/hdf5/serial -lnetcdf -L/usr/lib/x86_64-linux-gnu/hdf5/serial -lhdf5 -lmfhdfalt -ldfalt -logdi -lgif -lCharLS -lgeotiff -lpng -lcfitsio -lpq -lzstd -lproj   -lsqlite3 -ltiff -ljpeg -lz -lpthread -lm -lrt -ldl  -lpcre   -lcurl             -lxml2      "
+CONFIG_PREFIX="/opt/render/project/src/child-processes/cdo"
+CONFIG_CFLAGS="-I/opt/render/project/src/child-processes/cdo/include"
+CONFIG_DATA="/opt/render/project/src/child-processes/cdo/share/gdal"
+CONFIG_VERSION="3.4.0"
+CONFIG_OGR_ENABLED=yes
+CONFIG_GNM_ENABLED=yes
+CONFIG_FORMATS="derived gtiff hfa mem vrt  aaigrid adrg aigrid airsar arg blx bmp bsb cals ceos ceos2 coasp cosar ctg dimap dted elas envisat ers esric fit gff gsg gxf hf2 idrisi ilwis ingr iris iso8211 jaxapalsar jdem kmlsuperoverlay l1b leveller map mrf msgn ngsgeoid nitf northwood pds prf r raw rmf rs2 safe saga sdts sentinel2 sgi sigdem srtmhgt stacit stacta terragen tga til tsx usgsdem xpm xyz zarr zmap rik ozi eeda plmosaic rda wcs wms wmts daas ogcapi rasterlite mbtiles grib pdf webp openjpeg netcdf hdf5 hdf4 gif png pcraster fits jpeg  pcidsk postgisraster jpegls"
+usage()
+{
+	cat <<EOF
+Usage: gdal-config [OPTIONS]
+Options:
+	[--prefix[=DIR]]
+	[--libs]
+	[--dep-libs]
+	[--cflags]
+	[--datadir]
+	[--version]
+	[--ogr-enabled]
+	[--gnm-enabled]
+	[--formats]
+EOF
+	exit $1
+}
+
+if test $# -eq 0; then
+	usage 1 1>&2
+fi
+
+case $1 in
+  --libs)
+    echo $CONFIG_LIBS
+    ;;
+
+  --dep-libs)
+    echo $CONFIG_DEP_LIBS
+    ;;
+
+  --cflags)
+    echo $CONFIG_CFLAGS
+    ;;
+
+  --datadir)
+    echo $CONFIG_DATA
+    ;;
+
+  --prefix)
+    echo $CONFIG_PREFIX
+    ;;
+
+  --version)
+    echo $CONFIG_VERSION
+    ;;
+
+  --ogr-enabled)
+    echo yes
+    ;;
+
+  --gnm-enabled)
+    echo $CONFIG_GNM_ENABLED
+    ;;
+
+  --formats)
+    echo $CONFIG_FORMATS
+    ;;
+
+  *)
+    usage 1 1>&2
+    ;;
+
+esac
