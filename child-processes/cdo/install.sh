@@ -28,8 +28,8 @@ home=`pwd`
 # tar -xzf $home/cdo-1.9.1.tar.gz
 cd $home/cdo-1.9.1
 # ./configure --prefix=$home/cdo_exe --enable-netcdf4 --with-netcdf=$home/cdo_exe
-make
-# make install
+# make
+make install
 
 # cd $home
 
