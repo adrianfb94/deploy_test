@@ -395,8 +395,8 @@ def install_cdo():
 # # print()
 cdo_version = subprocess.run('cdo --version', shell=True, encoding='utf-8', capture_output=True)
 # # cdo_version = subprocess.run('{} --version'.format(local_cdo_dir), shell=True, encoding='utf-8', capture_output=True)
-print('line00', cdo_version.stderr.split('\n')[0])
-print('line11',cdo_version.stderr.split('\n')[1])
+print('line00', cdo_version.stdout.split('\n')[0])
+print('line11',cdo_version.stdout.split('\n')[1])
 
 exit()
 
