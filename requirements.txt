@@ -1,4 +1,1 @@
-numpy
-netCDF4
-xarray
 python-dotenv
