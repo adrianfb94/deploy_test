@@ -1551,7 +1551,8 @@ else:
 # # #print('old nc eliminados')
 # ##print()
 
-# print('listo fortran \n')
+print('listo fortran \n')
+exit()
 
 
 
