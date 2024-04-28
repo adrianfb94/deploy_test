@@ -469,53 +469,53 @@ app.get('/api/ClientProject/python_script/:query/:ip',(req, res)=>{
     var client_ip = req.params.client_ip
     var client_query = req.params.client_query
 
-    console.log(`server_name: ${server_name}`)
-    console.log(`client_ip: ${client_ip}`)
-    console.log(`client_query: ${client_query}`)
+    // console.log(`server_name: ${server_name}`)
+    // console.log(`client_ip: ${client_ip}`)
+    // console.log(`client_query: ${client_query}`)
 
         
     // console.log(`estoy en descargar/ y esta es la query ${client_query}`)
-    // var client_name = server_name.split('-')[1]
-    // console.log(`DOWNLOADING ${server_name} ... `)
-    // console.log(`client_name: ${client_name}`)
+    var client_name = server_name.split('-')[1]
+    console.log(`DOWNLOADING ${server_name} ... `)
+    console.log(`client_name: ${client_name}`)
 
     
-    // res.download(__dirname+'/uploads/targz_files/'+server_name, client_name,(err)=>{
-    //    if(err) {
-    //        console.log(err)
-    //    }
+    res.download(__dirname+'/uploads/targz_files/'+server_name, client_name,(err)=>{
+       if(err) {
+           console.log(err)
+       }
 
-    //    exec(`rm ${__dirname}/uploads/targz_files/${server_name}`, {maxBuffer: 5 * 1024 * 1024}, async(error, stderr) => {
+       exec(`rm ${__dirname}/uploads/targz_files/${server_name}`, {maxBuffer: 5 * 1024 * 1024}, async(error, stderr) => {
 
-    //     if (error) {
-    //     console.log(`rm error: ${error.message}`);
+        if (error) {
+        console.log(`rm error: ${error.message}`);
 
 
-    //     file_notfound = mod_fs.readFileSync("./notfound.html", {encoding: 'utf-8', flag: 'r'})
-    //     file_notfound = file_notfound.replaceAll("%client_query%", `${client_query}`)
+        file_notfound = mod_fs.readFileSync("./notfound.html", {encoding: 'utf-8', flag: 'r'})
+        file_notfound = file_notfound.replaceAll("%client_query%", `${client_query}`)
 
-    //     res.status(200).send(file_notfound)
+        res.status(200).send(file_notfound)
 
-    //     // res.status(200).sendFile(`${__dirname}/notfound.html`)
+        // res.status(200).sendFile(`${__dirname}/notfound.html`)
 
-    //     // return res.status(200).send('No hay ficheros disponibles')
-    //     // return error.toString()
-    //     }
+        // return res.status(200).send('No hay ficheros disponibles')
+        // return error.toString()
+        }
     
-    //     if (stderr) {
-    //     console.log(`rm stderr: ${stderr}`);
-    //     // return res.status(200).send('fallos en los scripts')
-    //     // return stderr.toString()
-    //     }
+        if (stderr) {
+        console.log(`rm stderr: ${stderr}`);
+        // return res.status(200).send('fallos en los scripts')
+        // return stderr.toString()
+        }
 
-    //     console.log(`${server_name} was deleted`)
-    //     // res.redirect('/')
+        console.log(`${server_name} was deleted`)
+        // res.redirect('/')
 
-    //     // console.log('ya se borraron')
-    //     // return stdout.toString()
-    //     });
+        // console.log('ya se borraron')
+        // return stdout.toString()
+        });
 
-    // });
+    });
 
 });
 
