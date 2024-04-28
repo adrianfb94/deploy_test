@@ -5,7 +5,7 @@ import datetime
 from warnings import filterwarnings
 filterwarnings(action='ignore', category=DeprecationWarning)
 filterwarnings(action='ignore', category=UserWarning)
-from netCDF4 import Dataset
+from netCDF4 import Dataset, num2date
 import struct
 import os, glob
 import xarray as xr
@@ -18,18 +18,18 @@ from dotenv import load_dotenv
 # import git
 
 python_version = subprocess.run('python --version', shell=True, capture_output=True).stdout.decode()
-print('python version: ', python_version)
-print()
+# print('python version: ', python_version)
+# print()
 python_dir = subprocess.run('which python', shell=True, capture_output=True).stdout.decode()
-print('python dir: ', python_dir)
+# print('python dir: ', python_dir)
 
-print()
+# print()
 
 fortran_version = subprocess.run('gfortran --version', shell=True, capture_output=True).stdout.decode()
-print('fortran version: ', fortran_version)
-print()
+# print('fortran version: ', fortran_version)
+# print()
 fortran_dir = subprocess.run('which gfortran', shell=True, capture_output=True).stdout.decode()
-print('fortran dir: ', fortran_dir)
+# print('fortran dir: ', fortran_dir)
 
 
 
@@ -134,46 +134,37 @@ nowdate = '_'.join([fecha, hora])
 
 
 def get_nc(var,f, miss):
-    print('estoy en el get_nc')
-    print('var: {},f: {}, miss: {}'.format(var,f, miss))
+    # print('estoy en el get_nc')
+    # print('var: {},f: {}, miss: {}'.format(var,f, miss))
     
+    nc_file = Dataset(f)
+    nc_lat = nc_file.variables['lat'][:]
+    nc_lon = nc_file.variables['lon'][:]
+    if nc_lon.min()>0 and nc_lon.max()>0:
+        nc_lon = nc_lon-360
 
-    # file = subprocess.run('tar -xzvf {}'.format(f), shell=True, capture_output=True).stdout.decode('utf-8').split('\n')[0]
-
-    # nc_file = Dataset(f)
-    # nc_lat = nc_file.variables['lat'][:]
-    # nc_lon = nc_file.variables['lon'][:]
-    # if nc_lon.min()>0 and nc_lon.max()>0:
-    #     nc_lon = nc_lon-360
-
-    # nc_var = nc_file.variables[var][:]
-    # nc_var.fill_value = miss
-    # nc_var[nc_var.mask] = nc_var.fill_value
+    nc_var = nc_file.variables[var][:]
+    nc_var.fill_value = miss
+    nc_var[nc_var.mask] = nc_var.fill_value
 
 
-    # nc_time_array = np.asarray(nc_file.variables['time'])
+    nc_time_array = np.asarray(nc_file.variables['time'])
 
-    # nc_time_units = nc_file.variables['time'].units
-    # nc_file.close()
-    # return nc_lat, nc_lon, nc_var, nc_time_array, nc_time_units
-    ds = xr.load_dataset(f)
-    print('ya tengo ds')
-    exit()
-    # ds[var] = ds.variables[var].fillna(miss)
-    # ##print(ds[var])
-    # exit()
+    nc_time_units = nc_file.variables['time'].units
 
-    if ds.lon.values.min()>0 and ds.lon.values.max()>0:
-        ds['lon'] = ds['lon']-360
+    times = num2date(nc_time_array, units=nc_time_units)
 
-    values = ds[var].fillna(miss)
+    nc_file.close()
+
+    return nc_lat, nc_lon, nc_var, times
+
+    # ds = xr.load_dataset(f)
+    # if ds.lon.values.min()>0 and ds.lon.values.max()>0:
+    #     ds['lon'] = ds['lon']-360
+
     # values = ds[var].fillna(miss)
-    times = ds.time.values
-
-    # subprocess.run('rm child-processes/data/data4drought/data/echam5/*.nc', shell=True, capture_output=False)
-
-    return ds, ds.lat, ds.lon, values, times
-    # return ds, ds.lat, ds.lon, ds[var], times
+    # times = ds.time.values
+    # return ds, ds.lat, ds.lon, values, times
 
 
 
@@ -356,17 +347,17 @@ else:
 
 
 ifile = '/'.join([workdir, datadir, modeldir2, ifilename])
-print('ifile:', ifile)
+# print('ifile:', ifile)
 
 if not os.path.exists(ifile+'.nc'):
     subprocess.run('cat {} >> {}'.format('/'.join([workdir, datadir, modeldir2, 'nc_file.parta*']), ifile+'.nc.tar.gz'), shell=True, capture_output=True)
     subprocess.run('tar -xzvf {} -C {}'.format(ifile+'.nc.tar.gz','child-processes/data/data4drought/data/echam5/'), shell=True, capture_output=True)
     subprocess.run('rm {}'.format(ifile+'.nc.tar.gz'), shell=True, capture_output=True)
 
-print('ya tengo el nc')
-ds =  Dataset(ifile+'.nc')
-print('ya tengo ds del nc')
-exit()
+# print('ya tengo el nc')
+# ds =  Dataset(ifile+'.nc')
+# print('ya tengo ds del nc')
+# exit()
 
 # targzfiles = glob.glob('/'.join([workdir, datadir, modeldir2,'*.tar.gz']))
 # for file in targzfiles:
@@ -578,7 +569,7 @@ grid = subprocess.run('cdo -s griddes {}.nc'.format(ifile), shell=True, encoding
 
 
 gridlines = grid.split('\n')
-print('gridlines: ',gridlines)
+# print('gridlines: ',gridlines)
 # exit()
 
 nx = int(gridlines[5].split('=')[1])
@@ -898,7 +889,8 @@ def closest(lst, K):
 #         return list_variable
 
 def save_mean(avg, minlat, maxlat, minlon, maxlon, ini, end, axis=None):
-    weighted = True
+    # print(f'save_mean avg={avg}')
+    weighted = False
 
     list_variable = []
 
@@ -934,6 +926,8 @@ def save_mean(avg, minlat, maxlat, minlon, maxlon, ini, end, axis=None):
                     # np.savetxt('./data4drought/outputs/prueba/local/127.0.0.1/output_python_no_weighted.txt', list_variable)
 
                 else:
+                    # print('dont have code for "weighted"')
+                    exit()
 
 
                     # ds = xr.load_dataset(filedir)
@@ -954,6 +948,8 @@ def save_mean(avg, minlat, maxlat, minlon, maxlon, ini, end, axis=None):
                     data_weighted = data.weighted(weights)
                     weighted_mean = data_weighted.mean(("lon", "lat"))
                     list_variable = np.asarray(weighted_mean[ini-1:end].values)
+
+
                     # np.savetxt('./data4drought/outputs/prueba/local/127.0.0.1/output_python_weighted.txt', list_variable)
 
 
@@ -980,7 +976,6 @@ def save_mean(avg, minlat, maxlat, minlon, maxlon, ini, end, axis=None):
             exit()
     
     else:
-    
         lon, lat = np.meshgrid(nc_lon, nc_lat)
         Lat_cond = (lat >= minlat) & (lat <= maxlat)
         Lon_cond = (lon >= minlon) & (lon <= maxlon)
@@ -996,7 +991,7 @@ def save_mean(avg, minlat, maxlat, minlon, maxlon, ini, end, axis=None):
         lon = lon[lat_lon].reshape((dim_lat, dim_lon))
 
         for k in range(ini-1,end):
-            variable = nc_variable[k,:,:].values
+            variable = nc_variable[k,:,:]
             variable = variable[lat_lon].reshape((dim_lat, dim_lon))
             list_variable.append(variable)
 
@@ -1376,16 +1371,19 @@ def write_ctl(path, fname,nx,xfirst,xinc,ny,yfirst,yinc,time,date,undef,var,indx
 # t_in = [irdate, erdate, iadate, eadate]
 # tmin, tmax, [t1, t2, t3, t4] = tdates(t_in)
 
-print('antes de get_nc')
+# print('antes de get_nc')
 
 # nc_lat, nc_lon, nc_variable, nc_time_array, nc_time_units = get_nc(var1, filedir, undef)
-nc_all, nc_lat, nc_lon, nc_variable, nc_time_array = get_nc(var1, filedir, undef)
-print('listo get_nc')
-exit()
+# nc_all, nc_lat, nc_lon, nc_variable, nc_time_array = get_nc(var1, filedir, undef)
+nc_lat, nc_lon, nc_variable, nc_time_array = get_nc(var1, filedir, undef)
+
+# print('listo get_nc')
 
 xfirst,yfirst,nx,ny,xlast,ylast,avg = righcoor(avg,ilat,elat,ilon,elon)
 t_in = [irdate, erdate, iadate, eadate]
 tmin, tmax, [t1, t2, t3, t4] = tdates(t_in)
+
+# print('listo tdates')
 
 
 itr = t1-tmin+1
@@ -1398,8 +1396,8 @@ date_i, date_f, time = searchtime_pos(tmin-1, tmax-1)
 ##print('date_i={}, date_f={}, time={}'.format(date_i, date_f, time))
 date1 = date_i
 date2 = date1[:5]+iadate
-# ##print('date2 => ', date2)
-# ##print('time => ', time)
+# print('date2 => ', date2)
+# print('time => ', time)
 varctl_idx=''
 
 
@@ -1429,8 +1427,7 @@ save_log()
 
 
 option, average = operation(tmin, tmax, '/'.join([path, ofile1]))
-# #print('option: {}\naverage: {}'.format(option, average))
-# exit()
+# print('option: {}\naverage: {}'.format(option, average))
 
 
 write_ctl(path, ofile1,nx,xfirst,xinc,ny,yfirst,yinc,time,date1,undef,var1,varctl_idx)
@@ -1465,11 +1462,10 @@ pfile='_'.join([modeldir,str(ilon),str(ilat),str(elon),str(elat),str(iryear)+'-'
 
 ovar=dindex
 
-print('ofile: {}'.format(ofile))
-print('pfile: {}'.format(pfile))
+# print('ofile: {}'.format(ofile))
+# print('pfile: {}'.format(pfile))
 # #print('ovar: ',ovar)
 # #print()
-exit()
 
 def return_args(lista):
 
