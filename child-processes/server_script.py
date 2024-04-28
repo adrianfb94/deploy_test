@@ -136,7 +136,6 @@ nowdate = '_'.join([fecha, hora])
 def get_nc(var,f, miss):
     print('estoy en el get_nc')
     print('var: {},f: {}, miss: {}'.format(var,f, miss))
-    exit()
     
 
     # file = subprocess.run('tar -xzvf {}'.format(f), shell=True, capture_output=True).stdout.decode('utf-8').split('\n')[0]
@@ -158,6 +157,8 @@ def get_nc(var,f, miss):
     # nc_file.close()
     # return nc_lat, nc_lon, nc_var, nc_time_array, nc_time_units
     ds = xr.load_dataset(f)
+    print('ya tengo ds')
+    exit()
     # ds[var] = ds.variables[var].fillna(miss)
     # ##print(ds[var])
     # exit()
@@ -169,7 +170,7 @@ def get_nc(var,f, miss):
     # values = ds[var].fillna(miss)
     times = ds.time.values
 
-    subprocess.run('rm child-processes/data/data4drought/data/echam5/*.nc', shell=True, capture_output=False)
+    # subprocess.run('rm child-processes/data/data4drought/data/echam5/*.nc', shell=True, capture_output=False)
 
     return ds, ds.lat, ds.lon, values, times
     # return ds, ds.lat, ds.lon, ds[var], times
