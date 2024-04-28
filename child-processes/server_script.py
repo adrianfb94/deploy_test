@@ -136,7 +136,7 @@ nowdate = '_'.join([fecha, hora])
 def get_nc(var,f, miss):
     # print('estoy en el get_nc')
     # print('var: {},f: {}, miss: {}'.format(var,f, miss))
-    
+    # exit()
     nc_file = Dataset(f)
     nc_lat = nc_file.variables['lat'][:]
     nc_lon = nc_file.variables['lon'][:]
@@ -155,7 +155,7 @@ def get_nc(var,f, miss):
     times = num2date(nc_time_array, units=nc_time_units)
 
     nc_file.close()
-
+    subprocess.run(f'rm {f}', shell=True, capture_output=False)
     return nc_lat, nc_lon, nc_var, times
 
     # ds = xr.load_dataset(f)
@@ -347,11 +347,13 @@ else:
 
 
 ifile = '/'.join([workdir, datadir, modeldir2, ifilename])
-# print('ifile:', ifile)
+print('ifile:', ifile)
 
+# subprocess.run('rm {}'.format(ifile+'.nc.tar.gz'), shell=True, capture_output=True)
+# exit()
 if not os.path.exists(ifile+'.nc'):
     subprocess.run('cat {} >> {}'.format('/'.join([workdir, datadir, modeldir2, 'nc_file.parta*']), ifile+'.nc.tar.gz'), shell=True, capture_output=True)
-    subprocess.run('tar -xzvf {} -C {}'.format(ifile+'.nc.tar.gz','child-processes/data/data4drought/data/echam5/'), shell=True, capture_output=True)
+    subprocess.run('tar -xzvf {} -C {}'.format(ifile+'.nc.tar.gz','/'.join([workdir, datadir, modeldir2])), shell=True, capture_output=True)
     subprocess.run('rm {}'.format(ifile+'.nc.tar.gz'), shell=True, capture_output=True)
 
 # print('ya tengo el nc')
