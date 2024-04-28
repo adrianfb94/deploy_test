@@ -34,12 +34,12 @@ home_server = os.getcwd()
 repo_name = 'deploy_test'
 
 
-print('HOME is: {}'.format(home_server))
-print('repo_name is: {}'.format(repo_name))
-print("Mi numero de carne es: {}".format(my_id))
-print("Mi username: {}".format(username))
-print("Mi password: {}".format(password))
-print("Mi token: {}".format(token))
+##print('HOME is: {}'.format(home_server))
+##print('repo_name is: {}'.format(repo_name))
+##print("Mi numero de carne es: {}".format(my_id))
+##print("Mi username: {}".format(username))
+##print("Mi password: {}".format(password))
+##print("Mi token: {}".format(token))
 
 
 # os.system('git config user.email "adrianfuentesbarrios@gmail.com"')
@@ -47,39 +47,39 @@ print("Mi token: {}".format(token))
 
 # url = f"https://{token}@github.com/{username}/{repo_name}.git"
 
-# print('tengo el REPO')
+# #print('tengo el REPO')
 
 
 
 # file = 'another_file_added_from_server.txt'
 # if not os.path.exists('/'.join([home,file])):
-#     print("no existe {}".format('/'.join([home,file])))
+#     ##print("no existe {}".format('/'.join([home,file])))
 
 #     subprocess.run('touch {}'.format('/'.join([home,file])), shell=True)
-#     print('{} was created'.format(file))
+#     ##print('{} was created'.format(file))
 
 # else:
-#     print("si existe {}".format('/'.join([home,file])))
+#     ##print("si existe {}".format('/'.join([home,file])))
 
-#     print('estoy haciendo el init')
+#     ##print('estoy haciendo el init')
 #     subprocess.run('git init', shell=True, capture_output=True)
 #     # os.system('git init')
-#     print('ya hice el init')
+#     ##print('ya hice el init')
 
-#     print("estoy haciendo el add")
+#     ##print("estoy haciendo el add")
 #     subprocess.run('git add {}'.format(file), shell=True, capture_output=True)
 #     # os.system('git add file_added_from_server.txt')
-#     print('ya hice el add')
+#     ##print('ya hice el add')
 
-#     print("estoy haciendo el commit")
+#     ##print("estoy haciendo el commit")
 #     subprocess.run('git commit -m "added {} from SERVER"'.format(file), shell=True, capture_output=True)
 #     # os.system('git commit -m "added from SERVER"')
-#     print('ya hice el commit')
+#     ##print('ya hice el commit')
 
-#     print("estoy haciendo el push")
+#     ##print("estoy haciendo el push")
 #     subprocess.run('git push https://{}@github.com/{}/{}.git HEAD:main'.format(token, username, repo_name), shell=True, capture_output=True)
 #     # os.system(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main')
-#     print('ya hice el push')
+#     ##print('ya hice el push')
 
 
 
@@ -141,7 +141,7 @@ def get_nc(var,f, miss):
     # return nc_lat, nc_lon, nc_var, nc_time_array, nc_time_units
     ds = xr.load_dataset(f)
     # ds[var] = ds.variables[var].fillna(miss)
-    # print(ds[var])
+    # ##print(ds[var])
     # exit()
 
     if ds.lon.values.min()>0 and ds.lon.values.max()>0:
@@ -220,7 +220,7 @@ for item in argumentos:
 
 
 # for i in range(len(listvar)):
-#     print(listvar[i], dict[listvar[i]])
+#     ##print(listvar[i], dict[listvar[i]])
 # exit()
 
 models = ['INIT_0',
@@ -350,11 +350,11 @@ if not os.path.exists(ifile+'.nc'):
 
 
 # namevar_cdo = subprocess.run('cdo -s showname {}.nc'.format(ifile), shell=True, encoding='utf-8', capture_output=True).stdout
-# # print('ifile',ifile)
-# # print('namevar_cdo',namevar_cdo)
+# # ##print('ifile',ifile)
+# # ##print('namevar_cdo',namevar_cdo)
 # namevar = namevar_cdo.split(' ')[1].split('\n')[0]
 
-# print('aqui',ifile, namevar)
+# #print('aqui',ifile, namevar)
 # exit()
 
 # def find_files(filename, search_path):
@@ -368,16 +368,16 @@ if not os.path.exists(ifile+'.nc'):
 
 # result = find_files(".bashrc","/home")
 
-# print(result)
+# #print(result)
 
-# print(find_files("g++","/usr"))
+# #print(find_files("g++","/usr"))
 # exit()
 
-# print('********* nc-config *********')
-# print()
+# #print('********* nc-config *********')
+# #print()
 # subprocess.run('nc-config --all', shell=True, capture_output=True)
-# print()
-# print('********* nc-config *********')
+# #print()
+# #print('********* nc-config *********')
 
 
 def install_cdo():
@@ -386,20 +386,20 @@ def install_cdo():
     sh_file = 'install.sh'
     subprocess.run('chmod a+x {}'.format(sh_file), shell=True)
     subprocess.run(f'./{sh_file} >> cdo.log', shell=True)
-    # print('./configure success!')
-    # print("CDO was instaled success!")
+    # #print('./configure success!')
+    # #print("CDO was instaled success!")
 
 # install_cdo()
 
 # dir_child_process = '/'.join([home_server, 'child-processes'])
 # cdo_dir = '/'.join([dir_child_process,'cdo/bin/cdo'])
 # # # local_cdo_dir = '/home/adrianfb/cdo_install/cdo-1.9.1/local/bin/cdo'
-# # # print(cdo_dir)
-# # print()
+# # # #print(cdo_dir)
+# # #print()
 cdo_version = subprocess.run('cdo --version', shell=True, encoding='utf-8', capture_output=True)
 # # cdo_version = subprocess.run('{} --version'.format(local_cdo_dir), shell=True, encoding='utf-8', capture_output=True)
-print('line00', cdo_version.stdout.split('\n')[0])
-print('line11',cdo_version.stdout.split('\n')[1])
+#print('line00', cdo_version.stdout.split('\n')[0])
+#print('line11',cdo_version.stdout.split('\n')[1])
 
 exit()
 
@@ -410,89 +410,89 @@ subprocess.run('git config user.email "adrianfuentesbarrios@gmail.com"', shell=T
 subprocess.run('git config user.name "adrianfb94"', shell=True)
 
 
-# print('estoy haciendo el init')
+# #print('estoy haciendo el init')
 # subprocess.run('git init', shell=True, capture_output=False)
 # # os.system('git init')
-# print('ya hice el init')
+# #print('ya hice el init')
 
-# print("estoy haciendo el add zlib")
+# #print("estoy haciendo el add zlib")
 # subprocess.run('git add -A {}'.format('/'.join(['child-processes','zlib-1.2.8'])), shell=True, capture_output=False)
 # # os.system('git add file_added_from_server.txt')
-# print('ya hice el add')
+# #print('ya hice el add')
 
-# print("estoy haciendo el commit zlib")
+# #print("estoy haciendo el commit zlib")
 # subprocess.run('git commit -m "added zlib from SERVER"', shell=True, capture_output=False)
 # # os.system('git commit -m "added from SERVER"')
-# print('ya hice el commit')
+# #print('ya hice el commit')
 
 
-# print("estoy haciendo el add hdf5")
+# #print("estoy haciendo el add hdf5")
 # subprocess.run('git add -A {}'.format('/'.join(['child-processes','hdf5-1.8.13'])), shell=True, capture_output=False)
 # # os.system('git add file_added_from_server.txt')
-# print('ya hice el add')
+# #print('ya hice el add')
 
-# print("estoy haciendo el commit hdf5")
+# #print("estoy haciendo el commit hdf5")
 # subprocess.run('git commit -m "added hdf5 from SERVER"', shell=True, capture_output=False)
 # # os.system('git commit -m "added from SERVER"')
-# print('ya hice el commit')
+# #print('ya hice el commit')
 
 
-# print("estoy haciendo el add netcdf")
+# #print("estoy haciendo el add netcdf")
 # subprocess.run('git add -A {}'.format('/'.join(['child-processes','netcdf-c-4.5.0'])), shell=True, capture_output=False)
 # # os.system('git add file_added_from_server.txt')
-# print('ya hice el add')
+# #print('ya hice el add')
 
-# print("estoy haciendo el commit netcdf")
+# #print("estoy haciendo el commit netcdf")
 # subprocess.run('git commit -m "added netcdf from SERVER"', shell=True, capture_output=False)
 # # os.system('git commit -m "added from SERVER"')
-# print('ya hice el commit')
+# #print('ya hice el commit')
 
 
 
-# print("estoy haciendo el add cdo")
+# #print("estoy haciendo el add cdo")
 # subprocess.run('git add -A {}'.format('/'.join(['child-processes','cdo-1.9.1'])), shell=True, capture_output=True)
 # # os.system('git add file_added_from_server.txt')
-# print('ya hice el add')
+# #print('ya hice el add')
 
-# print("estoy haciendo el commit cdo")
+# #print("estoy haciendo el commit cdo")
 # subprocess.run('git commit -m "added cdo from SERVER"', shell=True, capture_output=True)
 # # os.system('git commit -m "added from SERVER"')
-# print('ya hice el commit')
+# #print('ya hice el commit')
 
 
-# print("estoy haciendo el add cdo_installed")
+# #print("estoy haciendo el add cdo_installed")
 # subprocess.run('git add -A {}'.format('/'.join(['child-processes','cdo_installed'])), shell=True, capture_output=False)
 # # os.system('git add file_added_from_server.txt')
-# print('ya hice el add')
+# #print('ya hice el add')
 
-# print("estoy haciendo el commit cdo_installed")
+# #print("estoy haciendo el commit cdo_installed")
 # subprocess.run('git commit -m "added cdo_installed from SERVER"', shell=True, capture_output=False)
 # # os.system('git commit -m "added from SERVER"')
-# print('ya hice el commit')
+# #print('ya hice el commit')
 
 
-print("estoy haciendo el add -A")
+#print("estoy haciendo el add -A")
 subprocess.run('git add -A', shell=True, capture_output=False)
 # os.system('git add file_added_from_server.txt')
-print('ya hice el add -A')
+#print('ya hice el add -A')
 
-print("estoy haciendo el commit cdo_installed")
+#print("estoy haciendo el commit cdo_installed")
 subprocess.run('git commit -m "added from SERVER"', shell=True, capture_output=False)
 # os.system('git commit -m "added from SERVER"')
-print('ya hice el commit')
+#print('ya hice el commit')
 
 
-# print("estoy haciendo el pull")
+# #print("estoy haciendo el pull")
 # subprocess.run('git pull -v https://{}@github.com/{}/{}.git HEAD:main'.format(token, username, repo_name), shell=True, capture_output=False)
 # # os.system(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main')
-# print('ya hice el pull')
+# #print('ya hice el pull')
 
 
 
-print("estoy haciendo el push")
+#print("estoy haciendo el push")
 subprocess.run(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main', shell=True, capture_output=False)
 # subprocess.run(f'git push https://github.com/{username}/{repo_name}.git HEAD:main', shell=True, capture_output=False)
-print('ya hice el push')
+#print('ya hice el push')
 
 
 
@@ -500,37 +500,37 @@ exit()
 cdo_dir = '/'.join([root_dir,'child-processes/cdo-1.9.1/local/bin/cdo'])
 # local_cdo_dir = '/home/adrianfb/cdo_install/cdo-1.9.1/local/bin/cdo'
 
-# print(cdo_dir)
+# #print(cdo_dir)
 
 cdo_version = subprocess.run('{} --version'.format(cdo_dir), shell=True, encoding='utf-8', capture_output=True)
 # cdo_version = subprocess.run('{} --version'.format(local_cdo_dir), shell=True, encoding='utf-8', capture_output=True)
-print(cdo_version.stderr.split('\n')[0])
-print(cdo_version.stderr.split('\n')[1])
+#print(cdo_version.stderr.split('\n')[0])
+#print(cdo_version.stderr.split('\n')[1])
 
 
 # from cdo import *
 # cdo = Cdo()
-# print('\n')
-# print('cdo.version(): {}'.format(cdo.version()))
-# print()
+# #print('\n')
+# #print('cdo.version(): {}'.format(cdo.version()))
+# #print()
 # nvar = cdo.showname(input=ifile+'.nc')
-# print("namevar: {}".format(nvar))
-# print()
+# #print("namevar: {}".format(nvar))
+# #print()
 # grid = cdo.griddes(input=ifile+'.nc')
-# print("griddes: {}".format(grid))
-# print()
+# #print("griddes: {}".format(grid))
+# #print()
 # ntime = cdo.ntime(input=ifile+'.nc')
-# print("ntime: {}".format(ntime))
+# #print("ntime: {}".format(ntime))
 
 exit()
 
 # tempvar = subprocess.run('cdo -s showname {}.nc'.format(ifile), shell=True, encoding='utf-8', capture_output=True).stdout
 namevar = cdo.showname(input=ifile)
-print('namevar: {}'.format(namevar))
+#print('namevar: {}'.format(namevar))
 exit()
 
 
-#print('cdo ifile', ifile)
+##print('cdo ifile', ifile)
 grid = subprocess.run('cdo -s griddes {}.nc'.format(ifile), shell=True, encoding='utf-8', capture_output=True).stdout
 
 #0 #
@@ -555,30 +555,30 @@ grid = subprocess.run('cdo -s griddes {}.nc'.format(ifile), shell=True, encoding
 
 
 gridlines = grid.split('\n')
-print(gridlines)
+#print(gridlines)
 exit()
 
 nx = int(gridlines[5].split('=')[1])
-# #print('nx = {}'.format(nx))
+# ##print('nx = {}'.format(nx))
 
 ny = int(gridlines[6].split('=')[1])
-# #print('ny = {}'.format(ny))
+# ##print('ny = {}'.format(ny))
 
 xfirst = float(gridlines[13].split('=')[1])
-# #print('xfirst = {}'.format(xfirst))
+# ##print('xfirst = {}'.format(xfirst))
 
 xinc = float(gridlines[14].split('=')[1])
-# #print('xinc = {}'.format(xinc))
+# ##print('xinc = {}'.format(xinc))
 
 yfirst = float(gridlines[15].split('=')[1])
-# #print('yfirst = {}'.format(yfirst))
+# ##print('yfirst = {}'.format(yfirst))
 
 yinc = float(gridlines[16].split('=')[1])
-# #print('yinc = {}'.format(yinc))
+# ##print('yinc = {}'.format(yinc))
 
 
 ntime = int(subprocess.run('cdo -s ntime {}.nc'.format(ifile), shell=True, encoding='utf-8', capture_output=True).stdout)
-# #print('ntime = {}'.format(ntime))
+# ##print('ntime = {}'.format(ntime))
 
 
 args = ['INIT_0', dindex, modeldir, workdir, datadir, nx, xfirst, xinc, ny, 
@@ -594,15 +594,15 @@ args = ['INIT_0', dindex, modeldir, workdir, datadir, nx, xfirst, xinc, ny,
 # for arg in args:
 #     gradscmdline.append(arg)
 
-# #print()
+# ##print()
 # for i,arg in enumerate(args):
-#     #print(i,arg, type(arg))
+#     ##print(i,arg, type(arg))
 
 
 '''
 Aqui comienza GRADS
 '''
-#print()
+##print()
 
 def namemonth(iimes,a):
     nmes = []
@@ -687,8 +687,8 @@ moddrou=args[33] #moderate drought (spi or spei) value
 avgo=avg
 
 lsm=mask
-#print(modeldir,ilon,ilat,elon,elat,iryear,eryear,iayear,eayear,dindex+str(spilen),dindex,spilim,dindex,evenlim,extdrou,sevdrou,moddrou,var1)
-#print(dindex+str(spilen))
+##print(modeldir,ilon,ilat,elon,elat,iryear,eryear,iayear,eayear,dindex+str(spilen),dindex,spilim,dindex,evenlim,extdrou,sevdrou,moddrou,var1)
+##print(dindex+str(spilen))
 
 
 
@@ -779,10 +779,10 @@ def closest(lst, K):
 #     if avg != 0:
 #         if avg==1:
 
-#             #print('AVG = {}'.format(avg))
-#             #print('ini {} end {}'.format(ini, end))
-#             #print('minlon {} maxlon {}'.format(minlon, maxlon))
-#             #print('ini {} end {}'.format(0, nc_variable.shape[0]))
+#             ##print('AVG = {}'.format(avg))
+#             ##print('ini {} end {}'.format(ini, end))
+#             ##print('minlon {} maxlon {}'.format(minlon, maxlon))
+#             ##print('ini {} end {}'.format(0, nc_variable.shape[0]))
 
 
 #             lon, lat = np.meshgrid(nc_lon, nc_lat)
@@ -812,11 +812,11 @@ def closest(lst, K):
 #                     list_variable.append(variable.mean())                    
 #                 list_variable = np.asarray(list_variable)
 #                 # np.savetxt('./data4drought/outputs/prueba/local/127.0.0.1/output_python.txt', list_variable)
-#                 # print('file saved')
-#                 # print(list_variable.shape)
+#                 # #print('file saved')
+#                 # #print(list_variable.shape)
 #                 # return list_variable
 #             elif axis==0:
-#                 # #print('var not found')
+#                 # ##print('var not found')
 #                 for k in range(ini-1,end):
 #                 # for k in range(0,nc_variable.shape[0]):
 #                     variable = nc_variable_masked[k,:,:]
@@ -824,7 +824,7 @@ def closest(lst, K):
 #                     list_variable.append(variable.mean(axis=0).mean())
 #                 list_variable = np.asarray(list_variable)
 #                 # np.savetxt('./data4drought/outputs/prueba/output_python.txt', list_variable)
-#                 # #print('file saved with lon')
+#                 # ##print('file saved with lon')
 #             elif axis==1:
 #                 for k in range(ini-1,end):
 #                 # for k in range(0,nc_variable.shape[0]):
@@ -834,18 +834,18 @@ def closest(lst, K):
 #                     list_variable.append(variable.mean(axis=1).mean())
 #                 list_variable = np.asarray(list_variable)
 #                 # np.savetxt('./data4drought/outputs/prueba/output_python.txt', list_variable)
-#                 # #print('file saved with lat')
+#                 # ##print('file saved with lat')
 
 #             return list_variable
 #         else:
-#             print('No code for avg={}'.format(avg))
+#             #print('No code for avg={}'.format(avg))
 #             exit()
 
 #     else:
-#         #print('AVG = 0'.format(avg))
-#         #print('ini {} end {}'.format(ini, end))
-#         #print('minlon {} maxlon {}'.format(minlon, maxlon))
-#         #print('ini {} end {}'.format(ini-1, end))
+#         ##print('AVG = 0'.format(avg))
+#         ##print('ini {} end {}'.format(ini, end))
+#         ##print('minlon {} maxlon {}'.format(minlon, maxlon))
+#         ##print('ini {} end {}'.format(ini-1, end))
 
 #         lon, lat = np.meshgrid(nc_lon, nc_lat)
 
@@ -867,11 +867,11 @@ def closest(lst, K):
 #             variable = variable[lat_lon].reshape((dim_lat, dim_lon))
 #             list_variable.append(variable)
 #         list_variable = np.asarray(list_variable)
-#         #print('shape list_variable', list_variable.shape)
-#         #print('min list_variable', list_variable.min())
-#         #print('max list_variable', list_variable.max())
+#         ##print('shape list_variable', list_variable.shape)
+#         ##print('min list_variable', list_variable.min())
+#         ##print('max list_variable', list_variable.max())
 #         # np.savetxt('./data4drought/outputs/prueba/output_python.txt', list_variable)
-#         # #print('file saved')
+#         # ##print('file saved')
 #         return list_variable
 
 def save_mean(avg, minlat, maxlat, minlon, maxlon, ini, end, axis=None):
@@ -953,7 +953,7 @@ def save_mean(avg, minlat, maxlat, minlon, maxlon, ini, end, axis=None):
 
             return list_variable
         else:
-            # print('no tengo codigo para avg = {}'.format(avg))
+            # #print('no tengo codigo para avg = {}'.format(avg))
             exit()
     
     else:
@@ -1095,7 +1095,7 @@ def searchtime_date(time_ref):
 #     hour = date_f.split(' ')[1].split(':')[0]+'Z'
 #     date_f = hour+day+namemonth(int(month),2)+year
 
-#     # #print('Time = {} to {} T = {} to {}'.format(date_i, date_f, pos_i+1, pos_f+1))
+#     # ##print('Time = {} to {} T = {} to {}'.format(date_i, date_f, pos_i+1, pos_f+1))
 
 #     time = pos_f - pos_i + 1
 
@@ -1156,10 +1156,10 @@ def avg_name(avg):
 
 
 # def operation(tmin, tmax, namefile):
-#     #print('operation avg es ', avg)
-#     #print('operation namefile es ', namefile)
-#     #print('operation tmin es ', tmin)
-#     #print('operation tmax es ', tmax)
+#     ##print('operation avg es ', avg)
+#     ##print('operation namefile es ', namefile)
+#     ##print('operation tmin es ', tmin)
+#     ##print('operation tmax es ', tmax)
 #     '''
 #     ****************************************************************
 #     * Return the command line that will be executed to produce area average
@@ -1180,25 +1180,25 @@ def avg_name(avg):
 #         file_grb = open(namefile+'.grb', 'wb')
 #         file_grb.write(var_bytes)
 #         file_grb.close()
-#         #print('avg={} => grb saved'.format(avg))
+#         ##print('avg={} => grb saved'.format(avg))
 #         if(option==''):
 #             option='Area_Average'
 #     if(avg==0):
 #         var_array = save_mean(avg, ini=tmin, end=tmax, minlat=yfirst, minlon=xfirst, maxlat=ylast, maxlon=xlast, axis=None)
-#         #print(10*'@')
-#         #print(var_array.shape)
-#         #print(type(var_array))
-#         #print(10*'@')
+#         ##print(10*'@')
+#         ##print(var_array.shape)
+#         ##print(type(var_array))
+#         ##print(10*'@')
 
 #         # var_bytes = bytes()
 #         # for val in var_array:
-#         #     #print('{}/{}'.format(list(var_array).index(val), len(var_array)))
+#         #     ##print('{}/{}'.format(list(var_array).index(val), len(var_array)))
 #         #     var_bytes += struct.pack('f', val)
 #         file_grb = open(namefile+'.grb', 'wb')
 #         file_grb.write(var_array.astype('f').tobytes())
 #         # file_grb.write(struct.pack('{}f'.format([var for var in var_array]), var_array))
 #         file_grb.close()
-#         #print('acabo de guardar grb para avg=0')
+#         ##print('acabo de guardar grb para avg=0')
 
 #         if(option=='' and ilon!=elon and ilat!=elat):
 #             option='Grid_Point_Values'
@@ -1218,7 +1218,7 @@ def avg_name(avg):
 #         file_grb.write(var_bytes)
 #         file_grb.close()
 
-#         #print('avg={} => grb saved'.format(avg))
+#         ##print('avg={} => grb saved'.format(avg))
 #         # 'set lon 'xfirst' 'xlast
 #         # 'set lat 'yfirst' 'ylast
 #         if(option==''):
@@ -1236,7 +1236,7 @@ def avg_name(avg):
 
 
 
-#         #print('avg={} => grb saved'.format(avg))
+#         ##print('avg={} => grb saved'.format(avg))
 #         # 'set lon 'xfirst' 'xlast
 #         # 'set lat 'yfirst' 'ylast
 #         if(option==''):
@@ -1320,11 +1320,11 @@ def operation(tmin, tmax, namefile):
 
 
 def write_ctl(path, fname,nx,xfirst,xinc,ny,yfirst,yinc,time,date,undef,var,indx):
-    #print('this is write_ctl function', fname)
-    # #print('xdef {} linear {} {}\n'.format(nx, xfirst, xinc))
+    ##print('this is write_ctl function', fname)
+    # ##print('xdef {} linear {} {}\n'.format(nx, xfirst, xinc))
     fnamectl = fname + '.ctl'
     octl = '/'.join([path, fnamectl])
-    # #print(path, fname, octl)
+    # ##print(path, fname, octl)
     with open(octl, 'w') as file_ctl:
         file_ctl.write('Dset ^{}.grb\n'.format(fname))
         file_ctl.write('title drought index data input\n')
@@ -1339,8 +1339,8 @@ def write_ctl(path, fname,nx,xfirst,xinc,ny,yfirst,yinc,time,date,undef,var,indx
         file_ctl.write(' \n')
         file_ctl.close()
     
-    #print('ctl file [{}] was created'.format(fnamectl))
-    #print()
+    ##print('ctl file [{}] was created'.format(fnamectl))
+    ##print()
 
     return
 
@@ -1348,8 +1348,8 @@ def write_ctl(path, fname,nx,xfirst,xinc,ny,yfirst,yinc,time,date,undef,var,indx
 
 # nc_lat, nc_lon, nc_variable, nc_time_array, nc_time_units = get_nc(var1, filedir ,undef)
 # xfirst,yfirst,nx,ny,xlast,ylast,avg = righcoor(avg,ilat,elat,ilon,elon)
-# #print('xfirst:{}, yfirst:{}, nx:{}, ny:{}, xlast:{}, ylast:{}, avg:{}'.format(xfirst,yfirst,nx,ny,xlast,ylast,avg))
-# #print('irdate={}, erdate={}, iadate={}, eadate={}'.format(irdate, erdate, iadate, eadate))
+# ##print('xfirst:{}, yfirst:{}, nx:{}, ny:{}, xlast:{}, ylast:{}, avg:{}'.format(xfirst,yfirst,nx,ny,xlast,ylast,avg))
+# ##print('irdate={}, erdate={}, iadate={}, eadate={}'.format(irdate, erdate, iadate, eadate))
 # t_in = [irdate, erdate, iadate, eadate]
 # tmin, tmax, [t1, t2, t3, t4] = tdates(t_in)
 
@@ -1370,11 +1370,11 @@ eta = t4-tmin+1
 
 
 date_i, date_f, time = searchtime_pos(tmin-1, tmax-1)
-#print('date_i={}, date_f={}, time={}'.format(date_i, date_f, time))
+##print('date_i={}, date_f={}, time={}'.format(date_i, date_f, time))
 date1 = date_i
 date2 = date1[:5]+iadate
-# #print('date2 => ', date2)
-# #print('time => ', time)
+# ##print('date2 => ', date2)
+# ##print('time => ', time)
 varctl_idx=''
 
 
@@ -1406,12 +1406,12 @@ save_log()
 # ofile1 = 'mando'
 
 option, average = operation(tmin, tmax, '/'.join([path, ofile1]))
-# print('option: {}\naverage: {}'.format(option, average))
+# #print('option: {}\naverage: {}'.format(option, average))
 # exit()
 
 
 write_ctl(path, ofile1,nx,xfirst,xinc,ny,yfirst,yinc,time,date1,undef,var1,varctl_idx)
-#print()
+##print()
 # ifile1='/'.join([path,ofile1+'.grb'])
 # if(dindex=='spi'):
 #     ifile2='/'.join([path,ofile1+'.grb'])
@@ -1427,14 +1427,14 @@ else:
 
 
 
-#print('ifile1: {}'.format(ifile1))
-#print('ifile2: {}'.format(ifile2))
-#print()
+##print('ifile1: {}'.format(ifile1))
+##print('ifile2: {}'.format(ifile2))
+##print()
 totlen=time
 tlen=etr-itr+1
 tlen2=eta-ita+1
 
-#print('tlen:{}, tlen2:{}'.format(tlen, tlen2))
+##print('tlen:{}, tlen2:{}'.format(tlen, tlen2))
 
 ofile='_'.join([modeldir,str(ilon),str(ilat),str(elon),str(elat),str(iryear)+'-'+str(eryear),str(iayear)+'-'+str(eayear),option,dindex+str(spilen),'usrthreshold',str(spilim),'nmonths',str(evenlim),'thresholdcategories'+str(extdrou),str(sevdrou),str(moddrou),'rawdataindex-output'])
 pfile='_'.join([modeldir,str(ilon),str(ilat),str(elon),str(elat),str(iryear)+'-'+str(eryear),str(iayear)+'-'+str(eayear),option,dindex+str(spilen),'usrthreshold',str(spilim),'nmonths',str(evenlim),'thresholdcategories'+str(extdrou),str(sevdrou),str(moddrou),'droughtstats-output'])
@@ -1442,10 +1442,10 @@ pfile='_'.join([modeldir,str(ilon),str(ilat),str(elon),str(elat),str(iryear)+'-'
 
 ovar=dindex
 
-# print('ofile: {}'.format(ofile))
-# print('pfile: {}'.format(pfile))
-# print('ovar: ',ovar)
-# print()
+# #print('ofile: {}'.format(ofile))
+# #print('pfile: {}'.format(pfile))
+# #print('ovar: ',ovar)
+# #print()
 
 def return_args(lista):
 
@@ -1465,12 +1465,12 @@ cmdlinepar= return_args([totlen,tlen,itr,etr,tlen2,ita,eta,'12',nx,ny,yfirst,yin
 cmdlinelim = return_args([spilen,evenlim,spilim])
 cmdlinedrou=return_args([extdrou,sevdrou,moddrou])
 cmdline = cmdfiles + cmdlinepar + cmdlinelim + cmdlinedrou
-# print(cmdline)
+# #print(cmdline)
 # exit()
 
 if (dindex=='spi'):
     # Compile FORTRAN
-    # print('aqui esta el spi.f90', '/'.join([_workdir, progdir,'spi.f90']))
+    # #print('aqui esta el spi.f90', '/'.join([_workdir, progdir,'spi.f90']))
     # exit()
     subprocess.run('/usr/bin/gfortran {} -o {}'.format('/'.join([_workdir, progdir,'spi.f90']),'/'.join([_workdir, progdir,'spi'])), shell=True)
     os.chdir(home)
@@ -1503,11 +1503,11 @@ if (dindex=='spi'):
 
                             ), shell=True, capture_output=True)
 
-    # print('spif90.stderr:\n',spif90.stderr)
-    # print()
-    # print('spif90.stdout:\n',spif90.stdout)
+    # #print('spif90.stderr:\n',spif90.stderr)
+    # #print()
+    # #print('spif90.stdout:\n',spif90.stdout)
 
-    # print('runned spi FORTRAN script')
+    # #print('runned spi FORTRAN script')
 
 
 else:
@@ -1543,21 +1543,21 @@ else:
 
                             ), shell=True, capture_output=True)
 
-    # print(speif90.stdout)
-    # print('runned spei FORTRAN script')
+    # #print(speif90.stdout)
+    # #print('runned spei FORTRAN script')
 
 
-# #print()
+# ##print()
 # remove = subprocess.run('rm {}'.format('/'.join([path,'*.nc'])), shell=True, capture_output=True) 
 # # remove = subprocess.run('rm {}'.format('/'.join([_workdir,'outputs','prueba','*.nc'])), shell=True, capture_output=True) 
-# # print('old nc eliminados')
-# #print()
+# # #print('old nc eliminados')
+# ##print()
 
 
 
 
 write_ctl(path,ofile,nx,xfirst,xinc,ny,yfirst,yinc,tlen2,date2,undef,ovar,spilen)
-# print('write_ctl {}'.format(ofile))
+# #print('write_ctl {}'.format(ofile))
 # exit()
 
 pfile1=pfile+'_1'
@@ -1609,7 +1609,7 @@ rc=write_ctl(path,pfile2,nx,xfirst,xinc,ny,yfirst,yinc,1,date2,undef,ovar2,spile
 
 
 
-#print('yaaaaaaaaaaaaaaaaaaaa CTL')
+##print('yaaaaaaaaaaaaaaaaaaaa CTL')
 
 
 ofile_ctl='/'.join([path,ofile])
@@ -1618,14 +1618,14 @@ pfile = '/'.join([path,pfile])
 
 
 
-#print('ofile_ctl: {}'.format(ofile_ctl))
-#print('ofile_nc: {}'.format(ofile_nc))
-#print('pfile: {}'.format(pfile))
+##print('ofile_ctl: {}'.format(ofile_ctl))
+##print('ofile_nc: {}'.format(ofile_nc))
+##print('pfile: {}'.format(pfile))
 
 
 subprocess.run('cdo -s -f nc import_binary {}.ctl {}.nc'.format(ofile_ctl, ofile_nc), shell=True)
 
-# print('{}.ctl to {}.nc'.format(ofile_ctl, ofile_nc))
+# #print('{}.ctl to {}.nc'.format(ofile_ctl, ofile_nc))
 # exit()
 
 for i in range(1,5):
@@ -1664,7 +1664,7 @@ for i in range(1,8):
 # subprocess.run('/usr/bin/grads -lbc "run scripts.gs {} {} {} {} {} {} {} {} {} {} {}" >> log.txt'
 #                 .format('adrian', 30, avg, ilat, elat, ilon, elon, irdate, erdate, iadate, eadate), 
 #                 shell=True, encoding='utf-8')
-# #print('runned grads script')
+# ##print('runned grads script')
 
 
 
@@ -1698,14 +1698,14 @@ for i in range(1,8):
 #     precip_txt.append(float(value))
 
 
-# #print(precip_py.shape)
+# ##print(precip_py.shape)
 # dif_grb_py = precip_grb-precip_py
 
 # for (grb,py,diff) in zip(precip_grb, precip_py, dif_grb_py):
-#     #print('grb:{}, py:{}, grb-py:{}'.format(grb,py,diff))
+#     ##print('grb:{}, py:{}, grb-py:{}'.format(grb,py,diff))
 
-# #print()
-# #print(dif_grb_py.min(), dif_grb_py.max())
+# ##print()
+# ##print(dif_grb_py.min(), dif_grb_py.max())
     
 # import matplotlib.pyplot as plt
 
@@ -1719,7 +1719,7 @@ for i in range(1,8):
 # plt.ylim([-10,10])
 # plt.savefig('./data4drought/outputs/prueba/averages.png',dpi=300)
 
-# #print('grb: {} py: {} txt: {}'.format(len(precip_grb), len(precip_py), len(precip_txt)))
+# ##print('grb: {} py: {} txt: {}'.format(len(precip_grb), len(precip_py), len(precip_txt)))
 
 
 
@@ -1730,8 +1730,8 @@ for i in range(1,8):
 # dir_nc_files = '/'.join([_workdir,'outputs', 'prueba'])
 os.chdir(path)
 # current_dir = os.getcwd()
-# print(dir_nc_files)
-# print(current_dir)
+# #print(dir_nc_files)
+# #print(current_dir)
 files = glob.glob('*.nc')
 
 
