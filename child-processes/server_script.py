@@ -11,7 +11,6 @@ import os, glob
 import xarray as xr
 import numpy.ma as ma
 
-# pip install python-dotenv
 from dotenv import load_dotenv
 
 # pip install gitpython
@@ -133,32 +132,48 @@ nowdate = '_'.join([fecha, hora])
 #     return nc_lat, nc_lon, nc_var, nc_time_array, nc_time_units
 
 
-def get_nc(var,f, miss):
-    # print('estoy en el get_nc')
-    # print('var: {},f: {}, miss: {}'.format(var,f, miss))
-    # exit()
+def get_coords_times(f):
     nc_file = Dataset(f)
     nc_lat = nc_file.variables['lat'][:]
     nc_lon = nc_file.variables['lon'][:]
     if nc_lon.min()>0 and nc_lon.max()>0:
         nc_lon = nc_lon-360
 
-    nc_var = nc_file.variables[var][:]
-    nc_var.fill_value = miss
-    nc_var[nc_var.mask] = nc_var.fill_value
-
-
     nc_time_array = np.asarray(nc_file.variables['time'])
-
     nc_time_units = nc_file.variables['time'].units
 
     times = num2date(nc_time_array, units=nc_time_units)
 
     nc_file.close()
+    return nc_lat, nc_lon, times
+
+
+
+def get_nc(var, tmin, tmax,f, miss):
+    # print('estoy en el get_nc')
+    # print('var: {},f: {}, miss: {}'.format(var,f, miss))
+    # exit()
+    nc_file = Dataset(f)
+
+    # nc_lat = nc_file.variables['lat'][:]
+    # nc_lon = nc_file.variables['lon'][:]
+    # if nc_lon.min()>0 and nc_lon.max()>0:
+    #     nc_lon = nc_lon-360
+
+    nc_var = nc_file.variables[var][tmin-1:tmax]
+    nc_var.fill_value = miss
+    nc_var[nc_var.mask] = nc_var.fill_value
+
+
+    # nc_time_array = np.asarray(nc_file.variables['time'])
+    # nc_time_units = nc_file.variables['time'].units
+    # times = num2date(nc_time_array, units=nc_time_units)
+
+    nc_file.close()
     subprocess.run(f'rm {f}', shell=True, capture_output=False)
-    print('ya tengo el nc')
-    exit()
-    return nc_lat, nc_lon, nc_var, times
+    # print('ya tengo el nc')
+    # exit()
+    return  nc_var
 
     # ds = xr.load_dataset(f)
     # if ds.lon.values.min()>0 and ds.lon.values.max()>0:
@@ -349,7 +364,7 @@ else:
 
 
 ifile = '/'.join([workdir, datadir, modeldir2, ifilename])
-print('ifile:', ifile)
+# print('ifile:', ifile)
 
 # subprocess.run('rm {}'.format(ifile+'.nc.tar.gz'), shell=True, capture_output=True)
 # exit()
@@ -548,7 +563,7 @@ if not os.path.exists(ifile+'.nc'):
 # exit()
 
 
-print('cdo ifile', ifile)
+# print('cdo ifile', ifile)
 grid = subprocess.run('cdo -s griddes {}.nc'.format(ifile), shell=True, encoding='utf-8', capture_output=True).stdout
 
 #0 #
@@ -921,7 +936,8 @@ def save_mean(avg, minlat, maxlat, minlon, maxlon, ini, end, axis=None):
 
             if axis==None:
                 if not weighted:
-                    for k in range(ini-1,end):
+                    # for k in range(ini-1,end):
+                    for k in range(nc_variable_masked.shape[0]):
                         variable = nc_variable_masked[k,:,:]
                         variable = variable[lat_lon].reshape((dim_lat, dim_lon))
                         list_variable.append(variable.mean())                    
@@ -994,7 +1010,8 @@ def save_mean(avg, minlat, maxlat, minlon, maxlon, ini, end, axis=None):
         lat = lat[lat_lon].reshape((dim_lat, dim_lon))
         lon = lon[lat_lon].reshape((dim_lat, dim_lon))
 
-        for k in range(ini-1,end):
+        # for k in range(ini-1,end):
+        for k in range(nc_variable.shape[0]):
             variable = nc_variable[k,:,:]
             variable = variable[lat_lon].reshape((dim_lat, dim_lon))
             list_variable.append(variable)
@@ -1377,15 +1394,16 @@ def write_ctl(path, fname,nx,xfirst,xinc,ny,yfirst,yinc,time,date,undef,var,indx
 
 # print('antes de get_nc')
 
-# nc_lat, nc_lon, nc_variable, nc_time_array, nc_time_units = get_nc(var1, filedir, undef)
-# nc_all, nc_lat, nc_lon, nc_variable, nc_time_array = get_nc(var1, filedir, undef)
-nc_lat, nc_lon, nc_variable, nc_time_array = get_nc(var1, filedir, undef)
-
-# print('listo get_nc')
-
+nc_lat, nc_lon, nc_time_array = get_coords_times(filedir)
 xfirst,yfirst,nx,ny,xlast,ylast,avg = righcoor(avg,ilat,elat,ilon,elon)
 t_in = [irdate, erdate, iadate, eadate]
 tmin, tmax, [t1, t2, t3, t4] = tdates(t_in)
+
+# nc_lat, nc_lon, nc_variable, nc_time_array, nc_time_units = get_nc(var1, filedir, undef)
+# nc_all, nc_lat, nc_lon, nc_variable, nc_time_array = get_nc(var1, filedir, undef)
+
+nc_variable = get_nc(var1, tmin, tmax, filedir, undef)
+
 
 # print('listo tdates')
 
