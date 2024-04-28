@@ -156,6 +156,8 @@ def get_nc(var,f, miss):
 
     nc_file.close()
     subprocess.run(f'rm {f}', shell=True, capture_output=False)
+    print('ya tengo el nc')
+    exit()
     return nc_lat, nc_lon, nc_var, times
 
     # ds = xr.load_dataset(f)
