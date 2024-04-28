@@ -32,7 +32,7 @@ fortran_dir = subprocess.run('which gfortran', shell=True, capture_output=True).
 print('fortran dir: ', fortran_dir)
 
 
-
+exit()
 
 load_dotenv()
 
