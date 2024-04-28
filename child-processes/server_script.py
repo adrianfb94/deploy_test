@@ -395,116 +395,115 @@ def install_cdo():
 # # # local_cdo_dir = '/home/adrianfb/cdo_install/cdo-1.9.1/local/bin/cdo'
 # # # #print(cdo_dir)
 # # #print()
-cdo_version = subprocess.run('cdo --version', shell=True, encoding='utf-8', capture_output=True)
+# cdo_version = subprocess.run('cdo --version', shell=True, encoding='utf-8', capture_output=True)
 # # cdo_version = subprocess.run('{} --version'.format(local_cdo_dir), shell=True, encoding='utf-8', capture_output=True)
 #print('line00', cdo_version.stdout.split('\n')[0])
 #print('line11',cdo_version.stdout.split('\n')[1])
 
-exit()
 
-os.chdir(home_server)
+# os.chdir(home_server)
 
-subprocess.run('git config http.postBuffer 1048576000', shell=True)
-subprocess.run('git config user.email "adrianfuentesbarrios@gmail.com"', shell=True)
-subprocess.run('git config user.name "adrianfb94"', shell=True)
+# subprocess.run('git config http.postBuffer 1048576000', shell=True)
+# subprocess.run('git config user.email "adrianfuentesbarrios@gmail.com"', shell=True)
+# subprocess.run('git config user.name "adrianfb94"', shell=True)
 
 
-# #print('estoy haciendo el init')
-# subprocess.run('git init', shell=True, capture_output=False)
-# # os.system('git init')
-# #print('ya hice el init')
+# # #print('estoy haciendo el init')
+# # subprocess.run('git init', shell=True, capture_output=False)
+# # # os.system('git init')
+# # #print('ya hice el init')
 
-# #print("estoy haciendo el add zlib")
-# subprocess.run('git add -A {}'.format('/'.join(['child-processes','zlib-1.2.8'])), shell=True, capture_output=False)
+# # #print("estoy haciendo el add zlib")
+# # subprocess.run('git add -A {}'.format('/'.join(['child-processes','zlib-1.2.8'])), shell=True, capture_output=False)
+# # # os.system('git add file_added_from_server.txt')
+# # #print('ya hice el add')
+
+# # #print("estoy haciendo el commit zlib")
+# # subprocess.run('git commit -m "added zlib from SERVER"', shell=True, capture_output=False)
+# # # os.system('git commit -m "added from SERVER"')
+# # #print('ya hice el commit')
+
+
+# # #print("estoy haciendo el add hdf5")
+# # subprocess.run('git add -A {}'.format('/'.join(['child-processes','hdf5-1.8.13'])), shell=True, capture_output=False)
+# # # os.system('git add file_added_from_server.txt')
+# # #print('ya hice el add')
+
+# # #print("estoy haciendo el commit hdf5")
+# # subprocess.run('git commit -m "added hdf5 from SERVER"', shell=True, capture_output=False)
+# # # os.system('git commit -m "added from SERVER"')
+# # #print('ya hice el commit')
+
+
+# # #print("estoy haciendo el add netcdf")
+# # subprocess.run('git add -A {}'.format('/'.join(['child-processes','netcdf-c-4.5.0'])), shell=True, capture_output=False)
+# # # os.system('git add file_added_from_server.txt')
+# # #print('ya hice el add')
+
+# # #print("estoy haciendo el commit netcdf")
+# # subprocess.run('git commit -m "added netcdf from SERVER"', shell=True, capture_output=False)
+# # # os.system('git commit -m "added from SERVER"')
+# # #print('ya hice el commit')
+
+
+
+# # #print("estoy haciendo el add cdo")
+# # subprocess.run('git add -A {}'.format('/'.join(['child-processes','cdo-1.9.1'])), shell=True, capture_output=True)
+# # # os.system('git add file_added_from_server.txt')
+# # #print('ya hice el add')
+
+# # #print("estoy haciendo el commit cdo")
+# # subprocess.run('git commit -m "added cdo from SERVER"', shell=True, capture_output=True)
+# # # os.system('git commit -m "added from SERVER"')
+# # #print('ya hice el commit')
+
+
+# # #print("estoy haciendo el add cdo_installed")
+# # subprocess.run('git add -A {}'.format('/'.join(['child-processes','cdo_installed'])), shell=True, capture_output=False)
+# # # os.system('git add file_added_from_server.txt')
+# # #print('ya hice el add')
+
+# # #print("estoy haciendo el commit cdo_installed")
+# # subprocess.run('git commit -m "added cdo_installed from SERVER"', shell=True, capture_output=False)
+# # # os.system('git commit -m "added from SERVER"')
+# # #print('ya hice el commit')
+
+
+# #print("estoy haciendo el add -A")
+# subprocess.run('git add -A', shell=True, capture_output=False)
 # # os.system('git add file_added_from_server.txt')
-# #print('ya hice el add')
-
-# #print("estoy haciendo el commit zlib")
-# subprocess.run('git commit -m "added zlib from SERVER"', shell=True, capture_output=False)
-# # os.system('git commit -m "added from SERVER"')
-# #print('ya hice el commit')
-
-
-# #print("estoy haciendo el add hdf5")
-# subprocess.run('git add -A {}'.format('/'.join(['child-processes','hdf5-1.8.13'])), shell=True, capture_output=False)
-# # os.system('git add file_added_from_server.txt')
-# #print('ya hice el add')
-
-# #print("estoy haciendo el commit hdf5")
-# subprocess.run('git commit -m "added hdf5 from SERVER"', shell=True, capture_output=False)
-# # os.system('git commit -m "added from SERVER"')
-# #print('ya hice el commit')
-
-
-# #print("estoy haciendo el add netcdf")
-# subprocess.run('git add -A {}'.format('/'.join(['child-processes','netcdf-c-4.5.0'])), shell=True, capture_output=False)
-# # os.system('git add file_added_from_server.txt')
-# #print('ya hice el add')
-
-# #print("estoy haciendo el commit netcdf")
-# subprocess.run('git commit -m "added netcdf from SERVER"', shell=True, capture_output=False)
-# # os.system('git commit -m "added from SERVER"')
-# #print('ya hice el commit')
-
-
-
-# #print("estoy haciendo el add cdo")
-# subprocess.run('git add -A {}'.format('/'.join(['child-processes','cdo-1.9.1'])), shell=True, capture_output=True)
-# # os.system('git add file_added_from_server.txt')
-# #print('ya hice el add')
-
-# #print("estoy haciendo el commit cdo")
-# subprocess.run('git commit -m "added cdo from SERVER"', shell=True, capture_output=True)
-# # os.system('git commit -m "added from SERVER"')
-# #print('ya hice el commit')
-
-
-# #print("estoy haciendo el add cdo_installed")
-# subprocess.run('git add -A {}'.format('/'.join(['child-processes','cdo_installed'])), shell=True, capture_output=False)
-# # os.system('git add file_added_from_server.txt')
-# #print('ya hice el add')
+# #print('ya hice el add -A')
 
 # #print("estoy haciendo el commit cdo_installed")
-# subprocess.run('git commit -m "added cdo_installed from SERVER"', shell=True, capture_output=False)
+# subprocess.run('git commit -m "added from SERVER"', shell=True, capture_output=False)
 # # os.system('git commit -m "added from SERVER"')
 # #print('ya hice el commit')
 
 
-#print("estoy haciendo el add -A")
-subprocess.run('git add -A', shell=True, capture_output=False)
-# os.system('git add file_added_from_server.txt')
-#print('ya hice el add -A')
-
-#print("estoy haciendo el commit cdo_installed")
-subprocess.run('git commit -m "added from SERVER"', shell=True, capture_output=False)
-# os.system('git commit -m "added from SERVER"')
-#print('ya hice el commit')
-
-
-# #print("estoy haciendo el pull")
-# subprocess.run('git pull -v https://{}@github.com/{}/{}.git HEAD:main'.format(token, username, repo_name), shell=True, capture_output=False)
-# # os.system(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main')
-# #print('ya hice el pull')
+# # #print("estoy haciendo el pull")
+# # subprocess.run('git pull -v https://{}@github.com/{}/{}.git HEAD:main'.format(token, username, repo_name), shell=True, capture_output=False)
+# # # os.system(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main')
+# # #print('ya hice el pull')
 
 
 
-#print("estoy haciendo el push")
-subprocess.run(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main', shell=True, capture_output=False)
-# subprocess.run(f'git push https://github.com/{username}/{repo_name}.git HEAD:main', shell=True, capture_output=False)
-#print('ya hice el push')
+# #print("estoy haciendo el push")
+# subprocess.run(f'git push https://{token}@github.com/{username}/{repo_name}.git HEAD:main', shell=True, capture_output=False)
+# # subprocess.run(f'git push https://github.com/{username}/{repo_name}.git HEAD:main', shell=True, capture_output=False)
+# #print('ya hice el push')
 
 
 
-exit()
-cdo_dir = '/'.join([root_dir,'child-processes/cdo-1.9.1/local/bin/cdo'])
-# local_cdo_dir = '/home/adrianfb/cdo_install/cdo-1.9.1/local/bin/cdo'
+# exit()
+# cdo_dir = '/'.join([root_dir,'child-processes/cdo-1.9.1/local/bin/cdo'])
+# # local_cdo_dir = '/home/adrianfb/cdo_install/cdo-1.9.1/local/bin/cdo'
 
-# #print(cdo_dir)
+# # #print(cdo_dir)
 
-cdo_version = subprocess.run('{} --version'.format(cdo_dir), shell=True, encoding='utf-8', capture_output=True)
-# cdo_version = subprocess.run('{} --version'.format(local_cdo_dir), shell=True, encoding='utf-8', capture_output=True)
-#print(cdo_version.stderr.split('\n')[0])
-#print(cdo_version.stderr.split('\n')[1])
+# cdo_version = subprocess.run('{} --version'.format(cdo_dir), shell=True, encoding='utf-8', capture_output=True)
+# # cdo_version = subprocess.run('{} --version'.format(local_cdo_dir), shell=True, encoding='utf-8', capture_output=True)
+# #print(cdo_version.stderr.split('\n')[0])
+# #print(cdo_version.stderr.split('\n')[1])
 
 
 # from cdo import *
@@ -521,12 +520,12 @@ cdo_version = subprocess.run('{} --version'.format(cdo_dir), shell=True, encodin
 # ntime = cdo.ntime(input=ifile+'.nc')
 # #print("ntime: {}".format(ntime))
 
-exit()
+# exit()
 
 # tempvar = subprocess.run('cdo -s showname {}.nc'.format(ifile), shell=True, encoding='utf-8', capture_output=True).stdout
-namevar = cdo.showname(input=ifile)
+# namevar = cdo.showname(input=ifile)
 #print('namevar: {}'.format(namevar))
-exit()
+# exit()
 
 
 ##print('cdo ifile', ifile)
@@ -555,7 +554,7 @@ grid = subprocess.run('cdo -s griddes {}.nc'.format(ifile), shell=True, encoding
 
 gridlines = grid.split('\n')
 #print(gridlines)
-exit()
+# exit()
 
 nx = int(gridlines[5].split('=')[1])
 # ##print('nx = {}'.format(nx))
@@ -1552,7 +1551,7 @@ else:
 # # #print('old nc eliminados')
 # ##print()
 
-print('listo fortran \n')
+# print('listo fortran \n')
 
 
 
@@ -1641,7 +1640,7 @@ for i in range(1,8):
 
 subprocess.run('cdo -s merge {}d_1.nc {}d_2.nc {}d_3.nc {}d_4.nc {}d_5.nc {}d_6.nc {}d_7.nc {}kind_drought.nc'.format(pfile, pfile, pfile, pfile, pfile, pfile, pfile, pfile), shell=True)
 
-print('listo los nc \n')
+# print('listo los nc \n')
 
 
 #  se borran todos los files grb, ctl y los 4 netcdf temporales
@@ -1653,7 +1652,7 @@ for i in range(1,8):
     subprocess.run('rm {}d_{}.nc'.format(pfile,i), shell=True)
 
 
-print('borrados los *.grb & *.ctl \n')
+# print('borrados los *.grb & *.ctl \n')
 
 
 
@@ -1732,13 +1731,13 @@ print('borrados los *.grb & *.ctl \n')
 
 # out=subprocess.run('tar -czvf uploads/AAA.tar.gz uploads/*.png', shell=True, capture_output=True)
 
-print('listo chdir \n')
+# print('listo chdir \n')
 
 
 # dir_nc_files = '/'.join([_workdir,'outputs', 'prueba'])
 os.chdir(path)
 
-print('path: ',path)
+# print('path: ',path)
 
 # current_dir = os.getcwd()
 # #print(dir_nc_files)
@@ -1749,8 +1748,8 @@ files = glob.glob('*.nc')
 
 nowdate += '.tar.gz'
 namefile = ip+'-'+'ncfiles'+'_'+nowdate
-print('namefile: ',namefile)
-exit()
+# print('namefile: ',namefile)
+# exit()
 
 subprocess.run('tar -czf {} *.nc'.format(namefile), shell=True)
 
