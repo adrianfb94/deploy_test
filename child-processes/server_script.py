@@ -364,6 +364,9 @@ if not os.path.exists(ifile+'.nc'):
     subprocess.run('rm {}'.format(ifile+'.nc.tar.gz'), shell=True, capture_output=True)
 
 print('ya tengo el nc')
+ds =  xr.load_dataset(ifile+'.nc')
+print('ya tengo ds del nc')
+exit()
 
 # targzfiles = glob.glob('/'.join([workdir, datadir, modeldir2,'*.tar.gz']))
 # for file in targzfiles:
