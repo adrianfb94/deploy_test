@@ -32,7 +32,6 @@ fortran_dir = subprocess.run('which gfortran', shell=True, capture_output=True).
 print('fortran dir: ', fortran_dir)
 
 
-exit()
 
 load_dotenv()
 
@@ -360,6 +359,7 @@ if not os.path.exists(ifile+'.nc'):
     subprocess.run('rm {}'.format(ifile+'.nc.tar.gz'), shell=True, capture_output=True)
 
 print('ya tengo el nc')
+exit()
 
 # targzfiles = glob.glob('/'.join([workdir, datadir, modeldir2,'*.tar.gz']))
 # for file in targzfiles:
