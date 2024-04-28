@@ -134,6 +134,10 @@ nowdate = '_'.join([fecha, hora])
 
 
 def get_nc(var,f, miss):
+    print('estoy en el get_nc')
+    print('var: {},f: {}, miss: {}'.format(var,f, miss))
+    exit()
+    
 
     # file = subprocess.run('tar -xzvf {}'.format(f), shell=True, capture_output=True).stdout.decode('utf-8').split('\n')[0]
 
@@ -1369,7 +1373,6 @@ def write_ctl(path, fname,nx,xfirst,xinc,ny,yfirst,yinc,time,date,undef,var,indx
 # tmin, tmax, [t1, t2, t3, t4] = tdates(t_in)
 
 print('antes de get_nc')
-exit()
 
 # nc_lat, nc_lon, nc_variable, nc_time_array, nc_time_units = get_nc(var1, filedir, undef)
 nc_all, nc_lat, nc_lon, nc_variable, nc_time_array = get_nc(var1, filedir, undef)
