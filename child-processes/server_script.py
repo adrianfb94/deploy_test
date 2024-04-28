@@ -1738,6 +1738,8 @@ files = glob.glob('*.nc')
 
 nowdate += '.tar.gz'
 namefile = ip+'-'+'ncfiles'+'_'+nowdate
+print('namefile: ',namefile)
+exit()
 
 subprocess.run('tar -czf {} *.nc'.format(namefile), shell=True)
 
@@ -1746,5 +1748,4 @@ subprocess.run('mv {} {}'.format(namefile,root_dir+'/uploads/targz_files'), shel
 
 subprocess.run('rm *.nc', shell=True)
 
-print('adrian')
-# print(namefile)
+print(namefile)
