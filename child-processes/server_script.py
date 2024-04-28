@@ -359,7 +359,6 @@ if not os.path.exists(ifile+'.nc'):
     subprocess.run('rm {}'.format(ifile+'.nc.tar.gz'), shell=True, capture_output=True)
 
 print('ya tengo el nc')
-exit()
 
 # targzfiles = glob.glob('/'.join([workdir, datadir, modeldir2,'*.tar.gz']))
 # for file in targzfiles:
@@ -572,6 +571,7 @@ grid = subprocess.run('cdo -s griddes {}.nc'.format(ifile), shell=True, encoding
 
 gridlines = grid.split('\n')
 print('gridlines: ',gridlines)
+exit()
 # exit()
 
 nx = int(gridlines[5].split('=')[1])
