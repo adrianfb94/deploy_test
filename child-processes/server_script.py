@@ -571,7 +571,6 @@ grid = subprocess.run('cdo -s griddes {}.nc'.format(ifile), shell=True, encoding
 
 gridlines = grid.split('\n')
 print('gridlines: ',gridlines)
-exit()
 # exit()
 
 nx = int(gridlines[5].split('=')[1])
@@ -1416,7 +1415,7 @@ def save_log():
         new_query.write('\n')
         new_query.close()
 
-# save_log()
+save_log()
 
 
 option, average = operation(tmin, tmax, '/'.join([path, ofile1]))
@@ -1456,10 +1455,11 @@ pfile='_'.join([modeldir,str(ilon),str(ilat),str(elon),str(elat),str(iryear)+'-'
 
 ovar=dindex
 
-# #print('ofile: {}'.format(ofile))
-# #print('pfile: {}'.format(pfile))
+print('ofile: {}'.format(ofile))
+print('pfile: {}'.format(pfile))
 # #print('ovar: ',ovar)
 # #print()
+exit()
 
 def return_args(lista):
 
