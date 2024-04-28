@@ -5,7 +5,7 @@ import datetime
 from warnings import filterwarnings
 filterwarnings(action='ignore', category=DeprecationWarning)
 filterwarnings(action='ignore', category=UserWarning)
-# from netCDF4 import Dataset, num2date
+from netCDF4 import Dataset
 import struct
 import os, glob
 import xarray as xr
