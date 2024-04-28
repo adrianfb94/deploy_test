@@ -339,7 +339,10 @@ else:
 ifile = '/'.join([workdir, datadir, modeldir2, ifilename])
 
 if not os.path.exists(ifile+'.nc'):
+    subprocess.run('cat {} >> {}'.format('/'.join([workdir, datadir, modeldir2, 'nc_file.parta*']), ifile+'.nc.tar.gz'), shell=True, capture_output=True)
     subprocess.run('tar -xzvf {} -C {}'.format(ifile+'.nc.tar.gz','child-processes/data/data4drought/data/echam5/'), shell=True, capture_output=True)
+    subprocess.run('rm {}'.format(ifile+'.nc.tar.gz'), shell=True, capture_output=True)
+
 
 # targzfiles = glob.glob('/'.join([workdir, datadir, modeldir2,'*.tar.gz']))
 # for file in targzfiles:
