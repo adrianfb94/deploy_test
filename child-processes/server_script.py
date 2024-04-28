@@ -1463,8 +1463,8 @@ cmdlinepar= return_args([totlen,tlen,itr,etr,tlen2,ita,eta,'12',nx,ny,yfirst,yin
 cmdlinelim = return_args([spilen,evenlim,spilim])
 cmdlinedrou=return_args([extdrou,sevdrou,moddrou])
 cmdline = cmdfiles + cmdlinepar + cmdlinelim + cmdlinedrou
-# #print(cmdline)
-# exit()
+print('cmdline: ',cmdline)
+exit()
 
 if (dindex=='spi'):
     # Compile FORTRAN
