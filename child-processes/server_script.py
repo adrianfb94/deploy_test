@@ -17,6 +17,22 @@ from dotenv import load_dotenv
 # pip install gitpython
 # import git
 
+python_version = subprocess.run('python --version', shell=True, capture_output=True).stdout.decode()
+print('python version: ', python_version)
+print()
+python_dir = subprocess.run('which python', shell=True, capture_output=True).stdout.decode()
+print('python dir: ', python_dir)
+
+print()
+
+fortran_version = subprocess.run('gfortran --version', shell=True, capture_output=True).stdout.decode()
+print('fortran version: ', fortran_version)
+print()
+gortran_dir = subprocess.run('which gfortran', shell=True, capture_output=True).stdout.decode()
+print('fortran dir: ', fortran_dir)
+
+
+
 
 load_dotenv()
 
@@ -336,12 +352,14 @@ else:
 
 
 ifile = '/'.join([workdir, datadir, modeldir2, ifilename])
+print('ifile:', ifile)
 
 if not os.path.exists(ifile+'.nc'):
     subprocess.run('cat {} >> {}'.format('/'.join([workdir, datadir, modeldir2, 'nc_file.parta*']), ifile+'.nc.tar.gz'), shell=True, capture_output=True)
     subprocess.run('tar -xzvf {} -C {}'.format(ifile+'.nc.tar.gz','child-processes/data/data4drought/data/echam5/'), shell=True, capture_output=True)
     subprocess.run('rm {}'.format(ifile+'.nc.tar.gz'), shell=True, capture_output=True)
 
+print('ya tengo el nc')
 
 # targzfiles = glob.glob('/'.join([workdir, datadir, modeldir2,'*.tar.gz']))
 # for file in targzfiles:
@@ -379,14 +397,14 @@ if not os.path.exists(ifile+'.nc'):
 # #print('********* nc-config *********')
 
 
-def install_cdo():
-    os.chdir('/'.join([root_dir,'child-processes/cdo']))
-    # subprocess.run('rm cdo.log', shell=True)
-    sh_file = 'install.sh'
-    subprocess.run('chmod a+x {}'.format(sh_file), shell=True)
-    subprocess.run(f'./{sh_file} >> cdo.log', shell=True)
-    # #print('./configure success!')
-    # #print("CDO was instaled success!")
+# def install_cdo():
+#     os.chdir('/'.join([root_dir,'child-processes/cdo']))
+#     # subprocess.run('rm cdo.log', shell=True)
+#     sh_file = 'install.sh'
+#     subprocess.run('chmod a+x {}'.format(sh_file), shell=True)
+#     subprocess.run(f'./{sh_file} >> cdo.log', shell=True)
+#     # #print('./configure success!')
+#     # #print("CDO was instaled success!")
 
 # install_cdo()
 
@@ -528,7 +546,7 @@ def install_cdo():
 # exit()
 
 
-##print('cdo ifile', ifile)
+print('cdo ifile', ifile)
 grid = subprocess.run('cdo -s griddes {}.nc'.format(ifile), shell=True, encoding='utf-8', capture_output=True).stdout
 
 #0 #
@@ -553,7 +571,7 @@ grid = subprocess.run('cdo -s griddes {}.nc'.format(ifile), shell=True, encoding
 
 
 gridlines = grid.split('\n')
-#print(gridlines)
+print('gridlines: ',gridlines)
 # exit()
 
 nx = int(gridlines[5].split('=')[1])
@@ -1398,10 +1416,8 @@ def save_log():
         new_query.write('\n')
         new_query.close()
 
+# save_log()
 
-save_log()
-
-# ofile1 = 'mando'
 
 option, average = operation(tmin, tmax, '/'.join([path, ofile1]))
 # #print('option: {}\naverage: {}'.format(option, average))
