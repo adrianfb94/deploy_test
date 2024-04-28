@@ -1368,6 +1368,8 @@ def write_ctl(path, fname,nx,xfirst,xinc,ny,yfirst,yinc,time,date,undef,var,indx
 # t_in = [irdate, erdate, iadate, eadate]
 # tmin, tmax, [t1, t2, t3, t4] = tdates(t_in)
 
+print('antes de get_nc')
+exit()
 
 # nc_lat, nc_lon, nc_variable, nc_time_array, nc_time_units = get_nc(var1, filedir, undef)
 nc_all, nc_lat, nc_lon, nc_variable, nc_time_array = get_nc(var1, filedir, undef)
