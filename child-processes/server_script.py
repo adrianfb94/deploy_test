@@ -1371,7 +1371,8 @@ def write_ctl(path, fname,nx,xfirst,xinc,ny,yfirst,yinc,time,date,undef,var,indx
 
 # nc_lat, nc_lon, nc_variable, nc_time_array, nc_time_units = get_nc(var1, filedir, undef)
 nc_all, nc_lat, nc_lon, nc_variable, nc_time_array = get_nc(var1, filedir, undef)
-
+print('listo get_nc')
+exit()
 
 xfirst,yfirst,nx,ny,xlast,ylast,avg = righcoor(avg,ilat,elat,ilon,elon)
 t_in = [irdate, erdate, iadate, eadate]
