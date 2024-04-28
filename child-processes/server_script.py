@@ -19,8 +19,6 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
-print('adrian')
-exit()
 
 # os.environ['GADDIR'] = '/usr/lib/cgi-bin/grads-2.1.a2.oga.1/Classic/data'
 # os.environ['GASCRP'] = '/usr/lib/cgi-bin/grads-2.1.a2.oga.1/Classic/scripts'
@@ -1554,6 +1552,7 @@ else:
 # # #print('old nc eliminados')
 # ##print()
 
+print('listo fortran \n')
 
 
 
@@ -1642,6 +1641,8 @@ for i in range(1,8):
 
 subprocess.run('cdo -s merge {}d_1.nc {}d_2.nc {}d_3.nc {}d_4.nc {}d_5.nc {}d_6.nc {}d_7.nc {}kind_drought.nc'.format(pfile, pfile, pfile, pfile, pfile, pfile, pfile, pfile), shell=True)
 
+print('listo los nc \n')
+
 
 #  se borran todos los files grb, ctl y los 4 netcdf temporales
 subprocess.run('rm {}'.format(path+'/*.grb'), shell=True)
@@ -1650,6 +1651,9 @@ for i in range(1,5):
     subprocess.run('rm {}_{}.nc'.format(pfile,i), shell=True)
 for i in range(1,8):
     subprocess.run('rm {}d_{}.nc'.format(pfile,i), shell=True)
+
+
+print('borrados los *.grb & *.ctl \n')
 
 
 
@@ -1728,8 +1732,14 @@ for i in range(1,8):
 
 # out=subprocess.run('tar -czvf uploads/AAA.tar.gz uploads/*.png', shell=True, capture_output=True)
 
+print('listo chdir \n')
+
+
 # dir_nc_files = '/'.join([_workdir,'outputs', 'prueba'])
 os.chdir(path)
+
+print('path: ',path)
+
 # current_dir = os.getcwd()
 # #print(dir_nc_files)
 # #print(current_dir)
