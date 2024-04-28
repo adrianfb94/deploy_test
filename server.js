@@ -404,7 +404,8 @@ app.get('/api/ClientProject/python_script/:query/:ip',(req, res)=>{
 
         // console.log(`este es el argumento: ${arg}`)
         // exec(`python child-processes/script.py ${arg}`, (error, stdout, stderr) => {
-        exec(`python child-processes/server_script.py ${arg} ${ip}`,{maxBuffer: 50*1024*1024}, (error, stdout, stderr) => {
+        exec(`python child-processes/server_script.py ${arg} ${ip}`, (error, stdout, stderr) => {
+        // exec(`python child-processes/server_script.py ${arg} ${ip}`,{maxBuffer: 50*1024*1024}, (error, stdout, stderr) => {
             if (error) {
             console.error(`error: ${error.message}`);
             res.send(error.message)
@@ -529,6 +530,6 @@ var server = app.listen(puerto, ()=>{
 });
 
 
-server.keepAliveTimeout = 45 * 60 * 1000;
-server.headersTimeout = 50 * 60 * 1000; 
+// server.keepAliveTimeout = 45 * 60 * 1000;
+// server.headersTimeout = 50 * 60 * 1000; 
 
