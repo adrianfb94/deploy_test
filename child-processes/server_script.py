@@ -1746,5 +1746,5 @@ subprocess.run('mv {} {}'.format(namefile,root_dir+'/uploads/targz_files'), shel
 
 subprocess.run('rm *.nc', shell=True)
 
-
-print(namefile)
+print('adrian')
+# print(namefile)
