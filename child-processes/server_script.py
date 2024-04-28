@@ -28,7 +28,7 @@ print()
 fortran_version = subprocess.run('gfortran --version', shell=True, capture_output=True).stdout.decode()
 print('fortran version: ', fortran_version)
 print()
-gortran_dir = subprocess.run('which gfortran', shell=True, capture_output=True).stdout.decode()
+fortran_dir = subprocess.run('which gfortran', shell=True, capture_output=True).stdout.decode()
 print('fortran dir: ', fortran_dir)
 
 
